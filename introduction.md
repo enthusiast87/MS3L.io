@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Members
+title: Introduction
 ---
 
 <div class="page-wrap">
   <div class="container">
     <div class="page-card">
-      <h1>Members</h1>
+      <h1>Introduction</h1>
       <p>
-        This page will list the principal investigator, students, and collaborators.
+        This page will introduce the laboratory vision, research direction, and academic background.
       </p>
     </div>
   </div>

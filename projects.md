@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Members
+title: Projects
 ---
 
 <div class="page-wrap">
   <div class="container">
     <div class="page-card">
-      <h1>Members</h1>
+      <h1>Projects</h1>
       <p>
-        This page will list the principal investigator, students, and collaborators.
+        This page will summarize current research themes and ongoing projects.
       </p>
     </div>
   </div>

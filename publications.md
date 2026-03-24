@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Members
+title: Publications
 ---
 
 <div class="page-wrap">
   <div class="container">
     <div class="page-card">
-      <h1>Members</h1>
+      <h1>Publications</h1>
       <p>
-        This page will list the principal investigator, students, and collaborators.
+        This page will organize selected and full publications in a structured format.
       </p>
     </div>
   </div>

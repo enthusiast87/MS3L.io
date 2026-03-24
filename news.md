@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Members
+title: News
 ---
 
 <div class="page-wrap">
   <div class="container">
     <div class="page-card">
-      <h1>Members</h1>
+      <h1>News</h1>
       <p>
-        This page will list the principal investigator, students, and collaborators.
+        This page will be used for lab announcements, updates, and milestones.
       </p>
     </div>
   </div>

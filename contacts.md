@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Members
+title: Contacts
 ---
 
 <div class="page-wrap">
   <div class="container">
     <div class="page-card">
-      <h1>Members</h1>
+      <h1>Contacts</h1>
       <p>
-        This page will list the principal investigator, students, and collaborators.
+        Contact information, office location, and recruitment details will be added here.
       </p>
     </div>
   </div>

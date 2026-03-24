@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Members
+title: Patents
 ---
 
 <div class="page-wrap">
   <div class="container">
     <div class="page-card">
-      <h1>Members</h1>
+      <h1>Patents</h1>
       <p>
-        This page will list the principal investigator, students, and collaborators.
+        This page will include patents, technology transfer, and related achievements.
       </p>
     </div>
   </div>
