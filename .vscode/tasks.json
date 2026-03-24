@@ -12,24 +12,26 @@
       "problemMatcher": []
     },
     {
-      "label": "Update Research Themes",
+      "label": "Update Site (Prompt)",
       "type": "shell",
       "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
       "args": [
         "${workspaceFolder}\\scripts\\update_site.py",
-        "Research Themes를 전문적인 문장으로 정리하고 subtopics를 보완해줘."
+        "${input:updatePrompt}"
       ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
       "problemMatcher": []
-    },
+    }
+  ],
+  "inputs": [
     {
-      "label": "Add News Draft",
-      "type": "shell",
-      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
-      "args": [
-        "${workspaceFolder}\\scripts\\update_site.py",
-        "news 페이지에 최근 연구실 공지 1건을 추가하는 draft를 생성해줘."
-      ],
-      "problemMatcher": []
+      "id": "updatePrompt",
+      "type": "promptString",
+      "description": "홈페이지 수정 지시를 입력하세요",
+      "default": "Research Themes를 전문적인 문장으로 정리하고 subtopics를 보완해줘."
     }
   ]
 }
