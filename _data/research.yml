@@ -1,0 +1,26 @@
+- title: Biorefinery
+  summary: Membrane-enabled separations for sustainable biorefinery operations.
+  topics:
+    - Product recovery
+    - Base catalyst recycling
+    - Product acidification
+
+- title: Plastic recycling
+  summary: Selective purification and solvent/catalyst recovery for circular plastics.
+  topics:
+    - Monomer purification
+    - Solvent recycling
+    - Base catalyst recycling
+
+- title: Resource recovery
+  summary: Recovery and purification of valuable species from complex liquid streams.
+  topics:
+    - Membrane distillation and crystallization
+    - Solvent recycling
+
+- title: Energy-related applications
+  summary: Membrane and separation technologies for energy conversion and storage.
+  topics:
+    - Biofuel production
+    - Pressure retarded osmosis
+    - Lithium-ion battery separator
