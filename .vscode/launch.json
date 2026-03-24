@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug validate_site.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/validate_site.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Debug update_site.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/update_site.py",
+      "args": [
+        "Research Themes를 전문적인 문장으로 정리하고 subtopics를 보완해줘."
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}
