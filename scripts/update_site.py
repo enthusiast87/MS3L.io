@@ -9,14 +9,20 @@ OLLAMA_URL = "http://localhost:11434/api/chat"
 
 ALLOWED_FILES = [
     "index.md",
+    "introduction.md",
     "research.md",
     "members.md",
+    "projects.md",
     "publications.md",
     "patents.md",
     "news.md",
+    "contacts.md",
+    "_data/lab.yml",
     "_data/research.yml",
     "_data/members.yml",
     "_data/publications.yml",
+    "_data/news.yml",
+    "_data/patents.yml",
 ]
 
 PLANNER_MODEL = "qwen3:4b"

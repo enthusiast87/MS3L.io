@@ -1,0 +1,166 @@
+short_name: MS^3L
+brand_mark: MS<sup>3</sup>L
+full_name: Membrane-based Sustainable Separation Solutions Laboratory
+subtitle: Membrane Science | Sustainable Separation | Process Innovation
+institution: Korea Research Institute of Chemical Technology
+
+hero:
+  title: Membrane-based sustainable separation solutions for circular chemical processes, resource recovery, and energy systems.
+  body: Membrane-based Sustainable Separation Solutions Laboratory (MS^3L) develops membrane technologies for energy-efficient ion and liquid separations across biorefinery systems, plastic recycling, solvent management, resource recovery, and electrochemical applications. Our work integrates separation science, membrane engineering, and process design to build practical low-energy solutions.
+  primary_cta_label: Research Areas
+  primary_cta_url: /research
+  secondary_cta_label: Publications
+  secondary_cta_url: /publications
+  metrics:
+    - label: Research Focus
+      value: Membrane-enabled sustainable separations
+    - label: Application Areas
+      value: Biorefinery, circular materials, energy, and resource recovery
+  credibility:
+    - label: Institution
+      value: Korea Research Institute of Chemical Technology
+    - label: Research Domains
+      value: Membrane science, liquid separations, and process intensification
+    - label: Application Areas
+      value: Biorefinery, circular materials, energy, and resource recovery
+
+principal_investigator:
+  name: Jihoon Kim
+  role: Principal Investigator
+  affiliation: Korea Research Institute of Chemical Technology
+  summary: Research focus on membrane-based sustainable separations for sustainable chemical processing, circular resource systems, and energy-related applications.
+  links:
+    - label: Lab Introduction
+      url: /introduction
+    - label: Contact
+      url: /contact
+
+research:
+  title: Research Themes
+  lead: Core areas currently highlighted across the lab's research portfolio.
+
+featured_outputs:
+  title: Featured Research Outputs
+  lead: Representative topics and publications currently featured from the lab.
+
+news:
+  title: Recent News
+  lead: Selected lab updates migrated from the current website.
+
+approach:
+  title: From membrane science to process impact
+  lead: MS3L connects molecular-scale membrane design to scalable process performance in chemically demanding liquid systems.
+  areas:
+    - title: Molecular selectivity
+      summary: Designing membranes and interfaces for challenging ion and organic-liquid separations.
+    - title: Process integration
+      summary: Linking membrane performance to practical recovery, purification, and recycle schemes.
+    - title: Circular systems
+      summary: Applying separation science to biorefinery, recycling, and energy-related resource loops.
+
+join:
+  title: Join MS3L
+  body: We welcome inquiries regarding research collaboration, student positions, and other opportunities related to membrane science, sustainable separations, and process innovation.
+  actions:
+    - label: Contact the Lab
+      url: /contact
+    - label: View News
+      url: /news
+
+introduction:
+  title: Introduction
+  overview:
+    - Membrane-based Sustainable Separation Solutions Laboratory (MS^3L) develops membrane-based technologies for energy-efficient ion and liquid separations in sustainable chemical processes, circular resource systems, and energy applications.
+    - Our research integrates separation science, process design, and membrane engineering to build practical low-energy solutions for chemically demanding liquid systems.
+  priorities:
+    - Sustainable biorefinery and product recovery
+    - Circular plastic and solvent systems
+    - Resource recovery from complex liquid streams
+    - Membrane-enabled energy and electrochemical separations
+  principal_investigator:
+    name: Jihoon Kim
+    current_role: Senior Researcher (2021 - present)
+    current_affiliation: Korea Research Institute of Chemical Technology (KRICT)
+    previous_positions:
+      - Postdoctoral Research Associate in Chemical Engineering (2018 - 2021), Imperial College London (Prof. Andrew G. Livingston)
+      - MS-PhD in Energy Engineering (2012 - 2017), Hanyang University (Prof. Young Moo Lee)
+      - BS in Chemical Engineering (2006 - 2008, 2010 - 2012), Hanyang University
+
+projects:
+  title: Current Research Projects
+  lead: The Google Site highlights several ongoing projects spanning carbon utilization, demonstration-scale process development, and sustainable separation systems.
+  items:
+    - title: Carbon Capture and Utilization (CCU) with digital transformation
+      summary: Development of demonstration technology for carbon-neutral chemical processes utilizing digital transformation.
+      trl: TRL 3 to 6
+    - title: Global Top Strategic Research Group for CCU
+      summary: Advanced separation processes for CCU systems.
+      trl: TRL 3 to 7
+    - title: Platform chemical production and demonstration
+      summary: Carbon dioxide conversion to platform chemicals (C4, C6) using under-utilized biomass resources.
+      trl: TRL 3 to 4
+    - title: Sustainable separation processes for biorefinery
+      summary: Development of polymer platform materials utilizing organic resources and carbon dioxide.
+      trl: TRL 3 to 7
+
+experiences:
+  title: Representative Experiences
+  items:
+    - title: National Research and Development Excellence Achievements 100 Case (2023)
+      summary: Continuous waste polystyrene catalytic depolymerization and separation.
+      detail: Published by Korea Institute of Science and Technology Evaluation and Planning (KISTEP).
+    - title: Technology transfer to Lotte Chemical
+      summary: Continuous waste polystyrene catalytic depolymerization and separation.
+      detail: 2022-07-11, 396,000 USD, 10% contribution.
+    - title: Know-how consultancy to Evonik Industries
+      summary: Roll-to-roll robust membrane fabrication and module preparation.
+      detail: 2020-07 to 2020-12, 8,000 GBP, 100% contribution.
+    - title: Principal Investigator
+      summary: National Research Foundation of Korea Basic Science Research Program.
+      detail: 2018-09 to 2019-08, developing an innovative and environmentally friendly spraying thin-film composite membrane for interactive separation in organic solvents, 30,000 USD.
+
+members:
+  title: Members
+  lead: MS^3L is currently presented with the principal investigator profile first. Additional researcher and student profiles can be added as the team roster is finalized.
+
+publications:
+  title: Publications
+  lead: Selected publications currently highlighted on the MS^3L website.
+
+news_page:
+  title: News
+  lead: Selected recent updates and milestones from MS^3L.
+
+technology_impact:
+  title: Technology and Impact
+  lead: MS^3L translates membrane research into practical solutions through patents, technology transfer, and industry-relevant process innovation.
+  pages:
+    - title: Patents
+      slug: patents
+      summary: Intellectual property development in membrane-based separations and sustainable process technologies.
+    - title: Technology Transfer
+      slug: technology-transfer
+      summary: Translation of research outcomes toward practical implementation and industrial deployment.
+    - title: Industrial Collaboration
+      slug: industrial-collaboration
+      summary: Collaboration and consulting on membrane separation systems and sustainable chemical engineering.
+    - title: Process Innovation
+      slug: process-innovation
+      summary: Development of low-energy, circular, and intensified separation processes for real-world applications.
+
+join_us:
+  title: Join Us
+  body: MS^3L welcomes students and researchers who are interested in membrane science, sustainable separations, and process innovation for chemical, energy, and environmental systems.
+  cta_label: Contact MS^3L
+  cta_url: /contact
+
+contact:
+  title: Contact
+  note: Please reach out regarding research collaboration, student opportunities, or general inquiries about MS^3L.
+  institution: Korea Research Institute of Chemical Technology (KRICT)
+  address: W6, 141 Gajeong-ro, Yuseong-gu, Daejeon, South Korea
+  emails:
+    - jh.kim@krict.re.kr
+    - enthusiast87@gmail.com
+  phone: +82-42-860-7506
+  email: jh.kim@krict.re.kr

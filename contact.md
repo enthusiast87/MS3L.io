@@ -1,9 +1,6 @@
 ---
 layout: default
 title: Contact
-permalink: /contacts/
-redirect_from:
-  - /contacts.html
 ---
 {% assign contact = site.data.lab.contact %}
 

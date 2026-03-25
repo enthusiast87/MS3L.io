@@ -2,57 +2,75 @@
 layout: default
 title: Home
 ---
+{% assign lab = site.data.lab %}
 
 <section class="hero">
   <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">Academic Lab Website</div>
-      <h1>Sustainable membrane separation solutions for resource circulation, energy, and biorefinery systems.</h1>
-      <p>
-        MS³L develops membrane-based sustainable separation technologies for biorefinery, plastic recycling,
-        resource recovery, and energy-related applications. This page is the first GitHub Pages version of the lab website.
-      </p>
+    <div class="hero-copy">
+      <div class="eyebrow">{{ lab.subtitle }}</div>
+      <h1>{{ lab.hero.title }}</h1>
+      <p>{{ lab.hero.body }}</p>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="{{ '/projects' | relative_url }}">View Projects</a>
-        <a class="btn btn-secondary" href="{{ '/members' | relative_url }}">Meet the Lab</a>
+        <a class="btn btn-primary" href="{{ lab.hero.primary_cta_url | relative_url }}">{{ lab.hero.primary_cta_label }}</a>
+        <a class="btn btn-secondary" href="{{ lab.hero.secondary_cta_url | relative_url }}">{{ lab.hero.secondary_cta_label }}</a>
+      </div>
+
+      <div class="hero-metrics">
+        {% for metric in lab.hero.metrics %}
+        <div class="metric-card">
+          <div class="metric-label">{{ metric.label }}</div>
+          <strong>{{ metric.value }}</strong>
+        </div>
+        {% endfor %}
       </div>
     </div>
 
     <div class="hero-card">
       <div class="hero-card-photo"></div>
-      <h3>Jihoon Kim</h3>
-      <div class="role">Principal Investigator</div>
-      <p>
-        Research focus on membrane-based sustainable separations for biorefinery,
-        plastic recycling, resource recovery, and energy-related applications.
-      </p>
+      <h3>{{ lab.principal_investigator.name }}</h3>
+      <div class="role">{{ lab.principal_investigator.role }}</div>
+      <div class="hero-card-affiliation">{{ lab.principal_investigator.affiliation }}</div>
+      <p>{{ lab.principal_investigator.summary }}</p>
+      <div class="hero-card-links">
+        {% for link in lab.principal_investigator.links %}
+        <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="credibility-strip">
+  <div class="container credibility-grid">
+    {% for item in lab.hero.credibility %}
+    <div class="credibility-item">
+      <div class="credibility-label">{{ item.label }}</div>
+      <strong>{{ item.value }}</strong>
+    </div>
+    {% endfor %}
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">Research Themes</h2>
-    <p class="section-lead">Core research areas currently highlighted on the homepage.</p>
+    <h2 class="section-title">{{ lab.research.title }}</h2>
+    <p class="section-lead">{{ lab.research.lead }}</p>
 
     <div class="card-grid four">
+      {% for item in site.data.research %}
       <div class="card">
-        <h3>Biorefinery</h3>
-        <p>Membrane-enabled product recovery, catalyst recycling, and sustainable downstream processing.</p>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+        {% if item.topics %}
+        <ul class="topic-list">
+          {% for topic in item.topics limit: 3 %}
+          <li>{{ topic }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
       </div>
-      <div class="card">
-        <h3>Plastic Recycling</h3>
-        <p>Selective purification, solvent recovery, and circular separation strategies for recycled feedstocks.</p>
-      </div>
-      <div class="card">
-        <h3>Resource Recovery</h3>
-        <p>Membrane distillation, crystallization, and purification technologies for valuable resource recovery.</p>
-      </div>
-      <div class="card">
-        <h3>Energy Applications</h3>
-        <p>Separation technologies for biofuels, pressure retarded osmosis, and battery-related systems.</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -60,61 +78,65 @@ title: Home
 <section class="section">
   <div class="container split-grid">
     <div>
-      <h2 class="section-title">Representative Publications</h2>
-      <p class="section-lead">Selected work to be refined later.</p>
+      <h2 class="section-title">{{ lab.featured_outputs.title }}</h2>
+      <p class="section-lead">{{ lab.featured_outputs.lead }}</p>
 
+      {% assign featured_publications = site.data.publications | where: "featured", true %}
+      {% for item in featured_publications %}
       <div class="list-card">
-        <div class="list-meta">01</div>
-        <strong>Membrane-based sustainable separation for biorefinery systems</strong>
+        <div class="list-meta">{{ item.venue }} | {{ item.year }}</div>
+        {% if item.url %}
+        <strong><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></strong>
+        {% else %}
+        <strong>{{ item.title }}</strong>
+        {% endif %}
+        {% if item.doi %}
+        <p>DOI: <a class="inline-link" href="{{ item.url }}">{{ item.doi }}</a></p>
+        {% endif %}
       </div>
-      <div class="list-card">
-        <div class="list-meta">02</div>
-        <strong>Selective purification strategies for circular plastic recycling</strong>
-      </div>
-      <div class="list-card">
-        <div class="list-meta">03</div>
-        <strong>Advanced membrane processes for resource recovery and solvent recycling</strong>
-      </div>
+      {% endfor %}
     </div>
 
     <div>
-      <h2 class="section-title">Recent News</h2>
-      <p class="section-lead">Temporary updates for the migration stage.</p>
+      <h2 class="section-title">{{ lab.news.title }}</h2>
+      <p class="section-lead">{{ lab.news.lead }}</p>
 
+      {% for item in site.data.news limit: 3 %}
       <div class="list-card">
-        <div class="list-meta">March 2026</div>
-        <strong>Lab website migration to GitHub Pages is in progress.</strong>
+        <div class="list-meta">{{ item.date }}</div>
+        <strong>{{ item.title }}</strong>
       </div>
-      <div class="list-card">
-        <div class="list-meta">March 2026</div>
-        <strong>Research themes and content structure will be updated gradually.</strong>
-      </div>
-      <div class="list-card">
-        <div class="list-meta">March 2026</div>
-        <strong>Members, publications, and patents pages will be refined step by step.</strong>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">Quick Access</h2>
-    <p class="section-lead">Placeholder cards for the next stage of the migration.</p>
+    <h2 class="section-title">{{ lab.approach.title }}</h2>
+    <p class="section-lead">{{ lab.approach.lead }}</p>
 
     <div class="card-grid three">
+      {% for item in lab.approach.areas %}
       <div class="card">
-        <h3>Members</h3>
-        <p>Faculty, students, and collaborators will be organized in a dedicated academic-style page.</p>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
       </div>
-      <div class="card">
-        <h3>Patents & Projects</h3>
-        <p>Patents, sponsored projects, and technology transfer achievements will be added here.</p>
-      </div>
-      <div class="card">
-        <h3>Contact</h3>
-        <p>Office location, email, and recruitment information will be organized in a clean footer-style section.</p>
-      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-emphasis">
+  <div class="container cta-panel">
+    <div>
+      <h2 class="section-title">{{ lab.join.title }}</h2>
+      <p class="section-lead">{{ lab.join.body }}</p>
+    </div>
+    <div class="cta-actions">
+      {% for item in lab.join.actions %}
+      <a class="btn {% if forloop.first %}btn-primary{% else %}btn-secondary{% endif %}" href="{{ item.url | relative_url }}">{{ item.label }}</a>
+      {% endfor %}
     </div>
   </div>
 </section>

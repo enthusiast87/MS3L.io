@@ -1,0 +1,49 @@
+- title: Low energy-intensive production of fuel-grade bio-butanol enabled by membrane-based extraction
+  authors: J. H. Kim, M. Cook, L. Peeva, J. Yeo, L. W. Bolton, Y. M. Lee, and A. G. Livingston
+  venue: Energy & Environmental Science
+  year: 2020
+  featured: true
+  doi: 10.1039/D0EE02927K
+  url: https://doi.org/10.1039/D0EE02927K
+  summary: Widespread use of biofuels is inhibited by the significant energy burden of recovering fuel products from aqueous fermentation systems. This work describes a membrane-based extraction system for the recovery of fuel-grade biobutanol from fermentation broths with high purity while using substantially less energy than current technology options.
+  support: Supported by BP through the BP International Centre for Advanced Materials and the National Research Foundation of Korea Basic Science Research Program funded by the Ministry of Education.
+
+- title: Advancing membrane technology in organic liquids towards a sustainable future
+  authors: Jihoon Kim, Jeong F. Kim, Zhiwei Jiang, and Andrew G. Livingston
+  venue: Nature Sustainability
+  year: 2025
+  featured: true
+  doi: 10.1038/s41893-025-01570-4
+  url: https://doi.org/10.1038/s41893-025-01570-4
+  summary: This review highlights how membrane technology can drive sustainability in organic-liquid separations, with perspectives on promising materials, manufacturing processes, and industrial applications in terms of energy saving, process intensification, and environmental impact.
+  support: Supported by National Research Foundation projects in the Republic of Korea, UK Research and Innovation, and a European Research Council Advanced Grant.
+
+- title: Hydrophobic polyamide nanofilms provide rapid transport for crude oil separation
+  authors: Siyao Li, Ruijiao Dong, Valentina-Elena Musteata, Jihoon Kim, Neel D. Rangnekar, J. R. Johnson, Bennett D. Marshall, Stefan Chisca, Jia Xu, Scott Hoy, Benjamin A. McCool, Suzana P. Nunes, Zhiwei Jiang, and Andrew G. Livingston
+  venue: Science
+  year: 2022
+  featured: true
+  doi: 10.1126/science.abq0598
+  url: https://doi.org/10.1126/science.abq0598
+  summary: This work introduces hydrophobic polyamide nanofilms fabricated by interfacial polymerization from self-assembled vesicles, enabling rapid transport and class-based separation of crude-oil fractions with high permeance.
+  support: Supported by ExxonMobil Research and Engineering, UKRI EPSRC, a European Research Council grant, King Abdullah University of Science and Technology, and EPSRC.
+
+- title: Thermally rearranged polymer membranes for desalination
+  authors: Ji Hoon Kim, Sang Hyun Park, Moon Joo Lee, Sang Min Lee, Won Hyo Lee, Kang Hyuck Lee, Na Rae Kang, Hye Jin Jo, Jeong F. Kim, Enrico Drioli, and Young Moo Lee
+  venue: Energy & Environmental Science
+  year: 2016
+  featured: false
+  doi: 10.1039/C5EE03768A
+  url: https://doi.org/10.1039/C5EE03768A
+  summary: This study demonstrates thermally rearranged polybenzoxazole-co-imide electrospun nanocomposite membranes for membrane distillation and membrane crystallization, showing improved long-term stability while maintaining high porosity and water flux.
+  support: Supported by the Nano Material Technology Development Program through the National Research Foundation funded by the Ministry of Science, ICT and Future Planning.
+
+- title: N-aryl-linked spirocyclic polymers for membrane separations of complex hydrocarbon mixtures
+  authors: Kirstie A. Thompson, Ronita Mathias, Daeok Kim, Jihoon Kim, Neel Rangnekar, J. R. Johnson, Scott J. Hoy, Irene Bechis, Andrew Tarzia, Kim E. Jelfs, Benjamin A. McCool, Andrew G. Livingston, Ryan P. Lively, and M. G. Finn
+  venue: Science
+  year: 2020
+  featured: false
+  doi: 10.1126/science.aba9806
+  url: https://doi.org/10.1126/science.aba9806
+  summary: This work develops polymers of intrinsic microporosity for membrane-based separations of complex hydrocarbon mixtures and demonstrates separation of light shale crude oil with much lower molecular weight cutoffs than previous systems.
+  support: Supported by ExxonMobil Research and Engineering, the Department of Education GAANN program, a Royal Society University Research Fellowship, a Royal Society Enhancement Grant, and a European Research Council grant.
