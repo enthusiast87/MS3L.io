@@ -176,6 +176,10 @@ a {
   margin: 0 0 14px;
 }
 
+.hero-side-heading {
+  margin-top: 22px !important;
+}
+
 .side-news-item {
   border-top: 1px dashed #d5ddd8;
   padding: 10px 0;

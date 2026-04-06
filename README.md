@@ -14,3 +14,13 @@ Recommended workflow:
 4. Run `bundle exec jekyll serve`.
 
 The current project also includes a reusable sub-agent workflow guide in `docs/subagent-playbook.md`.
+
+## Data Validation
+
+Run structured data validation before publishing updates:
+
+```bash
+python scripts/validate_site.py
+```
+
+This invokes `scripts/validate_site.rb` to validate YAML syntax and required fields for members, publications, and patents.

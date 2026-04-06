@@ -28,6 +28,15 @@ title: Home
         </div>
         {% endfor %}
         <a class="inline-link" href="{{ '/news' | relative_url }}">More news →</a>
+
+        <h3 class="hero-side-heading">Upcoming Events</h3>
+        {% for event in site.data.events limit: 3 %}
+        <div class="side-news-item">
+          <div class="list-meta">{{ event.date }}</div>
+          <strong>{{ event.title }}</strong>
+          <p>{{ event.location }}</p>
+        </div>
+        {% endfor %}
       </aside>
     </div>
   </div>

@@ -12,6 +12,10 @@
   </head>
   <body>
     {% assign current_url = page.url | replace: 'index.html', '' | replace: '.html', '/' %}
+    {% assign impact_active = false %}
+    {% if current_url == '/technology-transfer/' or current_url == '/industrial-collaboration/' or current_url == '/process-innovation/' %}
+      {% assign impact_active = true %}
+    {% endif %}
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
@@ -48,12 +52,12 @@
             </div>
           </details>
 
-          <details class="nav-group">
+          <details class="nav-group" {% if impact_active %}open{% endif %}>
             <summary>Impact</summary>
             <div class="nav-dropdown">
-              <a href="{{ '/technology-transfer' | relative_url }}">Technology Transfer</a>
-              <a href="{{ '/industrial-collaboration' | relative_url }}">Industrial Collaboration</a>
-              <a href="{{ '/process-innovation' | relative_url }}">Process Innovation</a>
+              <a class="{% if current_url == '/technology-transfer/' %}is-active{% endif %}" href="{{ '/technology-transfer' | relative_url }}">Technology Transfer</a>
+              <a class="{% if current_url == '/industrial-collaboration/' %}is-active{% endif %}" href="{{ '/industrial-collaboration' | relative_url }}">Industrial Collaboration</a>
+              <a class="{% if current_url == '/process-innovation/' %}is-active{% endif %}" href="{{ '/process-innovation' | relative_url }}">Process Innovation</a>
             </div>
           </details>
 
