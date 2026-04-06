@@ -3,6 +3,7 @@ layout: default
 title: Home
 ---
 {% assign lab = site.data.lab %}
+{% assign pi = site.data.members | where: "role_group", "Principal Investigator" | first %}
 
 <section class="hero">
   <div class="container hero-grid">
@@ -27,7 +28,11 @@ title: Home
     </div>
 
     <div class="hero-card">
-      <div class="hero-card-photo"></div>
+      <div class="hero-card-photo">
+        {% if pi.image_url %}
+        <img src="{{ pi.image_url }}" alt="{{ lab.principal_investigator.name }} portrait">
+        {% endif %}
+      </div>
       <h3>{{ lab.principal_investigator.name }}</h3>
       <div class="role">{{ lab.principal_investigator.role }}</div>
       <div class="hero-card-affiliation">{{ lab.principal_investigator.affiliation }}</div>
@@ -113,6 +118,23 @@ title: Home
 
 <section class="section">
   <div class="container">
+    <h2 class="section-title">{{ lab.projects.title }}</h2>
+    <p class="section-lead">{{ lab.projects.lead }}</p>
+
+    <div class="card-grid four">
+      {% for item in lab.projects.items %}
+      <div class="card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+        <p class="trl-badge">{{ item.trl }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
     <h2 class="section-title">{{ lab.approach.title }}</h2>
     <p class="section-lead">{{ lab.approach.lead }}</p>
 
@@ -123,6 +145,36 @@ title: Home
         <p>{{ item.summary }}</p>
       </div>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container split-grid">
+    <div>
+      <h2 class="section-title">{{ lab.experiences.title }}</h2>
+      <p class="section-lead">Selected translation and commercialization highlights from the original MS3L website.</p>
+      {% for item in lab.experiences.items %}
+      <div class="list-card">
+        <strong>{{ item.title }}</strong>
+        <p>{{ item.summary }}</p>
+        <p class="publication-doi">{{ item.detail }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div>
+      <h2 class="section-title">{{ lab.contact.title }}</h2>
+      <p class="section-lead">{{ lab.contact.note }}</p>
+      <div class="page-card contact-summary">
+        <p><strong>Address</strong><br>{{ lab.contact.address }}</p>
+        <p><strong>Email</strong><br>
+          {% for item in lab.contact.emails %}
+          <a class="inline-link" href="mailto:{{ item }}">{{ item }}</a>{% unless forloop.last %}<br>{% endunless %}
+          {% endfor %}
+        </p>
+        <p><strong>Phone</strong><br>{{ lab.contact.phone }}</p>
+        <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Get in touch</a>
+      </div>
     </div>
   </div>
 </section>

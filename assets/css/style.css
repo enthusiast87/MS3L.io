@@ -24,7 +24,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Source Sans 3", Arial, sans-serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
@@ -59,7 +59,7 @@ a {
 
 .brand-title {
   font-size: 1.4rem;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--strong);
@@ -133,7 +133,7 @@ a {
 
 .hero h1 {
   margin: 0 0 18px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 3.3rem;
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -241,7 +241,7 @@ a {
 
 .hero-card h3 {
   margin: 0 0 6px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 1.2rem;
   color: var(--strong);
 }
@@ -317,9 +317,15 @@ a {
   border-bottom: 1px solid #c9ddd7;
 }
 
+.section-soft {
+  background: linear-gradient(180deg, #f8f7f2 0%, #efede6 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
 .section-title {
   margin: 0 0 8px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 2rem;
   letter-spacing: -0.02em;
   color: var(--strong);
@@ -349,7 +355,7 @@ a {
 
 .card h3 {
   margin: 0 0 10px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 1.15rem;
   color: var(--strong);
 }
@@ -390,6 +396,15 @@ a {
   font-size: 0.94rem;
 }
 
+.list-card img {
+  max-width: 220px;
+  max-height: 84px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
 .page-wrap {
   padding: 56px 0 72px;
 }
@@ -401,7 +416,7 @@ a {
 .page-card h1 {
   margin-top: 0;
   margin-bottom: 12px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 2.2rem;
   letter-spacing: -0.02em;
   color: var(--strong);
@@ -409,7 +424,7 @@ a {
 
 .page-card h2 {
   margin: 24px 0 12px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 1.3rem;
   color: var(--strong);
 }
@@ -461,7 +476,7 @@ a {
 
 .profile-body h2 {
   margin: 0 0 8px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 2rem;
   color: var(--strong);
 }
@@ -488,6 +503,30 @@ a {
 
 .publication-support {
   margin: 10px 0 0;
+}
+
+.trl-badge {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #bddad4;
+  background: #ebf7f4;
+  color: var(--accent-strong) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700;
+}
+
+.contact-summary p {
+  margin: 0 0 14px;
+}
+
+.hero-card-photo img,
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 .site-footer {
