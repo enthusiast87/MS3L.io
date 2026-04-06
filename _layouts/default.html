@@ -7,11 +7,15 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
   <body>
     {% assign current_url = page.url | replace: 'index.html', '' | replace: '.html', '/' %}
+    {% assign impact_active = false %}
+    {% if current_url == '/technology-transfer/' or current_url == '/industrial-collaboration/' or current_url == '/process-innovation/' %}
+      {% assign impact_active = true %}
+    {% endif %}
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
@@ -21,11 +25,43 @@
 
         <nav class="site-nav">
           <a class="{% if current_url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
-          <a class="{% if current_url == '/introduction/' %}is-active{% endif %}" href="{{ '/introduction' | relative_url }}">Introduction</a>
-          <a class="{% if current_url == '/research/' %}is-active{% endif %}" href="{{ '/research' | relative_url }}">Research</a>
-          <a class="{% if current_url == '/members/' %}is-active{% endif %}" href="{{ '/members' | relative_url }}">Members</a>
-          <a class="{% if current_url == '/publications/' %}is-active{% endif %}" href="{{ '/publications' | relative_url }}">Publications</a>
-          <a class="{% if current_url == '/news/' %}is-active{% endif %}" href="{{ '/news' | relative_url }}">News</a>
+
+          <details class="nav-group">
+            <summary>People</summary>
+            <div class="nav-dropdown">
+              <a class="{% if current_url == '/principal-investigator/' %}is-active{% endif %}" href="{{ '/principal-investigator' | relative_url }}">PI</a>
+              <a class="{% if current_url == '/members/' %}is-active{% endif %}" href="{{ '/members' | relative_url }}">Members</a>
+            </div>
+          </details>
+
+          <details class="nav-group">
+            <summary>Research</summary>
+            <div class="nav-dropdown">
+              <a class="{% if current_url == '/introduction/' %}is-active{% endif %}" href="{{ '/introduction' | relative_url }}">Introduction</a>
+              <a class="{% if current_url == '/research/' %}is-active{% endif %}" href="{{ '/research' | relative_url }}">Themes</a>
+              <a class="{% if current_url == '/projects/' %}is-active{% endif %}" href="{{ '/projects' | relative_url }}">Projects</a>
+            </div>
+          </details>
+
+          <details class="nav-group">
+            <summary>Achievements</summary>
+            <div class="nav-dropdown">
+              <a class="{% if current_url == '/publications/' %}is-active{% endif %}" href="{{ '/publications' | relative_url }}">Publications</a>
+              <a class="{% if current_url == '/patents/' %}is-active{% endif %}" href="{{ '/patents' | relative_url }}">Patents</a>
+              <a class="{% if current_url == '/news/' %}is-active{% endif %}" href="{{ '/news' | relative_url }}">News</a>
+            </div>
+          </details>
+
+          <details class="nav-group" {% if impact_active %}open{% endif %}>
+            <summary>Impact</summary>
+            <div class="nav-dropdown">
+              <a class="{% if current_url == '/technology-transfer/' %}is-active{% endif %}" href="{{ '/technology-transfer' | relative_url }}">Technology Transfer</a>
+              <a class="{% if current_url == '/industrial-collaboration/' %}is-active{% endif %}" href="{{ '/industrial-collaboration' | relative_url }}">Industrial Collaboration</a>
+              <a class="{% if current_url == '/process-innovation/' %}is-active{% endif %}" href="{{ '/process-innovation' | relative_url }}">Process Innovation</a>
+            </div>
+          </details>
+
+          <a class="{% if current_url == '/join-us/' %}is-active{% endif %}" href="{{ '/join-us' | relative_url }}">Join Us</a>
           <a class="{% if current_url == '/contact/' or current_url == '/contacts/' %}is-active{% endif %}" href="{{ '/contact' | relative_url }}">Contact</a>
         </nav>
       </div>
