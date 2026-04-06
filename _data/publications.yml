@@ -5,8 +5,6 @@
   featured: true
   doi: 10.1039/D0EE02927K
   url: https://doi.org/10.1039/D0EE02927K
-  summary: Widespread use of biofuels is inhibited by the significant energy burden of recovering fuel products from aqueous fermentation systems. This work describes a membrane-based extraction system for the recovery of fuel-grade biobutanol from fermentation broths with high purity while using substantially less energy than current technology options.
-  support: Supported by BP through the BP International Centre for Advanced Materials and the National Research Foundation of Korea Basic Science Research Program funded by the Ministry of Education.
 
 - title: Advancing membrane technology in organic liquids towards a sustainable future
   authors: Jihoon Kim, Jeong F. Kim, Zhiwei Jiang, and Andrew G. Livingston
@@ -15,35 +13,107 @@
   featured: true
   doi: 10.1038/s41893-025-01570-4
   url: https://doi.org/10.1038/s41893-025-01570-4
-  summary: This review highlights how membrane technology can drive sustainability in organic-liquid separations, with perspectives on promising materials, manufacturing processes, and industrial applications in terms of energy saving, process intensification, and environmental impact.
-  support: Supported by National Research Foundation projects in the Republic of Korea, UK Research and Innovation, and a European Research Council Advanced Grant.
 
 - title: Hydrophobic polyamide nanofilms provide rapid transport for crude oil separation
-  authors: Siyao Li, Ruijiao Dong, Valentina-Elena Musteata, Jihoon Kim, Neel D. Rangnekar, J. R. Johnson, Bennett D. Marshall, Stefan Chisca, Jia Xu, Scott Hoy, Benjamin A. McCool, Suzana P. Nunes, Zhiwei Jiang, and Andrew G. Livingston
+  authors: Siyao Li, Ruijiao Dong, Valentina-Elena Musteata, Jihoon Kim et al.
   venue: Science
   year: 2022
   featured: true
   doi: 10.1126/science.abq0598
   url: https://doi.org/10.1126/science.abq0598
-  summary: This work introduces hydrophobic polyamide nanofilms fabricated by interfacial polymerization from self-assembled vesicles, enabling rapid transport and class-based separation of crude-oil fractions with high permeance.
-  support: Supported by ExxonMobil Research and Engineering, UKRI EPSRC, a European Research Council grant, King Abdullah University of Science and Technology, and EPSRC.
 
 - title: Thermally rearranged polymer membranes for desalination
-  authors: Ji Hoon Kim, Sang Hyun Park, Moon Joo Lee, Sang Min Lee, Won Hyo Lee, Kang Hyuck Lee, Na Rae Kang, Hye Jin Jo, Jeong F. Kim, Enrico Drioli, and Young Moo Lee
+  authors: Ji Hoon Kim, Sang Hyun Park, Moon Joo Lee, Sang Min Lee et al.
   venue: Energy & Environmental Science
   year: 2016
-  featured: false
+  featured: true
   doi: 10.1039/C5EE03768A
   url: https://doi.org/10.1039/C5EE03768A
-  summary: This study demonstrates thermally rearranged polybenzoxazole-co-imide electrospun nanocomposite membranes for membrane distillation and membrane crystallization, showing improved long-term stability while maintaining high porosity and water flux.
-  support: Supported by the Nano Material Technology Development Program through the National Research Foundation funded by the Ministry of Science, ICT and Future Planning.
 
 - title: N-aryl-linked spirocyclic polymers for membrane separations of complex hydrocarbon mixtures
-  authors: Kirstie A. Thompson, Ronita Mathias, Daeok Kim, Jihoon Kim, Neel Rangnekar, J. R. Johnson, Scott J. Hoy, Irene Bechis, Andrew Tarzia, Kim E. Jelfs, Benjamin A. McCool, Andrew G. Livingston, Ryan P. Lively, and M. G. Finn
+  authors: Kirstie A. Thompson, Ronita Mathias, Daeok Kim, Jihoon Kim et al.
   venue: Science
   year: 2020
   featured: false
   doi: 10.1126/science.aba9806
   url: https://doi.org/10.1126/science.aba9806
-  summary: This work develops polymers of intrinsic microporosity for membrane-based separations of complex hydrocarbon mixtures and demonstrates separation of light shale crude oil with much lower molecular weight cutoffs than previous systems.
-  support: Supported by ExxonMobil Research and Engineering, the Department of Education GAANN program, a Royal Society University Research Fellowship, a Royal Society Enhancement Grant, and a European Research Council grant.
+
+- title: Two-dimensional metal-organic framework membrane enabling high-flux molecular separation in hydrophobic solvents
+  authors: Jinhyuk Choi et al.
+  venue: Science
+  year: 2024
+  featured: false
+  doi: 10.1126/science.adk8377
+  url: https://doi.org/10.1126/science.adk8377
+
+- title: Rationally designed additive towards industrially attractive solvent resistant nanofiltration membrane with superior selectivity and processability
+  authors: Khilola Kholmizaeva et al.
+  venue: "Applied Catalysis B: Environment and Energy"
+  year: 2025
+  featured: false
+  doi: 10.1016/j.apcatb.2025.125968
+  url: https://doi.org/10.1016/j.apcatb.2025.125968
+
+- title: Energy efficient valorization of cellulose to 5-chloromethylfurfural through membrane-assisted catalyst recycle and process simulation
+  authors: Xin Xing et al.
+  venue: Chemical Engineering Journal
+  year: 2025
+  featured: false
+  doi: 10.1016/j.cej.2025.164366
+  url: https://doi.org/10.1016/j.cej.2025.164366
+
+- title: Elucidation of charge transport and catalytic role in water dissociation for a bipolar membrane toward practical electrodialysis operation
+  authors: Yourim Noh et al.
+  venue: ACS Sustainable Chemistry & Engineering
+  year: 2024
+  featured: false
+  doi: 10.1021/acssuschemeng.4c04537
+  url: https://doi.org/10.1021/acssuschemeng.4c04537
+
+- title: Solubility-diffusivity engineering of ultrafast membranes for molecular separation in hydrophobic solvents
+  authors: Jia Xu et al.
+  venue: Science
+  year: 2024
+  featured: false
+  doi: 10.1126/science.adk8377
+  url: https://doi.org/10.1126/science.adk8377
+
+- title: Green process optimization for dehydrogenation of glycerol to lactic acid via integrated membrane and separation simulation approaches
+  authors: Ali Awad et al.
+  venue: Chemical Engineering Journal
+  year: 2024
+  featured: false
+  doi: 10.1016/j.cej.2024.151536
+  url: https://doi.org/10.1016/j.cej.2024.151536
+
+- title: Effect of end-group cross-linking on transport properties of sulfonated poly(phenylene sulfide nitrile)s for proton exchange membranes
+  authors: Na Rae Kang et al.
+  venue: Journal of Power Sources
+  year: 2016
+  featured: false
+  doi: 10.1016/j.jpowsour.2016.01.051
+  url: https://doi.org/10.1016/j.jpowsour.2016.01.051
+
+- title: Electrochemical performance of a thermally rearranged polybenzoxazole nanocomposite membrane as a separator for lithium-ion batteries at elevated temperature
+  authors: Moo Joo Lee, Jun-Ki Hwang, Ji Hoon Kim et al.
+  venue: Journal of Power Sources
+  year: 2016
+  featured: false
+  doi: 10.1016/j.jpowsour.2015.11.068
+  url: https://doi.org/10.1016/j.jpowsour.2015.11.068
+
+- title: "Thermally induced phase separation and electrospinning methods for emerging membrane applications: a review"
+  authors: Jeong F. Kim, Ji Hoon Kim, Young Moo Lee, Enrico Drioli
+  venue: AIChE Journal
+  year: 2016
+  featured: false
+  doi: 10.1002/aic.15076
+  url: https://doi.org/10.1002/aic.15076
+
+- title: Highly lithium-ion conductive battery separators from thermally rearranged polybenzoxazole
+  authors: Moon Joo Lee, Ji Hoon Kim et al.
+  venue: Chemical Communications
+  year: 2015
+  featured: false
+  doi: 10.1039/C4CC09411E
+  url: https://doi.org/10.1039/C4CC09411E

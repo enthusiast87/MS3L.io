@@ -12,11 +12,14 @@ title: Members
       <p>{{ lab.members.lead }}</p>
     </div>
 
-    {% assign principal_investigators = members | where: "role_group", "Principal Investigator" %}
-    {% for member in principal_investigators %}
+{% for member in members %}
     <section class="profile-section">
       <div class="profile-card">
-        <div class="profile-photo"></div>
+        <div class="profile-photo">
+          {% if member.image_url %}
+          <img src="{{ member.image_url }}" alt="{{ member.name }} profile photo">
+          {% endif %}
+        </div>
         <div class="profile-body">
           <div class="profile-label">{{ member.role_group }}</div>
           <h2>{{ member.name }}</h2>
@@ -30,6 +33,14 @@ title: Members
           {% if member.research %}
           <p><strong>Research focus:</strong> {{ member.research }}</p>
           {% endif %}
+          {% if member.achievements %}
+          <p><strong>Highlights:</strong></p>
+          <ul>
+            {% for item in member.achievements %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
           {% if member.email %}
           <p><strong>Email:</strong> <a class="inline-link" href="mailto:{{ member.email }}">{{ member.email }}</a></p>
           {% endif %}
@@ -42,8 +53,7 @@ title: Members
       <div class="page-card">
         <h2>Team updates</h2>
         <p>
-          Additional student, researcher, and collaborator profiles from the original Google Site will be continuously added as profile permissions are confirmed.
-          This page keeps the PI profile and group structure ready for expanding the full MS<sup>3</sup>L roster.
+          This member list is migrated from the current Google Site structure and includes PI, graduate students, and postdoctoral researchers.
         </p>
       </div>
     </section>

@@ -3,6 +3,7 @@ layout: default
 title: Home
 ---
 {% assign lab = site.data.lab %}
+{% assign pi = site.data.members | where: "role_group", "Principal Investigator" | first %}
 
 <section class="hero">
   <div class="container hero-grid">
@@ -27,7 +28,11 @@ title: Home
     </div>
 
     <div class="hero-card">
-      <div class="hero-card-photo"></div>
+      <div class="hero-card-photo">
+        {% if pi.image_url %}
+        <img src="{{ pi.image_url }}" alt="{{ lab.principal_investigator.name }} portrait">
+        {% endif %}
+      </div>
       <h3>{{ lab.principal_investigator.name }}</h3>
       <div class="role">{{ lab.principal_investigator.role }}</div>
       <div class="hero-card-affiliation">{{ lab.principal_investigator.affiliation }}</div>
