@@ -5,190 +5,97 @@ title: Home
 {% assign lab = site.data.lab %}
 {% assign pi = site.data.members | where: "role_group", "Principal Investigator" | first %}
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <div class="eyebrow">{{ lab.subtitle }}</div>
-      <h1>{{ lab.hero.title }}</h1>
-      <p>{{ lab.hero.body }}</p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="{{ lab.hero.primary_cta_url | relative_url }}">{{ lab.hero.primary_cta_label }}</a>
-        <a class="btn btn-secondary" href="{{ lab.hero.secondary_cta_url | relative_url }}">{{ lab.hero.secondary_cta_label }}</a>
+<section class="hero hero-clean">
+  <div class="container">
+    <div class="hero-board">
+      <div class="hero-main">
+        <div class="eyebrow">{{ lab.subtitle }}</div>
+        <h1>{{ lab.hero.title }}</h1>
+        <p>{{ lab.hero.body }}</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="{{ '/research' | relative_url }}">Research</a>
+          <a class="btn btn-secondary" href="{{ '/publications' | relative_url }}">Publications</a>
+          <a class="btn btn-secondary" href="{{ '/join-us' | relative_url }}">Join Us</a>
+        </div>
       </div>
 
-      <div class="hero-metrics">
-        {% for metric in lab.hero.metrics %}
-        <div class="metric-card">
-          <div class="metric-label">{{ metric.label }}</div>
-          <strong>{{ metric.value }}</strong>
+      <aside class="hero-side">
+        <h3>Notice / News</h3>
+        {% for item in site.data.news limit: 4 %}
+        <div class="side-news-item">
+          <div class="list-meta">{{ item.date }}</div>
+          <strong>{{ item.title }}</strong>
         </div>
         {% endfor %}
-      </div>
-    </div>
-
-    <div class="hero-card">
-      <div class="hero-card-photo">
-        {% if pi.image_url %}
-        <img src="{{ pi.image_url }}" alt="{{ lab.principal_investigator.name }} portrait">
-        {% endif %}
-      </div>
-      <h3>{{ lab.principal_investigator.name }}</h3>
-      <div class="role">{{ lab.principal_investigator.role }}</div>
-      <div class="hero-card-affiliation">{{ lab.principal_investigator.affiliation }}</div>
-      <p>{{ lab.principal_investigator.summary }}</p>
-      <div class="hero-card-links">
-        {% for link in lab.principal_investigator.links %}
-        <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="credibility-strip">
-  <div class="container credibility-grid">
-    {% for item in lab.hero.credibility %}
-    <div class="credibility-item">
-      <div class="credibility-label">{{ item.label }}</div>
-      <strong>{{ item.value }}</strong>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">{{ lab.research.title }}</h2>
-    <p class="section-lead">{{ lab.research.lead }}</p>
-
-    <div class="card-grid four">
-      {% for item in site.data.research %}
-      <div class="card">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.summary }}</p>
-        {% if item.topics %}
-        <ul class="topic-list">
-          {% for topic in item.topics limit: 3 %}
-          <li>{{ topic }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </div>
-      {% endfor %}
+        <a class="inline-link" href="{{ '/news' | relative_url }}">More news →</a>
+      </aside>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container split-grid">
-    <div>
-      <h2 class="section-title">{{ lab.featured_outputs.title }}</h2>
-      <p class="section-lead">{{ lab.featured_outputs.lead }}</p>
-
-      {% assign featured_publications = site.data.publications | where: "featured", true %}
-      {% for item in featured_publications %}
-      <div class="list-card">
-        <div class="list-meta">{{ item.venue }} | {{ item.year }}</div>
-        {% if item.url %}
-        <strong><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></strong>
-        {% else %}
-        <strong>{{ item.title }}</strong>
-        {% endif %}
-        {% if item.doi %}
-        <p>DOI: <a class="inline-link" href="{{ item.url }}">{{ item.doi }}</a></p>
-        {% endif %}
-      </div>
-      {% endfor %}
-    </div>
-
-    <div>
-      <h2 class="section-title">{{ lab.news.title }}</h2>
-      <p class="section-lead">{{ lab.news.lead }}</p>
-
-      {% for item in site.data.news limit: 3 %}
-      <div class="list-card">
-        <div class="list-meta">{{ item.date }}</div>
-        <strong>{{ item.title }}</strong>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">{{ lab.projects.title }}</h2>
-    <p class="section-lead">{{ lab.projects.lead }}</p>
-
-    <div class="card-grid four">
-      {% for item in lab.projects.items %}
-      <div class="card">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.summary }}</p>
-        <p class="trl-badge">{{ item.trl }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">{{ lab.approach.title }}</h2>
-    <p class="section-lead">{{ lab.approach.lead }}</p>
-
-    <div class="card-grid three">
-      {% for item in lab.approach.areas %}
-      <div class="card">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.summary }}</p>
-      </div>
-      {% endfor %}
-    </div>
+  <div class="container card-grid three">
+    <a class="card card-link" href="{{ '/principal-investigator' | relative_url }}">
+      <h3>Principal Investigator</h3>
+      <p>{{ pi.name }} | {{ pi.position }}</p>
+    </a>
+    <a class="card card-link" href="{{ '/members' | relative_url }}">
+      <h3>Members</h3>
+      <p>Graduate students and postdoctoral researchers in MS3L.</p>
+    </a>
+    <a class="card card-link" href="{{ '/projects' | relative_url }}">
+      <h3>Current Projects</h3>
+      <p>National R&D and CCU related ongoing projects.</p>
+    </a>
   </div>
 </section>
 
 <section class="section section-soft">
   <div class="container split-grid">
     <div>
-      <h2 class="section-title">{{ lab.experiences.title }}</h2>
-      <p class="section-lead">Selected translation and commercialization highlights from the original MS3L website.</p>
-      {% for item in lab.experiences.items %}
-      <div class="list-card">
-        <strong>{{ item.title }}</strong>
-        <p>{{ item.summary }}</p>
-        <p class="publication-doi">{{ item.detail }}</p>
+      <h2 class="section-title">Research Themes</h2>
+      <div class="card-grid two">
+        {% for item in site.data.research %}
+        <div class="card">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.summary }}</p>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
+
     <div>
-      <h2 class="section-title">{{ lab.contact.title }}</h2>
-      <p class="section-lead">{{ lab.contact.note }}</p>
       <div class="page-card contact-summary">
-        <p><strong>Address</strong><br>{{ lab.contact.address }}</p>
-        <p><strong>Email</strong><br>
+        <h2>Contact</h2>
+        <p><strong>{{ lab.contact.institution }}</strong></p>
+        <p>{{ lab.contact.address }}</p>
+        <p>
           {% for item in lab.contact.emails %}
           <a class="inline-link" href="mailto:{{ item }}">{{ item }}</a>{% unless forloop.last %}<br>{% endunless %}
           {% endfor %}
         </p>
-        <p><strong>Phone</strong><br>{{ lab.contact.phone }}</p>
-        <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Get in touch</a>
+        <p><strong>TEL.</strong> {{ lab.contact.phone }}</p>
+        <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Contact us</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-emphasis">
-  <div class="container cta-panel">
-    <div>
-      <h2 class="section-title">{{ lab.join.title }}</h2>
-      <p class="section-lead">{{ lab.join.body }}</p>
-    </div>
-    <div class="cta-actions">
-      {% for item in lab.join.actions %}
-      <a class="btn {% if forloop.first %}btn-primary{% else %}btn-secondary{% endif %}" href="{{ item.url | relative_url }}">{{ item.label }}</a>
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Recent Publications</h2>
+    <div class="card-grid two">
+      {% for item in site.data.publications limit: 6 %}
+      <div class="list-card publication-entry">
+        <div class="list-meta">{{ item.year }} · {{ item.venue }}</div>
+        {% if item.url %}
+        <strong><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></strong>
+        {% else %}
+        <strong>{{ item.title }}</strong>
+        {% endif %}
+      </div>
       {% endfor %}
     </div>
+    <p><a class="inline-link" href="{{ '/publications' | relative_url }}">View full publication list →</a></p>
   </div>
 </section>
