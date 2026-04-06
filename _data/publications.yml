@@ -1,119 +1,230 @@
-- title: Low energy-intensive production of fuel-grade bio-butanol enabled by membrane-based extraction
-  authors: J. H. Kim, M. Cook, L. Peeva, J. Yeo, L. W. Bolton, Y. M. Lee, and A. G. Livingston
-  venue: Energy & Environmental Science
-  year: 2020
+- title: "Energy-Efficient Chemical Recycling of Polyethylene Terephthalate via Water-Free Glycolysis Process Using Membrane Technology"
+  authors: Seung Hwan Kim, Hoik Lee, Jieun Kang, Jeong Sun Hwang, Min Gyu Shin, Jung-Hyun Lee, Jihoon Kim, Jeong F. Kim
+  venue: ChemSusChem
+  year: 2026
+  doi: 10.1002/cssc.202502180
+  url: https://doi.org/10.1002/cssc.202502180
   featured: true
-  doi: 10.1039/D0EE02927K
-  url: https://doi.org/10.1039/D0EE02927K
 
-- title: Advancing membrane technology in organic liquids towards a sustainable future
-  authors: Jihoon Kim, Jeong F. Kim, Zhiwei Jiang, and Andrew G. Livingston
+- title: "Transfer hydrogenation-driven co-production of gluconic acid and sorbitol from glucose at room temperature using bifunctional PtSn/ZrO2 catalyst"
+  authors: Ali Awad, Fajar Prihatno, Khilola Kholmizaeva, Hyun-Wook Jeong, Haerin Lee et al.
+  venue: "Applied Catalysis B: Environment and Energy"
+  year: 2026
+  doi: 10.1016/j.apcatb.2026.126387
+  url: https://doi.org/10.1016/j.apcatb.2026.126387
+  featured: true
+
+- title: "Simultaneous CO2 mineralization and organic acid purification via diffusion dialysis process"
+  authors: Jieun Kang, Suyeon Park, Seung Hwan Kim, Yourim Noh, Dae Woo Kim et al.
+  venue: Chemical Engineering Journal
+  year: 2025
+  doi: 10.1016/j.cej.2025.165207
+  url: https://doi.org/10.1016/j.cej.2025.165207
+  featured: true
+
+- title: "Advancing membrane technology in organic liquids towards a sustainable future"
+  authors: Jihoon Kim, Jeong F. Kim, Zhiwei Jiang, Andrew G. Livingston
   venue: Nature Sustainability
   year: 2025
-  featured: true
   doi: 10.1038/s41893-025-01570-4
   url: https://doi.org/10.1038/s41893-025-01570-4
+  featured: true
 
-- title: Hydrophobic polyamide nanofilms provide rapid transport for crude oil separation
-  authors: Siyao Li, Ruijiao Dong, Valentina-Elena Musteata, Jihoon Kim et al.
+- title: "Concurrent Production of Xylonic Acid and Xylitol from Xylose Through Sustainable Bipolar Membrane Electrodialysis"
+  authors: Ali Awad, Yourim Noh, Khilola Kholmirzaeva, Suyeon Park et al.
+  venue: ACS Sustainable Chemistry & Engineering
+  year: 2025
+  doi: 10.1021/acssuschemeng.5c00612
+  url: https://doi.org/10.1021/acssuschemeng.5c00612
+  featured: false
+
+- title: "Process modeling and assessment of waste polystyrene pyrolysis: Comparing catalytic and thermal methods"
+  authors: Jisoo Kim, Gwang-Nam Yun, In-Hyoup Song, Kwang Ho Song, Seung-Jun Baek et al.
+  venue: Chemical Engineering Journal
+  year: 2025
+  doi: 10.1016/j.cej.2025.159261
+  url: https://doi.org/10.1016/j.cej.2025.159261
+  featured: false
+
+- title: "Scalable membrane-assisted ion exchange (MEM-IE) strategy for organic acid purification in biorefinery process"
+  authors: Jieun Kang, Seung Hwan Kim, Young Kyu Hwang, Bao Tran Duy Nguyen, Jihoon Kim, Jeong F. Kim
+  venue: Journal of Membrane Science
+  year: 2025
+  doi: 10.1016/j.memsci.2024.123442
+  url: https://doi.org/10.1016/j.memsci.2024.123442
+  featured: false
+
+- title: "Simultaneous Coproduction of Xylonic Acid and Xylitol Leveraging In-situ Hydrogen Generation and Utilization from Xylose"
+  authors: Ali Awad, Anil H. Valekar, Kyung-Ryul Oh, Fajar Prihatno, Jaehoon Jung et al.
+  venue: ChemSusChem
+  year: 2024
+  doi: 10.1002/cssc.202401651
+  url: https://doi.org/10.1002/cssc.202401651
+  featured: false
+
+- title: "Ir(triNHC)-Catalyzed Upcycling of Waste PET for Lactic Acid Production with Sustainable Isolation via Bipolar Membrane Electrodialysis"
+  authors: Mi-hyun Lee, Ji Hoon Kim, Young Kyu Hwang, Hye-Young Jang
+  venue: Angewandte Chemie
+  year: 2024
+  doi: 10.1002/ange.202410003
+  url: https://doi.org/10.1002/ange.202410003
+  featured: false
+
+- title: "Hydrophobic Polyamide Nanofilms Provide Rapid Transport for Crude Oil Separation"
+  authors: Siyao Li, Ruijiao Dong, Valentina-Elena Musteata, Ji Hoon Kim et al.
   venue: Science
   year: 2022
-  featured: true
   doi: 10.1126/science.abq0598
   url: https://doi.org/10.1126/science.abq0598
-
-- title: Thermally rearranged polymer membranes for desalination
-  authors: Ji Hoon Kim, Sang Hyun Park, Moon Joo Lee, Sang Min Lee et al.
-  venue: Energy & Environmental Science
-  year: 2016
   featured: true
-  doi: 10.1039/C5EE03768A
-  url: https://doi.org/10.1039/C5EE03768A
 
-- title: N-aryl-linked spirocyclic polymers for membrane separations of complex hydrocarbon mixtures
-  authors: Kirstie A. Thompson, Ronita Mathias, Daeok Kim, Jihoon Kim et al.
+- title: "N-Aryl Linked Spirocyclic Polymers for Membrane Separations of Complex Hydrocarbon Mixtures"
+  authors: Kirstie A. Thompson, Ronita Mathias, Daeok Kim, Ji Hoon Kim et al.
   venue: Science
   year: 2020
-  featured: false
   doi: 10.1126/science.aba9806
   url: https://doi.org/10.1126/science.aba9806
-
-- title: Two-dimensional metal-organic framework membrane enabling high-flux molecular separation in hydrophobic solvents
-  authors: Jinhyuk Choi et al.
-  venue: Science
-  year: 2024
   featured: false
-  doi: 10.1126/science.adk8377
-  url: https://doi.org/10.1126/science.adk8377
 
-- title: Rationally designed additive towards industrially attractive solvent resistant nanofiltration membrane with superior selectivity and processability
-  authors: Khilola Kholmizaeva et al.
-  venue: "Applied Catalysis B: Environment and Energy"
-  year: 2025
+- title: "Low energy-intensive production of fuel-grade bio-butanol enabled by membrane-based extraction"
+  authors: Ji Hoon Kim, Marcus Cook, Ludmila Peeva, Jet Yeo, Leslie W. Bolton, Young Moo Lee, Andrew G. Livingston
+  venue: Energy & Environmental Science
+  year: 2020
+  doi: 10.1039/D0EE02927K
+  url: https://doi.org/10.1039/D0EE02927K
+  featured: true
+
+- title: "Hybrid Configuration of Membrane Distillation Pressure-Retarded Osmosis and Reverse Osmosis with Membrane Distillation"
+  authors: Ji Hoon Kim
+  venue: Membrane Distillation Materials and Processes (Book Chapter)
+  year: 2020
+  url: https://novapublishers.com/shop/membrane-distillation-materials-and-processes/
   featured: false
-  doi: 10.1016/j.apcatb.2025.125968
-  url: https://doi.org/10.1016/j.apcatb.2025.125968
 
-- title: Energy efficient valorization of cellulose to 5-chloromethylfurfural through membrane-assisted catalyst recycle and process simulation
-  authors: Xin Xing et al.
-  venue: Chemical Engineering Journal
-  year: 2025
+- title: "Thin Film Composite on Fluorinated Thermally Rearranged Polymer Nanofibrous Membrane Achieves Power Density of 87 W·m-2 in Pressure Retarded Osmosis"
+  authors: Sun Ju Moon, Ji Hoon Kim, Jong Geun Seong, Won Hee Lee, Sang Hyun Park et al.
+  venue: Journal of Membrane Science
+  year: 2020
+  doi: 10.1016/j.memsci.2020.118120
+  url: https://doi.org/10.1016/j.memsci.2020.118120
   featured: false
-  doi: 10.1016/j.cej.2025.164366
-  url: https://doi.org/10.1016/j.cej.2025.164366
 
-- title: Elucidation of charge transport and catalytic role in water dissociation for a bipolar membrane toward practical electrodialysis operation
-  authors: Yourim Noh et al.
-  venue: ACS Sustainable Chemistry & Engineering
-  year: 2024
+- title: "A highly robust and water permeable thin film composite membranes for pressure retarded osmosis generating 26 W·m−2 at 21 bar"
+  authors: Sun Ju Moon, Sang Min Lee, Ji Hoon Kim, Sang Hyun Park, Ho Hyun Wang et al.
+  venue: Desalination
+  year: 2020
+  doi: 10.1016/j.desal.2020.114409
+  url: https://doi.org/10.1016/j.desal.2020.114409
   featured: false
-  doi: 10.1021/acssuschemeng.4c04537
-  url: https://doi.org/10.1021/acssuschemeng.4c04537
 
-- title: Solubility-diffusivity engineering of ultrafast membranes for molecular separation in hydrophobic solvents
-  authors: Jia Xu et al.
-  venue: Science
-  year: 2024
+- title: "Lithium recovery from artificial brine using energy-efficient membrane distillation and nanofiltration"
+  authors: Sang Hyun Park, Ji Hoon Kim, Sun Ju Moon, Jun Tae Jung, Ho Hyun Wang et al.
+  venue: Journal of Membrane Science
+  year: 2020
+  doi: 10.1016/j.memsci.2019.117683
+  url: https://doi.org/10.1016/j.memsci.2019.117683
   featured: false
-  doi: 10.1126/science.adk8377
-  url: https://doi.org/10.1126/science.adk8377
 
-- title: Green process optimization for dehydrogenation of glycerol to lactic acid via integrated membrane and separation simulation approaches
-  authors: Ali Awad et al.
-  venue: Chemical Engineering Journal
-  year: 2024
+- title: "A compact and scalable fabrication method for robust thin film composite membrane"
+  authors: Ji Hoon Kim, Marcus Cook, Sang Hyun Park, Sun Ju Moon, Jeong F. Kim et al.
+  venue: Green Chemistry
+  year: 2018
+  doi: 10.1039/C8GC00731D
+  url: https://doi.org/10.1039/C8GC00731D
   featured: false
-  doi: 10.1016/j.cej.2024.151536
-  url: https://doi.org/10.1016/j.cej.2024.151536
 
-- title: Effect of end-group cross-linking on transport properties of sulfonated poly(phenylene sulfide nitrile)s for proton exchange membranes
-  authors: Na Rae Kang et al.
+- title: "A robust thin film composite membrane incorporating thermally rearranged polymer support for organic solvent nanofiltration and pressure retarded osmosis"
+  authors: Ji Hoon Kim, Sun Ju Moon, Sang Hyun Park, Marcus Cook, Andrew G. Livingston, Young Moo Lee
+  venue: Journal of Membrane Science
+  year: 2018
+  doi: 10.1016/j.memsci.2018.01.008
+  url: https://doi.org/10.1016/j.memsci.2018.01.008
+  featured: false
+
+- title: "Enhanced hydrophobic fluorine-containing thermally rearranged nanofibrous membranes for desalination via membrane distillation"
+  authors: Sang Hyun Park, Ji Hoon Kim, Sun Ju Moon, Enrico Drioli, Young Moo Lee
+  venue: Journal of Membrane Science
+  year: 2017
+  doi: 10.1016/j.memsci.2017.10.065
+  url: https://doi.org/10.1016/j.memsci.2017.10.065
+  featured: false
+
+- title: "Open-source predictive simulators for scale-up of direct contact membrane distillation modules for seawater desalination"
+  authors: Guangxi Dong, Jeong F. Kim, Ji Hoon Kim, Enrico Drioli, Young Moo Lee
+  venue: Desalination
+  year: 2017
+  doi: 10.1016/j.desal.2016.08.025
+  url: https://doi.org/10.1016/j.desal.2016.08.025
+  featured: false
+
+- title: "Effect of end-group cross-linking on transport properties of sulfonated poly(phenylene sulfide nitrile)s for proton exchange membranes"
+  authors: Na Rae Kang, So Young Lee, Dong Won Shin, Doo Sung Hwang, Kang Hyuck Lee et al.
   venue: Journal of Power Sources
   year: 2016
-  featured: false
   doi: 10.1016/j.jpowsour.2016.01.051
   url: https://doi.org/10.1016/j.jpowsour.2016.01.051
+  featured: false
 
-- title: Electrochemical performance of a thermally rearranged polybenzoxazole nanocomposite membrane as a separator for lithium-ion batteries at elevated temperature
-  authors: Moo Joo Lee, Jun-Ki Hwang, Ji Hoon Kim et al.
+- title: "Electrochemical performance of a thermally rearranged polybenzoxazole nanocomposite membrane as a separator for lithium-ion batteries at elevated temperature"
+  authors: Moo Joo Lee, Jun-Ki Hwang, Ji Hoon Kim, Hyung-Seok Lim, Yang-Kook Sun et al.
   venue: Journal of Power Sources
   year: 2016
-  featured: false
   doi: 10.1016/j.jpowsour.2015.11.068
   url: https://doi.org/10.1016/j.jpowsour.2015.11.068
+  featured: false
 
-- title: "Thermally induced phase separation and electrospinning methods for emerging membrane applications: a review"
+- title: "Thermally induced phase separation and electrospinning methods for emerging membrane applications a review"
   authors: Jeong F. Kim, Ji Hoon Kim, Young Moo Lee, Enrico Drioli
   venue: AIChE Journal
   year: 2016
-  featured: false
   doi: 10.1002/aic.15076
   url: https://doi.org/10.1002/aic.15076
+  featured: false
 
-- title: Highly lithium-ion conductive battery separators from thermally rearranged polybenzoxazole
-  authors: Moon Joo Lee, Ji Hoon Kim et al.
+- title: "Thermally rearranged polymer membranes for desalination"
+  authors: Ji Hoon Kim, Sang Hyun Park, Moon Joo Lee, Sang Min Lee, Won Hyo Lee et al.
+  venue: Energy & Environmental Science
+  year: 2016
+  doi: 10.1039/C5EE03768A
+  url: https://doi.org/10.1039/C5EE03768A
+  featured: false
+
+- title: "Highly lithium-ion conductive battery separators from thermally rearranged polybenzoxazole"
+  authors: Moon Joo Lee, Ji Hoon Kim, Hyung-Seok Lim, So Young Lee, Hyung Kyun Yu et al.
   venue: Chemical Communications
   year: 2015
-  featured: false
   doi: 10.1039/C4CC09411E
   url: https://doi.org/10.1039/C4CC09411E
+  featured: false
+
+- title: "Dually cross-linked polymer electrolyte membranes for direct methanol fuel cells"
+  authors: Won Hyo Lee, Kang Hyuck Lee, Dong Won Shin, Doo Sung Hwang, Na Rae Kang et al.
+  venue: Journal of Power Sources
+  year: 2015
+  doi: 10.1016/j.jpowsour.2015.01.191
+  url: https://doi.org/10.1016/j.jpowsour.2015.01.191
+  featured: false
+
+- title: "Microporous poly(vinylidene fluoride) hollow fiber membranes fabricated with PolarClean as water-soluble green diluent and additives"
+  authors: Naser Tavajohi Hassankiadeh, Zhaoliang Cui, Ji Hoon Kim, Dong Won Shin, Suk Young Lee et al.
+  venue: Journal of Membrane Science
+  year: 2015
+  doi: 10.1016/j.memsci.2015.01.031
+  url: https://doi.org/10.1016/j.memsci.2015.01.031
+  featured: false
+
+- title: "Proton conducting composite sulfonated polymer membrane for medium temperature and low relative humidity fuel cells"
+  authors: Dong Won Shin, Na Rae Kang, Kang Hyuck Lee, Doo Hee Cho, Ji Hoon Kim et al.
+  venue: Journal of Power Sources
+  year: 2014
+  doi: 10.1016/j.jpowsour.2014.03.116
+  url: https://doi.org/10.1016/j.jpowsour.2014.03.116
+  featured: false
+
+- title: "PVDF hollow fiber membranes prepared from green diluent via thermally induced phase separation effect of PVDF molecular weight"
+  authors: Naser Tavajohi Hassankiadeh, Zhaoliang Cui, Ji Hoon Kim, Dong Won Shin, Aldo Sanguineti et al.
+  venue: Journal of Membrane Science
+  year: 2014
+  doi: 10.1016/j.memsci.2014.07.060
+  url: https://doi.org/10.1016/j.memsci.2014.07.060
+  featured: false

@@ -88,20 +88,17 @@ introduction:
 
 projects:
   title: Current Research Projects
-  lead: The Google Site highlights several ongoing projects spanning carbon utilization, demonstration-scale process development, and sustainable separation systems.
+  lead: Ongoing national and institute-led projects migrated from the original MS3L website.
   items:
-    - title: Carbon Capture and Utilization (CCU) with digital transformation
-      summary: Development of demonstration technology for carbon-neutral chemical processes utilizing digital transformation.
+    - title: Development of demonstration technology for carbon-neutral chemical process with digital transformation
+      summary: Carbon-neutral process demonstration project integrating CCU technologies with digital transformation workflows.
       trl: TRL 3 to 6
-    - title: Global Top Strategic Research Group for CCU
-      summary: Advanced separation processes for CCU systems.
+    - title: Development of advanced separation process for CCU
+      summary: Advanced membrane and separation process development for CCU and carbon circulation systems.
       trl: TRL 3 to 7
-    - title: Platform chemical production and demonstration
-      summary: Carbon dioxide conversion to platform chemicals (C4, C6) using under-utilized biomass resources.
+    - title: Development of platform chemical production and demonstration through CO2 conversion with under-utilized biomass
+      summary: Platform chemical production and pilot-scale demonstration based on under-utilized biomass and CO2 conversion.
       trl: TRL 3 to 4
-    - title: Sustainable separation processes for biorefinery
-      summary: Development of polymer platform materials utilizing organic resources and carbon dioxide.
-      trl: TRL 3 to 7
 
 experiences:
   title: Representative Experiences
