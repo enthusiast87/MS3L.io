@@ -24,7 +24,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Source Sans 3", Arial, sans-serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
@@ -59,7 +59,7 @@ a {
 
 .brand-title {
   font-size: 1.4rem;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--strong);
@@ -82,6 +82,7 @@ a {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .site-nav a {
@@ -102,12 +103,82 @@ a {
   background: var(--accent-soft);
 }
 
+.nav-group {
+  position: relative;
+}
+
+.nav-group summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.nav-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-group[open] summary,
+.nav-group summary:hover {
+  color: var(--strong);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.nav-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 220px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 8px;
+  display: grid;
+  gap: 4px;
+}
+
+.nav-dropdown a {
+  border-radius: 10px;
+}
+
 .hero {
   padding: 88px 0 60px;
   background:
     radial-gradient(circle at top right, rgba(15, 118, 110, 0.14), transparent 30%),
     linear-gradient(180deg, #fbfaf6 0%, #f3f1eb 100%);
   border-bottom: 1px solid var(--line);
+}
+
+.hero-clean {
+  padding: 54px 0 36px;
+}
+
+.hero-board {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 22px;
+}
+
+.hero-main,
+.hero-side {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.hero-side h3 {
+  margin: 0 0 14px;
+}
+
+.side-news-item {
+  border-top: 1px dashed #d5ddd8;
+  padding: 10px 0;
 }
 
 .hero-grid {
@@ -133,7 +204,7 @@ a {
 
 .hero h1 {
   margin: 0 0 18px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 3.3rem;
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -241,7 +312,7 @@ a {
 
 .hero-card h3 {
   margin: 0 0 6px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 1.2rem;
   color: var(--strong);
 }
@@ -317,9 +388,15 @@ a {
   border-bottom: 1px solid #c9ddd7;
 }
 
+.section-soft {
+  background: linear-gradient(180deg, #f8f7f2 0%, #efede6 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
 .section-title {
   margin: 0 0 8px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 2rem;
   letter-spacing: -0.02em;
   color: var(--strong);
@@ -343,13 +420,22 @@ a {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.card-grid.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .card {
   padding: 22px;
 }
 
+.card-link:hover {
+  transform: translateY(-2px);
+  transition: transform .15s ease;
+}
+
 .card h3 {
   margin: 0 0 10px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 1.15rem;
   color: var(--strong);
 }
@@ -390,6 +476,15 @@ a {
   font-size: 0.94rem;
 }
 
+.list-card img {
+  max-width: 220px;
+  max-height: 84px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
 .page-wrap {
   padding: 56px 0 72px;
 }
@@ -401,7 +496,7 @@ a {
 .page-card h1 {
   margin-top: 0;
   margin-bottom: 12px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 2.2rem;
   letter-spacing: -0.02em;
   color: var(--strong);
@@ -409,7 +504,7 @@ a {
 
 .page-card h2 {
   margin: 24px 0 12px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 1.3rem;
   color: var(--strong);
 }
@@ -461,7 +556,7 @@ a {
 
 .profile-body h2 {
   margin: 0 0 8px;
-  font-family: "Fraunces", "Times New Roman", serif;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
   font-size: 2rem;
   color: var(--strong);
 }
@@ -488,6 +583,30 @@ a {
 
 .publication-support {
   margin: 10px 0 0;
+}
+
+.trl-badge {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #bddad4;
+  background: #ebf7f4;
+  color: var(--accent-strong) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700;
+}
+
+.contact-summary p {
+  margin: 0 0 14px;
+}
+
+.hero-card-photo img,
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 .site-footer {
@@ -539,10 +658,12 @@ a {
 
 @media (max-width: 980px) {
   .hero-grid,
+  .hero-board,
   .split-grid,
   .credibility-grid,
   .card-grid.four,
-  .card-grid.three {
+  .card-grid.three,
+  .card-grid.two {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -575,10 +696,12 @@ a {
 
 @media (max-width: 680px) {
   .hero-grid,
+  .hero-board,
   .split-grid,
   .credibility-grid,
   .card-grid.four,
-  .card-grid.three {
+  .card-grid.three,
+  .card-grid.two {
     grid-template-columns: 1fr;
   }
 
@@ -591,6 +714,12 @@ a {
     padding-right: 0;
     border-radius: 0;
     background: transparent;
+  }
+
+  .nav-dropdown {
+    position: static;
+    width: auto;
+    margin-top: 6px;
   }
 
   .footer-inner {
