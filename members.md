@@ -42,8 +42,8 @@ title: Members
       <div class="page-card">
         <h2>Team updates</h2>
         <p>
-          Additional student, researcher, and collaborator profiles can be added as the current MS^3L roster is finalized.
-          The page structure is ready for future expansion without redesigning the site again.
+          Additional student, researcher, and collaborator profiles from the original Google Site will be continuously added as profile permissions are confirmed.
+          This page keeps the PI profile and group structure ready for expanding the full MS<sup>3</sup>L roster.
         </p>
       </div>
     </section>

@@ -317,6 +317,12 @@ a {
   border-bottom: 1px solid #c9ddd7;
 }
 
+.section-soft {
+  background: linear-gradient(180deg, #f8f7f2 0%, #efede6 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
 .section-title {
   margin: 0 0 8px;
   font-family: "Fraunces", "Times New Roman", serif;
@@ -488,6 +494,22 @@ a {
 
 .publication-support {
   margin: 10px 0 0;
+}
+
+.trl-badge {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #bddad4;
+  background: #ebf7f4;
+  color: var(--accent-strong) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700;
+}
+
+.contact-summary p {
+  margin: 0 0 14px;
 }
 
 .site-footer {
