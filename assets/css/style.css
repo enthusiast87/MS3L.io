@@ -65,6 +65,12 @@ a {
   color: var(--strong);
 }
 
+.brand-logo img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
 .brand-title sup {
   font-size: 0.58em;
   vertical-align: super;
@@ -440,6 +446,10 @@ a {
 .card-link:hover {
   transform: translateY(-2px);
   transition: transform .15s ease;
+}
+
+a.card {
+  margin-bottom: 12px;
 }
 
 .card h3 {
