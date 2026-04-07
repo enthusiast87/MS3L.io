@@ -20,7 +20,19 @@ title: Publications
       <strong>{{ item.title }}</strong>
       {% endif %}
       {% if item.authors %}
-      <p class="publication-authors">{{ item.authors }}</p>
+      {% assign authors_rendered = item.authors
+        | replace: "Jihoon Kim", "<span class='author-highlight'>Jihoon Kim</span>"
+        | replace: "Ji Hoon Kim", "<span class='author-highlight'>Ji Hoon Kim</span>"
+        | replace: "Jieun Kang", "<span class='author-highlight'>Jieun Kang</span>"
+        | replace: "Suyeon Park", "<span class='author-highlight'>Suyeon Park</span>"
+        | replace: "Yourim Noh", "<span class='author-highlight'>Yourim Noh</span>"
+        | replace: "Seung Hwan Kim", "<span class='author-highlight'>Seung Hwan Kim</span>"
+        | replace: "Khilola Kholmizaeva", "<span class='author-highlight'>Khilola Kholmizaeva</span>"
+      %}
+      <p class="publication-authors">{{ authors_rendered }}</p>
+      {% if item.authors contains "et al." %}
+      <p class="publication-note">Full author list is available in the journal record (DOI link).</p>
+      {% endif %}
       {% endif %}
       {% if item.summary %}
       <p>{{ item.summary }}</p>

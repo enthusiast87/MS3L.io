@@ -1,7 +1,43 @@
 - name: Jihoon Kim
   role_group: Principal Investigator
-  position: Senior Researcher
-  affiliation: Korea Research Institute of Chemical Technology
+  position: Principal Researcher | Associate Professor
+  affiliation: Korea Research Institute of Chemical Technology (KRICT) | University of Science and Technology (UST)
   email: jh.kim@krict.re.kr
   research: Membrane-based sustainable separation, resource recovery, and energy-related applications
   bio: Leads MS^3L with a focus on membrane science for sustainable chemical processing, circular resource systems, and energy-related separations.
+  image_url: https://lh3.googleusercontent.com/sitesv/APaQ0STL68liEshlPpaTbd3nYR8pm93oAgviHROUxxhgpMEkPoL3eje7oTChsRT_nGNPrzQMTJZUj9AJX1zMBd2uOl3vxK3KkyQiJYSO-yNrAna0F1wXXHxRa47hKEYOZu9kVEzO8hu0W5tOzC7CknzYAcCPTAk7RuSIJUubmpz5kMJlbK9X1rW54F65fBbId66Lerz1nFZvt1UDXD2DEY5ZHqgMOsIvCwQDfrcaJr0%3Dw1280
+
+- name: Khilola Kholmizaeva
+  role_group: Ph.D. Student
+  position: UST-KOICA Program (2023 - present)
+  affiliation: Co-supervised with Prof. Young Kyu Hwang
+  research: Bipolar membrane electrodialysis, water dissociation catalyst, anion exchange membrane, electrified crystallization
+  achievements:
+    - Applied Catalysis B: Environment and Energy (Co-author)
+    - ACS Sustainable Chemistry & Engineering (Co-author)
+
+- name: Suyeon Park
+  role_group: Master Student
+  position: Yonsei University (2024 Fall - present)
+  affiliation: Co-supervised with Prof. Dae Woo Kim
+  research: Diffusion dialysis, cation exchange membrane, polymer synthesis, thin-film composite membrane fabrication, system-level investigation
+  achievements:
+    - Best oral presentation award (MSK Fall 2025)
+    - Best poster presentation award (MSK Spring 2025)
+    - Chemical Engineering Journal (First author), ACS Sustainable Chemistry & Engineering (Co-author)
+    - Two Korean registered patents
+
+- name: Yourim Noh
+  role_group: Master Student
+  position: Korea University (2024 Fall - present)
+  affiliation: Co-supervised with Prof. Gwang Ho Song
+  research: Bipolar membrane electrodialysis, bipolar membrane fabrication, catalyst modification, electrochemical analysis, system-level investigation
+  achievements:
+    - KRICT best research achievement news release
+    - ACS Sustainable Chemistry & Engineering (First author), Chemical Engineering Journal (Co-author)
+    - Two Korean registered patents
+
+- name: Dr. Hyeokjun Seo
+  role_group: Postdoctoral Researcher
+  position: Postdoctoral Researcher (2025 - present)
+  research: Organic solvent nanofiltration, membrane fabrication, plastic recycling, iterative synthesis

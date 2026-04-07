@@ -19,6 +19,12 @@ title: Projects
         {% if item.trl %}
         <p><strong>{{ item.trl }}</strong></p>
         {% endif %}
+        {% if item.period %}
+        <p><strong>Period:</strong> {{ item.period }}</p>
+        {% endif %}
+        {% if item.focus %}
+        <p><strong>Focus:</strong> {{ item.focus }}</p>
+        {% endif %}
       </div>
       {% endfor %}
     </div>

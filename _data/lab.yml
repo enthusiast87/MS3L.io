@@ -5,8 +5,8 @@ subtitle: Membrane Science | Sustainable Separation | Process Innovation
 institution: Korea Research Institute of Chemical Technology
 
 hero:
-  title: Membrane-based sustainable separation solutions for circular chemical processes, resource recovery, and energy systems.
-  body: Membrane-based Sustainable Separation Solutions Laboratory (MS^3L) develops membrane technologies for energy-efficient ion and liquid separations across biorefinery systems, plastic recycling, solvent management, resource recovery, and electrochemical applications. Our work integrates separation science, membrane engineering, and process design to build practical low-energy solutions.
+  title: Membrane-based Sustainable Separation Solutions Laboratory (MS<sup>3</sup>L)
+  body: We develop membrane technologies for energy-efficient ion and liquid separations across biorefinery systems, plastic recycling, solvent management, resource recovery, and electrochemical applications.
   primary_cta_label: Research Areas
   primary_cta_url: /research
   secondary_cta_label: Publications
@@ -88,20 +88,23 @@ introduction:
 
 projects:
   title: Current Research Projects
-  lead: The Google Site highlights several ongoing projects spanning carbon utilization, demonstration-scale process development, and sustainable separation systems.
+  lead: Ongoing national and institute-led projects migrated from the original MS3L website.
   items:
-    - title: Carbon Capture and Utilization (CCU) with digital transformation
-      summary: Development of demonstration technology for carbon-neutral chemical processes utilizing digital transformation.
+    - title: Development of demonstration technology for carbon-neutral chemical process with digital transformation
+      summary: Carbon-neutral process demonstration project integrating CCU technologies with digital transformation workflows.
       trl: TRL 3 to 6
-    - title: Global Top Strategic Research Group for CCU
-      summary: Advanced separation processes for CCU systems.
+      period: 2024 - ongoing
+      focus: Demonstration-scale digital operation and process integration
+    - title: Development of advanced separation process for CCU
+      summary: Advanced membrane and separation process development for CCU and carbon circulation systems.
       trl: TRL 3 to 7
-    - title: Platform chemical production and demonstration
-      summary: Carbon dioxide conversion to platform chemicals (C4, C6) using under-utilized biomass resources.
+      period: 2023 - ongoing
+      focus: High-selectivity separation trains for CCU unit operations
+    - title: Development of platform chemical production and demonstration through CO2 conversion with under-utilized biomass
+      summary: Platform chemical production and pilot-scale demonstration based on under-utilized biomass and CO2 conversion.
       trl: TRL 3 to 4
-    - title: Sustainable separation processes for biorefinery
-      summary: Development of polymer platform materials utilizing organic resources and carbon dioxide.
-      trl: TRL 3 to 7
+      period: 2024 - ongoing
+      focus: Biomass/CO2 conversion and downstream purification
 
 experiences:
   title: Representative Experiences
