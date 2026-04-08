@@ -65,12 +65,19 @@ title: Home
       <h2 class="section-title">Research Themes</h2>
       <div class="card-grid two">
         {% for item in site.data.research %}
-        <div class="card">
+        <div class="card research-theme-card">
           <h3>{{ item.title }}</h3>
           <p>{{ item.summary }}</p>
+          {% if item.selected_papers %}
+          <div class="theme-paper-inline">
+            <div class="list-meta">Key paper</div>
+            <a class="publication-link" href="{{ item.selected_papers[0].url }}">{{ item.selected_papers[0].title }}</a>
+          </div>
+          {% endif %}
         </div>
         {% endfor %}
       </div>
+      <p class="theme-cta"><a class="inline-link" href="{{ '/research' | relative_url }}">View detailed theme summaries and figures →</a></p>
     </div>
 
     <div>
