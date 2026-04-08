@@ -15,6 +15,9 @@ title: News
     <div class="list-card">
       <div class="list-meta">{{ item.date }}</div>
       <strong>{{ item.title }}</strong>
+      {% if item.summary %}
+      <p>{{ item.summary }}</p>
+      {% endif %}
     </div>
     {% endfor %}
 

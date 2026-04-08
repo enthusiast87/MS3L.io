@@ -43,19 +43,34 @@ title: Home
 </section>
 
 <section class="section">
-  <div class="container card-grid three">
-    <a class="card card-link" href="{{ '/principal-investigator' | relative_url }}">
-      <h3>Principal Investigator</h3>
-      <p>{{ pi.name }} | {{ pi.position }}</p>
-    </a>
-    <a class="card card-link" href="{{ '/members' | relative_url }}">
-      <h3>Members</h3>
-      <p>Graduate students and postdoctoral researchers in MS3L.</p>
-    </a>
-    <a class="card card-link" href="{{ '/projects' | relative_url }}">
-      <h3>Current Projects</h3>
-      <p>National R&D and CCU related ongoing projects.</p>
-    </a>
+  <div class="container split-grid">
+    <div>
+      <h2 class="section-title">Current Projects</h2>
+      {% for item in lab.projects.items %}
+      <div class="list-card">
+        <strong>{{ item.title }}</strong>
+        <p>{{ item.summary }}</p>
+        <p class="publication-doi">{{ item.trl }}{% if item.period %} · {{ item.period }}{% endif %}</p>
+      </div>
+      {% endfor %}
+      <p><a class="inline-link" href="{{ '/projects' | relative_url }}">View project details →</a></p>
+    </div>
+
+    <div>
+      <h2 class="section-title">Lab Snapshot</h2>
+      <a class="card card-link" href="{{ '/principal-investigator' | relative_url }}">
+        <h3>Principal Investigator</h3>
+        <p>{{ pi.name }} | {{ pi.position }}</p>
+      </a>
+      <a class="card card-link" href="{{ '/members' | relative_url }}">
+        <h3>Members</h3>
+        <p>Graduate students and postdoctoral researchers in MS3L.</p>
+      </a>
+      <a class="card card-link" href="{{ '/patents' | relative_url }}">
+        <h3>Patents & Technology Impact</h3>
+        <p>Registered patents, transfer, and industrial collaborations.</p>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -65,19 +80,12 @@ title: Home
       <h2 class="section-title">Research Themes</h2>
       <div class="card-grid two">
         {% for item in site.data.research %}
-        <div class="card research-theme-card">
+        <div class="card">
           <h3>{{ item.title }}</h3>
           <p>{{ item.summary }}</p>
-          {% if item.selected_papers %}
-          <div class="theme-paper-inline">
-            <div class="list-meta">Key paper</div>
-            <a class="publication-link" href="{{ item.selected_papers[0].url }}">{{ item.selected_papers[0].title }}</a>
-          </div>
-          {% endif %}
         </div>
         {% endfor %}
       </div>
-      <p class="theme-cta"><a class="inline-link" href="{{ '/research' | relative_url }}">View detailed theme summaries and figures →</a></p>
     </div>
 
     <div>
@@ -94,6 +102,24 @@ title: Home
         <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Contact us</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Latest News</h2>
+    <div class="card-grid two">
+      {% for item in site.data.news limit: 4 %}
+      <div class="list-card">
+        <div class="list-meta">{{ item.date }}</div>
+        <strong>{{ item.title }}</strong>
+        {% if item.summary %}
+        <p>{{ item.summary }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    <p><a class="inline-link" href="{{ '/news' | relative_url }}">View all news →</a></p>
   </div>
 </section>
 

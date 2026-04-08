@@ -20,7 +20,21 @@ title: Publications
       <strong>{{ item.title }}</strong>
       {% endif %}
       {% if item.authors %}
-      <p class="publication-authors">{{ item.authors }}</p>
+      {% assign authors_rendered = item.authors %}
+      {% for member in site.data.members %}
+        {% assign member_tag = "<span class='author-highlight'>" | append: member.name | append: "</span>" %}
+        {% assign authors_rendered = authors_rendered | replace: member.name, member_tag %}
+        {% if member.aliases %}
+          {% for alias in member.aliases %}
+            {% assign alias_tag = "<span class='author-highlight'>" | append: alias | append: "</span>" %}
+            {% assign authors_rendered = authors_rendered | replace: alias, alias_tag %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+      <p class="publication-authors">{{ authors_rendered }}</p>
+      {% if item.authors contains "et al." %}
+      <p class="publication-note">Full author list is available in the journal record (DOI link).</p>
+      {% endif %}
       {% endif %}
       {% if item.summary %}
       <p>{{ item.summary }}</p>
