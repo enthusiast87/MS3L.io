@@ -13,11 +13,13 @@ title: News
 
     {% for item in site.data.news %}
     <div class="list-card">
-      <div class="list-meta">{{ item.date }}</div>
+      <div class="list-meta">{{ item.date | date: "%B %Y" }}</div>
+      {% if item.url %}
+      <strong><a class="publication-link" href="{{ item.url | relative_url }}">{{ item.title }}</a></strong>
+      {% else %}
       <strong>{{ item.title }}</strong>
-      {% if item.summary %}
-      <p>{{ item.summary }}</p>
       {% endif %}
+      {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
     </div>
     {% endfor %}
 
@@ -25,7 +27,7 @@ title: News
       <div class="page-card">
         <h2>News and updates</h2>
         <p>
-          The original Google Site frames this page as a place to stay up to date with recent publications, awards, projects, and other activities from MS^3L.
+          News migration is in progress. The entries above already include migrated highlights from publications, awards, and patent milestones, and more archived items will be added chronologically.
         </p>
       </div>
     </section>

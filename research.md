@@ -7,7 +7,7 @@ title: Research
     <div class="page-card">
       <h1>Research Themes</h1>
       <p>
-        MS3L develops membrane-enabled separations for sustainable chemical processing,
+        MS<sup>3</sup>L develops membrane-enabled separations for sustainable chemical processing,
         circular resource systems, and energy-related applications.
       </p>
     </div>
