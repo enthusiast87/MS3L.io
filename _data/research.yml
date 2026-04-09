@@ -1,26 +1,98 @@
 - title: Biorefinery
   summary: Membrane-enabled separations for sustainable biorefinery operations.
+  one_liner: Carbon-efficient downstream processing for biomass-derived platform chemicals.
+  why_it_matters: >-
+    We design low-energy separation pathways that replace neutralization-heavy and solvent-intensive
+    purification steps, enabling economically viable biorefinery operations.
+  image: /assets/images/research/biorefinery.jpg
   topics:
     - Product recovery
     - Base catalyst recycling
     - Product acidification
+  key_methods:
+    - Diffusion dialysis and membrane-assisted ion exchange
+    - Bipolar membrane electrodialysis for acid/base generation
+    - Integrated purification train design and system-level optimization
+  selected_papers:
+    - title: Scalable membrane-assisted ion exchange (MEM-IE) strategy for organic acid purification in biorefinery process
+      year: 2025
+      venue: Journal of Membrane Science
+      url: https://doi.org/10.1016/j.memsci.2024.123442
+    - title: Simultaneous CO2 mineralization and organic acid purification via diffusion dialysis process
+      year: 2025
+      venue: Chemical Engineering Journal
+      url: https://doi.org/10.1016/j.cej.2025.165207
 
 - title: Plastic recycling
   summary: Selective purification and solvent/catalyst recovery for circular plastics.
+  one_liner: Membrane-enabled depolymerization and monomer purification for circular plastics.
+  why_it_matters: >-
+    We develop selective separation routes that reduce process heat duty and solvent loss,
+    making chemical recycling of mixed polymer streams more scalable and sustainable.
+  image: /assets/images/research/plastic-recycling.jpg
   topics:
     - Monomer purification
     - Solvent recycling
     - Base catalyst recycling
+  key_methods:
+    - Membrane-coupled glycolysis and depolymerization workflows
+    - Solvent-resistant membrane purification
+    - Circular process integration for catalyst and solvent reuse
+  selected_papers:
+    - title: Energy-Efficient Chemical Recycling of Polyethylene Terephthalate via Water-Free Glycolysis Process Using Membrane Technology
+      year: 2026
+      venue: ChemSusChem
+      url: https://doi.org/10.1002/cssc.202502180
+    - title: "Process modeling and assessment of waste polystyrene pyrolysis: Comparing catalytic and thermal methods"
+      year: 2025
+      venue: Chemical Engineering Journal
+      url: https://doi.org/10.1016/j.cej.2025.159261
 
 - title: Resource recovery
   summary: Recovery and purification of valuable species from complex liquid streams.
+  one_liner: Recovering value from dilute and contaminated streams with membrane process intensification.
+  why_it_matters: >-
+    We target difficult feed streams where conventional purification is expensive,
+    and design membrane-first pathways for resource circulation and waste minimization.
+  image: /assets/images/research/resource-recovery.jpg
   topics:
     - Membrane distillation and crystallization
     - Solvent recycling
+  key_methods:
+    - Membrane distillation for concentration and water recovery
+    - Coupled crystallization and selective separation
+    - Separation train synthesis for high-purity product isolation
+  selected_papers:
+    - title: Concurrent Production of Xylonic Acid and Xylitol from Xylose Through Sustainable Bipolar Membrane Electrodialysis
+      year: 2025
+      venue: ACS Sustainable Chemistry & Engineering
+      url: https://doi.org/10.1021/acssuschemeng.5c00612
+    - title: Simultaneous Coproduction of Xylonic Acid and Xylitol Leveraging In-situ Hydrogen Generation and Utilization from Xylose
+      year: 2024
+      venue: ChemSusChem
+      url: https://doi.org/10.1002/cssc.202401651
 
 - title: Energy-related applications
   summary: Membrane and separation technologies for energy conversion and storage.
+  one_liner: Advanced membrane materials and modules for clean energy systems.
+  why_it_matters: >-
+    We advance membrane materials and hybrid configurations that improve energy efficiency,
+    process reliability, and commercialization potential in energy and battery applications.
+  image: /assets/images/research/energy.jpg
   topics:
     - Biofuel production
     - Pressure retarded osmosis
     - Lithium-ion battery separator
+  key_methods:
+    - Thin-film composite membrane design
+    - Pressure-retarded osmosis module optimization
+    - Membrane-electrochemical interface engineering
+  selected_papers:
+    - title: Low energy-intensive production of fuel-grade bio-butanol enabled by membrane-based extraction
+      year: 2020
+      venue: Energy & Environmental Science
+      url: https://doi.org/10.1039/D0EE02927K
+    - title: Thin Film Composite on Fluorinated Thermally Rearranged Polymer Nanofibrous Membrane Achieves Power Density of 87 W·m-2 in Pressure Retarded Osmosis
+      year: 2020
+      venue: Journal of Membrane Science
+      url: https://doi.org/10.1016/j.memsci.2020.118120
