@@ -4,7 +4,6 @@ title: Members
 ---
 {% assign members = site.data.members %}
 {% assign lab = site.data.lab %}
-{% assign pi = members | where: "role_group", "Principal Investigator" %}
 {% assign postdocs = members | where: "role_group", "Postdoctoral Researcher" %}
 {% assign students = members | where_exp: "item", "item.role_group contains 'Student'" %}
 
@@ -15,31 +14,7 @@ title: Members
       <p>{{ lab.members.lead }}</p>
     </div>
 
-    {% if pi.size > 0 %}
-    <section class="profile-section">
-      <h2 class="section-title section-title-sm">Principal Investigator</h2>
-      {% for member in pi %}
-      <article class="profile-card profile-card-highlight">
-        <div class="profile-photo profile-photo-lg">
-          {% if member.image_url %}
-          <img src="{{ member.image_url }}" alt="{{ member.name }} profile photo">
-          {% endif %}
-        </div>
-        <div class="profile-body">
-          <div class="profile-label">{{ member.role_group }}</div>
-          <h2>{{ member.name }}</h2>
-          <p class="profile-role">{{ member.position }}</p>
-          {% if member.affiliation %}<p class="profile-affiliation">{{ member.affiliation }}</p>{% endif %}
-          {% if member.bio %}<p>{{ member.bio }}</p>{% endif %}
-          {% if member.research %}<p><strong>Research focus:</strong> {{ member.research }}</p>{% endif %}
-          {% if member.email %}<p><strong>Email:</strong> <a class="inline-link" href="mailto:{{ member.email }}">{{ member.email }}</a></p>{% endif %}
-        </div>
-      </article>
-      {% endfor %}
-    </section>
-    {% endif %}
-
-    {% if postdocs.size > 0 %}
+        {% if postdocs.size > 0 %}
     <section class="profile-section">
       <h2 class="section-title section-title-sm">Postdoctoral Researchers</h2>
       <div class="member-grid">
