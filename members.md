@@ -75,7 +75,7 @@ title: Members
       <div class="page-card">
         <h2>Team updates</h2>
         <p>
-          This member list is migrated from the current Google Site structure and includes PI, graduate students, and postdoctoral researchers.
+          This member list is migrated from the current Google Site structure and currently highlights postdoctoral researchers and graduate students.
         </p>
       </div>
     </section>
