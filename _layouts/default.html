@@ -19,7 +19,13 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
-          <a class="brand-title" href="{{ '/' | relative_url }}">{{ site.data.lab.brand_mark }}</a>
+          <a class="brand-title brand-logo" href="{{ '/' | relative_url }}">
+            {% if site.data.lab.logo_image %}
+            <img src="{{ site.data.lab.logo_image | relative_url }}" alt="{{ site.data.lab.short_name }} logo">
+            {% else %}
+            {{ site.data.lab.brand_mark }}
+            {% endif %}
+          </a>
           <div class="brand-subtitle">{{ site.data.lab.full_name }}</div>
         </div>
 
