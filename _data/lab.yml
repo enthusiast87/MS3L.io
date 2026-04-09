@@ -1,5 +1,6 @@
 short_name: MS<sup>3</sup>L
 brand_mark: MS<sup>3</sup>L
+logo_image: /assets/images/logo/ms3l-logo.svg
 full_name: Membrane-based Sustainable Separation Solutions Laboratory
 subtitle: Membrane Science | Sustainable Separation | Process Innovation
 institution: Korea Research Institute of Chemical Technology
@@ -93,12 +94,18 @@ projects:
     - title: Development of demonstration technology for carbon-neutral chemical process with digital transformation
       summary: Carbon-neutral process demonstration project integrating CCU technologies with digital transformation workflows.
       trl: TRL 3 to 6
+      period: 2024 - ongoing
+      focus: Demonstration-scale digital operation and process integration
     - title: Development of advanced separation process for CCU
       summary: Advanced membrane and separation process development for CCU and carbon circulation systems.
       trl: TRL 3 to 7
+      period: 2023 - ongoing
+      focus: High-selectivity separation trains for CCU unit operations
     - title: Development of platform chemical production and demonstration through CO2 conversion with under-utilized biomass
       summary: Platform chemical production and pilot-scale demonstration based on under-utilized biomass and CO2 conversion.
       trl: TRL 3 to 4
+      period: 2024 - ongoing
+      focus: Biomass/CO2 conversion and downstream purification
 
 experiences:
   title: Representative Experiences

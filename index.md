@@ -100,6 +100,24 @@ title: Home
 
 <section class="section">
   <div class="container">
+    <h2 class="section-title">Latest News</h2>
+    <div class="card-grid two">
+      {% for item in site.data.news limit: 4 %}
+      <div class="list-card">
+        <div class="list-meta">{{ item.date }}</div>
+        <strong>{{ item.title }}</strong>
+        {% if item.summary %}
+        <p>{{ item.summary }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    <p><a class="inline-link" href="{{ '/news' | relative_url }}">View all news →</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
     <h2 class="section-title">Recent Publications</h2>
     <div class="card-grid two">
       {% for item in site.data.publications limit: 6 %}

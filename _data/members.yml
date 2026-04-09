@@ -1,4 +1,7 @@
 - name: Jihoon Kim
+  aliases:
+    - Ji Hoon Kim
+    - J. H. Kim
   role_group: Principal Investigator
   position: Principal Researcher | Associate Professor
   affiliation: Korea Research Institute of Chemical Technology (KRICT) | University of Science and Technology (UST)
@@ -8,6 +11,8 @@
   image_url: https://lh3.googleusercontent.com/sitesv/APaQ0STL68liEshlPpaTbd3nYR8pm93oAgviHROUxxhgpMEkPoL3eje7oTChsRT_nGNPrzQMTJZUj9AJX1zMBd2uOl3vxK3KkyQiJYSO-yNrAna0F1wXXHxRa47hKEYOZu9kVEzO8hu0W5tOzC7CknzYAcCPTAk7RuSIJUubmpz5kMJlbK9X1rW54F65fBbId66Lerz1nFZvt1UDXD2DEY5ZHqgMOsIvCwQDfrcaJr0%3Dw1280
 
 - name: Khilola Kholmizaeva
+  aliases:
+    - Khilola Kholmirzaeva
   role_group: Ph.D. Student
   position: UST-KOICA Program (2023 - present)
   affiliation: Co-supervised with Prof. Young Kyu Hwang
@@ -17,6 +22,8 @@
     - ACS Sustainable Chemistry & Engineering (Co-author)
 
 - name: Suyeon Park
+  aliases:
+    - Su Yeon Park
   role_group: Master Student
   position: Yonsei University (2024 Fall - present)
   affiliation: Co-supervised with Prof. Dae Woo Kim
@@ -28,6 +35,8 @@
     - Two Korean registered patents
 
 - name: Yourim Noh
+  aliases:
+    - You Rim Noh
   role_group: Master Student
   position: Korea University (2024 Fall - present)
   affiliation: Co-supervised with Prof. Gwang Ho Song
@@ -38,6 +47,7 @@
     - Two Korean registered patents
 
 - name: Dr. Hyeokjun Seo
+  aliases: []
   role_group: Postdoctoral Researcher
   position: Postdoctoral Researcher (2025 - present)
   research: Organic solvent nanofiltration, membrane fabrication, plastic recycling, iterative synthesis
