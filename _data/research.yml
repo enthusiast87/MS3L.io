@@ -14,14 +14,14 @@
     - Bipolar membrane electrodialysis for acid/base generation
     - Integrated purification train design and system-level optimization
   selected_papers:
-    - title: Scalable membrane-assisted ion exchange (MEM-IE) strategy for organic acid purification in biorefinery process
-      year: 2025
-      venue: Journal of Membrane Science
-      url: https://doi.org/10.1016/j.memsci.2024.123442
     - title: Simultaneous CO2 mineralization and organic acid purification via diffusion dialysis process
       year: 2025
       venue: Chemical Engineering Journal
       url: https://doi.org/10.1016/j.cej.2025.165207
+    - title: Concurrent Production of Xylonic Acid and Xylitol from Xylose Through Sustainable Bipolar Membrane Electrodialysis
+      year: 2025
+      venue: ACS Sustainable Chemistry & Engineering
+      url: https://doi.org/10.1021/acssuschemeng.5c00612
 
 - title: Plastic recycling
   summary: Selective purification and solvent/catalyst recovery for circular plastics.
@@ -39,14 +39,14 @@
     - Solvent-resistant membrane purification
     - Circular process integration for catalyst and solvent reuse
   selected_papers:
-    - title: Energy-Efficient Chemical Recycling of Polyethylene Terephthalate via Water-Free Glycolysis Process Using Membrane Technology
-      year: 2026
-      venue: ChemSusChem
-      url: https://doi.org/10.1002/cssc.202502180
     - title: "Process modeling and assessment of waste polystyrene pyrolysis: Comparing catalytic and thermal methods"
       year: 2025
       venue: Chemical Engineering Journal
       url: https://doi.org/10.1016/j.cej.2025.159261
+    - title: Ir(triNHC)-Catalyzed Upcycling of Waste PET for Lactic Acid Production with Sustainable Isolation via Bipolar Membrane Electrodialysis
+      year: 2024
+      venue: Angewandte Chemie
+      url: https://doi.org/10.1002/ange.202410003
 
 - title: Resource recovery
   summary: Recovery and purification of valuable species from complex liquid streams.
@@ -63,14 +63,14 @@
     - Coupled crystallization and selective separation
     - Separation train synthesis for high-purity product isolation
   selected_papers:
-    - title: Concurrent Production of Xylonic Acid and Xylitol from Xylose Through Sustainable Bipolar Membrane Electrodialysis
+    - title: Advancing membrane technology in organic liquids towards a sustainable future
       year: 2025
-      venue: ACS Sustainable Chemistry & Engineering
-      url: https://doi.org/10.1021/acssuschemeng.5c00612
-    - title: Simultaneous Coproduction of Xylonic Acid and Xylitol Leveraging In-situ Hydrogen Generation and Utilization from Xylose
-      year: 2024
-      venue: ChemSusChem
-      url: https://doi.org/10.1002/cssc.202401651
+      venue: Nature Sustainability
+      url: https://doi.org/10.1038/s41893-025-01570-4
+    - title: Thermally rearranged polymer membranes for desalination
+      year: 2016
+      venue: Energy & Environmental Science
+      url: https://doi.org/10.1039/C5EE03768A
 
 - title: Energy-related applications
   summary: Membrane and separation technologies for energy conversion and storage.

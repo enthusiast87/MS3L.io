@@ -21,21 +21,21 @@ title: Home
 
       <aside class="hero-side">
         <h3>Notice / News</h3>
-        {% for item in site.data.news limit: 4 %}
+        {% for item in site.data.news limit: 3 %}
         <div class="side-news-item">
           <div class="list-meta">{{ item.date | date: "%b %Y" }}</div>
-          {% if item.url %}<strong><a class="publication-link" href="{{ item.url | relative_url }}">{{ item.title }}</a></strong>{% else %}<strong>{{ item.title }}</strong>{% endif %}
-          {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
+          {% if item.url %}<strong class="side-item-title"><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></strong>{% else %}<strong class="side-item-title">{{ item.title }}</strong>{% endif %}
+          {% if item.summary %}<p class="side-item-summary">{{ item.summary }}</p>{% endif %}
         </div>
         {% endfor %}
         <a class="inline-link" href="{{ '/news' | relative_url }}">More news →</a>
 
         <h3 class="hero-side-heading">Upcoming Events</h3>
-        {% for event in site.data.events limit: 3 %}
+        {% for event in site.data.events limit: 2 %}
         <div class="side-news-item">
           <div class="list-meta">{{ event.date }}</div>
-          <strong>{{ event.title }}</strong>
-          <p>{{ event.location }}</p>
+          <strong class="side-item-title">{{ event.title }}</strong>
+          <p class="side-item-summary">{{ event.location }}</p>
         </div>
         {% endfor %}
       </aside>
@@ -61,9 +61,9 @@ title: Home
 </section>
 
 <section class="section section-soft">
-  <div class="container split-grid">
-    <div>
-      <h2 class="section-title">Research Themes</h2>
+  <div class="container">
+    <h2 class="section-title">Research Themes</h2>
+    <div class="split-grid">
       <div class="card-grid two">
         {% for item in site.data.research %}
         <div class="card research-theme-card">
@@ -78,23 +78,23 @@ title: Home
         </div>
         {% endfor %}
       </div>
-      <p class="theme-cta"><a class="inline-link" href="{{ '/research' | relative_url }}">View detailed theme summaries and figures →</a></p>
-    </div>
 
-    <div>
-      <div class="page-card contact-summary">
-        <h2>Contact</h2>
-        <p><strong>{{ lab.contact.institution }}</strong></p>
-        <p>{{ lab.contact.address }}</p>
-        <p>
-          {% for item in lab.contact.emails %}
-          <a class="inline-link" href="mailto:{{ item }}">{{ item }}</a>{% unless forloop.last %}<br>{% endunless %}
-          {% endfor %}
-        </p>
-        <p><strong>TEL.</strong> {{ lab.contact.phone }}</p>
-        <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Contact us</a>
+      <div>
+        <div class="page-card contact-summary">
+          <h2>Contact</h2>
+          <p><strong>{{ lab.contact.institution }}</strong></p>
+          <p>{{ lab.contact.address }}</p>
+          <p>
+            {% for item in lab.contact.emails %}
+            <a class="inline-link" href="mailto:{{ item }}">{{ item }}</a>{% unless forloop.last %}<br>{% endunless %}
+            {% endfor %}
+          </p>
+          <p><strong>TEL.</strong> {{ lab.contact.phone }}</p>
+          <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Contact us</a>
+        </div>
       </div>
     </div>
+    <p class="theme-cta"><a class="inline-link" href="{{ '/research' | relative_url }}">View detailed theme summaries and figures →</a></p>
   </div>
 </section>
 

@@ -15,10 +15,12 @@ title: Projects
       <h2 class="section-title section-title-sm">Ongoing projects</h2>
       <div class="card-grid two">
         {% for item in lab.projects.ongoing %}
-        <div class="card">
-          <h3>{{ item.title }}</h3>
-          <p><strong>{{ item.period }}</strong></p>
-          <p>{{ item.sponsor }}</p>
+        <div class="card project-card">
+          <h3 class="project-card-title">{{ item.title }}</h3>
+          <div class="project-card-meta">
+            <p class="project-card-period"><strong>{{ item.period }}</strong></p>
+            <p class="project-card-sponsor">{{ item.sponsor }}</p>
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -28,10 +30,12 @@ title: Projects
       <h2 class="section-title section-title-sm">Previous projects</h2>
       <div class="card-grid two">
         {% for item in lab.projects.previous %}
-        <div class="card">
-          <h3>{{ item.title }}</h3>
-          <p><strong>{{ item.period }}</strong></p>
-          <p>{{ item.sponsor }}</p>
+        <div class="card project-card">
+          <h3 class="project-card-title">{{ item.title }}</h3>
+          <div class="project-card-meta">
+            <p class="project-card-period"><strong>{{ item.period }}</strong></p>
+            <p class="project-card-sponsor">{{ item.sponsor }}</p>
+          </div>
         </div>
         {% endfor %}
       </div>

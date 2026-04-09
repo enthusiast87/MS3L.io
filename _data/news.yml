@@ -1,39 +1,65 @@
-- date: 2026-03-20
-  title: KRICT press release highlights MS<sup>3</sup>L best research achievement.
-  summary: Featured by KRICT for membrane-enabled process innovation and resource-circulation impact.
-  url: https://www.krict.re.kr/
+- date: 2026-03-15
+  title: Press coverage on glucose-to-sorbitol and gluconic acid conversion.
+  summary: Media coverage highlighted Khilola Kholmizaeva's research on catalytic co-production of sorbitol and gluconic acid from glucose.
+  note: Featured by major Korean outlets following the March 15, 2026 press release.
+  image: https://lh3.googleusercontent.com/sitesv/APaQ0STkZumyLvmaxXjwDxceHST39saye8wWnW9b40kR7yAB6JWh5WxqtuSIeDJDhuMzyPim5q5m0EqlhGssmriAMGnuAQDgMOKMbN76bYmFjc2YM9e9ZCCJa7itTVoq-d_DB6tx5_FD7Ki3aNUHWdXVgIiYFNoX8xjv-8TlCgmwdQNqqNHEdGtew5U6ENgLP6NGTrL_US0x2HkIy9185bbfvXf9L4AnOTCFI8q6=w1280
+  image_alt: News image for glucose-to-sorbitol and gluconic acid press coverage.
+  url: https://news.kbs.co.kr/news/pc/view/view.do?ncd=8509180#:~:text=%ED%95%9C%EA%B5%AD%ED%99%94%ED%95%99%EC%97%B0%EA%B5%AC%EC%9B%90%EC%9D%80%20%ED%8F%AC%EB%8F%84%EB%8B%B9%EC%9C%BC%EB%A1%9C%EB%B6%80%ED%84%B0%20%EC%84%B8%EC%A0%9C%2C%20%EC%9D%98%EC%95%BD%ED%92%88%20%EB%93%B1%EC%9D%98%20%EC%9B%90%EB%A3%8C%EC%9D%B8%20%27%EA%B8%80%EB%A3%A8%EC%BD%98%EC%82%B0%27%EA%B3%BC,%ED%83%84%EC%86%8C%20%EB%B0%B0%EC%B6%9C%EC%9D%84%20%ED%81%AC%EA%B2%8C%20%EC%A4%84%EC%9D%BC%20%EC%88%98%20%EC%9E%88%EB%8B%A4%EA%B3%A0%20%EC%84%A4%EB%AA%85
+  links:
+    - label: KBS
+      url: https://news.kbs.co.kr/news/pc/view/view.do?ncd=8509180#:~:text=%ED%95%9C%EA%B5%AD%ED%99%94%ED%95%99%EC%97%B0%EA%B5%AC%EC%9B%90%EC%9D%80%20%ED%8F%AC%EB%8F%84%EB%8B%B9%EC%9C%BC%EB%A1%9C%EB%B6%80%ED%84%B0%20%EC%84%B8%EC%A0%9C%2C%20%EC%9D%98%EC%95%BD%ED%92%88%20%EB%93%B1%EC%9D%98%20%EC%9B%90%EB%A3%8C%EC%9D%B8%20%27%EA%B8%80%EB%A3%A8%EC%BD%98%EC%82%B0%27%EA%B3%BC,%ED%83%84%EC%86%8C%20%EB%B0%B0%EC%B6%9C%EC%9D%84%20%ED%81%AC%EA%B2%8C%20%EC%A4%84%EC%9D%BC%20%EC%88%98%20%EC%9E%88%EB%8B%A4%EA%B3%A0%20%EC%84%A4%EB%AA%85
+    - label: Dong-A Ilbo
+      url: https://www.donga.com/news/Health/article/all/20260315/133532168/2
+    - label: Daum
+      url: https://v.daum.net/v/tobyTnIkEZ#:~:text=%ED%8F%AC%EB%8F%84%EB%8B%B9%EC%9C%BC%EB%A1%9C%EB%B6%80%ED%84%B0%20%EC%84%B8%EC%A0%9C%C2%B7%EC%9D%98%EC%95%BD%ED%92%88%20%EC%9B%90%EB%A3%8C%EC%9D%B8%20%27%EA%B8%80%EB%A3%A8%EC%BD%98%EC%82%B0%27%2C%20%EA%B0%90%EB%AF%B8%EB%A3%8C%C2%B7%ED%99%94%EC%9E%A5%ED%92%88%20%EC%9B%90%EB%A3%8C%EC%9D%B8%20%27%EC%86%8C%EB%A5%B4%EB%B9%84%ED%86%A8%27%EC%9D%84,%EC%83%9D%EC%82%B0%ED%95%98%EB%8A%94%20%ED%8A%B9%EC%88%98%20%EC%B4%89%EB%A7%A4%20%EA%B8%B0%EC%88%A0%EC%9D%84%20%EA%B0%9C%EB%B0%9C%ED%95%9C%20%ED%95%9C%EA%B5%AD%ED%99%94%ED%95%99%EC%97%B0%EA%B5%AC%EC%9B%90%20%EC%97%B0%EA%B5%AC%EC%A7%84.
 
-- date: 2026-01-25
-  title: New publications in Applied Catalysis B and ChemSusChem.
-  summary: Recent studies report catalytic co-production and membrane-enabled chemical recycling advances.
-  url: /publications
+- date: 2025-10-27
+  title: MSK fall meeting oral presentation award.
+  summary: Suyeon Park received recognition at the fall meeting of the Membrane Society of Korea for work on Donnan-dialysis-based organic acid purification and conversion.
+  note: Presentation topic focused on how polymer properties and thermodynamics influence separation performance.
+  image: https://lh3.googleusercontent.com/sitesv/APaQ0STStDlYzZCObySWxS7Uv35VxIcfAyi94hXrXbbF5O2SwwFQP8eo-SPW4ekdZuGVlKHmE91Y05LdMNEHn50NigzKmgA2lnG00vkzeH0UPFC4k_M5K6tOoxKn7chzGplljP897hjaJuhWbix717dYeE_DdA5eJsq_bPNIG5dUQlaT5XZ_xxoeT5dhWvu1BImuKdqLyNYccGWKHkTp3lCiRp6ll71BzZVQZZIeoTo=w1280
+  image_alt: News image for the MSK fall meeting oral presentation award.
 
-- date: 2025-11-28
-  title: Chemical Engineering Journal paper accepted on CO2 mineralization and organic acid purification.
-  summary: Diffusion dialysis strategy demonstrates simultaneous CO2 utilization and purification performance.
-  url: /publications
+- date: 2025-09-01
+  title: KRICT outstanding researcher commendation.
+  summary: Jihoon Kim was recognized by the Korea Research Institute of Chemical Technology with an outstanding researcher award.
+  note: Institutional recognition highlighting research leadership and performance at KRICT.
+  image: https://lh3.googleusercontent.com/sitesv/APaQ0SQWF8M7Ftf2IH-X7OyLiUs3p9H7d4k-OvHGCDRGU2SYJ0w3MfySwikJJM5LTKfuR99O4YDojuwPjvgqjiRO5Q0bA3yM4kUv7muDRJyP7vpfXUHH78_PCmhkH7F5AoQ7P7pwPA3UvPlwHgZk71vH_iNiZ8I6w36tVBbQtXpG7fsg3GTw9nfmA_1oQeh4V464RTqZcXwGgAGVYgdTGvtxOPmATZ8Vemv81ztiPI8=w1280
+  image_alt: News image for the KRICT outstanding researcher award.
 
-- date: 2025-10-18
-  title: MSK award for oral and poster presentations.
-  summary: Student presentations were recognized for membrane process development and system-level analysis.
-  url: /members
+- date: 2025-06-29
+  title: Press coverage on xylose-to-xylitol and xylonic acid production.
+  summary: Yourim Noh's work on simultaneous xylose conversion to xylitol and xylonic acid without external hydrogen drew coverage from Korean and international media.
+  note: Coverage followed the June 29, 2025 press release on hydrogen-free catalytic conversion.
+  image: https://lh3.googleusercontent.com/sitesv/APaQ0SR92_h-RIVTtiE5MrhQ77_Zn1L7XDN4WOt5WMx7XIHaRZB1lCPoVFEEXSGVgJWf7h9rw3yOiJ8yel-DXi4S8B4FSBiBaF_6qZOximERjzE9An1c-ki4CgvdFj9RcRLLCcZnfL2PA1dnpRsAdfiXPAI-y4FelDTdcrqisBBw-2yP8TxidroH6MzRuQrgGUA234-YcPUhSgszZs8sG47Jkd7GAYiEpIR1Pth7Bhw=w1280
+  image_alt: News image for xylose-to-xylitol and xylonic acid press coverage.
+  url: https://www.chosun.com/economy/science/2025/06/29/EU7QHGXWDFW6IGA657CA7KYGFQ/
+  links:
+    - label: Chosun Ilbo
+      url: https://www.chosun.com/economy/science/2025/06/29/EU7QHGXWDFW6IGA657CA7KYGFQ/
+    - label: Dong-A Science
+      url: https://www.dongascience.com/ko/news/72495
+    - label: EurekAlert
+      url: https://www.eurekalert.org/news-releases/1091073
+    - label: Newswise
+      url: https://www.newswise.com/articles/simultaneous-production-of-xylonic-acid-and-xylitol-from-xylose-via-atmospheric-pressure-catalysis
 
-- date: 2025-08-07
-  title: Nature Sustainability publication on membrane technology in organic liquids.
-  summary: Collaborative perspective article discusses sustainability opportunities and scale-up challenges.
-  url: /publications
+- date: 2025-05-15
+  title: MSK spring meeting best poster award.
+  summary: Suyeon Park received the best poster presentation award for research combining organic acid purification with CO2 mineralization through diffusion dialysis.
+  note: Awarded at the spring meeting of the Membrane Society of Korea.
+  image: https://lh3.googleusercontent.com/sitesv/APaQ0STXwhMIoXUWKAwmY8f-AQN3-aK8lYTNZqHLqi24X2yrU2YVeiU0iXSWlIjmjCrfpdirpx3gYcHtHXZo_wDNGT85IBwrT0IXWxvzSTeNnKs_vIaoITrzljummbhauW3cRAyfpqFp-wzliTLpB7AYMmMnGbPu4hVCiBSyCgp-BrfYYEFhfMwQwDv0UqEpA7ja-bDxMeHvXKvrJ_MOcIkQXe83vjfXI1iH9VX1=w1280
+  image_alt: News image for the MSK spring meeting best poster award.
 
-- date: 2025-05-09
-  title: Korean patent registered for ion exchange membrane with improved selectivity.
-  summary: Patent registration supports industrial translation for organic acid separations.
-  url: /patents
-
-- date: 2024-11-15
-  title: Two Korean patents registered for organic acid separation and bipolar membrane electrodialysis control.
-  summary: Intellectual property portfolio expanded in circular separation process technologies.
-  url: /patents
-
-- date: 2024-02-15
-  title: Catalyst patent registered for glycerol-to-lactic-acid route.
-  summary: Process and catalyst design jointly protected to accelerate commercialization.
-  url: /patents
+- date: 2023-11-09
+  title: National R&D Excellence Achievements 100 recognition.
+  summary: The lab's work on continuous catalytic depolymerization and separation of waste polystyrene was recognized among Korea's National R&D Excellence Achievements 100.
+  note: Listed through national recognition programs led by MSIT and KISTEP.
+  image: https://lh3.googleusercontent.com/sitesv/APaQ0SSGaFmTJs8_ipBTNglttT4V_VKMj8TYnahNc7b-j_7fDPB4uklxooUlJJ_4co8B9cetsVBSHvKZtaI9QBfMDtmVxDAJ20R-bMRtOvbOLScrQNFEJ40lCoLLa9qXc7unNJjShhDN5nhE9tM5AK-RV9Nv45DjBAB0Y4K0fKewQ81N9U8CIo6jOtGjH-DOrLnMvihJv72HYf9sCqS_uWrr1YTuvNygjzbjgEar=w1280
+  image_alt: News image for the National R&D Excellence Achievements 100 recognition.
+  url: https://www.msit.go.kr/bbs/view.do?sCode=user&mId=239&mPid=113&bbsSeqNo=94&nttSeqNo=3183666
+  links:
+    - label: MSIT
+      url: https://www.msit.go.kr/bbs/view.do?sCode=user&mId=239&mPid=113&bbsSeqNo=94&nttSeqNo=3183666
+    - label: KISTEP
+      url: https://www.kistep.re.kr/board.es?mid=a10305080000&bid=0002&act=view&list_no=43708

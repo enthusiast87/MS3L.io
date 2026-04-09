@@ -2,7 +2,6 @@
 layout: default
 title: Patents
 ---
-{% assign experiences = site.data.lab.experiences.items %}
 {% assign impact = site.data.lab.technology_impact %}
 {% assign patents = site.data.patents %}
 
@@ -31,19 +30,6 @@ title: Patents
           {% if patent.china_patent %}
           <p class="publication-doi">{{ patent.china_patent }}</p>
           {% endif %}
-        </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="member-note">
-      <div class="page-card">
-        <h2>Representative experiences</h2>
-        {% for item in experiences %}
-        <div class="list-card publication-entry">
-          <strong>{{ item.title }}</strong>
-          <p>{{ item.summary }}</p>
-          <p class="publication-doi">{{ item.detail }}</p>
         </div>
         {% endfor %}
       </div>

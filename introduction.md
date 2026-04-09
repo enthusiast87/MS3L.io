@@ -11,20 +11,25 @@ title: Introduction
       {% for paragraph in lab.introduction.overview %}
       <p>{{ paragraph }}</p>
       {% endfor %}
+
       <h2>Research Priorities</h2>
       <ul>
         {% for item in lab.introduction.priorities %}
         <li>{{ item }}</li>
         {% endfor %}
       </ul>
-      <h2>Jihoon Kim</h2>
-      <p><strong>{{ lab.introduction.principal_investigator.current_role }}</strong></p>
-      <p>{{ lab.introduction.principal_investigator.current_affiliation }}</p>
-      <ul>
-        {% for item in lab.introduction.principal_investigator.previous_positions %}
-        <li>{{ item }}</li>
+
+      <h2>{{ lab.approach.title }}</h2>
+      <p>{{ lab.approach.lead }}</p>
+
+      <div class="card-grid three">
+        {% for area in lab.approach.areas %}
+        <div class="card">
+          <h3>{{ area.title }}</h3>
+          <p>{{ area.summary }}</p>
+        </div>
         {% endfor %}
-      </ul>
+      </div>
     </div>
   </div>
 </div>

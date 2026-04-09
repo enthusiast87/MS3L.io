@@ -11,25 +11,38 @@ title: News
       <p>{{ lab.news_page.lead }}</p>
     </div>
 
-    {% for item in site.data.news %}
-    <div class="list-card">
-      <div class="list-meta">{{ item.date | date: "%B %Y" }}</div>
-      {% if item.url %}
-      <strong><a class="publication-link" href="{{ item.url | relative_url }}">{{ item.title }}</a></strong>
-      {% else %}
-      <strong>{{ item.title }}</strong>
-      {% endif %}
-      {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
-    </div>
-    {% endfor %}
+    <div class="news-feed">
+      {% for item in site.data.news %}
+      <article class="news-card">
+        {% if item.image %}
+        <div class="news-card-media">
+          <img src="{{ item.image }}" alt="{{ item.image_alt | default: item.title }}">
+        </div>
+        {% endif %}
 
-    <section class="member-note">
-      <div class="page-card">
-        <h2>News and updates</h2>
-        <p>
-          News migration is in progress. The entries above already include migrated highlights from publications, awards, and patent milestones, and more archived items will be added chronologically.
-        </p>
-      </div>
-    </section>
+        <div class="news-card-body">
+          <div class="list-meta">{{ item.date | date: "%B %-d, %Y" }}</div>
+
+          {% if item.url %}
+          <h2 class="news-card-title"><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></h2>
+          {% else %}
+          <h2 class="news-card-title">{{ item.title }}</h2>
+          {% endif %}
+
+          {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
+          {% if item.note %}<p class="news-note">{{ item.note }}</p>{% endif %}
+
+          {% if item.links %}
+          <div class="news-links">
+            <span class="news-links-label">Related links</span>
+            {% for link in item.links %}
+            <a class="publication-link" href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span class="news-links-sep">/</span>{% endunless %}
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
   </div>
 </div>
