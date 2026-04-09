@@ -71,6 +71,12 @@ a {
   color: var(--strong);
 }
 
+.brand-logo img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
 .brand-title sup {
   font-size: 0.58em;
   vertical-align: super;
@@ -161,6 +167,11 @@ a {
 
 .hero-clean {
   padding: 54px 0 36px;
+}
+
+.hero-clean h1 {
+  font-size: 2.35rem;
+  line-height: 1.2;
 }
 
 .hero-board {
@@ -443,6 +454,10 @@ a {
   transition: transform .15s ease;
 }
 
+a.card {
+  margin-bottom: 12px;
+}
+
 .card h3 {
   margin: 0 0 10px;
   font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
@@ -589,6 +604,19 @@ a {
 .publication-authors,
 .publication-doi {
   margin: 6px 0 0;
+}
+
+.author-highlight {
+  font-weight: 700;
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.publication-note {
+  margin-top: 6px;
+  font-size: 0.86rem;
+  color: #6b7280;
 }
 
 .publication-support {
