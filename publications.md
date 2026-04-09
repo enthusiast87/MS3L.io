@@ -20,7 +20,8 @@ title: Publications
       <strong>{{ item.title }}</strong>
       {% endif %}
       {% if item.authors %}
-      <p class="publication-authors">{% include highlight-members.html text=item.authors %}</p>
+      {% assign cleaned_authors = item.authors | replace: ' et al.', '' | replace: ' et al', '' %}
+      <p class="publication-authors">{% include highlight-members.html text=cleaned_authors %}</p>
       {% endif %}
       {% if item.summary %}
       <p>{{ item.summary }}</p>

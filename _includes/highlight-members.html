@@ -1,7 +1,7 @@
 {% assign highlighted = include.text %}
 {% assign aliases = "Jihoon Kim|Ji Hoon Kim|Khilola Kholmizaeva|Suyeon Park|Su Yeon Park|Yourim Noh|You Rim Noh|Hyeokjun Seo|Dr. Hyeokjun Seo" | split: "|" %}
 {% for alias in aliases %}
-  {% assign wrapped = '<span class="member-highlight">' | append: alias | append: '</span>' %}
+  {% assign wrapped = '<strong class="member-highlight">' | append: alias | append: '</strong>' %}
   {% assign highlighted = highlighted | replace: alias, wrapped %}
 {% endfor %}
 {{ highlighted }}

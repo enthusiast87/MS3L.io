@@ -89,5 +89,29 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        const navGroups = Array.from(document.querySelectorAll('.nav-group'));
+        if (!navGroups.length) return;
+
+        navGroups.forEach((group) => {
+          const summary = group.querySelector('summary');
+          if (!summary) return;
+          summary.addEventListener('click', () => {
+            navGroups.forEach((other) => {
+              if (other !== group) other.removeAttribute('open');
+            });
+          });
+        });
+
+        document.addEventListener('click', (event) => {
+          const insideAnyGroup = navGroups.some((group) => group.contains(event.target));
+          if (!insideAnyGroup) {
+            navGroups.forEach((group) => group.removeAttribute('open'));
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
