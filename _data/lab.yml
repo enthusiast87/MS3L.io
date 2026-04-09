@@ -1,4 +1,4 @@
-short_name: MS^3L
+short_name: MS<sup>3</sup>L
 brand_mark: MS<sup>3</sup>L
 full_name: Membrane-based Sustainable Separation Solutions Laboratory
 subtitle: Membrane Science | Sustainable Separation | Process Innovation
@@ -6,7 +6,7 @@ institution: Korea Research Institute of Chemical Technology
 
 hero:
   title: Membrane-based sustainable separation solutions for circular chemical processes, resource recovery, and energy systems.
-  body: Membrane-based Sustainable Separation Solutions Laboratory (MS^3L) develops membrane technologies for energy-efficient ion and liquid separations across biorefinery systems, plastic recycling, solvent management, resource recovery, and electrochemical applications. Our work integrates separation science, membrane engineering, and process design to build practical low-energy solutions.
+  body: Membrane-based Sustainable Separation Solutions Laboratory (MS<sup>3</sup>L) develops membrane technologies for energy-efficient ion and liquid separations across biorefinery systems, plastic recycling, solvent management, resource recovery, and electrochemical applications. Our work integrates separation science, membrane engineering, and process design to build practical low-energy solutions.
   primary_cta_label: Research Areas
   primary_cta_url: /research
   secondary_cta_label: Publications
@@ -49,7 +49,7 @@ news:
 
 approach:
   title: From membrane science to process impact
-  lead: MS3L connects molecular-scale membrane design to scalable process performance in chemically demanding liquid systems.
+  lead: MS<sup>3</sup>L connects molecular-scale membrane design to scalable process performance in chemically demanding liquid systems.
   areas:
     - title: Molecular selectivity
       summary: Designing membranes and interfaces for challenging ion and organic-liquid separations.
@@ -59,7 +59,7 @@ approach:
       summary: Applying separation science to biorefinery, recycling, and energy-related resource loops.
 
 join:
-  title: Join MS3L
+  title: Join MS<sup>3</sup>L
   body: We welcome inquiries regarding research collaboration, student positions, and other opportunities related to membrane science, sustainable separations, and process innovation.
   actions:
     - label: Contact the Lab
@@ -70,7 +70,7 @@ join:
 introduction:
   title: Introduction
   overview:
-    - Membrane-based Sustainable Separation Solutions Laboratory (MS^3L) develops membrane-based technologies for energy-efficient ion and liquid separations in sustainable chemical processes, circular resource systems, and energy applications.
+    - Membrane-based Sustainable Separation Solutions Laboratory (MS<sup>3</sup>L) develops membrane-based technologies for energy-efficient ion and liquid separations in sustainable chemical processes, circular resource systems, and energy applications.
     - Our research integrates separation science, process design, and membrane engineering to build practical low-energy solutions for chemically demanding liquid systems.
   priorities:
     - Sustainable biorefinery and product recovery
@@ -88,7 +88,7 @@ introduction:
 
 projects:
   title: Current Research Projects
-  lead: Ongoing national and institute-led projects migrated from the original MS3L website.
+  lead: Ongoing national and institute-led projects migrated from the original MS<sup>3</sup>L website.
   items:
     - title: Development of demonstration technology for carbon-neutral chemical process with digital transformation
       summary: Carbon-neutral process demonstration project integrating CCU technologies with digital transformation workflows.
@@ -118,19 +118,19 @@ experiences:
 
 members:
   title: Members
-  lead: MS^3L is currently presented with the principal investigator profile first. Additional researcher and student profiles can be added as the team roster is finalized.
+  lead: MS<sup>3</sup>L is currently presented with the principal investigator profile first. Additional researcher and student profiles can be added as the team roster is finalized.
 
 publications:
   title: Publications
-  lead: Selected publications currently highlighted on the MS^3L website.
+  lead: Selected publications currently highlighted on the MS<sup>3</sup>L website.
 
 news_page:
   title: News
-  lead: Selected recent updates and milestones from MS^3L.
+  lead: Selected recent updates and milestones from MS<sup>3</sup>L.
 
 technology_impact:
   title: Technology and Impact
-  lead: MS^3L translates membrane research into practical solutions through patents, technology transfer, and industry-relevant process innovation.
+  lead: MS<sup>3</sup>L translates membrane research into practical solutions through patents, technology transfer, and industry-relevant process innovation.
   pages:
     - title: Patents
       slug: patents
@@ -147,13 +147,13 @@ technology_impact:
 
 join_us:
   title: Join Us
-  body: MS^3L welcomes students and researchers who are interested in membrane science, sustainable separations, and process innovation for chemical, energy, and environmental systems.
-  cta_label: Contact MS^3L
+  body: MS<sup>3</sup>L welcomes students and researchers who are interested in membrane science, sustainable separations, and process innovation for chemical, energy, and environmental systems.
+  cta_label: Contact MS<sup>3</sup>L
   cta_url: /contact
 
 contact:
   title: Contact
-  note: Please reach out regarding research collaboration, student opportunities, or general inquiries about MS^3L.
+  note: Please reach out regarding research collaboration, student opportunities, or general inquiries about MS<sup>3</sup>L.
   institution: Korea Research Institute of Chemical Technology (KRICT)
   address: W6, 141 Gajeong-ro, Yuseong-gu, Daejeon, South Korea
   emails:

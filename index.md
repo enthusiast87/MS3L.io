@@ -23,8 +23,9 @@ title: Home
         <h3>Notice / News</h3>
         {% for item in site.data.news limit: 4 %}
         <div class="side-news-item">
-          <div class="list-meta">{{ item.date }}</div>
-          <strong>{{ item.title }}</strong>
+          <div class="list-meta">{{ item.date | date: "%b %Y" }}</div>
+          {% if item.url %}<strong><a class="publication-link" href="{{ item.url | relative_url }}">{{ item.title }}</a></strong>{% else %}<strong>{{ item.title }}</strong>{% endif %}
+          {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
         </div>
         {% endfor %}
         <a class="inline-link" href="{{ '/news' | relative_url }}">More news →</a>
@@ -50,7 +51,7 @@ title: Home
     </a>
     <a class="card card-link" href="{{ '/members' | relative_url }}">
       <h3>Members</h3>
-      <p>Graduate students and postdoctoral researchers in MS3L.</p>
+      <p>Graduate students and postdoctoral researchers in MS<sup>3</sup>L.</p>
     </a>
     <a class="card card-link" href="{{ '/projects' | relative_url }}">
       <h3>Current Projects</h3>
@@ -65,12 +66,19 @@ title: Home
       <h2 class="section-title">Research Themes</h2>
       <div class="card-grid two">
         {% for item in site.data.research %}
-        <div class="card">
+        <div class="card research-theme-card">
           <h3>{{ item.title }}</h3>
           <p>{{ item.summary }}</p>
+          {% if item.selected_papers %}
+          <div class="theme-paper-inline">
+            <div class="list-meta">Key paper</div>
+            <a class="publication-link" href="{{ item.selected_papers[0].url }}">{{ item.selected_papers[0].title }}</a>
+          </div>
+          {% endif %}
         </div>
         {% endfor %}
       </div>
+      <p class="theme-cta"><a class="inline-link" href="{{ '/research' | relative_url }}">View detailed theme summaries and figures →</a></p>
     </div>
 
     <div>
@@ -100,7 +108,8 @@ title: Home
         {% if item.url %}
         <strong><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></strong>
         {% else %}
-        <strong>{{ item.title }}</strong>
+        {% if item.url %}<strong><a class="publication-link" href="{{ item.url | relative_url }}">{{ item.title }}</a></strong>{% else %}<strong>{{ item.title }}</strong>{% endif %}
+          {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
         {% endif %}
       </div>
       {% endfor %}

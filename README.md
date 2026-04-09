@@ -1,6 +1,6 @@
-# MS3L.io
+# MS<sup>3</sup>L.io
 
-MS^3L GitHub Pages website for the Membrane-based Sustainable Separation Solutions Laboratory.
+MS<sup>3</sup>L GitHub Pages website for the Membrane-based Sustainable Separation Solutions Laboratory.
 
 ## Local Preview
 
