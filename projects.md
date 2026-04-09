@@ -11,22 +11,30 @@ title: Projects
       <p>{{ lab.projects.lead }}</p>
     </div>
 
-    <div class="card-grid three">
-      {% for item in lab.projects.items %}
-      <div class="card">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.summary }}</p>
-        {% if item.trl %}
-        <p><strong>{{ item.trl }}</strong></p>
-        {% endif %}
-        {% if item.period %}
-        <p><strong>Period:</strong> {{ item.period }}</p>
-        {% endif %}
-        {% if item.focus %}
-        <p><strong>Focus:</strong> {{ item.focus }}</p>
-        {% endif %}
+    <section class="profile-section">
+      <h2 class="section-title section-title-sm">Ongoing projects</h2>
+      <div class="card-grid two">
+        {% for item in lab.projects.ongoing %}
+        <div class="card">
+          <h3>{{ item.title }}</h3>
+          <p><strong>{{ item.period }}</strong></p>
+          <p>{{ item.sponsor }}</p>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
+    </section>
+
+    <section class="profile-section">
+      <h2 class="section-title section-title-sm">Previous projects</h2>
+      <div class="card-grid two">
+        {% for item in lab.projects.previous %}
+        <div class="card">
+          <h3>{{ item.title }}</h3>
+          <p><strong>{{ item.period }}</strong></p>
+          <p>{{ item.sponsor }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
   </div>
 </div>

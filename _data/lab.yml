@@ -80,33 +80,72 @@ introduction:
     - Membrane-enabled energy and electrochemical separations
   principal_investigator:
     name: Jihoon Kim
-    current_role: Senior Researcher (2021 - present)
-    current_affiliation: Korea Research Institute of Chemical Technology (KRICT)
+    current_role: Principal Researcher (March 2026 - present)
+    current_affiliation: Korea Research Institute of Chemical Technology (KRICT) | Associate Professor, UST-KRICT School
     previous_positions:
       - Postdoctoral Research Associate in Chemical Engineering (2018 - 2021), Imperial College London (Prof. Andrew G. Livingston)
       - MS-PhD in Energy Engineering (2012 - 2017), Hanyang University (Prof. Young Moo Lee)
       - BS in Chemical Engineering (2006 - 2008, 2010 - 2012), Hanyang University
 
 projects:
-  title: Current Research Projects
-  lead: Ongoing national and institute-led projects migrated from the original MS<sup>3</sup>L website.
-  items:
-    - title: Development of demonstration technology for carbon-neutral chemical process with digital transformation
-      summary: Carbon-neutral process demonstration project integrating CCU technologies with digital transformation workflows.
-      trl: TRL 3 to 6
-      period: 2024 - ongoing
-      focus: Demonstration-scale digital operation and process integration
-    - title: Development of advanced separation process for CCU
-      summary: Advanced membrane and separation process development for CCU and carbon circulation systems.
-      trl: TRL 3 to 7
-      period: 2023 - ongoing
-      focus: High-selectivity separation trains for CCU unit operations
-    - title: Development of platform chemical production and demonstration through CO2 conversion with under-utilized biomass
-      summary: Platform chemical production and pilot-scale demonstration based on under-utilized biomass and CO2 conversion.
-      trl: TRL 3 to 4
-      period: 2024 - ongoing
-      focus: Biomass/CO2 conversion and downstream purification
-
+  title: Projects
+  lead: Key ongoing and previous projects migrated from the original Google homepage.
+  ongoing:
+    - title: "Global Top Strategic Research Group: CCU"
+      period: 2025.05 - 2030.04
+      sponsor: NRF - Basic Science Research Program
+    - title: Development of Demonstration Technologies for Carbon-Neutral Chemical Processes Utilizing Digital Transformation (DX)
+      period: 2024.01 - 2029.12
+      sponsor: Korean Research Institute of Chemical Technology (KRICT)
+    - title: Development of polymer platform materials utilizing organic resources and carbon dioxide
+      period: 2022.05 - 2027.01
+      sponsor: NRF - Basic Science Research Program
+    - title: Carbon dioxide conversion to platform chemicals (C4, C6) using under-utilized biomass resources
+      period: 2022.05 - 2027.02
+      sponsor: NRF - Basic Science Research Program
+  previous:
+    - title: 3kT/yr scale continuous plastic recycling plant design
+      period: 2023.02 - 2024.12
+      sponsor: Lotte Chemicals
+    - title: Plastic value-up based on the catalytic depolymerization
+      period: 2021.10 - 2024.12
+      sponsor: Korea Research Institute of Chemical Technology (KRICT)
+    - title: Highly pure acetophenone purification plant design
+      period: 2022.12 - 2024.07
+      sponsor: SK picglobal
+    - title: Roll-to-roll robust membrane fabrication for methoxy carboxylation pilot-plant
+      period: 2020.07 - 2020.12
+      sponsor: Evonik Industries - Know-how consultancy
+    - title: Liquid-phase iterative oligonucleotide synthesis through organic solvent nanofiltration
+      period: 2019.03 - 2021.08
+      sponsor: European Research Council - Advanced Grant
+    - title: Membrane development for separation of complex hydrocarbon mixtures
+      period: 2019.08 - 2021.08
+      sponsor: ExxonMobil
+    - title: Membrane-based extraction of organic molecules from actual fermentation broth
+      period: 2018.05 - 2019.08
+      sponsor: British Petroleum - International Centre of Advanced Materials
+    - title: Developing innovative and environmental-friendly spraying thin-film composite membranes for interactive separation in organic solvents
+      period: 2018.09 - 2019.08
+      sponsor: NRF - Basic Science Research Program (Principal Investigator)
+    - title: Development of innovative lithium-ion battery separator supported for next-generation lithium-ion battery
+      period: 2016.11 - 2018.04
+      sponsor: Samsung SDI
+    - title: Development of durable anion exchange reinforced composite membrane using innovative robust support for alkaline membrane fuel cell supported
+      period: 2015.10 - 2018.04
+      sponsor: NRF - Nano Material Technology Development Program
+    - title: Development of innovative original polymer membrane materials for energy harvesting
+      period: 2012.09 - 2017.08
+      sponsor: NRF - Nano Material Technology Development Program
+    - title: New Battery Separator with Excellent Thermal Stability
+      period: 2011.04 - 2014.06
+      sponsor: LG Chemicals
+    - title: Development of robust hydrocarbon polymer electrolyte membranes for high-temperature proton exchange membrane fuel cell
+      period: 2012.01 - 2013.12
+      sponsor: Korean Institute of Science and Technology (KIST)
+    - title: Development of innovative hydrocarbon polymer electrolyte membranes for low-temperature proton exchange membrane fuel cell
+      period: 2012.01 - 2013.07
+      sponsor: Hyundai Motors
 experiences:
   title: Representative Experiences
   items:
