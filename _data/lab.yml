@@ -1,4 +1,4 @@
-short_name: MS^3L
+short_name: MS<sup>3</sup>L
 brand_mark: MS<sup>3</sup>L
 full_name: Membrane-based Sustainable Separation Solutions Laboratory
 subtitle: Membrane Science | Sustainable Separation | Process Innovation
@@ -6,7 +6,7 @@ institution: Korea Research Institute of Chemical Technology
 
 hero:
   title: Membrane-based sustainable separation solutions for circular chemical processes, resource recovery, and energy systems.
-  body: Membrane-based Sustainable Separation Solutions Laboratory (MS^3L) develops membrane technologies for energy-efficient ion and liquid separations across biorefinery systems, plastic recycling, solvent management, resource recovery, and electrochemical applications. Our work integrates separation science, membrane engineering, and process design to build practical low-energy solutions.
+  body: Membrane-based Sustainable Separation Solutions Laboratory (MS<sup>3</sup>L) develops membrane technologies for energy-efficient ion and liquid separations across biorefinery systems, plastic recycling, solvent management, resource recovery, and electrochemical applications. Our work integrates separation science, membrane engineering, and process design to build practical low-energy solutions.
   primary_cta_label: Research Areas
   primary_cta_url: /research
   secondary_cta_label: Publications
@@ -49,7 +49,7 @@ news:
 
 approach:
   title: From membrane science to process impact
-  lead: MS3L connects molecular-scale membrane design to scalable process performance in chemically demanding liquid systems.
+  lead: MS<sup>3</sup>L connects molecular-scale membrane design to scalable process performance in chemically demanding liquid systems.
   areas:
     - title: Molecular selectivity
       summary: Designing membranes and interfaces for challenging ion and organic-liquid separations.
@@ -59,7 +59,7 @@ approach:
       summary: Applying separation science to biorefinery, recycling, and energy-related resource loops.
 
 join:
-  title: Join MS3L
+  title: Join MS<sup>3</sup>L
   body: We welcome inquiries regarding research collaboration, student positions, and other opportunities related to membrane science, sustainable separations, and process innovation.
   actions:
     - label: Contact the Lab
@@ -70,7 +70,7 @@ join:
 introduction:
   title: Introduction
   overview:
-    - Membrane-based Sustainable Separation Solutions Laboratory (MS^3L) develops membrane-based technologies for energy-efficient ion and liquid separations in sustainable chemical processes, circular resource systems, and energy applications.
+    - Membrane-based Sustainable Separation Solutions Laboratory (MS<sup>3</sup>L) develops membrane-based technologies for energy-efficient ion and liquid separations in sustainable chemical processes, circular resource systems, and energy applications.
     - Our research integrates separation science, process design, and membrane engineering to build practical low-energy solutions for chemically demanding liquid systems.
   priorities:
     - Sustainable biorefinery and product recovery
@@ -79,27 +79,72 @@ introduction:
     - Membrane-enabled energy and electrochemical separations
   principal_investigator:
     name: Jihoon Kim
-    current_role: Senior Researcher (2021 - present)
-    current_affiliation: Korea Research Institute of Chemical Technology (KRICT)
+    current_role: Principal Researcher (March 2026 - present)
+    current_affiliation: Korea Research Institute of Chemical Technology (KRICT) | Associate Professor, UST-KRICT School
     previous_positions:
       - Postdoctoral Research Associate in Chemical Engineering (2018 - 2021), Imperial College London (Prof. Andrew G. Livingston)
       - MS-PhD in Energy Engineering (2012 - 2017), Hanyang University (Prof. Young Moo Lee)
       - BS in Chemical Engineering (2006 - 2008, 2010 - 2012), Hanyang University
 
 projects:
-  title: Current Research Projects
-  lead: Ongoing national and institute-led projects migrated from the original MS3L website.
-  items:
-    - title: Development of demonstration technology for carbon-neutral chemical process with digital transformation
-      summary: Carbon-neutral process demonstration project integrating CCU technologies with digital transformation workflows.
-      trl: TRL 3 to 6
-    - title: Development of advanced separation process for CCU
-      summary: Advanced membrane and separation process development for CCU and carbon circulation systems.
-      trl: TRL 3 to 7
-    - title: Development of platform chemical production and demonstration through CO2 conversion with under-utilized biomass
-      summary: Platform chemical production and pilot-scale demonstration based on under-utilized biomass and CO2 conversion.
-      trl: TRL 3 to 4
-
+  title: Projects
+  lead: Key ongoing and previous projects migrated from the original Google homepage.
+  ongoing:
+    - title: "Global Top Strategic Research Group: CCU"
+      period: 2025.05 - 2030.04
+      sponsor: NRF - Basic Science Research Program
+    - title: Development of Demonstration Technologies for Carbon-Neutral Chemical Processes Utilizing Digital Transformation (DX)
+      period: 2024.01 - 2029.12
+      sponsor: Korean Research Institute of Chemical Technology (KRICT)
+    - title: Development of polymer platform materials utilizing organic resources and carbon dioxide
+      period: 2022.05 - 2027.01
+      sponsor: NRF - Basic Science Research Program
+    - title: Carbon dioxide conversion to platform chemicals (C4, C6) using under-utilized biomass resources
+      period: 2022.05 - 2027.02
+      sponsor: NRF - Basic Science Research Program
+  previous:
+    - title: 3kT/yr scale continuous plastic recycling plant design
+      period: 2023.02 - 2024.12
+      sponsor: Lotte Chemicals
+    - title: Plastic value-up based on the catalytic depolymerization
+      period: 2021.10 - 2024.12
+      sponsor: Korea Research Institute of Chemical Technology (KRICT)
+    - title: Highly pure acetophenone purification plant design
+      period: 2022.12 - 2024.07
+      sponsor: SK picglobal
+    - title: Roll-to-roll robust membrane fabrication for methoxy carboxylation pilot-plant
+      period: 2020.07 - 2020.12
+      sponsor: Evonik Industries - Know-how consultancy
+    - title: Liquid-phase iterative oligonucleotide synthesis through organic solvent nanofiltration
+      period: 2019.03 - 2021.08
+      sponsor: European Research Council - Advanced Grant
+    - title: Membrane development for separation of complex hydrocarbon mixtures
+      period: 2019.08 - 2021.08
+      sponsor: ExxonMobil
+    - title: Membrane-based extraction of organic molecules from actual fermentation broth
+      period: 2018.05 - 2019.08
+      sponsor: British Petroleum - International Centre of Advanced Materials
+    - title: Developing innovative and environmental-friendly spraying thin-film composite membranes for interactive separation in organic solvents
+      period: 2018.09 - 2019.08
+      sponsor: NRF - Basic Science Research Program (Principal Investigator)
+    - title: Development of innovative lithium-ion battery separator supported for next-generation lithium-ion battery
+      period: 2016.11 - 2018.04
+      sponsor: Samsung SDI
+    - title: Development of durable anion exchange reinforced composite membrane using innovative robust support for alkaline membrane fuel cell supported
+      period: 2015.10 - 2018.04
+      sponsor: NRF - Nano Material Technology Development Program
+    - title: Development of innovative original polymer membrane materials for energy harvesting
+      period: 2012.09 - 2017.08
+      sponsor: NRF - Nano Material Technology Development Program
+    - title: New Battery Separator with Excellent Thermal Stability
+      period: 2011.04 - 2014.06
+      sponsor: LG Chemicals
+    - title: Development of robust hydrocarbon polymer electrolyte membranes for high-temperature proton exchange membrane fuel cell
+      period: 2012.01 - 2013.12
+      sponsor: Korean Institute of Science and Technology (KIST)
+    - title: Development of innovative hydrocarbon polymer electrolyte membranes for low-temperature proton exchange membrane fuel cell
+      period: 2012.01 - 2013.07
+      sponsor: Hyundai Motors
 experiences:
   title: Representative Experiences
   items:
@@ -118,19 +163,19 @@ experiences:
 
 members:
   title: Members
-  lead: MS^3L is currently presented with the principal investigator profile first. Additional researcher and student profiles can be added as the team roster is finalized.
+  lead: MS<sup>3</sup>L is currently presented with the principal investigator profile first. Additional researcher and student profiles can be added as the team roster is finalized.
 
 publications:
   title: Publications
-  lead: Selected publications currently highlighted on the MS^3L website.
+  lead: Selected publications currently highlighted on the MS<sup>3</sup>L website.
 
 news_page:
   title: News
-  lead: Selected recent updates and milestones from MS^3L.
+  lead: Selected recent updates and milestones from MS<sup>3</sup>L.
 
 technology_impact:
   title: Technology and Impact
-  lead: MS^3L translates membrane research into practical solutions through patents, technology transfer, and industry-relevant process innovation.
+  lead: MS<sup>3</sup>L translates membrane research into practical solutions through patents, technology transfer, and industry-relevant process innovation.
   pages:
     - title: Patents
       slug: patents
@@ -147,13 +192,13 @@ technology_impact:
 
 join_us:
   title: Join Us
-  body: MS^3L welcomes students and researchers who are interested in membrane science, sustainable separations, and process innovation for chemical, energy, and environmental systems.
-  cta_label: Contact MS^3L
+  body: MS<sup>3</sup>L welcomes students and researchers who are interested in membrane science, sustainable separations, and process innovation for chemical, energy, and environmental systems.
+  cta_label: Contact MS<sup>3</sup>L
   cta_url: /contact
 
 contact:
   title: Contact
-  note: Please reach out regarding research collaboration, student opportunities, or general inquiries about MS^3L.
+  note: Please reach out regarding research collaboration, student opportunities, or general inquiries about MS<sup>3</sup>L.
   institution: Korea Research Institute of Chemical Technology (KRICT)
   address: W6, 141 Gajeong-ro, Yuseong-gu, Daejeon, South Korea
   emails:
