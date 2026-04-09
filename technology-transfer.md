@@ -2,6 +2,7 @@
 layout: default
 title: Technology Transfer
 ---
+{% assign impact = site.data.lab.technology_impact %}
 
 <div class="page-wrap">
   <div class="container">
@@ -12,8 +13,21 @@ title: Technology Transfer
       </p>
     </div>
 
+    <section class="member-note">
+      <div class="page-card">
+        <h2>Selected partners and recognition</h2>
+        <div class="logo-strip">
+          {% for item in impact.logos %}
+          <div class="logo-chip">
+            <img src="{{ item.image }}" alt="{{ item.alt | default: item.name }}">
+            <span>{{ item.name }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
     <div class="list-card publication-entry">
-      <p><img src="https://lh3.googleusercontent.com/sitesv/APaQ0STG-tDzQqnq65icrWY9bu3Cb7-ShwA_908tgmSQF6s2ZRUPlDNE3E8WOb0WfN9wcmi58Fmc8kzx_fSPO1ukp8zIm_vHrn7QctfoONw23mRVG5veuKLA1I3Zr3OHCKsTQncHylS186xSElX0MNQtXGKADFQDLXYOIk9I6UzVwg7cIOL4XOEiLnpOSruxUcmmjU0ahx73GqEfUH66yHEwnjcqn-3HlsrY4nQk%3Dw1280" alt="Lotte Chemical logo"></p>
       <strong>Technology transfer to Lotte Chemical</strong>
       <p>Continuous waste polystyrene catalytic depolymerization and separation.</p>
       <p class="publication-doi">2022-07-11, 396,000 USD, 10% contribution.</p>

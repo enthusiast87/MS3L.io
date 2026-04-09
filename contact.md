@@ -11,6 +11,19 @@ title: Contact
       <p>{{ contact.note }}</p>
       <p><strong>Institution:</strong> {{ contact.institution }}</p>
       <p><strong>Address:</strong> {{ contact.address }}</p>
+
+      {% if contact.position_inquiry_note %}
+      <h2>Position inquiries</h2>
+      <p>{{ contact.position_inquiry_note }}</p>
+      {% if contact.position_inquiry_items %}
+      <ul>
+        {% for item in contact.position_inquiry_items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% endif %}
+
       <p><strong>Email:</strong></p>
       <ul>
         {% for item in contact.emails %}

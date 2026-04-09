@@ -29,15 +29,6 @@ title: Home
         </div>
         {% endfor %}
         <a class="inline-link" href="{{ '/news' | relative_url }}">More news →</a>
-
-        <h3 class="hero-side-heading">Upcoming Events</h3>
-        {% for event in site.data.events limit: 2 %}
-        <div class="side-news-item">
-          <div class="list-meta">{{ event.date }}</div>
-          <strong class="side-item-title">{{ event.title }}</strong>
-          <p class="side-item-summary">{{ event.location }}</p>
-        </div>
-        {% endfor %}
       </aside>
     </div>
   </div>
@@ -81,16 +72,16 @@ title: Home
 
       <div>
         <div class="page-card contact-summary">
-          <h2>Contact</h2>
-          <p><strong>{{ lab.contact.institution }}</strong></p>
-          <p>{{ lab.contact.address }}</p>
+          <h2>Research Contact</h2>
           <p>
-            {% for item in lab.contact.emails %}
-            <a class="inline-link" href="mailto:{{ item }}">{{ item }}</a>{% unless forloop.last %}<br>{% endunless %}
-            {% endfor %}
+            We welcome inquiries about research collaboration, student opportunities,
+            and membrane-enabled separation topics connected to the themes above.
           </p>
-          <p><strong>TEL.</strong> {{ lab.contact.phone }}</p>
-          <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Contact us</a>
+          <p class="contact-summary-meta"><strong>{{ lab.contact.institution }}</strong></p>
+          <p class="contact-summary-email">
+            <a class="inline-link" href="mailto:{{ lab.contact.email }}">{{ lab.contact.email }}</a>
+          </p>
+          <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Get in touch</a>
         </div>
       </div>
     </div>

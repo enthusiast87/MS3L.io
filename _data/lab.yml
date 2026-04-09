@@ -178,6 +178,19 @@ news_page:
 technology_impact:
   title: Technology and Impact
   lead: MS<sup>3</sup>L translates membrane research into practical solutions through patents, technology transfer, and industry-relevant process innovation.
+  logos:
+    - name: Lotte Chemical
+      image: https://lh3.googleusercontent.com/sitesv/APaQ0STG-tDzQqnq65icrWY9bu3Cb7-ShwA_908tgmSQF6s2ZRUPlDNE3E8WOb0WfN9wcmi58Fmc8kzx_fSPO1ukp8zIm_vHrn7QctfoONw23mRVG5veuKLA1I3Zr3OHCKsTQncHylS186xSElX0MNQtXGKADFQDLXYOIk9I6UzVwg7cIOL4XOEiLnpOSruxUcmmjU0ahx73GqEfUH66yHEwnjcqn-3HlsrY4nQk%3Dw1280
+      alt: Lotte Chemical logo
+    - name: Evonik Industries
+      image: https://lh3.googleusercontent.com/sitesv/APaQ0SRQafT_HU19uTk6RNpNqOXP_o_pqqt2x6sG6gDMSxn-wSTiEx9iVsxwEOJC5R8Il5Prbb-FvOT9TnLb5qcDzuegAt7ZPE3lcGI5Fe24RLyXQMiOdv98u8k0b7MSFs8XFKF8qmEfKArO4NVWoqwpyK4GK4VjwIFOTFI2ZwMCQx8JLlxVEK4zrvEtosNJATMmsGM0Gye3uDUhlDE0GFx1Muqm4TuQT1sxKyJBN3Y%3Dw1280
+      alt: Evonik Industries logo
+    - name: KISTEP
+      image: https://lh3.googleusercontent.com/sitesv/APaQ0SQVoDvdh39K4W6RTM3E9JOkHSFo4B2SFDHt6tIQQFJQv3Yu58-EE4S_BCAjDx1G26eiskPGKMCZOs8P3k06QOhKmXS_-kjzveuB2hqGQ1KdZCRb2ZPpT6gfW3Y-m0-SqsN7l7ka5XcEI1r7rpq7G1gjouFGTElBIGiLjQobLNRrdj7wXplS8osJt0E%3Dw1280
+      alt: KISTEP recognition poster
+    - name: National Research Foundation of Korea
+      image: https://lh3.googleusercontent.com/sitesv/APaQ0SSzaNLT2v_xElSX49fB4Zn_bXj4PXhnJ9-tS-Im6S_Tm4U3UA9-Tse4UR96b4dETHiiMKThSlMQ7DyK69oGDkKYXOTjG8cXDiNri53V3CamxK1yWSVaaEuifO2yMxr0ISfs4ry0cikUSMXWXkGZvtAxW2mFfrqDG1091r1UMMlE123vn4ZcntAzQWMijVWXXI2TqnBesW1hTJ6OzOKj-FxBA3HXjbLg4XOWH9Q%3Dw1280
+      alt: National Research Foundation of Korea logo
   pages:
     - title: Patents
       slug: patents
@@ -203,6 +216,13 @@ contact:
   note: Please reach out regarding research collaboration, student opportunities, or general inquiries about MS<sup>3</sup>L.
   institution: Korea Research Institute of Chemical Technology (KRICT)
   address: W6, 141 Gajeong-ro, Yuseong-gu, Daejeon, South Korea
+  position_inquiry_note: For student or research position inquiries, please include the materials below so we can review your background more efficiently.
+  position_inquiry_items:
+    - A short introduction and your current affiliation
+    - CV or resume
+    - Academic transcript
+    - Research interests and a brief statement on why you want to join MS<sup>3</sup>L
+    - Optional supporting materials such as publications, thesis summary, or portfolio
   emails:
     - jh.kim@krict.re.kr
     - enthusiast87@gmail.com
