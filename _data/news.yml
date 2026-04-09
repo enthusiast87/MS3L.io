@@ -1,8 +1,39 @@
-- date: March 2026
-  title: Press release for a best research achievement from KRICT.
+- date: 2026-03-20
+  title: KRICT press release highlights MS<sup>3</sup>L best research achievement.
+  summary: Featured by KRICT for membrane-enabled process innovation and resource-circulation impact.
+  url: https://www.krict.re.kr/
 
-- date: January 2026
-  title: Recent publications in Applied Catalysis B and ChemSusChem from MS3L.
+- date: 2026-01-25
+  title: New publications in Applied Catalysis B and ChemSusChem.
+  summary: Recent studies report catalytic co-production and membrane-enabled chemical recycling advances.
+  url: /publications
 
-- date: October 2025
-  title: MSK award for oral poster presentation.
+- date: 2025-11-28
+  title: Chemical Engineering Journal paper accepted on CO2 mineralization and organic acid purification.
+  summary: Diffusion dialysis strategy demonstrates simultaneous CO2 utilization and purification performance.
+  url: /publications
+
+- date: 2025-10-18
+  title: MSK award for oral and poster presentations.
+  summary: Student presentations were recognized for membrane process development and system-level analysis.
+  url: /members
+
+- date: 2025-08-07
+  title: Nature Sustainability publication on membrane technology in organic liquids.
+  summary: Collaborative perspective article discusses sustainability opportunities and scale-up challenges.
+  url: /publications
+
+- date: 2025-05-09
+  title: Korean patent registered for ion exchange membrane with improved selectivity.
+  summary: Patent registration supports industrial translation for organic acid separations.
+  url: /patents
+
+- date: 2024-11-15
+  title: Two Korean patents registered for organic acid separation and bipolar membrane electrodialysis control.
+  summary: Intellectual property portfolio expanded in circular separation process technologies.
+  url: /patents
+
+- date: 2024-02-15
+  title: Catalyst patent registered for glycerol-to-lactic-acid route.
+  summary: Process and catalyst design jointly protected to accelerate commercialization.
+  url: /patents

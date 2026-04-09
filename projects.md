@@ -22,18 +22,5 @@ title: Projects
       </div>
       {% endfor %}
     </div>
-
-    <section class="member-note">
-      <div class="page-card">
-        <h2>{{ lab.experiences.title }}</h2>
-        {% for item in lab.experiences.items %}
-        <div class="list-card publication-entry">
-          <strong>{{ item.title }}</strong>
-          <p>{{ item.summary }}</p>
-          <p class="publication-doi">{{ item.detail }}</p>
-        </div>
-        {% endfor %}
-      </div>
-    </section>
   </div>
 </div>

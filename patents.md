@@ -18,9 +18,10 @@ title: Patents
         <h2>Registered patents</h2>
         {% for patent in patents %}
         <div class="list-card publication-entry">
-          <strong>{{ forloop.index }}. {{ patent.title }}</strong>
-          <p>{{ patent.inventors }}</p>
-          <p class="publication-doi">{{ patent.registration }}{% if patent.date %} ({{ patent.date }}){% endif %}</p>
+          <strong>{{ patent.title }}</strong>
+          <p class="publication-authors">{% include highlight-members.html text=patent.inventors %}</p>
+          <div class="list-meta">{% if patent.date %}{{ patent.date | date: "%Y" }}{% else %}N/A{% endif %} · {{ patent.country | default: "Korea (KR)" }}</div>
+          <p class="publication-doi">{{ patent.registration }}</p>
           {% if patent.pct %}
           <p class="publication-doi">PCT: {{ patent.pct }}</p>
           {% endif %}
