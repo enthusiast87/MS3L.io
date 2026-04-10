@@ -9,9 +9,20 @@ title: Home
   <div class="container">
     <div class="hero-board">
       <div class="hero-main">
-        <div class="eyebrow">{{ lab.subtitle }}</div>
-        <h1>{{ lab.hero.title }}</h1>
-        <p>{{ lab.hero.body }}</p>
+        <div class="hero-identity">
+          <div class="hero-acronym-block" aria-label="{{ lab.full_name | strip_html }}">
+            <div class="hero-acronym-line"><span class="hero-initial">M</span>embrane-based</div>
+            <div class="hero-acronym-line"><span class="hero-initial">S</span>ustainable</div>
+            <div class="hero-acronym-line"><span class="hero-initial">S</span>eparation</div>
+            <div class="hero-acronym-line"><span class="hero-initial">S</span>olutions</div>
+            <div class="hero-acronym-line"><span class="hero-initial">L</span>aboratory</div>
+          </div>
+          <div class="hero-identity-copy">
+            <h1>MS<sup>3</sup>L</h1>
+            <p class="hero-mission">{{ lab.hero.mission }}</p>
+            <p class="hero-subcopy">{{ lab.subtitle }}</p>
+          </div>
+        </div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="{{ '/research' | relative_url }}">Research</a>
           <a class="btn btn-secondary" href="{{ '/publications' | relative_url }}">Publications</a>
