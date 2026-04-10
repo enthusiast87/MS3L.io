@@ -10,11 +10,15 @@ title: Home
     <div class="hero-board">
       <div class="hero-main">
         <div class="hero-identity">
-          {% if lab.logo_image %}
-          <img class="hero-logo" src="{{ lab.logo_image | relative_url }}" alt="{{ lab.short_name | strip_html }} logo">
-          {% endif %}
-          <div>
-            <h1>{{ lab.full_name }}</h1>
+          <div class="hero-acronym-block" aria-label="{{ lab.full_name | strip_html }}">
+            <div class="hero-acronym-line"><span class="hero-initial">M</span>embrane-based</div>
+            <div class="hero-acronym-line"><span class="hero-initial">S</span>ustainable</div>
+            <div class="hero-acronym-line"><span class="hero-initial">S</span>eparation</div>
+            <div class="hero-acronym-line"><span class="hero-initial">S</span>olutions</div>
+            <div class="hero-acronym-line"><span class="hero-initial">L</span>aboratory</div>
+          </div>
+          <div class="hero-identity-copy">
+            <h1>MS<sup>3</sup>L</h1>
             <p class="hero-mission">{{ lab.hero.mission }}</p>
             <p class="hero-subcopy">{{ lab.subtitle }}</p>
           </div>
