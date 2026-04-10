@@ -9,9 +9,16 @@ title: Home
   <div class="container">
     <div class="hero-board">
       <div class="hero-main">
-        <div class="eyebrow">{{ lab.subtitle }}</div>
-        <h1>{{ lab.hero.title }}</h1>
-        <p>{{ lab.hero.body }}</p>
+        <div class="hero-identity">
+          {% if lab.logo_image %}
+          <img class="hero-logo" src="{{ lab.logo_image | relative_url }}" alt="{{ lab.short_name | strip_html }} logo">
+          {% endif %}
+          <div>
+            <h1>{{ lab.full_name }}</h1>
+            <p class="hero-mission">{{ lab.hero.mission }}</p>
+            <p class="hero-subcopy">{{ lab.subtitle }}</p>
+          </div>
+        </div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="{{ '/research' | relative_url }}">Research</a>
           <a class="btn btn-secondary" href="{{ '/publications' | relative_url }}">Publications</a>
