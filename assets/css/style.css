@@ -231,6 +231,13 @@ a {
   border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 28px;
+  height: 100%;
+}
+
+.hero-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .hero-main {
