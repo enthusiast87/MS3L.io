@@ -174,11 +174,39 @@ a {
   line-height: 1.2;
 }
 
+.hero-identity {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 16px;
+}
+
+.hero-logo {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding: 10px;
+}
+
+.hero-mission {
+  margin-top: 0;
+  font-size: 1.04rem;
+}
+
+.hero-subcopy {
+  margin-top: 8px !important;
+  font-size: 0.9rem !important;
+  color: var(--muted);
+}
+
 .hero-board {
   display: grid;
-  grid-template-columns: 1.6fr 0.9fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 22px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .hero-main,
@@ -188,12 +216,18 @@ a {
   border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 28px;
+  height: 100%;
+}
+
+.hero-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .hero-side {
   display: flex;
   flex-direction: column;
-  align-self: start;
 }
 
 .hero-side h3 {
@@ -280,7 +314,7 @@ a {
 }
 
 .hero-actions {
-  margin-top: 28px;
+  margin-top: auto;
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -956,6 +990,15 @@ a.card {
 
   .hero h1 {
     font-size: 2.2rem;
+  }
+
+  .hero-identity {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-logo {
+    width: 60px;
+    height: 60px;
   }
 
   .site-nav a {
