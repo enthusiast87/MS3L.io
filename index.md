@@ -46,7 +46,7 @@ title: Home
 </section>
 
 <section class="section">
-  <div class="container card-grid three">
+  <div class="container card-grid three home-quicklinks">
     <a class="card card-link" href="{{ '/principal-investigator' | relative_url }}">
       <h3>Principal Investigator</h3>
       <p>{{ pi.name }} | {{ pi.position }}</p>
@@ -66,7 +66,7 @@ title: Home
   <div class="container">
     <h2 class="section-title">Research Themes</h2>
     <div class="split-grid">
-      <div class="card-grid two">
+      <div class="card-grid two home-research-grid">
         {% for item in site.data.research %}
         <div class="card research-theme-card">
           <h3>{{ item.title }}</h3>
@@ -103,7 +103,7 @@ title: Home
 <section class="section">
   <div class="container">
     <h2 class="section-title">Latest News</h2>
-    <div class="card-grid two">
+    <div class="card-grid two home-news-grid">
       {% for item in site.data.news limit: 4 %}
       <div class="list-card">
         <div class="list-meta">{{ item.date }}</div>
@@ -121,7 +121,7 @@ title: Home
 <section class="section">
   <div class="container">
     <h2 class="section-title">Recent Publications</h2>
-    <div class="card-grid two">
+    <div class="card-grid two home-publication-grid">
       {% for item in site.data.publications limit: 6 %}
       <div class="list-card publication-entry">
         <div class="list-meta">{{ item.year }} · {{ item.venue }}</div>
