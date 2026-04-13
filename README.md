@@ -4,14 +4,22 @@ MS<sup>3</sup>L GitHub Pages website for the Membrane-based Sustainable Separati
 
 ## Local Preview
 
-This repository can be previewed with Jekyll. On Windows, Ruby native gems may fail when the repo is located in a non-ASCII path.
+This repository can be previewed with Jekyll. On Windows, Docker is the simplest option because it avoids host Ruby setup and works better with GitHub Pages dependencies.
 
 Recommended workflow:
 
-1. Edit the source repo normally.
-2. Copy it to an ASCII-only preview path if needed.
-3. Run `bundle install`.
-4. Run `bundle exec jekyll serve`.
+1. Build and start the development container:
+   `docker compose -f compose.dev.yaml up --build`
+2. Open `http://localhost:4000/MS3L.io/`
+3. Edit files in the repo and let the browser reload automatically
+
+Notes:
+
+- The container publishes both `4000` and the live reload port `35729`.
+- `--force_polling` is enabled in the container command because file watching over Docker bind mounts on Windows is often unreliable without polling.
+- Gems are cached in the Docker volume `bundle_cache`, so after the first install subsequent starts are faster.
+- If the `Gemfile` changes, rerun with `--build`.
+- If your network injects a corporate SSL certificate, export the root certificate as a `.crt` file into `certs/` before starting Docker. The compose file mounts that directory into the container and runs `update-ca-certificates` on startup.
 
 The current project also includes a reusable sub-agent workflow guide in `docs/subagent-playbook.md`.
 

@@ -1,0 +1,15 @@
+FROM ruby:3.1-bookworm
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends build-essential ca-certificates nodejs \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /srv/jekyll
+
+COPY scripts/jekyll-dev-entrypoint.sh /usr/local/bin/jekyll-dev-entrypoint.sh
+RUN chmod +x /usr/local/bin/jekyll-dev-entrypoint.sh
+
+EXPOSE 4000 35729
+
+ENTRYPOINT ["/usr/local/bin/jekyll-dev-entrypoint.sh"]
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--port", "4000", "--livereload", "--livereload-port", "35729", "--force_polling"]

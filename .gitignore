@@ -5,3 +5,4 @@ _site/
 .bundle-user/
 vendor/
 *.log
+certs/*.crt
