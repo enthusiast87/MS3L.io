@@ -10,7 +10,7 @@ Recommended workflow:
 
 1. Build and start the development container:
    `docker compose -f compose.dev.yaml up --build`
-2. Open `http://localhost:4000/MS3L.io/`
+2. Open `http://localhost:4000/`
 3. Edit files in the repo and let the browser reload automatically
 
 Notes:
@@ -20,6 +20,7 @@ Notes:
 - Gems are cached in the Docker volume `bundle_cache`, so after the first install subsequent starts are faster.
 - If the `Gemfile` changes, rerun with `--build`.
 - If your network injects a corporate SSL certificate, export the root certificate as a `.crt` file into `certs/` before starting Docker. The compose file mounts that directory into the container and runs `update-ca-certificates` on startup.
+- Production deploy still uses `_config.yml`; the Docker dev flow adds `_config_dev.yml` so local preview works at the root path.
 
 The current project also includes a reusable sub-agent workflow guide in `docs/subagent-playbook.md`.
 

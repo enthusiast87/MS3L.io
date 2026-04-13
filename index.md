@@ -35,11 +35,15 @@ title: Home
         {% for item in site.data.news limit: 3 %}
         <div class="side-news-item">
           <div class="list-meta">{{ item.date | date: "%b %Y" }}</div>
-          {% if item.url %}<strong class="side-item-title"><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></strong>{% else %}<strong class="side-item-title">{{ item.title }}</strong>{% endif %}
+          {% if item.url %}
+          <strong class="side-item-title"><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></strong>
+          {% else %}
+          <strong class="side-item-title">{{ item.title }}</strong>
+          {% endif %}
           {% if item.summary %}<p class="side-item-summary">{{ item.summary }}</p>{% endif %}
         </div>
         {% endfor %}
-        <a class="inline-link" href="{{ '/news' | relative_url }}">More news →</a>
+        <a class="inline-link" href="{{ '/news' | relative_url }}">More news</a>
       </aside>
     </div>
   </div>
@@ -57,7 +61,7 @@ title: Home
     </a>
     <a class="card card-link" href="{{ '/projects' | relative_url }}">
       <h3>Current Projects</h3>
-      <p>National R&D and CCU related ongoing projects.</p>
+      <p>National R&amp;D and CCU related ongoing projects.</p>
     </a>
   </div>
 </section>
@@ -65,38 +69,38 @@ title: Home
 <section class="section section-soft">
   <div class="container">
     <h2 class="section-title">Research Themes</h2>
-    <div class="split-grid">
-      <div class="card-grid two">
-        {% for item in site.data.research %}
-        <div class="card research-theme-card">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.summary }}</p>
-          {% if item.selected_papers %}
-          <div class="theme-paper-inline">
-            <div class="list-meta">Key paper</div>
-            <a class="publication-link" href="{{ item.selected_papers[0].url }}">{{ item.selected_papers[0].title }}</a>
-          </div>
-          {% endif %}
+    <div class="card-grid two research-theme-grid">
+      {% for item in site.data.research %}
+      <div class="card research-theme-card">
+        <h3>{{ item.title }}</h3>
+        <p class="research-theme-summary">{{ item.summary }}</p>
+        {% if item.selected_papers %}
+        <div class="theme-paper-inline">
+          <div class="list-meta">Key paper</div>
+          <a class="publication-link" href="{{ item.selected_papers[0].url }}">{{ item.selected_papers[0].title }}</a>
         </div>
-        {% endfor %}
+        {% endif %}
       </div>
-
-      <div>
-        <div class="page-card contact-summary">
-          <h2>Research Contact</h2>
-          <p>
-            We welcome inquiries about research collaboration, student opportunities,
-            and membrane-enabled separation topics connected to the themes above.
-          </p>
-          <p class="contact-summary-meta"><strong>{{ lab.contact.institution }}</strong></p>
-          <p class="contact-summary-email">
-            <a class="inline-link" href="mailto:{{ lab.contact.email }}">{{ lab.contact.email }}</a>
-          </p>
-          <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Get in touch</a>
-        </div>
-      </div>
+      {% endfor %}
     </div>
-    <p class="theme-cta"><a class="inline-link" href="{{ '/research' | relative_url }}">View detailed theme summaries and figures →</a></p>
+
+    <div class="page-card contact-banner">
+      <div class="contact-banner-copy">
+        <h2>Research Contact</h2>
+        <p>
+          We welcome inquiries about research collaboration, student opportunities,
+          and membrane-enabled separation topics connected to the themes above.
+        </p>
+      </div>
+      <div class="contact-banner-meta">
+        <p class="contact-summary-meta"><strong>{{ lab.contact.institution }}</strong></p>
+        <p class="contact-summary-email">
+          <a class="inline-link" href="mailto:{{ lab.contact.email }}">{{ lab.contact.email }}</a>
+        </p>
+      </div>
+      <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Get in touch</a>
+    </div>
+    <p class="theme-cta"><a class="inline-link" href="{{ '/research' | relative_url }}">View detailed theme summaries and figures</a></p>
   </div>
 </section>
 
@@ -114,7 +118,7 @@ title: Home
       </div>
       {% endfor %}
     </div>
-    <p><a class="inline-link" href="{{ '/news' | relative_url }}">View all news →</a></p>
+    <p><a class="inline-link" href="{{ '/news' | relative_url }}">View all news</a></p>
   </div>
 </section>
 
@@ -124,16 +128,16 @@ title: Home
     <div class="card-grid two">
       {% for item in site.data.publications limit: 6 %}
       <div class="list-card publication-entry">
-        <div class="list-meta">{{ item.year }} · {{ item.venue }}</div>
+        <div class="list-meta">{{ item.year }} | {{ item.venue }}</div>
         {% if item.url %}
         <strong><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></strong>
         {% else %}
-        {% if item.url %}<strong><a class="publication-link" href="{{ item.url | relative_url }}">{{ item.title }}</a></strong>{% else %}<strong>{{ item.title }}</strong>{% endif %}
-          {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
+        <strong>{{ item.title }}</strong>
         {% endif %}
+        {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
       </div>
       {% endfor %}
     </div>
-    <p><a class="inline-link" href="{{ '/publications' | relative_url }}">View full publication list →</a></p>
+    <p><a class="inline-link" href="{{ '/publications' | relative_url }}">View full publication list</a></p>
   </div>
 </section>

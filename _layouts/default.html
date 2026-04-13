@@ -29,7 +29,11 @@
           <div class="brand-subtitle">{{ site.data.lab.full_name }}</div>
         </div>
 
-        <nav class="site-nav">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+
+        <nav class="site-nav" id="site-nav">
           <a class="{% if current_url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
 
           <details class="nav-group">
@@ -92,8 +96,36 @@
 
     <script>
       (function () {
+        const nav = document.querySelector('.site-nav');
+        const navToggle = document.querySelector('.nav-toggle');
         const navGroups = Array.from(document.querySelectorAll('.nav-group'));
-        if (!navGroups.length) return;
+        const mobileQuery = window.matchMedia('(max-width: 1040px)');
+
+        function closeMobileNav() {
+          if (!nav || !navToggle || !mobileQuery.matches) return;
+          nav.hidden = true;
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        function syncNavVisibility() {
+          if (!nav || !navToggle) return;
+
+          if (mobileQuery.matches) {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            nav.hidden = !isExpanded;
+          } else {
+            nav.hidden = false;
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+
+        if (nav && navToggle) {
+          navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!isExpanded));
+            syncNavVisibility();
+          });
+        }
 
         navGroups.forEach((group) => {
           const summary = group.querySelector('summary');
@@ -105,12 +137,32 @@
           });
         });
 
+        if (nav) {
+          nav.addEventListener('click', (event) => {
+            if (event.target.closest('a')) {
+              closeMobileNav();
+            }
+          });
+        }
+
         document.addEventListener('click', (event) => {
           const insideAnyGroup = navGroups.some((group) => group.contains(event.target));
+          const clickedNavToggle = navToggle && navToggle.contains(event.target);
           if (!insideAnyGroup) {
             navGroups.forEach((group) => group.removeAttribute('open'));
           }
+          if (!clickedNavToggle && nav && navToggle && mobileQuery.matches && !nav.contains(event.target)) {
+            closeMobileNav();
+          }
         });
+
+        if (mobileQuery.addEventListener) {
+          mobileQuery.addEventListener('change', syncNavVisibility);
+        } else if (mobileQuery.addListener) {
+          mobileQuery.addListener(syncNavVisibility);
+        }
+
+        syncNavVisibility();
       })();
     </script>
   </body>

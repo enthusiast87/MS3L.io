@@ -46,7 +46,7 @@ title: Research
           <div class="card-grid two">
             {% for paper in item.selected_papers %}
             <div class="list-card publication-entry">
-              <div class="list-meta">{{ paper.year }} · {{ paper.venue }}</div>
+              <div class="list-meta">{{ paper.year }} | {{ paper.venue }}</div>
               <strong><a class="publication-link" href="{{ paper.url }}">{{ paper.title }}</a></strong>
             </div>
             {% endfor %}
