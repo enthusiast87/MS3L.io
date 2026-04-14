@@ -9,9 +9,18 @@ This repository can be previewed with Jekyll. On Windows, Docker is the simplest
 Recommended workflow:
 
 1. Build and start the development container:
-   `docker compose -f compose.dev.yaml up --build`
+   `.\scripts\dev-up.ps1`
 2. Open `http://localhost:4000/`
 3. Edit files in the repo and let the browser reload automatically
+
+Useful shortcuts:
+
+- `.\scripts\dev-up.ps1`: start in the foreground with rebuild
+- `.\scripts\dev-up.ps1 -Detached`: start in the background
+- `.\scripts\dev-up.ps1 -Detached -Logs`: start in the background and immediately tail logs
+- `.\scripts\dev-up.ps1 -NoBuild`: start without rebuilding the image
+- `.\scripts\dev-logs.ps1`: tail dev server logs
+- `.\scripts\dev-down.ps1`: stop and remove the dev container
 
 Notes:
 

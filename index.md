@@ -4,6 +4,10 @@ title: Home
 ---
 {% assign lab = site.data.lab %}
 {% assign pi = site.data.members | where: "role_group", "Principal Investigator" | first %}
+{% assign biorefinery_theme = site.data.research | where: "title", "Biorefinery" | first %}
+{% assign resource_recovery_theme = site.data.research | where: "title", "Resource recovery" | first %}
+{% assign plastic_recycling_theme = site.data.research | where: "title", "Plastic recycling" | first %}
+{% assign energy_theme = site.data.research | where: "title", "Energy-related applications" | first %}
 
 <section class="hero hero-clean">
   <div class="container">
@@ -50,7 +54,7 @@ title: Home
 </section>
 
 <section class="section">
-  <div class="container card-grid three">
+  <div class="container home-overview-grid">
     <a class="card card-link" href="{{ '/principal-investigator' | relative_url }}">
       <h3>Principal Investigator</h3>
       <p>{{ pi.name }} | {{ pi.position }}</p>
@@ -63,25 +67,68 @@ title: Home
       <h3>Current Projects</h3>
       <p>National R&amp;D and CCU related ongoing projects.</p>
     </a>
+    <a class="card card-link" href="{{ '/publications' | relative_url }}">
+      <h3>Recent Publications</h3>
+      <p>Journal articles and selected outputs from recent MS<sup>3</sup>L work.</p>
+    </a>
   </div>
 </section>
 
 <section class="section section-soft">
   <div class="container">
     <h2 class="section-title">Research Themes</h2>
-    <div class="card-grid two research-theme-grid">
-      {% for item in site.data.research %}
-      <div class="card research-theme-card">
-        <h3>{{ item.title }}</h3>
-        <p class="research-theme-summary">{{ item.summary }}</p>
-        {% if item.selected_papers %}
-        <div class="theme-paper-inline">
-          <div class="list-meta">Key paper</div>
-          <a class="publication-link" href="{{ item.selected_papers[0].url }}">{{ item.selected_papers[0].title }}</a>
+    <div class="research-theme-stack-home">
+      <div class="research-theme-row">
+        {% assign row_theme = biorefinery_theme %}
+        <div class="card research-theme-card">
+          <h3>{{ row_theme.title }}</h3>
+          <p class="research-theme-summary">{{ row_theme.summary }}</p>
+          {% if row_theme.selected_papers %}
+          <div class="theme-paper-inline">
+            <div class="list-meta">Key paper</div>
+            <a class="publication-link" href="{{ row_theme.selected_papers[0].url }}">{{ row_theme.selected_papers[0].title }}</a>
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
+
+        {% assign row_theme = resource_recovery_theme %}
+        <div class="card research-theme-card">
+          <h3>{{ row_theme.title }}</h3>
+          <p class="research-theme-summary">{{ row_theme.summary }}</p>
+          {% if row_theme.selected_papers %}
+          <div class="theme-paper-inline">
+            <div class="list-meta">Key paper</div>
+            <a class="publication-link" href="{{ row_theme.selected_papers[0].url }}">{{ row_theme.selected_papers[0].title }}</a>
+          </div>
+          {% endif %}
+        </div>
       </div>
-      {% endfor %}
+
+      <div class="research-theme-row">
+        {% assign row_theme = plastic_recycling_theme %}
+        <div class="card research-theme-card">
+          <h3>{{ row_theme.title }}</h3>
+          <p class="research-theme-summary">{{ row_theme.summary }}</p>
+          {% if row_theme.selected_papers %}
+          <div class="theme-paper-inline">
+            <div class="list-meta">Key paper</div>
+            <a class="publication-link" href="{{ row_theme.selected_papers[0].url }}">{{ row_theme.selected_papers[0].title }}</a>
+          </div>
+          {% endif %}
+        </div>
+
+        {% assign row_theme = energy_theme %}
+        <div class="card research-theme-card">
+          <h3>{{ row_theme.title }}</h3>
+          <p class="research-theme-summary">{{ row_theme.summary }}</p>
+          {% if row_theme.selected_papers %}
+          <div class="theme-paper-inline">
+            <div class="list-meta">Key paper</div>
+            <a class="publication-link" href="{{ row_theme.selected_papers[0].url }}">{{ row_theme.selected_papers[0].title }}</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
     </div>
 
     <div class="page-card contact-banner">

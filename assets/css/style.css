@@ -243,7 +243,7 @@ main {
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #fff;
-  padding: 16px 14px;
+  padding: 18px 16px;
   min-width: 182px;
   height: 100%;
   display: flex;
@@ -252,7 +252,7 @@ main {
 }
 
 .hero-acronym-line {
-  font-size: 0.92rem;
+  font-size: 0.99rem;
   font-weight: 600;
   line-height: 1.35;
   color: var(--muted);
@@ -587,6 +587,12 @@ main {
 
 .card-grid {
   display: grid;
+  gap: 18px;
+}
+
+.home-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -954,12 +960,9 @@ a.card {
   flex-direction: column;
 }
 
-.research-theme-grid {
-  align-items: stretch;
-}
-
 .research-theme-card h3 {
   min-height: 2.9em;
+  margin-bottom: 10px;
 }
 
 .research-theme-summary {
@@ -968,6 +971,18 @@ a.card {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   min-height: calc(1.65em * 2);
+}
+
+.research-theme-stack-home {
+  display: grid;
+  gap: 18px;
+}
+
+.research-theme-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
 }
 
 .logo-strip {
@@ -1002,6 +1017,19 @@ a.card {
   font-weight: 600;
   color: var(--strong);
   line-height: 1.35;
+}
+
+.impact-experience-card {
+  height: 100%;
+}
+
+.impact-experience-card h3 {
+  margin-bottom: 10px;
+}
+
+.impact-experience-detail {
+  margin-top: 12px !important;
+  font-size: 0.92rem !important;
 }
 
 .hero-card-photo img,
@@ -1125,6 +1153,7 @@ a.card {
   .card-grid.three,
   .card-grid.two,
   .credibility-grid,
+  .research-theme-row,
   .logo-strip,
   .member-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1158,6 +1187,8 @@ a.card {
   .hero-grid,
   .split-grid,
   .credibility-grid,
+  .home-overview-grid,
+  .research-theme-row,
   .card-grid.four,
   .card-grid.three,
   .card-grid.two,
@@ -1197,6 +1228,10 @@ a.card {
 
 
 .research-page .page-card {
+  margin-bottom: 20px;
+}
+
+.publications-page .page-card {
   margin-bottom: 20px;
 }
 

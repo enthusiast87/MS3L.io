@@ -3,6 +3,7 @@ layout: default
 title: Technology Transfer
 ---
 {% assign impact = site.data.lab.technology_impact %}
+{% assign experiences = site.data.lab.experiences %}
 
 <div class="page-wrap">
   <div class="container">
@@ -15,12 +16,13 @@ title: Technology Transfer
 
     <section class="member-note">
       <div class="page-card">
-        <h2>Selected partners and recognition</h2>
-        <div class="logo-strip">
-          {% for item in impact.logos %}
-          <div class="logo-chip">
-            <img src="{{ item.image }}" alt="{{ item.alt | default: item.name }}">
-            <span>{{ item.name }}</span>
+        <h2>Selected Experiences</h2>
+        <div class="card-grid two">
+          {% for item in experiences.items %}
+          <div class="card impact-experience-card">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.summary }}</p>
+            <p class="impact-experience-detail">{{ item.detail }}</p>
           </div>
           {% endfor %}
         </div>

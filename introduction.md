@@ -22,7 +22,7 @@ title: Introduction
       <h2>{{ lab.approach.title }}</h2>
       <p>{{ lab.approach.lead }}</p>
 
-      <div class="card-grid three">
+      <div class="card-grid two">
         {% for area in lab.approach.areas %}
         <div class="card">
           <h3>{{ area.title }}</h3>

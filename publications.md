@@ -5,7 +5,7 @@ title: Publications
 {% assign lab = site.data.lab %}
 
 <div class="page-wrap">
-  <div class="container">
+  <div class="container publications-page">
     <div class="page-card">
       <h1>{{ lab.publications.title }}</h1>
       <p>{{ lab.publications.lead }}</p>
