@@ -1,0 +1,79 @@
+/* ── Research tab navigation ─────────────────────────────────
+   Append this entire file to assets/css/style.css
+   ─────────────────────────────────────────────────────────── */
+
+.research-tab-nav {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+  position: sticky;
+  top: 73px;
+  z-index: 10;
+  margin: 16px 0 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.research-tab-nav::-webkit-scrollbar { display: none; }
+
+.research-tab-btn {
+  padding: 14px 22px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color .15s, border-color .15s;
+  margin-bottom: -1px;
+}
+.research-tab-btn:hover { color: var(--strong); }
+.research-tab-btn.active {
+  color: var(--brand-primary);
+  border-bottom-color: var(--brand-primary);
+}
+
+/* ── Tab panels ──────────────────────────────────────────── */
+.research-tab-panel { display: none; }
+.research-tab-panel.active { display: block; }
+
+/* ── Diagram pair grid ───────────────────────────────────── */
+.research-diagram-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0 4px;
+}
+.research-diagram-box {
+  aspect-ratio: 265 / 195;
+  background: #f8fbff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.research-diagram-box svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.research-diagram-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+/* ── Detail card without image ───────────────────────────── */
+.research-detail-card.no-image {
+  grid-template-columns: 1fr;
+}
+.research-detail-card.no-image .research-detail-media { display: none; }
+
+@media (max-width: 640px) {
+  .research-diagram-pair { grid-template-columns: 1fr; }
+  .research-tab-btn { padding: 11px 14px; font-size: 0.85rem; }
+}
