@@ -5,6 +5,15 @@
     We design low-energy separation pathways that replace neutralization-heavy and solvent-intensive
     purification steps, enabling economically viable biorefinery operations.
   image: /assets/images/research/biorefinery.jpg
+  image_alt: Biorefinery separation workflow and recovery concept for biomass-derived products.
+  visual_caption: Membrane-assisted recovery routes for biomass-derived acids, bases, and purified product streams.
+  application_examples:
+    - Biomass platform chemicals
+    - Organic acid purification
+    - Acid and base regeneration
+  visual_points:
+    - Focuses on replacing neutralization-heavy purification steps with membrane-enabled recovery.
+    - Highlights how acidification, product recovery, and reagent recycle can be integrated in one train.
   topics:
     - Product recovery
     - Base catalyst recycling
@@ -30,6 +39,15 @@
     We develop selective separation routes that reduce process heat duty and solvent loss,
     making chemical recycling of mixed polymer streams more scalable and sustainable.
   image: /assets/images/research/plastic-recycling.jpg
+  image_alt: Circular plastics workflow with membrane-enabled solvent and monomer recovery.
+  visual_caption: Circular separation schemes for depolymerization products, solvent recycle, and catalyst recovery.
+  application_examples:
+    - PET and polystyrene upcycling
+    - Solvent recovery loops
+    - Monomer purification
+  visual_points:
+    - Emphasizes closed-loop separation around depolymerization rather than one-pass purification.
+    - Connects selective membrane recovery with lower solvent loss and lower thermal load.
   topics:
     - Monomer purification
     - Solvent recycling
@@ -55,6 +73,15 @@
     We target difficult feed streams where conventional purification is expensive,
     and design membrane-first pathways for resource circulation and waste minimization.
   image: /assets/images/research/resource-recovery.jpg
+  image_alt: Resource recovery concept showing concentration, crystallization, and selective purification.
+  visual_caption: Intensified recovery routes for dilute, mixed, or contamination-prone liquid streams.
+  application_examples:
+    - Valuable salt recovery
+    - Water reuse
+    - Concentration and crystallization
+  visual_points:
+    - Shows how value can be recovered from streams that are traditionally treated as waste.
+    - Pairs concentration and selective purification steps to improve product quality and water reuse.
   topics:
     - Membrane distillation and crystallization
     - Solvent recycling
@@ -79,6 +106,15 @@
     We advance membrane materials and hybrid configurations that improve energy efficiency,
     process reliability, and commercialization potential in energy and battery applications.
   image: /assets/images/research/energy.jpg
+  image_alt: Energy-related membrane applications spanning biofuels, osmosis modules, and battery materials.
+  visual_caption: Membrane materials and modules tailored for fuel, osmotic, and electrochemical systems.
+  application_examples:
+    - Biofuel separations
+    - Pressure-retarded osmosis
+    - Battery separator materials
+  visual_points:
+    - Frames membrane design as part of larger energy conversion and storage systems.
+    - Links material-level selectivity to module reliability and process-scale performance.
   topics:
     - Biofuel production
     - Pressure retarded osmosis

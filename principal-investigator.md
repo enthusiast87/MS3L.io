@@ -10,7 +10,7 @@ title: Principal Investigator
     <div class="profile-card">
       <div class="profile-photo">
         {% if member_pi.image_url %}
-        <img src="{{ member_pi.image_url }}" alt="{{ member_pi.name }} profile photo">
+        <img src="{{ member_pi.image_url | relative_url }}" alt="{{ member_pi.name }} profile photo" loading="lazy">
         {% endif %}
       </div>
       <div class="profile-body">

@@ -162,6 +162,56 @@
           mobileQuery.addListener(syncNavVisibility);
         }
 
+        const modalOpeners = Array.from(document.querySelectorAll('[data-modal-open]'));
+        const modalClosers = Array.from(document.querySelectorAll('[data-modal-close]'));
+        let lastFocusedElement = null;
+
+        function openModal(id) {
+          const modal = document.getElementById(id);
+          if (!modal) return;
+          lastFocusedElement = document.activeElement;
+          modal.hidden = false;
+          document.body.classList.add('modal-open');
+          const closeButton = modal.querySelector('[data-modal-close]');
+          if (closeButton) closeButton.focus();
+        }
+
+        function closeModal(modal) {
+          if (!modal) return;
+          modal.hidden = true;
+          const openModalCount = document.querySelectorAll('.content-modal:not([hidden])').length;
+          if (openModalCount === 0) {
+            document.body.classList.remove('modal-open');
+          }
+          if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+            lastFocusedElement.focus();
+          }
+        }
+
+        modalOpeners.forEach((opener) => {
+          opener.addEventListener('click', () => {
+            openModal(opener.getAttribute('data-modal-open'));
+          });
+        });
+
+        modalClosers.forEach((closer) => {
+          closer.addEventListener('click', () => {
+            closeModal(closer.closest('.content-modal'));
+          });
+        });
+
+        document.addEventListener('click', (event) => {
+          if (event.target.classList && event.target.classList.contains('content-modal')) {
+            closeModal(event.target);
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key !== 'Escape') return;
+          const openModal = document.querySelector('.content-modal:not([hidden])');
+          closeModal(openModal);
+        });
+
         syncNavVisibility();
       })();
     </script>

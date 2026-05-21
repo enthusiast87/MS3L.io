@@ -24,6 +24,16 @@ rescue URI::InvalidURIError
   false
 end
 
+def valid_asset_path?(value)
+  return true if value.nil? || value.to_s.strip.empty?
+  value = value.to_s
+  value.start_with?('/assets/images/') && !value.include?('..') && !value.match?(/[<>\0]/)
+end
+
+def valid_url_or_asset?(value)
+  valid_url?(value) || valid_asset_path?(value)
+end
+
 def valid_doi?(value)
   return true if value.nil? || value.to_s.strip.empty?
   value.to_s.match?(%r{^10\.\d{4,9}/[-._;()/:A-Za-z0-9]+$})
@@ -45,8 +55,20 @@ Array(loaded[:members]).each_with_index do |m, i|
   if m['email'] && m['email'] !~ /@/
     errors << "members[#{i}].email is invalid: #{m['email']}"
   end
-  if m['image_url'] && !valid_url?(m['image_url'])
-    errors << "members[#{i}].image_url is invalid URL"
+  if m['image_url'] && !valid_url_or_asset?(m['image_url'])
+    errors << "members[#{i}].image_url must be an http(s) URL or /assets/images/ path"
+  end
+end
+
+Array(loaded[:research]).each_with_index do |r, i|
+  if r['image'] && !valid_url_or_asset?(r['image'])
+    errors << "research[#{i}].image must be an http(s) URL or /assets/images/ path"
+  end
+end
+
+Array(loaded[:news]).each_with_index do |n, i|
+  if n['image'] && !valid_url_or_asset?(n['image'])
+    errors << "news[#{i}].image must be an http(s) URL or /assets/images/ path"
   end
 end
 
@@ -64,6 +86,12 @@ end
 Array(loaded[:patents]).each_with_index do |p, i|
   %w[title registration].each do |k|
     errors << "patents[#{i}].#{k} is required" if p[k].to_s.strip.empty?
+  end
+end
+
+Array(loaded.dig(:lab, 'technology_impact', 'logos')).each_with_index do |logo, i|
+  if logo['image'] && !valid_url_or_asset?(logo['image'])
+    errors << "lab.technology_impact.logos[#{i}].image must be an http(s) URL or /assets/images/ path"
   end
 end
 

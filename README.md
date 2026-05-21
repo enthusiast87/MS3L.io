@@ -42,3 +42,25 @@ python scripts/validate_site.py
 ```
 
 This invokes `scripts/validate_site.rb` to validate YAML syntax and required fields for members, publications, and patents.
+If Ruby is not installed, the Python wrapper runs a fallback validation pass for the same core fields.
+
+## Image Migration
+
+Public images from the previous Google Sites page can be imported into local assets:
+
+```bash
+python scripts/import_google_sites_assets.py --apply
+```
+
+The importer crawls `https://sites.google.com/view/kim-jihoon/home`, downloads public images, fills missing research visuals, and writes a manifest to `assets/images/imported/google-sites/manifest.json`.
+Add `--save-unassigned` when you want to archive every crawled image that is not mapped to a data field.
+
+## Local Admin
+
+Run the draft-only admin UI when Ruby is available:
+
+```bash
+ruby scripts/admin_server.rb
+```
+
+Open `http://localhost:4567/` to create draft updates for news, members, and research images. The tool writes `_data/*.yml.draft` files and does not publish changes automatically.

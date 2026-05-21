@@ -81,8 +81,20 @@ title: Home
       <div class="research-theme-row">
         {% assign row_theme = biorefinery_theme %}
         <div class="card research-theme-card">
+          {% if row_theme.image %}
+          <div class="research-theme-thumb">
+            <img src="{{ row_theme.image | relative_url }}" alt="{{ row_theme.title }} research visual" loading="lazy">
+          </div>
+          {% endif %}
           <h3>{{ row_theme.title }}</h3>
           <p class="research-theme-summary">{{ row_theme.summary }}</p>
+          {% if row_theme.application_examples %}
+          <div class="research-chip-row research-chip-row-compact">
+            {% for example in row_theme.application_examples limit: 2 %}
+            <span class="research-chip">{{ example }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
           {% if row_theme.selected_papers %}
           <div class="theme-paper-inline">
             <div class="list-meta">Key paper</div>
@@ -93,8 +105,20 @@ title: Home
 
         {% assign row_theme = resource_recovery_theme %}
         <div class="card research-theme-card">
+          {% if row_theme.image %}
+          <div class="research-theme-thumb">
+            <img src="{{ row_theme.image | relative_url }}" alt="{{ row_theme.title }} research visual" loading="lazy">
+          </div>
+          {% endif %}
           <h3>{{ row_theme.title }}</h3>
           <p class="research-theme-summary">{{ row_theme.summary }}</p>
+          {% if row_theme.application_examples %}
+          <div class="research-chip-row research-chip-row-compact">
+            {% for example in row_theme.application_examples limit: 2 %}
+            <span class="research-chip">{{ example }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
           {% if row_theme.selected_papers %}
           <div class="theme-paper-inline">
             <div class="list-meta">Key paper</div>
@@ -107,8 +131,20 @@ title: Home
       <div class="research-theme-row">
         {% assign row_theme = plastic_recycling_theme %}
         <div class="card research-theme-card">
+          {% if row_theme.image %}
+          <div class="research-theme-thumb">
+            <img src="{{ row_theme.image | relative_url }}" alt="{{ row_theme.title }} research visual" loading="lazy">
+          </div>
+          {% endif %}
           <h3>{{ row_theme.title }}</h3>
           <p class="research-theme-summary">{{ row_theme.summary }}</p>
+          {% if row_theme.application_examples %}
+          <div class="research-chip-row research-chip-row-compact">
+            {% for example in row_theme.application_examples limit: 2 %}
+            <span class="research-chip">{{ example }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
           {% if row_theme.selected_papers %}
           <div class="theme-paper-inline">
             <div class="list-meta">Key paper</div>
@@ -119,8 +155,20 @@ title: Home
 
         {% assign row_theme = energy_theme %}
         <div class="card research-theme-card">
+          {% if row_theme.image %}
+          <div class="research-theme-thumb">
+            <img src="{{ row_theme.image | relative_url }}" alt="{{ row_theme.title }} research visual" loading="lazy">
+          </div>
+          {% endif %}
           <h3>{{ row_theme.title }}</h3>
           <p class="research-theme-summary">{{ row_theme.summary }}</p>
+          {% if row_theme.application_examples %}
+          <div class="research-chip-row research-chip-row-compact">
+            {% for example in row_theme.application_examples limit: 2 %}
+            <span class="research-chip">{{ example }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
           {% if row_theme.selected_papers %}
           <div class="theme-paper-inline">
             <div class="list-meta">Key paper</div>
@@ -157,6 +205,11 @@ title: Home
     <div class="card-grid two">
       {% for item in site.data.news limit: 4 %}
       <div class="list-card">
+        {% if item.image %}
+        <div class="list-card-thumb">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}" loading="lazy">
+        </div>
+        {% endif %}
         <div class="list-meta">{{ item.date }}</div>
         <strong>{{ item.title }}</strong>
         {% if item.summary %}
