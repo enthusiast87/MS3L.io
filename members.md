@@ -19,31 +19,7 @@ title: Members
       <h2 class="section-title section-title-sm">Postdoctoral Researchers</h2>
       <div class="member-grid">
         {% for member in postdocs %}
-        <article class="member-card-compact">
-          <div class="profile-photo">
-            {% if member.image_url %}
-            <img src="{{ member.image_url | relative_url }}" alt="{{ member.name }} profile photo" loading="lazy">
-            {% endif %}
-          </div>
-          <div class="profile-body">
-            <div class="profile-label">{{ member.role_group }}</div>
-            <h3>{{ member.name }}</h3>
-            <p class="profile-role">{{ member.position }}</p>
-            {% if member.affiliation %}<p class="profile-affiliation">{{ member.affiliation }}</p>{% endif %}
-            {% if member.email %}<p><a class="inline-link" href="mailto:{{ member.email }}">{{ member.email }}</a></p>{% endif %}
-            {% if member.research %}<p><strong>Research:</strong> {{ member.research }}</p>{% endif %}
-            {% if member.achievements %}
-            <details class="member-achievements">
-              <summary>Highlights</summary>
-              <ul>
-                {% for item in member.achievements %}
-                <li>{{ item }}</li>
-                {% endfor %}
-              </ul>
-            </details>
-            {% endif %}
-          </div>
-        </article>
+        {% include member-card.html member=member %}
         {% endfor %}
       </div>
     </section>
@@ -54,31 +30,7 @@ title: Members
       <h2 class="section-title section-title-sm">Students</h2>
       <div class="member-grid">
         {% for member in students %}
-        <article class="member-card-compact">
-          <div class="profile-photo">
-            {% if member.image_url %}
-            <img src="{{ member.image_url | relative_url }}" alt="{{ member.name }} profile photo" loading="lazy">
-            {% endif %}
-          </div>
-          <div class="profile-body">
-            <div class="profile-label">{{ member.role_group }}</div>
-            <h3>{{ member.name }}</h3>
-            <p class="profile-role">{{ member.position }}</p>
-            {% if member.affiliation %}<p class="profile-affiliation">{{ member.affiliation }}</p>{% endif %}
-            {% if member.email %}<p><a class="inline-link" href="mailto:{{ member.email }}">{{ member.email }}</a></p>{% endif %}
-            {% if member.research %}<p><strong>Research:</strong> {{ member.research }}</p>{% endif %}
-            {% if member.achievements %}
-            <details class="member-achievements">
-              <summary>Highlights</summary>
-              <ul>
-                {% for item in member.achievements %}
-                <li>{{ item }}</li>
-                {% endfor %}
-              </ul>
-            </details>
-            {% endif %}
-          </div>
-        </article>
+        {% include member-card.html member=member %}
         {% endfor %}
       </div>
     </section>

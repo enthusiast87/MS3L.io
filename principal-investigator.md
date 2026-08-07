@@ -7,8 +7,8 @@ title: Principal Investigator
 
 <div class="page-wrap">
   <div class="container">
-    <div class="profile-card">
-      <div class="profile-photo">
+    <div class="profile-card pi-profile-card">
+      <div class="profile-photo pi-profile-photo">
         {% if member_pi.image_url %}
         <img src="{{ member_pi.image_url | relative_url }}" alt="{{ member_pi.name }} profile photo" loading="lazy">
         {% endif %}

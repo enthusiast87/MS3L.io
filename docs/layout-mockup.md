@@ -52,7 +52,7 @@ export default function MS3LHomepageMockup() {
           <div>
             <div className="text-xl font-semibold tracking-tight">MS³L</div>
             <div className="text-sm text-slate-500">
-              Membrane-based Sustainable Separation Solutions Laboratory
+              Membrane-based Sustainable Separation System Laboratory
             </div>
           </div>
           <nav className="hidden gap-6 text-sm md:flex">
@@ -74,7 +74,7 @@ export default function MS3LHomepageMockup() {
               </div>
               <div className="space-y-4">
                 <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
-                  Sustainable membrane separation solutions for resource circulation, energy, and biorefinery systems.
+                  Sustainable membrane separation system for resource circulation, energy, and biorefinery systems.
                 </h1>
                 <p className="max-w-2xl text-base leading-7 text-slate-600 md:text-lg">
                   This layout draft keeps the overall clarity of your current Google Sites page,

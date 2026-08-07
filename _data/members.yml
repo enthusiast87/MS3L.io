@@ -8,14 +8,16 @@
   email: jh.kim@krict.re.kr
   research: Membrane-based sustainable separation, resource recovery, and energy-related applications
   bio: Leads MS<sup>3</sup>L with a focus on membrane science for sustainable chemical processing, circular resource systems, and energy-related separations.
-  image_url: /assets/images/members/jihoon-kim.jpg
+  image_url: /assets/images/members/jihoon_kim.jpg
 
 - name: Khilola Kholmizaeva
   aliases:
     - Khilola Kholmirzaeva
   role_group: Ph.D. Student
   position: UST-KOICA Program (2023 - present)
-  affiliation: Co-supervised with Prof. Young Kyu Hwang
+  affiliation: University of Science and Technology (UST) | UST-KOICA Program | Co-supervised with Prof. Young Kyu Hwang
+  degree: Ph.D. Program
+  period: 2023 - present
   research: Bipolar membrane electrodialysis, water dissociation catalyst, anion exchange membrane, electrified crystallization
   achievements:
     - "Applied Catalysis B: Environment and Energy (Co-author)"
@@ -26,12 +28,15 @@
     - Su Yeon Park
   role_group: Master Student
   position: Yonsei University (2024 Fall - present)
-  affiliation: Co-supervised with Prof. Dae Woo Kim
+  affiliation: Yonsei University | Co-supervised with Prof. Dae Woo Kim
+  degree: M.S. Program
+  period: 2024 Fall - present
   research: Diffusion dialysis, cation exchange membrane, polymer synthesis, thin-film composite membrane fabrication, system-level investigation
   achievements:
     - Best oral presentation award (MSK Fall 2025)
     - Best poster presentation award (MSK Spring 2025)
-    - Chemical Engineering Journal (First author), ACS Sustainable Chemistry & Engineering (Co-author)
+    - Chemical Engineering Journal (First author)
+    - ACS Sustainable Chemistry & Engineering (Co-author)
     - Two Korean registered patents
 
 - name: Yourim Noh
@@ -39,15 +44,22 @@
     - You Rim Noh
   role_group: Master Student
   position: Korea University (2024 Fall - present)
-  affiliation: Co-supervised with Prof. Gwang Ho Song
+  affiliation: Korea University | Co-supervised with Prof. Gwang Ho Song
+  degree: M.S. Program
+  period: 2024 Fall - present
   research: Bipolar membrane electrodialysis, bipolar membrane fabrication, catalyst modification, electrochemical analysis, system-level investigation
   achievements:
     - KRICT best research achievement news release
-    - ACS Sustainable Chemistry & Engineering (First author), Chemical Engineering Journal (Co-author)
+    - ACS Sustainable Chemistry & Engineering (First author)
+    - Chemical Engineering Journal (Co-author)
     - Two Korean registered patents
 
 - name: Dr. Hyeokjun Seo
-  aliases: []
+  aliases:
+    - Hyeok Jun Seo
   role_group: Postdoctoral Researcher
   position: Postdoctoral Researcher (2025 - present)
+  affiliation: Korea Research Institute of Chemical Technology (KRICT)
+  degree: Ph.D.
+  period: 2025 - present
   research: Organic solvent nanofiltration, membrane fabrication, plastic recycling, iterative synthesis

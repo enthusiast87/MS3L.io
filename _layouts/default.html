@@ -19,8 +19,8 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
-          <a class="brand-title brand-logo" href="{{ '/' | relative_url }}">
-            <span class="brand-wordmark">{{ site.data.lab.brand_mark }}</span>
+          <a class="brand-title brand-logo" href="{{ '/' | relative_url }}" aria-label="MS3L home">
+            <img class="brand-logo-image" src="{{ site.data.lab.logo_image | relative_url }}" alt="MS3L">
           </a>
           <div class="brand-subtitle">{{ site.data.lab.full_name }}</div>
         </div>

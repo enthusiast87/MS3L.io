@@ -1,0 +1,56 @@
+{% assign member = include.member %}
+<article class="member-card-compact">
+  <div class="member-card-top{% if member.image_url %} has-photo{% endif %}">
+    {% if member.image_url %}
+    <div class="member-photo">
+      <img src="{{ member.image_url | relative_url }}" alt="{{ member.name }} profile photo" loading="lazy">
+    </div>
+    {% endif %}
+
+    <div class="member-identity">
+      <div class="profile-label">{{ member.role_group }}</div>
+      <h3>{{ member.name }}</h3>
+
+      <dl class="member-meta">
+        {% if member.affiliation %}
+        <div class="member-meta-row">
+          <dt>Affiliation</dt>
+          <dd>{{ member.affiliation }}</dd>
+        </div>
+        {% endif %}
+        {% if member.degree %}
+        <div class="member-meta-row">
+          <dt>Degree</dt>
+          <dd>{{ member.degree }}</dd>
+        </div>
+        {% endif %}
+        {% if member.period %}
+        <div class="member-meta-row">
+          <dt>Period</dt>
+          <dd>{{ member.period }}</dd>
+        </div>
+        {% endif %}
+      </dl>
+
+      {% if member.email %}
+      <p class="member-contact"><a class="inline-link" href="mailto:{{ member.email }}">{{ member.email }}</a></p>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if member.research or member.achievements %}
+  <div class="member-card-details">
+    {% if member.research %}<p class="member-research"><strong>Research:</strong> {{ member.research }}</p>{% endif %}
+    {% if member.achievements %}
+    <details class="member-achievements">
+      <summary>Highlights</summary>
+      <ul>
+        {% for item in member.achievements %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </details>
+    {% endif %}
+  </div>
+  {% endif %}
+</article>
