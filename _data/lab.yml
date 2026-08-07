@@ -84,17 +84,29 @@ introduction:
   principal_investigator:
     name: Jihoon Kim
     current_role: Principal Researcher (March 2026 - present)
-    current_affiliation: Korea Research Institute of Chemical Technology (KRICT) | Associate Professor, UST-KRICT School (March 2026 - present)
+    current_affiliation: Korea Research Institute of Chemical Technology (KRICT) | Associate Professor in Advanced Materials and Chemical Engineering, University of Science and Technology (UST) (March 2026 - present)
     previous_positions:
-      - Senior Researcher (2021 - February 2026), Korea Research Institute of Chemical Technology (KRICT)
+      - Senior Researcher (2021 - February 2026), Chemical Process Technology Division, Korea Research Institute of Chemical Technology (KRICT)
       - Postdoctoral Research Associate in Chemical Engineering (2018 - 2021), Imperial College London (Prof. Andrew G. Livingston)
       - MS-PhD in Energy Engineering (2012 - 2017), Hanyang University (Prof. Young Moo Lee)
       - BS in Chemical Engineering (2006 - 2008, 2010 - 2012), Hanyang University
+    biography:
+      - Dr. Jihoon Kim received his BS in Chemical Engineering from Hanyang University in 2012 and became a regular member of the Young Engineers Honour Society (YEHS) of the National Academy of Engineering of Korea.
+      - He completed an integrated MS-PhD program in Energy Engineering at Hanyang University under Prof. Young Moo Lee. His graduate research covered lithium-ion battery separators, pressure-retarded osmosis, membrane distillation, and organic solvent nanofiltration, including collaborative research in Prof. Andrew G. Livingston's group at Imperial College London.
+      - After earning his PhD in 2017, he joined Imperial College London as a Postdoctoral Research Associate in 2018. There, he expanded his research into membrane technologies for biofuel recovery, crude-oil fractionation, iterative synthesis, and precision separation.
+      - He began his independent research career at KRICT in 2021. His work connects fundamental membrane science with practical, scalable separation technologies for carbon-neutral and resource-circulating chemical processes.
+      - His research record includes publications in Energy & Environmental Science, Nature Sustainability, Angewandte Chemie, Journal of Membrane Science, Chemical Engineering Journal, and Science, together with industrial know-how consultancy for Evonik Industries and technology transfer to Lotte Chemical.
+    research_interests:
+      - Sustainable membrane-based separation systems for ion and liquid separations, supported by transport phenomena, membrane material design, and process engineering.
+      - Practical membrane processes for biofuel recovery, crude-oil fractionation, iterative synthesis, resource circulation, and carbon-neutral chemical manufacturing, with particular emphasis on robustness, scalability, waste minimization, and energy efficiency.
 
 projects:
   title: Projects
   lead: Key ongoing and previous projects migrated from the original Google homepage.
   ongoing:
+    - title: Development of AI-powered Integrated Biomass Fractionation and Conversion Process Using Renewable Power
+      period: 2026.04 - 2030.12
+      sponsor: NRF - Basic Science Research Program (RS-2026-25535057)
     - title: "Global Top Strategic Research Group: CCU"
       period: 2025.05 - 2030.04
       sponsor: NRF - Basic Science Research Program

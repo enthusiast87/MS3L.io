@@ -28,5 +28,25 @@ title: Principal Investigator
         </ul>
       </div>
     </div>
+
+    <div class="pi-details">
+      {% if pi.biography %}
+      <section class="page-card pi-detail-card">
+        <h2>Short Biography</h2>
+        {% for paragraph in pi.biography %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      {% if pi.research_interests %}
+      <section class="page-card pi-detail-card">
+        <h2>Research Interests</h2>
+        {% for paragraph in pi.research_interests %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+      </section>
+      {% endif %}
+    </div>
   </div>
 </div>
