@@ -13,22 +13,24 @@ title: Patents
       <p>{{ patent_page.summary }}</p>
     </div>
 
-    <div class="content-feed">
+    <div class="news-feed">
       {% for patent in patents %}
-      <article class="content-item-card publication-entry">
-        <div class="list-meta">{% if patent.date %}{{ patent.date | date: "%Y" }}{% else %}N/A{% endif %} · {{ patent.country | default: "Korea (KR)" }}</div>
-        <h2 class="content-item-title">{{ patent.title }}</h2>
-        <p class="publication-authors">{% include highlight-members.html text=patent.inventors %}</p>
-        <p class="publication-doi">{{ patent.registration }}</p>
-        {% if patent.pct %}
-        <p class="publication-doi">PCT: {{ patent.pct }}</p>
-        {% endif %}
-        {% if patent.us_patent %}
-        <p class="publication-doi">{{ patent.us_patent }}</p>
-        {% endif %}
-        {% if patent.china_patent %}
-        <p class="publication-doi">{{ patent.china_patent }}</p>
-        {% endif %}
+      <article class="news-card news-card-text-only publication-entry">
+        <div class="news-card-body">
+          <div class="list-meta">{% if patent.date %}{{ patent.date | date: "%Y" }}{% else %}N/A{% endif %} · {{ patent.country | default: "Korea (KR)" }}</div>
+          <h2 class="news-card-title">{{ patent.title }}</h2>
+          <p class="publication-authors">{% include highlight-members.html text=patent.inventors %}</p>
+          <p class="publication-doi">{{ patent.registration }}</p>
+          {% if patent.pct %}
+          <p class="publication-doi">PCT: {{ patent.pct }}</p>
+          {% endif %}
+          {% if patent.us_patent %}
+          <p class="publication-doi">{{ patent.us_patent }}</p>
+          {% endif %}
+          {% if patent.china_patent %}
+          <p class="publication-doi">{{ patent.china_patent }}</p>
+          {% endif %}
+        </div>
       </article>
       {% endfor %}
     </div>

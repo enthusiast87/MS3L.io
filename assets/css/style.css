@@ -776,6 +776,10 @@ a.card {
   box-shadow: var(--shadow);
 }
 
+.news-card-text-only {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .news-card-media {
   border-radius: 18px;
   overflow: hidden;

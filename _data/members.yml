@@ -13,6 +13,7 @@
 - name: Khilola Kholmizaeva
   aliases:
     - Khilola Kholmirzaeva
+  image_url: /assets/images/members/khilola_kholmizaeva.png
   role_group: Ph.D. Student
   position: UST-KOICA Program (2023 - present)
   affiliation: University of Science and Technology (UST) | UST-KOICA Program | Co-supervised with Prof. Young Kyu Hwang
@@ -20,12 +21,14 @@
   period: 2023 - present
   research: Bipolar membrane electrodialysis, water dissociation catalyst, anion exchange membrane, electrified crystallization
   achievements:
+    - KRICT press release and national media coverage (March 2026)
     - "Applied Catalysis B: Environment and Energy (Co-author)"
     - ACS Sustainable Chemistry & Engineering (Co-author)
 
 - name: Suyeon Park
   aliases:
     - Su Yeon Park
+  image_url: /assets/images/members/suyeon_park.jpg
   role_group: Master Student
   position: Yonsei University (2024 Fall - present)
   affiliation: Yonsei University | Co-supervised with Prof. Dae Woo Kim
@@ -42,6 +45,7 @@
 - name: Yourim Noh
   aliases:
     - You Rim Noh
+  image_url: /assets/images/members/yourim_noh.jpg
   role_group: Master Student
   position: Korea University (2024 Fall - present)
   affiliation: Korea University | Co-supervised with Prof. Gwang Ho Song
@@ -57,6 +61,7 @@
 - name: Dr. Hyeokjun Seo
   aliases:
     - Hyeok Jun Seo
+  image_url: /assets/images/members/hyeokjun_seo.jpg
   role_group: Postdoctoral Researcher
   position: Postdoctoral Researcher (2025 - present)
   affiliation: Korea Research Institute of Chemical Technology (KRICT)
