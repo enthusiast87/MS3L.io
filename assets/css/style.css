@@ -733,6 +733,38 @@ a.card {
   gap: 18px;
 }
 
+.content-feed {
+  margin-top: 22px;
+  display: grid;
+  gap: 16px;
+}
+
+.content-item-card {
+  padding: clamp(18px, 3vw, 24px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.content-item-title {
+  margin: 0;
+  color: var(--strong);
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  line-height: 1.38;
+}
+
+.content-item-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.content-item-detail {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
 .news-card {
   display: grid;
   grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
@@ -913,11 +945,6 @@ a.card {
 
 .member-note {
   margin-top: 24px;
-}
-
-.publication-entry strong {
-  display: block;
-  margin-bottom: 8px;
 }
 
 .publication-authors,
