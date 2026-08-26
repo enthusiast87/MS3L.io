@@ -48,7 +48,7 @@ h3,
 p,
 li,
 a {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 img {
@@ -68,9 +68,11 @@ main {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(90deg, rgba(0, 80, 164, 0.08), rgba(0, 150, 214, 0.08));
+  background:
+    linear-gradient(90deg, rgba(0, 80, 164, 0.08), rgba(0, 150, 214, 0.08)),
+    rgba(243, 248, 254, 0.94);
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 }
 
 .header-inner {
@@ -227,6 +229,7 @@ main {
   grid-template-columns: auto 1fr;
   align-items: stretch;
   gap: 16px;
+  flex: 1;
 }
 
 .hero-identity-copy,
@@ -245,20 +248,22 @@ main {
 .hero-acronym-block {
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: #fff;
-  padding: 18px 16px;
-  min-width: 182px;
+  border-left: 4px solid var(--brand-primary);
+  background: linear-gradient(160deg, #f4f9ff, #e9f2fb);
+  padding: 14px 18px;
+  min-width: 196px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .hero-acronym-line {
-  font-size: 0.99rem;
+  font-size: clamp(1.04rem, 1.15vw, 1.2rem);
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.45;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .hero-initial {
@@ -626,9 +631,13 @@ button.btn {
   padding: 22px;
 }
 
+.card-link {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
 .card-link:hover {
   transform: translateY(-2px);
-  transition: transform .15s ease;
+  box-shadow: 0 18px 46px rgba(15, 43, 70, 0.14);
 }
 
 a.card {
@@ -1377,9 +1386,24 @@ a.card {
     grid-template-columns: 1fr;
   }
 
+  .hero-process {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .separation-visual {
+    margin-top: 12px;
+  }
+
   .hero-acronym-block {
     min-width: 0;
     width: fit-content;
+    justify-content: center;
+  }
+
+  .hero-acronym-line {
+    font-size: 1.02rem;
+    line-height: 1.4;
   }
 
   .hero-main,
@@ -1787,4 +1811,378 @@ body.modal-open {
   .modal-body {
     padding-right: 0;
   }
+}
+
+.hero-process {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(170px, 0.8fr) minmax(250px, 1.35fr);
+  align-items: center;
+  min-height: 176px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  border-radius: 18px;
+  padding: 22px 20px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(64, 219, 210, 0.22), transparent 28%),
+    linear-gradient(125deg, #062c54 0%, #075e88 56%, #008a91 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.hero-process::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.22;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.65) 0.8px, transparent 0.8px);
+  background-size: 18px 18px;
+  mask-image: linear-gradient(90deg, transparent, #000 45%, #000);
+}
+
+.hero-process-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-process-copy span {
+  display: block;
+  margin-bottom: 8px;
+  color: #7ee5dd;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-process-copy strong {
+  display: block;
+  font-size: clamp(1rem, 1.8vw, 1.22rem);
+  line-height: 1.38;
+  letter-spacing: -0.015em;
+}
+
+.separation-visual {
+  contain: layout paint;
+  position: relative;
+  height: 132px;
+  min-width: 0;
+}
+
+.visual-label {
+  position: absolute;
+  top: 0;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.visual-label-feed {
+  left: 8%;
+}
+
+.visual-label-product {
+  right: 4%;
+}
+
+.flow-line {
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  height: 1px;
+  opacity: 0.32;
+  background: linear-gradient(90deg, transparent, #9fe5f2 20%, #9fe5f2 80%, transparent);
+}
+
+.flow-line::after {
+  content: "";
+  position: absolute;
+  right: 2%;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #d9fbff;
+  border-right: 1px solid #d9fbff;
+  transform: rotate(45deg);
+}
+
+.flow-line-one {
+  top: 48px;
+}
+
+.flow-line-two {
+  top: 99px;
+}
+
+.membrane-layer {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  z-index: 2;
+  width: 22px;
+  height: 104px;
+  transform: translateX(-50%) rotate(4deg);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 9px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.42), rgba(158, 241, 236, 0.84));
+  box-shadow: 0 0 26px rgba(114, 235, 226, 0.38);
+  animation: membrane-breathe 3.8s ease-in-out infinite;
+}
+
+.membrane-layer i {
+  position: absolute;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #087087;
+  box-shadow: inset 0 1px 2px rgba(0, 25, 48, 0.55);
+}
+
+.membrane-layer i:nth-child(1) { top: 9px; }
+.membrane-layer i:nth-child(2) { top: 29px; }
+.membrane-layer i:nth-child(3) { top: 49px; }
+.membrane-layer i:nth-child(4) { top: 69px; }
+.membrane-layer i:nth-child(5) { top: 89px; }
+
+.particle {
+  position: absolute;
+  z-index: 3;
+  left: 5%;
+  top: var(--particle-y);
+  width: var(--particle-size, 9px);
+  height: var(--particle-size, 9px);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.particle-pass {
+  animation: particle-pass 4.8s linear infinite;
+  animation-delay: var(--particle-delay);
+}
+
+.particle-reject {
+  animation: particle-reject 5.2s ease-in-out infinite;
+  animation-delay: var(--particle-delay);
+}
+
+.particle-cyan {
+  background: #a7f7ff;
+  box-shadow: 0 0 12px rgba(167, 247, 255, 0.9);
+}
+
+.particle-green {
+  background: #7df0b2;
+  box-shadow: 0 0 12px rgba(125, 240, 178, 0.9);
+}
+
+.particle-large,
+.particle-medium {
+  border: 2px solid #ffd07a;
+  background: rgba(255, 171, 64, 0.28);
+  box-shadow: 0 0 14px rgba(255, 190, 92, 0.65);
+}
+
+.particle-large {
+  --particle-size: 17px;
+}
+
+.particle-medium {
+  --particle-size: 13px;
+}
+
+.particle-one { --particle-y: 42px; --particle-delay: -0.4s; }
+.particle-two { --particle-y: 92px; --particle-delay: -1.7s; }
+.particle-three { --particle-y: 63px; --particle-delay: -3.1s; }
+.particle-four { --particle-y: 112px; --particle-delay: -4.2s; }
+.particle-five { --particle-y: 30px; --particle-delay: -1s; }
+.particle-six { --particle-y: 78px; --particle-delay: -3.7s; }
+.particle-seven { --particle-y: 103px; --particle-delay: -2.4s; }
+
+@keyframes particle-pass {
+  0% {
+    left: 5%;
+    opacity: 0;
+    transform: translateY(0) scale(0.7);
+  }
+  12%, 82% {
+    opacity: 1;
+  }
+  48% {
+    transform: translateY(-4px) scale(1);
+  }
+  100% {
+    left: 91%;
+    opacity: 0;
+    transform: translateY(3px) scale(0.75);
+  }
+}
+
+@keyframes particle-reject {
+  0% {
+    left: 5%;
+    opacity: 0;
+    transform: translateY(0) scale(0.7);
+  }
+  14%, 72% {
+    opacity: 1;
+  }
+  53% {
+    left: 41%;
+    transform: translateY(-5px) scale(1);
+  }
+  100% {
+    left: 17%;
+    opacity: 0;
+    transform: translateY(5px) scale(0.8);
+  }
+}
+
+@keyframes membrane-breathe {
+  0%, 100% {
+    transform: translateX(-50%) rotate(4deg) scaleY(0.96);
+  }
+  50% {
+    transform: translateX(-50%) rotate(2deg) scaleY(1.03);
+  }
+}
+
+
+/* Accessibility ------------------------------------------------------------ */
+
+:focus-visible {
+  outline: 3px solid var(--brand-secondary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  padding: 12px 18px;
+  border-radius: 0 0 12px 0;
+  background: var(--brand-primary);
+  color: #fff;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Capping the iteration count matters: duration alone makes an infinite
+   animation flicker at speed instead of stopping. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Scroll reveal - the class is applied by JS, so no-JS visitors are unaffected */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .5s ease, transform .5s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero heading was an h3 styled as a panel title */
+
+.hero-side-title {
+  margin: 0 0 14px;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
+  font-size: 1.15rem;
+  color: var(--strong);
+}
+
+/* Featured publications ---------------------------------------------------- */
+
+.publication-featured-section {
+  margin-bottom: 28px;
+}
+
+.publication-featured {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  border-left: 4px solid var(--brand-secondary);
+}
+
+.publication-featured h3 {
+  margin: 0;
+  font-size: 1.06rem;
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.publication-featured p {
+  margin: 0;
+}
+
+.publication-badge {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.all-publications-title {
+  margin-top: 8px;
+}
+
+/* Impact cards ------------------------------------------------------------- */
+
+.impact-grid {
+  align-items: stretch;
+}
+
+.impact-grid .card,
+.impact-card {
+  height: 100%;
+  margin-bottom: 0;
+}
+
+/* Home research theme cards ------------------------------------------------ */
+
+.research-theme-card .research-chip-row {
+  margin-top: auto;
+  padding-top: 12px;
 }

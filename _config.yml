@@ -1,6 +1,25 @@
 title: MS<sup>3</sup>L
-description: Membrane-based Sustainable Separation System Laboratory
+title_plain: MS3L
+description: Membrane-based Sustainable Separation Solutions Laboratory
 baseurl: "/MS3L.io"
 url: "https://enthusiast87.github.io"
 markdown: kramdown
 theme: null
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile.dev
+  - compose.dev.yaml
+  - _config_dev.yml
+  - README.md
+  - certs/
+  - docs/
+  - prompts/
+  - scripts/
+  - vendor/
+  - .venv/
+  - .bundle/
+  - .bundle-user/
+  - .vscode/
+  - assets/images/imported/

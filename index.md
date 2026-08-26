@@ -4,10 +4,6 @@ title: Home
 ---
 {% assign lab = site.data.lab %}
 {% assign pi = site.data.members | where: "role_group", "Principal Investigator" | first %}
-{% assign biorefinery_theme = site.data.research | where: "title", "Biorefinery" | first %}
-{% assign resource_recovery_theme = site.data.research | where: "title", "Resource recovery" | first %}
-{% assign plastic_recycling_theme = site.data.research | where: "title", "Plastic recycling" | first %}
-{% assign energy_theme = site.data.research | where: "title", "Energy-related applications" | first %}
 
 <section class="hero hero-clean">
   <div class="container">
@@ -27,6 +23,30 @@ title: Home
             <p class="hero-subcopy">{{ lab.subtitle }}</p>
           </div>
         </div>
+
+        <div class="hero-process" aria-hidden="true">
+          <div class="hero-process-copy">
+            <span>Selective transport</span>
+            <strong>From complex mixtures<br>to sustainable solutions.</strong>
+          </div>
+          <div class="separation-visual">
+            <span class="visual-label visual-label-feed">Feed</span>
+            <span class="visual-label visual-label-product">Product</span>
+            <div class="flow-line flow-line-one"></div>
+            <div class="flow-line flow-line-two"></div>
+            <div class="membrane-layer">
+              <i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <span class="particle particle-pass particle-cyan particle-one"></span>
+            <span class="particle particle-pass particle-green particle-two"></span>
+            <span class="particle particle-pass particle-cyan particle-three"></span>
+            <span class="particle particle-pass particle-green particle-four"></span>
+            <span class="particle particle-reject particle-large particle-five"></span>
+            <span class="particle particle-reject particle-large particle-six"></span>
+            <span class="particle particle-reject particle-medium particle-seven"></span>
+          </div>
+        </div>
+
         <div class="hero-actions">
           <a class="btn btn-primary" href="{{ '/research' | relative_url }}">Research</a>
           <a class="btn btn-secondary" href="{{ '/publications' | relative_url }}">Publications</a>
@@ -34,8 +54,8 @@ title: Home
         </div>
       </div>
 
-      <aside class="hero-side">
-        <h3>Notice / News</h3>
+      <aside class="hero-side" aria-labelledby="hero-news-heading">
+        <h2 id="hero-news-heading" class="hero-side-title">Notice / News</h2>
         {% for item in site.data.news limit: 3 %}
         <div class="side-news-item">
           <div class="list-meta">{{ item.date | date: "%b %Y" }}</div>
@@ -67,9 +87,9 @@ title: Home
       <h3>Current Projects</h3>
       <p>National R&amp;D and CCU related ongoing projects.</p>
     </a>
-    <a class="card card-link" href="{{ '/publications' | relative_url }}">
-      <h3>Recent Publications</h3>
-      <p>Journal articles and selected outputs from recent MS<sup>3</sup>L work.</p>
+    <a class="card card-link" href="{{ '/join-us' | relative_url }}">
+      <h3>Join Us</h3>
+      <p>Open to students and researchers in membrane science and sustainable separations.</p>
     </a>
   </div>
 </section>
@@ -77,108 +97,70 @@ title: Home
 <section class="section section-soft">
   <div class="container">
     <h2 class="section-title">Research Themes</h2>
-    <div class="research-theme-stack-home">
-      <div class="research-theme-row">
-        {% assign row_theme = biorefinery_theme %}
-        <div class="card research-theme-card">
-          {% if row_theme.image %}
-          <div class="research-theme-thumb">
-            <img src="{{ row_theme.image | relative_url }}" alt="{{ row_theme.title }} research visual" loading="lazy">
-          </div>
-          {% endif %}
-          <h3>{{ row_theme.title }}</h3>
-          <p class="research-theme-summary">{{ row_theme.summary }}</p>
-          {% if row_theme.application_examples %}
-          <div class="research-chip-row research-chip-row-compact">
-            {% for example in row_theme.application_examples limit: 2 %}
-            <span class="research-chip">{{ example }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-          {% if row_theme.selected_papers %}
-          <div class="theme-paper-inline">
-            <div class="list-meta">Key paper</div>
-            <a class="publication-link" href="{{ row_theme.selected_papers[0].url }}">{{ row_theme.selected_papers[0].title }}</a>
-          </div>
+    <p class="section-lead">{{ lab.research.lead }}</p>
+    <div class="card-grid two">
+      {% for theme in site.data.research limit: 4 %}
+      <a class="card card-link research-theme-card" href="{{ '/research' | relative_url }}">
+        <div class="research-theme-thumb">
+          {% if theme.image %}
+          <img src="{{ theme.image | relative_url }}" alt="{{ theme.image_alt | default: theme.title }}" loading="lazy">
           {% endif %}
         </div>
-
-        {% assign row_theme = resource_recovery_theme %}
-        <div class="card research-theme-card">
-          {% if row_theme.image %}
-          <div class="research-theme-thumb">
-            <img src="{{ row_theme.image | relative_url }}" alt="{{ row_theme.title }} research visual" loading="lazy">
-          </div>
-          {% endif %}
-          <h3>{{ row_theme.title }}</h3>
-          <p class="research-theme-summary">{{ row_theme.summary }}</p>
-          {% if row_theme.application_examples %}
-          <div class="research-chip-row research-chip-row-compact">
-            {% for example in row_theme.application_examples limit: 2 %}
-            <span class="research-chip">{{ example }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-          {% if row_theme.selected_papers %}
-          <div class="theme-paper-inline">
-            <div class="list-meta">Key paper</div>
-            <a class="publication-link" href="{{ row_theme.selected_papers[0].url }}">{{ row_theme.selected_papers[0].title }}</a>
-          </div>
-          {% endif %}
+        <h3>{{ theme.title }}</h3>
+        <p class="research-theme-summary">{{ theme.one_liner | default: theme.summary }}</p>
+        {% if theme.application_examples %}
+        <div class="research-chip-row research-chip-row-compact">
+          {% for example in theme.application_examples limit: 2 %}
+          <span class="research-chip">{{ example }}</span>
+          {% endfor %}
         </div>
-      </div>
-
-      <div class="research-theme-row">
-        {% assign row_theme = plastic_recycling_theme %}
-        <div class="card research-theme-card">
-          {% if row_theme.image %}
-          <div class="research-theme-thumb">
-            <img src="{{ row_theme.image | relative_url }}" alt="{{ row_theme.title }} research visual" loading="lazy">
-          </div>
-          {% endif %}
-          <h3>{{ row_theme.title }}</h3>
-          <p class="research-theme-summary">{{ row_theme.summary }}</p>
-          {% if row_theme.application_examples %}
-          <div class="research-chip-row research-chip-row-compact">
-            {% for example in row_theme.application_examples limit: 2 %}
-            <span class="research-chip">{{ example }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-          {% if row_theme.selected_papers %}
-          <div class="theme-paper-inline">
-            <div class="list-meta">Key paper</div>
-            <a class="publication-link" href="{{ row_theme.selected_papers[0].url }}">{{ row_theme.selected_papers[0].title }}</a>
-          </div>
-          {% endif %}
-        </div>
-
-        {% assign row_theme = energy_theme %}
-        <div class="card research-theme-card">
-          {% if row_theme.image %}
-          <div class="research-theme-thumb">
-            <img src="{{ row_theme.image | relative_url }}" alt="{{ row_theme.title }} research visual" loading="lazy">
-          </div>
-          {% endif %}
-          <h3>{{ row_theme.title }}</h3>
-          <p class="research-theme-summary">{{ row_theme.summary }}</p>
-          {% if row_theme.application_examples %}
-          <div class="research-chip-row research-chip-row-compact">
-            {% for example in row_theme.application_examples limit: 2 %}
-            <span class="research-chip">{{ example }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-          {% if row_theme.selected_papers %}
-          <div class="theme-paper-inline">
-            <div class="list-meta">Key paper</div>
-            <a class="publication-link" href="{{ row_theme.selected_papers[0].url }}">{{ row_theme.selected_papers[0].title }}</a>
-          </div>
-          {% endif %}
-        </div>
-      </div>
+        {% endif %}
+      </a>
+      {% endfor %}
     </div>
+    <p class="theme-cta"><a class="inline-link" href="{{ '/research' | relative_url }}">View detailed theme summaries and figures</a></p>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">{{ lab.technology_impact.title }}</h2>
+    <p class="section-lead">{{ lab.technology_impact.lead }}</p>
+    <div class="card-grid four">
+      {% for entry in lab.technology_impact.pages %}
+      <a class="card card-link impact-card" href="{{ entry.slug | prepend: '/' | relative_url }}">
+        <h3>{{ entry.title }}</h3>
+        <p>{{ entry.summary }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <h2 class="section-title">Featured Publications</h2>
+    <p class="section-lead">Representative work from the lab, spanning membrane materials, separations, and process design.</p>
+    {% assign featured = site.data.publications | where: "featured", true %}
+    <div class="card-grid two">
+      {% for item in featured %}
+      <article class="card publication-featured">
+        <div class="publication-badge">{{ item.venue }} &middot; {{ item.year }}</div>
+        {% if item.url %}
+        <h3><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></h3>
+        {% else %}
+        <h3>{{ item.title }}</h3>
+        {% endif %}
+        {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    <p><a class="inline-link" href="{{ '/publications' | relative_url }}">View full publication list</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
     <div class="page-card contact-banner">
       <div class="contact-banner-copy">
         <h2>Research Contact</h2>
@@ -188,56 +170,13 @@ title: Home
         </p>
       </div>
       <div class="contact-banner-meta">
-        <p class="contact-summary-meta"><strong>{{ lab.contact.institution }}</strong></p>
+        <p class="contact-summary-meta"><strong>{{ lab.institution }}</strong></p>
+        {% assign primary_email = lab.contact.emails | first %}
         <p class="contact-summary-email">
-          <a class="inline-link" href="mailto:{{ lab.contact.email }}">{{ lab.contact.email }}</a>
+          <a class="inline-link" href="mailto:{{ primary_email }}">{{ primary_email }}</a>
         </p>
       </div>
       <a class="btn btn-primary" href="{{ '/contact' | relative_url }}">Get in touch</a>
     </div>
-    <p class="theme-cta"><a class="inline-link" href="{{ '/research' | relative_url }}">View detailed theme summaries and figures</a></p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Latest News</h2>
-    <div class="card-grid two">
-      {% for item in site.data.news limit: 4 %}
-      <div class="list-card">
-        {% if item.image %}
-        <div class="list-card-thumb">
-          <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}" loading="lazy">
-        </div>
-        {% endif %}
-        <div class="list-meta">{{ item.date }}</div>
-        <strong>{{ item.title }}</strong>
-        {% if item.summary %}
-        <p>{{ item.summary }}</p>
-        {% endif %}
-      </div>
-      {% endfor %}
-    </div>
-    <p><a class="inline-link" href="{{ '/news' | relative_url }}">View all news</a></p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Recent Publications</h2>
-    <div class="card-grid two">
-      {% for item in site.data.publications limit: 6 %}
-      <div class="list-card publication-entry">
-        <div class="list-meta">{{ item.year }} | {{ item.venue }}</div>
-        {% if item.url %}
-        <strong><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></strong>
-        {% else %}
-        <strong>{{ item.title }}</strong>
-        {% endif %}
-        {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
-      </div>
-      {% endfor %}
-    </div>
-    <p><a class="inline-link" href="{{ '/publications' | relative_url }}">View full publication list</a></p>
   </div>
 </section>

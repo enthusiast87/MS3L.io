@@ -9,7 +9,7 @@ title: Contact
     <div class="page-card">
       <h1>{{ contact.title }}</h1>
       <p>{{ contact.note }}</p>
-      <p><strong>Institution:</strong> {{ contact.institution }}</p>
+      <p><strong>Institution:</strong> {{ site.data.lab.institution }}</p>
       <p><strong>Address:</strong> {{ contact.address }}</p>
 
       {% if contact.position_inquiry_note %}

@@ -15,10 +15,10 @@ title: Principal Investigator
       </div>
       <div class="profile-body">
         <div class="profile-label">Principal Investigator</div>
-        <h2>{{ site.data.lab.principal_investigator.name }}</h2>
+        <h2>{{ member_pi.name }}</h2>
         <p class="profile-role">{{ pi.current_role }}</p>
         <p class="profile-affiliation">{{ pi.current_affiliation }}</p>
-        <p><strong>Research focus:</strong> {{ site.data.lab.principal_investigator.summary }}</p>
+        <p><strong>Research focus:</strong> {{ member_pi.research }}</p>
 
         <h3>Career</h3>
         <ul>

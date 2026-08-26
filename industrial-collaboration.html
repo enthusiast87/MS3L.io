@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /industrial-collaboration/
+sitemap: false
+---
+{% assign target = '/technology-transfer' | relative_url %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting</title>
+    <link rel="canonical" href="{{ '/technology-transfer' | absolute_url }}">
+    <meta http-equiv="refresh" content="0; url={{ target }}">
+    <meta name="robots" content="noindex">
+    <script>location.replace({{ target | jsonify }});</script>
+  </head>
+  <body>
+    <p>This page has moved. <a href="{{ target }}">Continue</a>.</p>
+  </body>
+</html>

@@ -1,19 +1,20 @@
 ---
 layout: default
-title: Technology Transfer
+title: Recognitions
 ---
-{% assign transfer = site.data.lab.technology_transfer %}
+{% assign recognitions = site.data.lab.recognitions %}
 
 <div class="page-wrap">
   <div class="container">
     <div class="page-card">
-      <h1>Technology Transfer</h1>
-      <p>{{ transfer.lead }}</p>
+      <h1>Recognitions</h1>
+      <p>{{ recognitions.lead }}</p>
     </div>
 
     <div class="card-grid two impact-grid">
-      {% for item in transfer.items %}
+      {% for item in recognitions.items %}
       <article class="card impact-experience-card">
+        {% if item.year %}<div class="list-meta">{{ item.year }}</div>{% endif %}
         <h3>{{ item.title }}</h3>
         <p>{{ item.summary }}</p>
         {% if item.detail %}<p class="impact-experience-detail">{{ item.detail }}</p>{% endif %}

@@ -11,6 +11,28 @@ title: Publications
       <p>{{ lab.publications.lead }}</p>
     </div>
 
+    {% assign featured = site.data.publications | where: "featured", true %}
+    {% if featured.size > 0 %}
+    <section class="publication-featured-section">
+      <h2 class="section-title section-title-sm">Featured</h2>
+      <div class="card-grid two">
+        {% for item in featured %}
+        <article class="card publication-featured">
+          <div class="publication-badge">{{ item.venue }} &middot; {{ item.year }}</div>
+          {% if item.url %}
+          <h3><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></h3>
+          {% else %}
+          <h3>{{ item.title }}</h3>
+          {% endif %}
+          {% if item.authors %}<p class="publication-authors">{% include highlight-members.html text=item.authors %}</p>{% endif %}
+          {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <h2 class="section-title section-title-sm all-publications-title">All publications</h2>
     <div class="news-feed">
       {% for item in site.data.publications %}
       <article class="news-card news-card-text-only publication-entry">

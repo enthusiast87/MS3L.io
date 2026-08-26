@@ -9,4 +9,4 @@ The primary website logo is the clean, single-color wordmark. The alternatives b
 | C — Framed | ![Framed MS3L logo](../assets/images/logo/ms3l-logo-frame.svg) | Avatars, badges, and small placements |
 | D — Horizontal | ![Horizontal MS3L logo](../assets/images/logo/ms3l-logo-horizontal.svg) | Presentations, posters, and formal documents |
 
-All versions avoid the previous green `3`. The full laboratory name is **Membrane-based Sustainable Separation System Laboratory**.
+All versions avoid the previous green `3`. The full laboratory name is **Membrane-based Sustainable Separation Solutions Laboratory**.

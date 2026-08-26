@@ -52,7 +52,7 @@ export default function MS3LHomepageMockup() {
           <div>
             <div className="text-xl font-semibold tracking-tight">MS³L</div>
             <div className="text-sm text-slate-500">
-              Membrane-based Sustainable Separation System Laboratory
+              Membrane-based Sustainable Separation Solutions Laboratory
             </div>
           </div>
           <nav className="hidden gap-6 text-sm md:flex">
