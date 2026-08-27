@@ -59,6 +59,15 @@ main {
   overflow: hidden;
 }
 
+/* overflow:hidden makes main a scrollport, which kills position:sticky inside
+   it. overflow-x:clip contains the hero animation without that side effect. */
+@supports (overflow: clip) {
+  main {
+    overflow: visible;
+    overflow-x: clip;
+  }
+}
+
 .container {
   width: min(var(--max-width), calc(100% - clamp(24px, 4vw, 64px)));
   margin: 0 auto;
@@ -103,7 +112,7 @@ main {
 
 .brand-logo-image {
   display: block;
-  width: 112px;
+  width: 86px;
   height: auto;
 }
 
@@ -227,8 +236,8 @@ main {
 .hero-identity {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: stretch;
-  gap: 16px;
+  align-items: center;
+  gap: 20px;
   flex: 1;
 }
 
@@ -245,30 +254,40 @@ main {
   min-width: 0;
 }
 
+/* The block is an acrostic of MS3L. The lines are display:contents so every
+   initial shares one auto-sized column - the words then align on a single
+   left edge without hardcoding the width of "M". */
 .hero-acronym-block {
   border: 1px solid var(--line);
   border-radius: 14px;
   border-left: 4px solid var(--brand-primary);
   background: linear-gradient(160deg, #f4f9ff, #e9f2fb);
-  padding: 14px 18px;
-  min-width: 196px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-content: center;
+  align-items: baseline;
+  row-gap: 5px;
+  font-size: clamp(0.92rem, 0.98vw, 1.02rem);
 }
 
 .hero-acronym-line {
-  font-size: clamp(1.04rem, 1.15vw, 1.2rem);
-  font-weight: 600;
-  line-height: 1.45;
+  display: contents;
+}
+
+.hero-initial,
+.hero-acronym-word {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
   color: var(--muted);
   white-space: nowrap;
 }
 
 .hero-initial {
   color: var(--accent-strong);
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 1.14em;
 }
 
 .hero-identity-copy h1 {
@@ -882,6 +901,18 @@ a.card {
   padding: 32px;
 }
 
+/* One gap between the page intro card and whatever list follows it, so the
+   Impact pages line up with each other regardless of their content type. */
+.page-card + .card-grid,
+.page-card + .news-feed,
+.page-card + .content-feed,
+.page-card + .profile-section,
+.page-card + .research-theme-stack,
+.page-card + .publication-featured-section,
+.page-card + .section-title {
+  margin-top: 28px;
+}
+
 .page-card h1 {
   margin-top: 0;
   margin-bottom: 12px;
@@ -1077,12 +1108,15 @@ a.card {
   line-height: 1.2;
 }
 
+/* 25/18 matches the source figures, so nothing is cropped; capping the width
+   keeps the thumbnail at about two thirds of a full-bleed card image. */
 .research-theme-thumb {
-  margin-bottom: 16px;
+  width: min(100%, 320px);
+  margin: 0 auto 16px;
   border: 1px solid var(--line);
   border-radius: 14px;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 25 / 18;
   background:
     linear-gradient(145deg, rgba(0, 79, 159, 0.12), rgba(255, 255, 255, 0.9)),
     linear-gradient(135deg, #dce9f7, #f6faff);
@@ -1331,6 +1365,11 @@ a.card {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .research-detail-visual {
+    position: static;
+    width: min(100%, 340px);
+  }
+
   .profile-photo {
     min-height: 220px;
   }
@@ -1374,7 +1413,8 @@ a.card {
   .card-grid.three,
   .card-grid.two,
   .logo-strip,
-  .member-grid {
+  .member-grid,
+  .alumni-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1396,14 +1436,9 @@ a.card {
   }
 
   .hero-acronym-block {
-    min-width: 0;
     width: fit-content;
     justify-content: center;
-  }
-
-  .hero-acronym-line {
-    font-size: 1.02rem;
-    line-height: 1.4;
+    font-size: 1rem;
   }
 
   .hero-main,
@@ -1423,13 +1458,6 @@ a.card {
 }
 
 
-.research-page .page-card {
-  margin-bottom: 20px;
-}
-
-.publications-page .page-card {
-  margin-bottom: 20px;
-}
 
 .research-theme-stack {
   display: grid;
@@ -1438,8 +1466,8 @@ a.card {
 
 .research-detail-card {
   display: grid;
-  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: minmax(190px, 232px) minmax(0, 1fr);
+  gap: 26px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1447,17 +1475,22 @@ a.card {
   padding: 22px;
 }
 
+/* The body runs much longer than the figure, so the visual column shrinks to
+   its content and tracks the text instead of leaving a tall empty gutter. */
 .research-detail-visual {
   display: grid;
   gap: 12px;
   align-content: start;
+  align-self: start;
+  position: sticky;
+  top: 104px;
 }
 
 .research-detail-media {
-  border-radius: 18px;
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--line);
-  min-height: 220px;
+  aspect-ratio: 25 / 18;
   background:
     linear-gradient(145deg, rgba(0, 79, 159, 0.12), rgba(255, 255, 255, 0.9)),
     linear-gradient(135deg, #dce9f7, #f6faff);
@@ -1502,6 +1535,35 @@ a.card {
   margin: 16px 0 8px;
   font-size: 1.02rem;
   color: var(--strong);
+}
+
+/* Core topics and Methods sit side by side so the body column stays closer in
+   height to the figure beside it. */
+.research-detail-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 26px;
+  align-items: start;
+}
+
+.research-detail-columns > div > h3:first-child {
+  margin-top: 16px;
+}
+
+.research-detail-columns ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.research-detail-columns li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 720px) {
+  .research-detail-columns {
+    grid-template-columns: 1fr;
+  }
 }
 
 .research-aside-card {
@@ -1611,15 +1673,17 @@ a.card {
 
 .member-meta {
   display: grid;
-  gap: 7px;
+  gap: 10px;
   margin: 0;
 }
 
+/* "AFFILIATION" fills the label column exactly, so it needs its own width plus
+   a real gutter or it reads as one run-on line with the value. */
 .member-meta-row {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
-  gap: 8px;
-  align-items: start;
+  grid-template-columns: 94px minmax(0, 1fr);
+  gap: 4px 18px;
+  align-items: baseline;
 }
 
 .member-meta dt {
@@ -1682,7 +1746,7 @@ a.card {
 
   .member-meta-row {
     grid-template-columns: 1fr;
-    gap: 1px;
+    gap: 3px;
   }
 }
 
@@ -2109,8 +2173,8 @@ main:focus {
 
 .reveal {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity .5s ease, transform .5s ease;
+  transform: translateY(10px);
+  transition: opacity .32s ease-out, transform .32s ease-out;
   transition-delay: var(--reveal-delay, 0ms);
 }
 
@@ -2134,32 +2198,50 @@ main:focus {
   margin-bottom: 28px;
 }
 
+.featured-grid {
+  gap: 14px;
+}
+
 .publication-featured {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   height: 100%;
-  border-left: 4px solid var(--brand-secondary);
+  padding: 16px 18px;
+  border-radius: 14px;
+  border-left: 3px solid var(--brand-secondary);
+  box-shadow: 0 8px 22px rgba(15, 43, 70, 0.07);
 }
 
 .publication-featured h3 {
   margin: 0;
-  font-size: 1.06rem;
-  line-height: 1.45;
+  font-size: 0.96rem;
+  line-height: 1.42;
   text-wrap: balance;
 }
 
 .publication-featured p {
   margin: 0;
+  font-size: 0.88rem;
+}
+
+/* Author lists on the featured cards are long; two lines is enough of a cue. */
+.publication-featured .publication-authors {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5;
+  color: var(--muted);
 }
 
 .publication-badge {
   align-self: flex-start;
-  padding: 4px 10px;
+  padding: 3px 9px;
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent-strong);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -2185,4 +2267,78 @@ main:focus {
 .research-theme-card .research-chip-row {
   margin-top: auto;
   padding-top: 12px;
+}
+
+/* Alumni ------------------------------------------------------------------- */
+
+.alumni-lead {
+  margin-bottom: 16px;
+  font-size: 0.94rem;
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Deliberately lighter than a member card - this is a completed record, not a
+   roster entry, and two of these people also appear in the sections above. */
+.alumni-card {
+  padding: 16px 18px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-left: 3px solid rgba(0, 80, 164, 0.28);
+  border-radius: 14px;
+}
+
+.alumni-card h3 {
+  margin: 0 0 6px;
+  color: var(--strong);
+  font-size: 1.06rem;
+}
+
+.alumni-card > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.alumni-card > p + p {
+  margin-top: 4px;
+}
+
+.alumni-card .alumni-degree {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.alumni-card .alumni-period {
+  color: var(--muted);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.alumni-card .alumni-research {
+  font-size: 0.85rem;
+}
+
+.alumni-card .alumni-now {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+  color: var(--strong);
+}
+
+.alumni-card .alumni-now span {
+  margin-right: 8px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
 }

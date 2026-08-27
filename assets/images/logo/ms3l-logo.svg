@@ -1,8 +1,4 @@
-<svg width="140" height="56" viewBox="0 0 140 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ms3l-title">
+<svg width="94" height="48" viewBox="0 0 94 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ms3l-title">
   <title id="ms3l-title">MS3L</title>
-  <g fill="#0B2F5B" font-family="Inter, Avenir Next, Montserrat, Segoe UI, Arial, sans-serif" font-weight="800">
-    <text x="2" y="45" font-size="43" letter-spacing="-1.4">MS</text>
-    <text x="71" y="22" font-size="17">3</text>
-    <text x="88" y="45" font-size="43" letter-spacing="-1.4">L</text>
-  </g>
+  <text x="2" y="38" fill="#0B2F5B" font-family="Inter, Avenir Next, Montserrat, Segoe UI, Arial, sans-serif" font-weight="600" font-size="38" letter-spacing="-0.4">MS<tspan font-size="16" dy="-14">3</tspan><tspan font-size="38" dy="14">L</tspan></text>
 </svg>

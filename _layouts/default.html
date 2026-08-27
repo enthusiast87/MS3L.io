@@ -237,11 +237,11 @@
             entry.target.classList.add('is-visible');
             observer.unobserve(entry.target);
           });
-        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        }, { rootMargin: '0px 0px 6% 0px', threshold: 0.01 });
 
         targets.forEach((el) => {
           const index = Array.from(el.parentElement.children).indexOf(el);
-          el.style.setProperty('--reveal-delay', Math.min(index, 5) * 60 + 'ms');
+          el.style.setProperty('--reveal-delay', Math.min(index, 4) * 28 + 'ms');
           el.classList.add('reveal');
           observer.observe(el);
         });

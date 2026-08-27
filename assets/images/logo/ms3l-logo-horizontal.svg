@@ -1,14 +1,10 @@
 <svg width="420" height="72" viewBox="0 0 420 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ms3l-horizontal-title">
-  <title id="ms3l-horizontal-title">MS3L — Membrane-based Sustainable Separation System Laboratory</title>
-  <g fill="#0B2F5B" font-family="Inter, Avenir Next, Montserrat, Segoe UI, Arial, sans-serif" font-weight="800">
-    <text x="4" y="53" font-size="49" letter-spacing="-1.6">MS</text>
-    <text x="82" y="25" font-size="19">3</text>
-    <text x="101" y="53" font-size="49" letter-spacing="-1.6">L</text>
-  </g>
-  <rect x="151" y="13" width="2" height="46" rx="1" fill="#0096D6"/>
+  <title id="ms3l-horizontal-title">MS3L — Membrane-based Sustainable Separation Solutions Laboratory</title>
+  <text x="4" y="50" fill="#0B2F5B" font-family="Inter, Avenir Next, Montserrat, Segoe UI, Arial, sans-serif" font-weight="600" font-size="44" letter-spacing="-0.5">MS<tspan font-size="18" dy="-16">3</tspan><tspan font-size="44" dy="16">L</tspan></text>
+  <rect x="140" y="13" width="2" height="46" rx="1" fill="#0096D6"/>
   <g font-family="Inter, Avenir Next, Montserrat, Segoe UI, Arial, sans-serif">
-    <text x="170" y="29" font-size="10.5" font-weight="700" letter-spacing="1.35" fill="#0096D6">MEMBRANE-BASED</text>
-    <text x="170" y="47" font-size="13" font-weight="600" letter-spacing="0.15" fill="#0B2F5B">SUSTAINABLE SEPARATION SYSTEM</text>
-    <text x="170" y="61" font-size="10.5" font-weight="600" letter-spacing="1.15" fill="#5B6F84">LABORATORY</text>
+    <text x="159" y="29" font-size="10.5" font-weight="600" letter-spacing="1.35" fill="#0096D6">MEMBRANE-BASED</text>
+    <text x="159" y="47" font-size="13" font-weight="600" letter-spacing="0.15" fill="#0B2F5B">SUSTAINABLE SEPARATION SOLUTIONS</text>
+    <text x="159" y="61" font-size="10.5" font-weight="500" letter-spacing="1.15" fill="#5B6F84">LABORATORY</text>
   </g>
 </svg>

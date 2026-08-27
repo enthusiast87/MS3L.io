@@ -15,7 +15,7 @@ title: Publications
     {% if featured.size > 0 %}
     <section class="publication-featured-section">
       <h2 class="section-title section-title-sm">Featured</h2>
-      <div class="card-grid two">
+      <div class="card-grid three featured-grid">
         {% for item in featured %}
         <article class="card publication-featured">
           <div class="publication-badge">{{ item.venue }} &middot; {{ item.year }}</div>

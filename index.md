@@ -11,11 +11,11 @@ title: Home
       <div class="hero-main">
         <div class="hero-identity">
           <div class="hero-acronym-block" aria-label="{{ lab.full_name | strip_html }}">
-            <div class="hero-acronym-line"><span class="hero-initial">M</span>embrane-based</div>
-            <div class="hero-acronym-line"><span class="hero-initial">S</span>ustainable</div>
-            <div class="hero-acronym-line"><span class="hero-initial">S</span>eparation</div>
-            <div class="hero-acronym-line"><span class="hero-initial">S</span>olutions</div>
-            <div class="hero-acronym-line"><span class="hero-initial">L</span>aboratory</div>
+            <div class="hero-acronym-line"><span class="hero-initial">M</span><span class="hero-acronym-word">embrane-based</span></div>
+            <div class="hero-acronym-line"><span class="hero-initial">S</span><span class="hero-acronym-word">ustainable</span></div>
+            <div class="hero-acronym-line"><span class="hero-initial">S</span><span class="hero-acronym-word">eparation</span></div>
+            <div class="hero-acronym-line"><span class="hero-initial">S</span><span class="hero-acronym-word">olutions</span></div>
+            <div class="hero-acronym-line"><span class="hero-initial">L</span><span class="hero-acronym-word">aboratory</span></div>
           </div>
           <div class="hero-identity-copy">
             <h1>MS<sup>3</sup>L</h1>
@@ -142,7 +142,7 @@ title: Home
     <h2 class="section-title">Featured Publications</h2>
     <p class="section-lead">Representative work from the lab, spanning membrane materials, separations, and process design.</p>
     {% assign featured = site.data.publications | where: "featured", true %}
-    <div class="card-grid two">
+    <div class="card-grid three featured-grid">
       {% for item in featured %}
       <article class="card publication-featured">
         <div class="publication-badge">{{ item.venue }} &middot; {{ item.year }}</div>

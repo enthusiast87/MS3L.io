@@ -50,22 +50,30 @@ title: Research
           </div>
           {% endif %}
 
-          {% if item.topics %}
-          <h3>Core topics</h3>
-          <ul>
-            {% for topic in item.topics %}
-            <li>{{ topic }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
+          {% if item.topics or item.key_methods %}
+          <div class="research-detail-columns">
+            {% if item.topics %}
+            <div>
+              <h3>Core topics</h3>
+              <ul>
+                {% for topic in item.topics %}
+                <li>{{ topic }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
 
-          {% if item.key_methods %}
-          <h3>Methods and approach</h3>
-          <ul>
-            {% for method in item.key_methods %}
-            <li>{{ method }}</li>
-            {% endfor %}
-          </ul>
+            {% if item.key_methods %}
+            <div>
+              <h3>Methods and approach</h3>
+              <ul>
+                {% for method in item.key_methods %}
+                <li>{{ method }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+          </div>
           {% endif %}
 
           {% if item.selected_papers %}

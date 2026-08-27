@@ -1,0 +1,17 @@
+# Completed degrees supervised in MS3L. People who stayed on in the lab keep a
+# current entry in members.yml as well - `now` records where they are today.
+# Co-supervision belongs here rather than on the current member card: it is a
+# fact about the degree, not about the person's present role.
+- name: Suyeon Park
+  degree: M.S. in Chemical and Biomolecular Engineering
+  institution: Yonsei University | Co-supervised with Prof. Dae Woo Kim
+  period: 2024 Fall - 2026.08
+  research: Diffusion dialysis, cation exchange membrane, polymer synthesis, thin-film composite membrane fabrication
+  now: Internship Master Researcher, MS<sup>3</sup>L
+
+- name: Yourim Noh
+  degree: M.S. in Chemical and Biological Engineering
+  institution: Korea University | Co-supervised with Prof. Gwang Ho Song
+  period: 2024 Fall - 2026.08
+  research: Bipolar membrane electrodialysis, bipolar membrane fabrication, catalyst modification, electrochemical analysis
+  now: Internship Master Researcher, MS<sup>3</sup>L
