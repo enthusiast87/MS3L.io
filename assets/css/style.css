@@ -1878,6 +1878,13 @@ body.modal-open {
   background: rgba(11, 47, 91, 0.46);
 }
 
+/* An author display:grid outranks the UA sheet's [hidden] { display: none },
+   so without this every modal is painted at once and the last one in the DOM
+   covers the page. The close button then has nothing to hide. */
+.content-modal[hidden] {
+  display: none;
+}
+
 .content-modal-panel {
   position: relative;
   width: min(960px, 100%);
