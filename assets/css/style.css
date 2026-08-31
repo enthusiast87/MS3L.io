@@ -1088,6 +1088,112 @@ a.card {
   }
 }
 
+/* Invited talks ------------------------------------------------------------
+   Same shape as the PI career list: the date holds its own column so every
+   talk title starts on one vertical line. */
+
+.talk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 8px 26px;
+}
+
+.talk-item {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 6px 26px;
+  align-items: baseline;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+
+.talk-item:first-child {
+  border-top: 0;
+}
+
+.talk-when {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.talk-date {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.talk-upcoming {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 80, 164, 0.16);
+  background: rgba(0, 150, 214, 0.08);
+  color: var(--accent-strong);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.talk-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.talk-body h2 {
+  margin: 0;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
+  font-size: 1.14rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--strong);
+  text-wrap: balance;
+}
+
+.talk-event {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.talk-event strong {
+  color: var(--text);
+}
+
+.talk-location,
+.talk-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.talk-note {
+  font-size: 0.86rem;
+}
+
+@media (max-width: 640px) {
+  .talk-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .talk-when {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
 .member-note {
   margin-top: 24px;
 }

@@ -165,9 +165,25 @@ scale_up:
       summary: Robust membrane and module preparation for pilot-scale operation.
       detail: Evonik Industries | 2020.07 - 2020.12
 
+invited_talks:
+  title: Invited Talks
+  lead: Invited lectures and conference presentations by MS<sup>3</sup>L.
+  items:
+    - title: Low-Energy Membrane Separations Enabled by Affinity-Driven Transport
+      event: AIChE Annual Meeting
+      session: Honorary Session for Andrew G. Livingston
+      date: "2026-11-10"
+      date_label: 10 November 2026, 10:00
+      location: Minneapolis, United States
+      note: The honorary session runs 9 - 10 November, within the meeting on 8 - 12 November.
+
 recognitions:
   lead: Awards and honours received by the lab and its members.
   items:
+    - title: "STS forum Young Leaders Program"
+      year: 2026
+      summary: Invited to the Young Leaders Program, including the dialogue sessions with Nobel laureates.
+      detail: Kyoto International Conference Center, 3 October 2026, ahead of the STS forum annual meeting on 4 - 6 October.
     - title: KRICT Outstanding Researcher Commendation
       year: 2025
       summary: Institutional recognition of research leadership and performance.
