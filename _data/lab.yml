@@ -129,10 +129,18 @@ technology_transfer:
 scale_up:
   lead: Membrane separations only matter if they survive outside the lab. We work on the step between a coating on a coupon and a unit a plant can run.
   focus:
+    - Lab-to-pilot progression, from single cells and coupons to multi-stack modules and pilot skids
     - Module and roll-to-roll fabrication that holds performance beyond bench coupons
     - Process simulation and separation-train design at plant throughput
     - Operating windows, solvent and catalyst recycle loops, and energy duty at scale
   items:
+    - title: Bipolar membrane electrodialysis, lab cell to pilot skid
+      summary: >-
+        BMED carried from single-cell screening through bench multi-stack assembly to continuous
+        pilot operation, producing lactic acid at <strong>about 110 kg/day</strong> and handling
+        sodium sulfate streams <strong>above 100 kg/day</strong>. The pilot unit was built and is
+        operated with the KRICT Carbon-Neutral Chemical Process Demonstration Center in Yeosu.
+      detail: KRICT in-house technology | 2022.05 - present
     - title: 3 kT/yr continuous plastic recycling plant design
       summary: Process design for continuous polystyrene depolymerization and downstream separation.
       detail: Lotte Chemical | 2023.02 - 2024.12
