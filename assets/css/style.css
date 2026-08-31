@@ -1776,24 +1776,39 @@ a.card {
 
 /* Figure lightbox ---------------------------------------------------------- */
 
-/* The source renders top out between 667px and 1280px wide and cannot be
-   re-rendered larger, so the panel takes the image's natural size rather than
-   stretching it to a fixed panel width. */
+/* Every figure opens at the same panel size, so the dialog does not jump
+   between themes. */
 .content-modal-panel.research-figure-panel {
-  width: auto;
-  max-width: min(1280px, 100%);
+  width: min(920px, 100%);
+  max-width: min(920px, 100%);
   max-height: calc(100vh - 48px);
-  padding: 56px 16px 16px;
+  padding: 56px 20px 20px;
 }
 
-.research-figure-panel img {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  max-height: calc(100vh - 190px);
-  margin: 0 auto;
+/* A fixed 25:18 stage, matching the figures' own ratio. The image is centred
+   and capped at its natural size: the sources run 667-1280px and cannot be
+   re-rendered, so the smallest one sits with white around it rather than being
+   upscaled. The figures are on white grounds, so that reads as margin. */
+.research-figure-stage {
+  position: relative;
+  aspect-ratio: 25 / 18;
+  max-height: calc(100vh - 210px);
+  background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 10px;
+}
+
+/* Absolute, so the image is out of flow and cannot push the stage taller than
+   its ratio - the figures differ slightly (1.379 to 1.393) and were making
+   each dialog a few pixels different. scale-down shrinks an oversized figure
+   but never enlarges a small one past its native pixels. */
+.research-figure-stage img {
+  position: absolute;
+  inset: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  object-fit: scale-down;
+  object-position: center;
 }
 
 .research-figure-caption {

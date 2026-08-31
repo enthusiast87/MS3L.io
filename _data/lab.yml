@@ -168,14 +168,14 @@ scale_up:
 recognitions:
   lead: Awards and honours received by the lab and its members.
   items:
-    - title: National R&D Excellence Achievements 100 Case
-      year: 2023
-      summary: Continuous waste polystyrene catalytic depolymerization and separation.
-      detail: Selected and published by the Korea Institute of Science and Technology Evaluation and Planning (KISTEP).
     - title: KRICT Outstanding Researcher Commendation
       year: 2025
       summary: Institutional recognition of research leadership and performance.
       detail: Awarded to Jihoon Kim by the Korea Research Institute of Chemical Technology.
+    - title: National R&D Excellence Achievements 100 Case
+      year: 2023
+      summary: Continuous waste polystyrene catalytic depolymerization and separation.
+      detail: Selected and published by the Korea Institute of Science and Technology Evaluation and Planning (KISTEP).
 
 members:
   title: Members

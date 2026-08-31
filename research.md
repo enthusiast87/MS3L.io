@@ -58,7 +58,9 @@ title: Research
 <div class="content-modal" id="research-figure-{{ forloop.index }}" hidden>
   <div class="content-modal-panel research-figure-panel">
     <button class="modal-close" type="button" data-modal-close>Close</button>
-    <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}">
+    <div class="research-figure-stage">
+      <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}">
+    </div>
     {% if item.visual_caption %}
     <p class="research-figure-caption">{{ item.visual_caption }}</p>
     {% endif %}
