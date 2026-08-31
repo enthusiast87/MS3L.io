@@ -2,9 +2,8 @@
   summary: Integrated conversion and membrane-enabled separations for sustainable biorefinery operations.
   one_liner: Carbon-efficient routes from biomass to purified platform chemicals.
   why_it_matters: >-
-    We connect biomass conversion chemistry to low-energy separation pathways that replace
-    neutralization-heavy and solvent-intensive purification steps, so that platform chemicals from
-    edible and non-edible feedstocks reach usable purity at viable yield, cost, and carbon footprint.
+    Conversion chemistry and low-energy separation designed as one process, replacing
+    neutralization-heavy purification steps.
   image: /assets/images/research/biorefinery.jpg
   image_alt: Biorefinery separation workflow and recovery concept for biomass-derived products.
   visual_caption: Membrane-assisted recovery routes for biomass-derived acids, bases, and purified product streams.
@@ -42,8 +41,8 @@
   summary: Selective purification and solvent/catalyst recovery for circular plastics.
   one_liner: Membrane-enabled depolymerization and monomer purification for circular plastics.
   why_it_matters: >-
-    We develop selective separation routes that reduce process heat duty and solvent loss,
-    making chemical recycling of mixed polymer streams more scalable and sustainable.
+    Selective separation routes that cut process heat duty and solvent loss in chemical
+    recycling of mixed polymer streams.
   image: /assets/images/research/plastic-recycling.jpg
   image_alt: Circular plastics workflow with membrane-enabled solvent and monomer recovery.
   visual_caption: Circular separation schemes for depolymerization products, solvent recycle, and catalyst recovery.
@@ -76,8 +75,8 @@
   summary: Recovery and purification of valuable species from complex liquid streams.
   one_liner: Recovering value from dilute and contaminated streams with membrane process intensification.
   why_it_matters: >-
-    We target difficult feed streams where conventional purification is expensive,
-    and design membrane-first pathways for resource circulation and waste minimization.
+    Membrane-first pathways for feed streams where conventional purification is too
+    expensive to justify.
   image: /assets/images/research/resource-recovery.jpg
   image_alt: Resource recovery concept showing concentration, crystallization, and selective purification.
   visual_caption: Intensified recovery routes for dilute, mixed, or contamination-prone liquid streams.
@@ -109,11 +108,8 @@
   summary: Membrane separations and materials across fuel production, power generation, and energy storage.
   one_liner: Membranes for fuel separation, osmotic power, and energy storage materials.
   why_it_matters: >-
-    We work on three fronts of the same problem. Membrane separation recovers fuels from
-    fermentation broths and fractionates crude oil at a fraction of the thermal duty; osmotic
-    processes turn salinity gradients into power; and tailored polymer membranes serve as
-    separators inside electrochemical storage. Each depends on material-level selectivity
-    surviving into a module that runs reliably at scale.
+    Selectivity that has to survive from material to module, across fuel recovery,
+    salinity-gradient power, and storage.
   image: /assets/images/research/energy.jpg
   image_alt: Energy-related membrane applications spanning biofuels, osmosis modules, and battery materials.
   visual_caption: Membrane materials and modules tailored for fuel, osmotic, and electrochemical systems.

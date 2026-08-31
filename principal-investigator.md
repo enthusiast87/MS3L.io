@@ -16,14 +16,29 @@ title: Principal Investigator
       <div class="profile-body">
         <div class="profile-label">Principal Investigator</div>
         <h2>{{ member_pi.name }}</h2>
-        <p class="profile-role">{{ pi.current_role }}</p>
-        <p class="profile-affiliation">{{ pi.current_affiliation }}</p>
-        <p><strong>Research focus:</strong> {{ member_pi.research }}</p>
+
+        <ul class="pi-appointments">
+          {% for appointment in pi.current_appointments %}
+          <li>
+            <span class="pi-appointment-title">{{ appointment.title }}</span>
+            <span class="pi-appointment-org">{{ appointment.organization }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        <p class="pi-appointment-period">{{ pi.current_period }}</p>
+
+        <p class="pi-research-focus"><strong>Research focus:</strong> {{ member_pi.research }}</p>
 
         <h3>Career</h3>
-        <ul>
-          {% for item in pi.previous_positions %}
-          <li>{{ item }}</li>
+        <ul class="pi-career">
+          {% for item in pi.career %}
+          <li class="pi-career-item">
+            <span class="pi-career-period">{{ item.period }}</span>
+            <span class="pi-career-role">
+              <span class="pi-career-title">{{ item.title }}</span>
+              <span class="pi-career-affiliation">{{ item.affiliation }}{% if item.note %} ({{ item.note }}){% endif %}</span>
+            </span>
+          </li>
           {% endfor %}
         </ul>
       </div>

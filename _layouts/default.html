@@ -228,7 +228,7 @@
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         if (!('IntersectionObserver' in window)) return;
 
-        const targets = document.querySelectorAll('.section .card, .section .list-card, .news-card, .research-detail-card');
+        const targets = document.querySelectorAll('.section .card, .section .list-card, .news-card, .research-card');
         if (!targets.length) return;
 
         const observer = new IntersectionObserver((entries) => {

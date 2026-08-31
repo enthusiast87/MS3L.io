@@ -12,78 +12,28 @@ title: Research
       </p>
     </div>
 
-    <div class="research-theme-stack">
+    <div class="card-grid two research-theme-grid">
       {% for item in site.data.research %}
-      <article class="research-detail-card">
-        <div class="research-detail-visual">
-          <div class="research-detail-media">
-            <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title | append: ' research visual' }}" loading="lazy">
-          </div>
-          {% if item.visual_caption %}
-          <div class="research-visual-caption">
-            <strong>Visual focus</strong>
-            <p>{{ item.visual_caption }}</p>
-          </div>
-          {% endif %}
-        </div>
-        <div class="research-detail-body">
-          <div class="profile-label">{{ item.title }}</div>
-          <h2>{{ item.one_liner }}</h2>
-          <p>{{ item.why_it_matters }}</p>
+      <article class="research-card">
+        <button class="research-card-figure" type="button" data-modal-open="research-figure-{{ forloop.index }}" aria-label="Enlarge the {{ item.title }} figure">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}" loading="lazy">
+          <span class="research-figure-expand">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M9 21H3v-6"></path><path d="M21 3l-7 7"></path><path d="M3 21l7-7"></path></svg>
+            Enlarge
+          </span>
+        </button>
 
+        <div class="research-card-caption">
+          <div class="research-card-label">{{ item.title }}</div>
+          <h2>{{ item.one_liner }}</h2>
+        </div>
+
+        <div class="research-card-body">
+          <p>{{ item.why_it_matters }}</p>
           {% if item.application_examples %}
           <div class="research-chip-row" aria-label="{{ item.title }} application examples">
             {% for example in item.application_examples %}
             <span class="research-chip">{{ example }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-
-          {% if item.visual_points %}
-          <div class="research-aside-card">
-            <h3>What the visual highlights</h3>
-            <ul class="research-note-list">
-              {% for point in item.visual_points %}
-              <li>{{ point }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-          {% endif %}
-
-          {% if item.topics or item.key_methods %}
-          <div class="research-detail-columns">
-            {% if item.topics %}
-            <div>
-              <h3>Core topics</h3>
-              <ul>
-                {% for topic in item.topics %}
-                <li>{{ topic }}</li>
-                {% endfor %}
-              </ul>
-            </div>
-            {% endif %}
-
-            {% if item.key_methods %}
-            <div>
-              <h3>Methods and approach</h3>
-              <ul>
-                {% for method in item.key_methods %}
-                <li>{{ method }}</li>
-                {% endfor %}
-              </ul>
-            </div>
-            {% endif %}
-          </div>
-          {% endif %}
-
-          {% if item.selected_papers %}
-          <h3>Selected papers</h3>
-          <div class="card-grid two">
-            {% for paper in item.selected_papers %}
-            <div class="list-card publication-entry">
-              <div class="list-meta">{{ paper.year }} | {{ paper.venue }}</div>
-              <strong><a class="publication-link" href="{{ paper.url }}">{{ paper.title }}</a></strong>
-            </div>
             {% endfor %}
           </div>
           {% endif %}
@@ -93,3 +43,19 @@ title: Research
     </div>
   </div>
 </div>
+
+{% comment %}
+  One lightbox per figure, driven by the modal handlers already in the default
+  layout, so no page-specific script is needed.
+{% endcomment %}
+{% for item in site.data.research %}
+<div class="content-modal" id="research-figure-{{ forloop.index }}" hidden>
+  <div class="content-modal-panel research-figure-panel">
+    <button class="modal-close" type="button" data-modal-close>Close</button>
+    <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}">
+    {% if item.visual_caption %}
+    <p class="research-figure-caption">{{ item.visual_caption }}</p>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}

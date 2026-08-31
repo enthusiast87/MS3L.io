@@ -250,7 +250,7 @@ main {
 .news-card,
 .news-card-body,
 .profile-body,
-.research-detail-body {
+.research-card-body {
   min-width: 0;
 }
 
@@ -907,7 +907,6 @@ a.card {
 .page-card + .news-feed,
 .page-card + .content-feed,
 .page-card + .profile-section,
-.page-card + .research-theme-stack,
 .page-card + .publication-featured-section,
 .page-card + .section-title {
   margin-top: 28px;
@@ -981,10 +980,112 @@ a.card {
   color: var(--strong);
 }
 
-.profile-role,
-.profile-affiliation {
-  margin: 0 0 6px;
+/* PI current appointments -------------------------------------------------
+   Two concurrent posts that share one start date. Each row pairs a job title
+   with its own institution, and the period is stated once underneath instead
+   of being repeated on both. */
+
+.pi-appointments {
+  list-style: none;
+  margin: 2px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 5px;
+}
+
+.pi-appointments li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 8px;
+}
+
+.pi-appointment-title {
+  color: var(--strong);
+  font-weight: 600;
+}
+
+.pi-appointment-org {
   color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.pi-appointment-org::before {
+  content: "—";
+  margin-right: 8px;
+  color: var(--line);
+}
+
+.pi-appointment-period {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pi-research-focus {
+  margin-top: 16px;
+}
+
+/* PI career ---------------------------------------------------------------
+   The period gets a column of its own so every job title starts on the same
+   vertical line. Previously title, period, and affiliation ran together in one
+   sentence per row and nothing lined up. */
+
+.pi-career {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.pi-career-item {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 4px 24px;
+  align-items: baseline;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+
+.pi-career-item:first-child {
+  padding-top: 2px;
+  border-top: 0;
+}
+
+.pi-career-item:last-child {
+  padding-bottom: 0;
+}
+
+.pi-career-period {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pi-career-role {
+  display: grid;
+  gap: 2px;
+}
+
+.pi-career-title {
+  color: var(--strong);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.pi-career-affiliation {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+/* Below this the 170px period column leaves too little room for the longer
+   job titles, so the period stacks above its role instead. */
+@media (max-width: 560px) {
+  .pi-career-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
+  }
 }
 
 .member-note {
@@ -1140,11 +1241,6 @@ a.card {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   min-height: calc(1.65em * 2);
-}
-
-.research-theme-stack-home {
-  display: grid;
-  gap: 18px;
 }
 
 .research-theme-row {
@@ -1347,8 +1443,7 @@ a.card {
   .split-grid,
   .news-card,
   .profile-card,
-  .profile-card-highlight,
-  .research-detail-card {
+  .profile-card-highlight {
     grid-template-columns: 1fr;
   }
 
@@ -1363,11 +1458,6 @@ a.card {
   .logo-strip,
   .member-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .research-detail-visual {
-    position: static;
-    width: min(100%, 340px);
   }
 
   .profile-photo {
@@ -1445,7 +1535,6 @@ a.card {
   .hero-side,
   .page-card,
   .profile-card,
-  .research-detail-card,
   .news-card,
   .card,
   .list-card {
@@ -1459,137 +1548,145 @@ a.card {
 
 
 
-.research-theme-stack {
-  display: grid;
-  gap: 22px;
+/* Research theme cards ----------------------------------------------------- */
+
+.research-theme-grid {
+  align-items: stretch;
 }
 
-.research-detail-card {
-  display: grid;
-  grid-template-columns: minmax(190px, 232px) minmax(0, 1fr);
-  gap: 26px;
+.research-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 22px;
-}
-
-/* The body runs much longer than the figure, so the visual column shrinks to
-   its content and tracks the text instead of leaving a tall empty gutter. */
-.research-detail-visual {
-  display: grid;
-  gap: 12px;
-  align-content: start;
-  align-self: start;
-  position: sticky;
-  top: 104px;
-}
-
-.research-detail-media {
-  border-radius: 16px;
   overflow: hidden;
-  border: 1px solid var(--line);
-  aspect-ratio: 25 / 18;
-  background:
-    linear-gradient(145deg, rgba(0, 79, 159, 0.12), rgba(255, 255, 255, 0.9)),
-    linear-gradient(135deg, #dce9f7, #f6faff);
 }
 
-.research-detail-media img {
+/* The figures are process schematics on a white ground, so nothing is drawn
+   over them - the theme name sits in a caption bar underneath instead. Width
+   here is ~581px against source figures of 667-1280px, so none is upscaled. */
+.research-card-figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: #dce9f7;
+  aspect-ratio: 25 / 18;
+  cursor: zoom-in;
+  font: inherit;
+}
+
+.research-card-figure img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.research-visual-caption {
-  padding: 14px 16px;
-  border-top: 3px solid rgba(0, 150, 214, 0.28);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(235, 245, 252, 0.92));
-  border-radius: 14px;
+.research-figure-expand {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.93);
+  color: var(--strong);
+  font-size: 0.76rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(15, 43, 70, 0.16);
 }
 
-.research-visual-caption strong {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+.research-card-figure:hover .research-figure-expand {
+  background: #ffffff;
+}
+
+.research-card-figure:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.research-card-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px 22px 16px;
+  background: var(--surface-soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-left: 3px solid var(--accent-strong);
+}
+
+.research-card-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent-strong);
 }
 
-.research-visual-caption p {
+.research-card-caption h2 {
   margin: 0;
-  font-size: 0.92rem;
-  color: var(--muted);
-}
-
-.research-detail-body h2 {
-  margin: 0 0 12px;
-  font-size: 1.5rem;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
+  font-size: 1.18rem;
+  line-height: 1.34;
+  letter-spacing: -0.01em;
   color: var(--strong);
+  text-wrap: balance;
 }
 
-.research-detail-body h3 {
-  margin: 16px 0 8px;
-  font-size: 1.02rem;
-  color: var(--strong);
+.research-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+  padding: 18px 22px 22px;
 }
 
-/* Core topics and Methods sit side by side so the body column stays closer in
-   height to the figure beside it. */
-.research-detail-columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 26px;
-  align-items: start;
-}
-
-.research-detail-columns > div > h3:first-child {
-  margin-top: 16px;
-}
-
-.research-detail-columns ul {
+.research-card-body p {
   margin: 0;
-  padding-left: 20px;
   color: var(--muted);
+  font-size: 0.98rem;
 }
 
-.research-detail-columns li {
-  margin-bottom: 6px;
+/* Chips settle against the bottom edge so cards in a row line up on them. */
+.research-card-body .research-chip-row {
+  margin: auto 0 0;
 }
 
-@media (max-width: 720px) {
-  .research-detail-columns {
-    grid-template-columns: 1fr;
-  }
+/* Figure lightbox ---------------------------------------------------------- */
+
+/* The source renders top out between 667px and 1280px wide and cannot be
+   re-rendered larger, so the panel takes the image's natural size rather than
+   stretching it to a fixed panel width. */
+.content-modal-panel.research-figure-panel {
+  width: auto;
+  max-width: min(1280px, 100%);
+  max-height: calc(100vh - 48px);
+  padding: 56px 16px 16px;
 }
 
-.research-aside-card {
-  margin-top: 16px;
-  padding: 16px 18px;
-  border-left: 3px solid rgba(0, 150, 214, 0.36);
-  background: linear-gradient(180deg, rgba(243, 248, 253, 0.92), rgba(235, 244, 251, 0.92));
-  border-radius: 14px;
+.research-figure-panel img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 190px);
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
 }
 
-.research-aside-card h3 {
-  margin-top: 0;
-}
-
-.research-note-list {
-  margin: 0;
-  padding-left: 18px;
-}
-
-.research-note-list li {
-  margin-bottom: 8px;
+.research-figure-caption {
+  margin: 12px 2px 0;
   color: var(--muted);
-}
-
-.research-note-list li:last-child {
-  margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
 .research-theme-card .theme-paper-inline {

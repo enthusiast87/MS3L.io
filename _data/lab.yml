@@ -37,13 +37,27 @@ introduction:
     - Membrane-enabled energy and electrochemical separations
   principal_investigator:
     name: Jihoon Kim
-    current_role: Principal Researcher (March 2026 - present)
-    current_affiliation: Korea Research Institute of Chemical Technology (KRICT) | Associate Professor in Advanced Materials and Chemical Engineering, University of Science and Technology (UST) (March 2026 - present)
-    previous_positions:
-      - Senior Researcher (2021 - February 2026), Chemical Process Technology Division, Korea Research Institute of Chemical Technology (KRICT)
-      - Postdoctoral Research Associate in Chemical Engineering (2018 - 2021), Imperial College London (Prof. Andrew G. Livingston)
-      - MS-PhD in Energy Engineering (2012 - 2017), Hanyang University (Prof. Young Moo Lee)
-      - BS in Chemical Engineering (2006 - 2008, 2010 - 2012), Hanyang University
+    current_period: March 2026 - present
+    current_appointments:
+      - title: Principal Researcher
+        organization: Korea Research Institute of Chemical Technology (KRICT)
+      - title: Associate Professor
+        organization: Advanced Materials and Chemical Engineering, University of Science and Technology (UST)
+    career:
+      - title: Senior Researcher
+        period: 2021 - February 2026
+        affiliation: Chemical Process Technology Division, Korea Research Institute of Chemical Technology (KRICT)
+      - title: Postdoctoral Research Associate in Chemical Engineering
+        period: 2018 - 2021
+        affiliation: Imperial College London
+        note: Prof. Andrew G. Livingston
+      - title: Integrated MS-PhD in Energy Engineering
+        period: 2012 - 2017
+        affiliation: Hanyang University
+        note: Prof. Young Moo Lee
+      - title: BS in Chemical Engineering
+        period: 2006 - 2008, 2010 - 2012
+        affiliation: Hanyang University
     biography:
       - Dr. Jihoon Kim received his BS in Chemical Engineering from Hanyang University in 2012 and became a regular member of the Young Engineers Honour Society (YEHS) of the National Academy of Engineering of Korea.
       - He completed an integrated MS-PhD program in Energy Engineering at Hanyang University under Prof. Young Moo Lee. His graduate research covered lithium-ion battery separators, pressure-retarded osmosis, membrane distillation, and organic solvent nanofiltration, including collaborative research in Prof. Andrew G. Livingston's group at Imperial College London.
