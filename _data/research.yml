@@ -1,20 +1,24 @@
 - title: Biorefinery
-  summary: Membrane-enabled separations for sustainable biorefinery operations.
-  one_liner: Carbon-efficient downstream processing for biomass-derived platform chemicals.
+  summary: Integrated conversion and membrane-enabled separations for sustainable biorefinery operations.
+  one_liner: Carbon-efficient routes from biomass to purified platform chemicals.
   why_it_matters: >-
-    We design low-energy separation pathways that replace neutralization-heavy and solvent-intensive
-    purification steps, enabling economically viable biorefinery operations.
+    We connect biomass conversion chemistry to low-energy separation pathways that replace
+    neutralization-heavy and solvent-intensive purification steps, so that platform chemicals from
+    edible and non-edible feedstocks reach usable purity at viable yield, cost, and carbon footprint.
   image: /assets/images/research/biorefinery.jpg
   image_alt: Biorefinery separation workflow and recovery concept for biomass-derived products.
   visual_caption: Membrane-assisted recovery routes for biomass-derived acids, bases, and purified product streams.
   application_examples:
     - Biomass platform chemicals
+    - Non-edible feedstock valorization
     - Organic acid purification
     - Acid and base regeneration
   visual_points:
     - Focuses on replacing neutralization-heavy purification steps with membrane-enabled recovery.
     - Highlights how acidification, product recovery, and reagent recycle can be integrated in one train.
+    - Treats conversion and separation as one process, evaluated on overall yield and carbon footprint.
   topics:
+    - Platform chemical production
     - Product recovery
     - Base catalyst recycling
     - Product acidification
@@ -22,15 +26,16 @@
     - Diffusion dialysis and membrane-assisted ion exchange
     - Bipolar membrane electrodialysis for acid/base generation
     - Integrated purification train design and system-level optimization
+    - Scale-up demonstration and life cycle assessment of full conversion routes
   selected_papers:
+    - title: A new integrated process from non-edible biomass to 2,5-furandicarboxylic acid via 5-bromomethylfurfural and 5-acetoxymethylfurfural intermediates
+      year: 2026
+      venue: Chemical Engineering Journal
+      url: https://doi.org/10.1016/j.cej.2026.181043
     - title: Simultaneous CO2 mineralization and organic acid purification via diffusion dialysis process
       year: 2025
       venue: Chemical Engineering Journal
       url: https://doi.org/10.1016/j.cej.2025.165207
-    - title: Concurrent Production of Xylonic Acid and Xylitol from Xylose Through Sustainable Bipolar Membrane Electrodialysis
-      year: 2025
-      venue: ACS Sustainable Chemistry & Engineering
-      url: https://doi.org/10.1021/acssuschemeng.5c00612
 
 - title: Plastic recycling
   summary: Selective purification and solvent/catalyst recovery for circular plastics.
