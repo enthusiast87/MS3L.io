@@ -37,6 +37,12 @@ title: Research
             {% endfor %}
           </div>
           {% endif %}
+          <div class="research-card-actions">
+            <button class="research-details-button" type="button" data-modal-open="research-details-{{ forloop.index }}">
+              Details
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+            </button>
+          </div>
         </div>
       </article>
       {% endfor %}
@@ -45,8 +51,8 @@ title: Research
 </div>
 
 {% comment %}
-  One lightbox per figure, driven by the modal handlers already in the default
-  layout, so no page-specific script is needed.
+  Two dialogs per theme, both driven by the modal handlers already in the
+  default layout: the figure on its own, and the detail the card leaves out.
 {% endcomment %}
 {% for item in site.data.research %}
 <div class="content-modal" id="research-figure-{{ forloop.index }}" hidden>
@@ -55,6 +61,68 @@ title: Research
     <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}">
     {% if item.visual_caption %}
     <p class="research-figure-caption">{{ item.visual_caption }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="content-modal" id="research-details-{{ forloop.index }}" hidden>
+  <div class="content-modal-panel research-details-panel">
+    <button class="modal-close" type="button" data-modal-close>Close</button>
+
+    <div class="research-details-head">
+      <div class="research-card-label">{{ item.title }}</div>
+      <h2>{{ item.one_liner }}</h2>
+      <p>{{ item.why_it_matters }}</p>
+    </div>
+
+    {% if item.visual_points %}
+    <section class="research-details-section">
+      <h3>What the figure shows</h3>
+      <ul>
+        {% for point in item.visual_points %}
+        <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% if item.topics or item.key_methods %}
+    <div class="research-details-columns">
+      {% if item.topics %}
+      <section class="research-details-section">
+        <h3>Core topics</h3>
+        <ul>
+          {% for topic in item.topics %}
+          <li>{{ topic }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+      {% if item.key_methods %}
+      <section class="research-details-section">
+        <h3>Methods and approach</h3>
+        <ul>
+          {% for method in item.key_methods %}
+          <li>{{ method }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if item.selected_papers %}
+    <section class="research-details-section">
+      <h3>Selected papers</h3>
+      <div class="card-grid two">
+        {% for paper in item.selected_papers %}
+        <div class="list-card publication-entry">
+          <div class="list-meta">{{ paper.year }} | {{ paper.venue }}</div>
+          <strong><a class="publication-link" href="{{ paper.url }}">{{ paper.title }}</a></strong>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
     {% endif %}
   </div>
 </div>

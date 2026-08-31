@@ -1566,14 +1566,18 @@ a.card {
 }
 
 /* The figures are process schematics on a white ground, so nothing is drawn
-   over them - the theme name sits in a caption bar underneath instead. Width
-   here is ~581px against source figures of 667-1280px, so none is upscaled. */
+   over them - the theme name sits in a caption bar underneath instead. The
+   margin is equal on all four sides so the figure reads as a plate rather than
+   as bleed. Width lands near 550px against sources of 667-1280px, so none is
+   upscaled. */
 .research-card-figure {
   position: relative;
   display: block;
-  width: 100%;
+  margin: 16px;
   padding: 0;
-  border: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
   background: #dce9f7;
   aspect-ratio: 25 / 18;
   cursor: zoom-in;
@@ -1610,7 +1614,7 @@ a.card {
 
 .research-card-figure:focus-visible {
   outline: 3px solid var(--accent);
-  outline-offset: -3px;
+  outline-offset: 2px;
 }
 
 .research-card-caption {
@@ -1656,9 +1660,118 @@ a.card {
   font-size: 0.98rem;
 }
 
-/* Chips settle against the bottom edge so cards in a row line up on them. */
 .research-card-body .research-chip-row {
-  margin: auto 0 0;
+  margin: 0;
+}
+
+/* The action row holds the bottom edge, so the Details buttons line up across
+   a row of cards whatever the copy above them does. */
+.research-card-actions {
+  display: flex;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.research-details-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--accent-strong);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease;
+}
+
+.research-details-button:hover {
+  background: var(--accent-soft);
+  border-color: rgba(0, 80, 164, 0.3);
+}
+
+.research-details-button svg {
+  transition: transform .15s ease;
+}
+
+.research-details-button:hover svg {
+  transform: translateX(2px);
+}
+
+/* Theme detail dialog ------------------------------------------------------ */
+
+/* Everything the card deliberately leaves out: what the figure shows, the
+   topics, the methods, and the papers. */
+.content-modal-panel.research-details-panel {
+  padding: 56px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.research-details-head {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.research-details-head h2 {
+  margin: 0;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.32;
+  letter-spacing: -0.015em;
+  color: var(--strong);
+  text-wrap: balance;
+}
+
+.research-details-head p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.research-details-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 26px;
+  align-items: start;
+}
+
+.research-details-section h3 {
+  margin: 0 0 8px;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.research-details-section ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.research-details-section li {
+  margin-bottom: 6px;
+}
+
+.research-details-section li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 720px) {
+  .research-details-columns,
+  .research-details-panel .card-grid.two {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 /* Figure lightbox ---------------------------------------------------------- */
