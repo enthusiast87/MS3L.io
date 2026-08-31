@@ -9,8 +9,9 @@
   image_alt: Biorefinery separation workflow and recovery concept for biomass-derived products.
   visual_caption: Membrane-assisted recovery routes for biomass-derived acids, bases, and purified product streams.
   application_examples:
+    - Biomass valorization
     - Biomass platform chemicals
-    - Non-edible feedstock valorization
+    - Sustainable downstream processing
     - Organic acid purification
     - Acid and base regeneration
   visual_points:
@@ -105,35 +106,49 @@
       url: https://doi.org/10.1039/C5EE03768A
 
 - title: Energy-related applications
-  summary: Membrane and separation technologies for energy conversion and storage.
-  one_liner: Advanced membrane materials and modules for clean energy systems.
+  summary: Membrane separations and materials across fuel production, power generation, and energy storage.
+  one_liner: Membranes for fuel separation, osmotic power, and energy storage materials.
   why_it_matters: >-
-    We advance membrane materials and hybrid configurations that improve energy efficiency,
-    process reliability, and commercialization potential in energy and battery applications.
+    We work on three fronts of the same problem. Membrane separation recovers fuels from
+    fermentation broths and fractionates crude oil at a fraction of the thermal duty; osmotic
+    processes turn salinity gradients into power; and tailored polymer membranes serve as
+    separators inside electrochemical storage. Each depends on material-level selectivity
+    surviving into a module that runs reliably at scale.
   image: /assets/images/research/energy.jpg
   image_alt: Energy-related membrane applications spanning biofuels, osmosis modules, and battery materials.
   visual_caption: Membrane materials and modules tailored for fuel, osmotic, and electrochemical systems.
   application_examples:
-    - Biofuel separations
-    - Pressure-retarded osmosis
+    - Biofuel recovery
+    - Crude oil fractionation
+    - Osmotic power generation
     - Battery separator materials
   visual_points:
     - Frames membrane design as part of larger energy conversion and storage systems.
     - Links material-level selectivity to module reliability and process-scale performance.
   topics:
     - Biofuel production
+    - Crude oil and hydrocarbon separation
     - Pressure retarded osmosis
     - Lithium-ion battery separator
   key_methods:
-    - Thin-film composite membrane design
+    - Thin-film composite and polyamide nanofilm design
+    - Solvent- and hydrocarbon-stable selective layers
     - Pressure-retarded osmosis module optimization
     - Membrane-electrochemical interface engineering
   selected_papers:
+    - title: Hydrophobic Polyamide Nanofilms Provide Rapid Transport for Crude Oil Separation
+      year: 2022
+      venue: Science
+      url: https://doi.org/10.1126/science.abq0598
     - title: Low energy-intensive production of fuel-grade bio-butanol enabled by membrane-based extraction
       year: 2020
       venue: Energy & Environmental Science
       url: https://doi.org/10.1039/D0EE02927K
-    - title: A robust thin film composite membrane incorporating thermally rearranged polymer support for organic solvent nanofiltration and pressure retarded osmosis
-      year: 2018
+    - title: Thin Film Composite on Fluorinated Thermally Rearranged Polymer Nanofibrous Membrane Achieves Power Density of 87 W·m-2 in Pressure Retarded Osmosis
+      year: 2020
       venue: Journal of Membrane Science
-      url: https://doi.org/10.1016/j.memsci.2018.01.008
+      url: https://doi.org/10.1016/j.memsci.2020.118120
+    - title: Highly lithium-ion conductive battery separators from thermally rearranged polybenzoxazole
+      year: 2015
+      venue: Chemical Communications
+      url: https://doi.org/10.1039/C4CC09411E
