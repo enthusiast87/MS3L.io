@@ -12,24 +12,24 @@ title: Invited Talks
       <p>{{ talks.lead }}</p>
     </div>
 
-    <ul class="talk-list">
+    <div class="news-feed">
       {% for item in talks.items %}
       {% assign talk_ts = item.date | date: '%s' | plus: 0 %}
-      <li class="talk-item">
-        <div class="talk-when">
-          <span class="talk-date">{{ item.date_label | default: item.date }}</span>
-          {% if talk_ts > now_ts %}<span class="talk-upcoming">Upcoming</span>{% endif %}
-        </div>
-        <div class="talk-body">
-          <h2>{{ item.title }}</h2>
+      <article class="news-card news-card-text-only">
+        <div class="news-card-body">
+          <div class="talk-meta">
+            <span class="list-meta">{{ item.date_label | default: item.date }}</span>
+            {% if talk_ts > now_ts %}<span class="talk-upcoming">Upcoming</span>{% endif %}
+          </div>
+          <h2 class="news-card-title">{{ item.title }}</h2>
           <p class="talk-event">
             <strong>{{ item.event }}</strong>{% if item.session %} &middot; {{ item.session }}{% endif %}
           </p>
           {% if item.location %}<p class="talk-location">{{ item.location }}</p>{% endif %}
           {% if item.note %}<p class="talk-note">{{ item.note }}</p>{% endif %}
         </div>
-      </li>
+      </article>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 </div>

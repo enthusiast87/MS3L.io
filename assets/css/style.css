@@ -1089,44 +1089,19 @@ a.card {
 }
 
 /* Invited talks ------------------------------------------------------------
-   Same shape as the PI career list: the date holds its own column so every
-   talk title starts on one vertical line. */
+   The entries ride the same .news-feed / .news-card shape as Patents,
+   Publications and News, so the page spaces exactly like its siblings. Only
+   the pieces those pages do not have are styled here. */
 
-.talk-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 8px 26px;
-}
-
-.talk-item {
-  display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
-  gap: 6px 26px;
-  align-items: baseline;
-  padding: 20px 0;
-  border-top: 1px solid var(--line);
-}
-
-.talk-item:first-child {
-  border-top: 0;
-}
-
-.talk-when {
+.talk-meta {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 7px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
 }
 
-.talk-date {
-  color: var(--muted);
-  font-size: 0.86rem;
-  font-variant-numeric: tabular-nums;
+.talk-meta .list-meta {
+  margin-bottom: 0;
 }
 
 .talk-upcoming {
@@ -1137,31 +1112,14 @@ a.card {
   border: 1px solid rgba(0, 80, 164, 0.16);
   background: rgba(0, 150, 214, 0.08);
   color: var(--accent-strong);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.talk-body {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-
-.talk-body h2 {
-  margin: 0;
-  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
-  font-size: 1.14rem;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
-  color: var(--strong);
-  text-wrap: balance;
-}
-
 .talk-event {
-  margin: 0;
+  margin: 8px 0 0;
   color: var(--muted);
   font-size: 0.96rem;
 }
@@ -1170,28 +1128,16 @@ a.card {
   color: var(--text);
 }
 
-.talk-location,
-.talk-note {
-  margin: 0;
+.talk-location {
+  margin: 3px 0 0;
   color: var(--muted);
   font-size: 0.9rem;
 }
 
 .talk-note {
+  margin: 6px 0 0;
+  color: var(--muted);
   font-size: 0.86rem;
-}
-
-@media (max-width: 640px) {
-  .talk-item {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 8px;
-  }
-
-  .talk-when {
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-  }
 }
 
 .member-note {
