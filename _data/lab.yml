@@ -182,6 +182,7 @@ invited_talks:
       session: "Special session: Carbon Upcycling Demonstration - From Pilot to Commercialization"
       date: "2026-05-14"
       date_label: 14 May 2026
+      location: ICC Jeju, Jeju
 
     - title: "Organic solvent nanofiltration: principles and applications"
       event: Membrane Winter School, The Membrane Society of Korea
@@ -203,16 +204,19 @@ invited_talks:
       event: Spring Meeting, The Membrane Society of Korea
       date: "2025-05-15"
       date_label: 15 May 2025
+      location: Suwon Convention Center, Suwon
 
     - title: Low energy-intensive membrane technology for biorefinery
       event: Spring Meeting, The Membrane Society of Korea
       date: "2024-05-03"
       date_label: 3 May 2024
+      location: Suwon Convention Center, Suwon
 
     - title: Spray-coating thin-film composite membrane fabrication and its application in membrane-based extraction
       event: Fall Meeting, The Membrane Society of Korea
       date: "2021-11-18"
       date_label: 18 November 2021
+      location: Ramada Hotel, Daejeon
 
     - title: In-situ recovery for highly pure biofuel production through perstraction
       event: KSIEC Spring Meeting
