@@ -1118,6 +1118,22 @@ a.card {
   text-transform: uppercase;
 }
 
+/* A recurring lecture series rather than a one-off talk, marked so it does not
+   read as a single date. */
+.talk-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .talk-event {
   margin: 8px 0 0;
   color: var(--muted);

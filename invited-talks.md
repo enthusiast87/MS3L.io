@@ -19,6 +19,7 @@ title: Invited Talks
         <div class="news-card-body">
           <div class="talk-meta">
             <span class="list-meta">{{ item.date_label | default: item.date }}</span>
+            {% if item.tag %}<span class="talk-tag">{{ item.tag }}</span>{% endif %}
             {% if talk_ts > now_ts %}<span class="talk-upcoming">Upcoming</span>{% endif %}
           </div>
           <h2 class="news-card-title">{{ item.title }}</h2>

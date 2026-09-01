@@ -177,6 +177,50 @@ invited_talks:
       location: Minneapolis, United States
       note: The honorary session runs 9 - 10 November, within the meeting on 8 - 12 November.
 
+    - title: Low-energy-intensive membrane separation in biorefinery for platform chemical production
+      event: KSIEC Spring Meeting
+      session: "Special session: Carbon Upcycling Demonstration - From Pilot to Commercialization"
+      date: "2026-05-14"
+      date_label: 14 May 2026
+
+    - title: "Organic solvent nanofiltration: principles and applications"
+      event: Membrane Winter School, The Membrane Society of Korea
+      session: 10th to 14th schools
+      date: "2026-01-16"
+      date_label: January 2022 - 2026
+      tag: Annual lecture
+      location: Gyeongsang National University, Jinju
+      note: A one-hour tutorial lecture each year, invited by the society. The 10th school covered nanofiltration; the 11th to 14th covered organic solvent nanofiltration.
+
+    - title: Sustainable Membrane Separation Solution in Biorefinery for Platform Chemical Production
+      event: 1st Korea-Japan Membrane Workshop
+      session: Advanced Membrane Technologies toward a Sustainable Future
+      date: "2025-12-18"
+      date_label: 18 December 2025
+      location: KRICT, Daejeon
+
+    - title: Advancing membrane separation for sustainable platform chemicals production
+      event: Spring Meeting, The Membrane Society of Korea
+      date: "2025-05-15"
+      date_label: 15 May 2025
+
+    - title: Low energy-intensive membrane technology for biorefinery
+      event: Spring Meeting, The Membrane Society of Korea
+      date: "2024-05-03"
+      date_label: 3 May 2024
+
+    - title: Spray-coating thin-film composite membrane fabrication and its application in membrane-based extraction
+      event: Fall Meeting, The Membrane Society of Korea
+      date: "2021-11-18"
+      date_label: 18 November 2021
+
+    - title: In-situ recovery for highly pure biofuel production through perstraction
+      event: KSIEC Spring Meeting
+      session: International Cooperation Committee session
+      date: "2021-05-13"
+      date_label: 13 May 2021, 15:10 - 15:35
+      location: BEXCO, Busan
+
 recognitions:
   lead: Awards and honours received by the lab and its members.
   items:
