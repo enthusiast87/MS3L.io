@@ -10,7 +10,7 @@ hero:
 
 research:
   title: Research Themes
-  lead: Core areas currently highlighted across the lab's research portfolio.
+  lead: The lab's core research areas.
 
 approach:
   title: From membrane science to process impact
@@ -70,7 +70,7 @@ introduction:
 
 projects:
   title: Projects
-  lead: Key ongoing and previous projects migrated from the original Google homepage.
+  lead: Ongoing and completed funded research projects.
   ongoing:
     - title: Development of AI-powered Integrated Biomass Fractionation and Conversion Process Using Renewable Power
       period: 2026.04 - 2030.12
@@ -243,15 +243,15 @@ recognitions:
 
 members:
   title: Members
-  lead: MS<sup>3</sup>L is currently presented with the principal investigator profile first. Additional researcher and student profiles can be added as the team roster is finalized.
+  lead: Researchers, students, and alumni of MS<sup>3</sup>L.
 
 publications:
   title: Publications
-  lead: Selected publications currently highlighted on the MS<sup>3</sup>L website.
+  lead: Selected publications from MS<sup>3</sup>L.
 
 news_page:
   title: News
-  lead: Selected recent updates and milestones from MS<sup>3</sup>L.
+  lead: Recent updates and milestones from the lab.
 
 technology_impact:
   title: Technology and Impact
