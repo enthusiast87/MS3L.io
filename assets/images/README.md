@@ -8,7 +8,6 @@ This directory holds local image assets for the MS3L website.
 - `research/`: research-theme visuals used in `research.md` and home cards
 - `news/`: news and award photos
 - `logos/`: partner, institutional, and impact logos
-- `imported/google-sites/`: raw imported images and importer manifests
 
 ## Suggested Filenames
 

@@ -15,7 +15,6 @@ exclude:
   - README.md
   - certs/
   - docs/
-  - prompts/
   - scripts/
   - vendor/
   - .venv/
