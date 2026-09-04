@@ -31,8 +31,6 @@ Notes:
 - If your network injects a corporate SSL certificate, export the root certificate as a `.crt` file into `certs/` before starting Docker. The compose file mounts that directory into the container and runs `update-ca-certificates` on startup.
 - Production deploy still uses `_config.yml`; the Docker dev flow adds `_config_dev.yml` so local preview works at the root path.
 
-The current project also includes a reusable sub-agent workflow guide in `docs/subagent-playbook.md`.
-
 ## Data Validation
 
 Run structured data validation before publishing updates:
@@ -43,17 +41,6 @@ python scripts/validate_site.py
 
 This invokes `scripts/validate_site.rb` to validate YAML syntax and required fields for members, publications, and patents.
 If Ruby is not installed, the Python wrapper runs a fallback validation pass for the same core fields.
-
-## Image Migration
-
-Public images from the previous Google Sites page can be imported into local assets:
-
-```bash
-python scripts/import_google_sites_assets.py --apply
-```
-
-The importer crawls `https://sites.google.com/view/kim-jihoon/home`, downloads public images, fills missing research visuals, and writes a manifest to `assets/images/imported/google-sites/manifest.json`.
-Add `--save-unassigned` when you want to archive every crawled image that is not mapped to a data field.
 
 ## Local Admin
 
