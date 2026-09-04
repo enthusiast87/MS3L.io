@@ -13,7 +13,7 @@ title: News
 
     <div class="news-feed">
       {% for item in site.data.news %}
-      <article class="news-card">
+      <article class="news-card{% unless item.image %} news-card-text-only{% endunless %}">
         {% if item.image %}
         <div class="news-card-media">
           <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}" loading="lazy">
