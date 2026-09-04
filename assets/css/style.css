@@ -1523,8 +1523,7 @@ a.card {
   .card-grid.two,
   .credibility-grid,
   .research-theme-row,
-  .logo-strip,
-  .member-grid {
+  .logo-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1570,9 +1569,7 @@ a.card {
   .card-grid.four,
   .card-grid.three,
   .card-grid.two,
-  .logo-strip,
-  .member-grid,
-  .alumni-grid {
+  .logo-strip {
     grid-template-columns: 1fr;
   }
 
@@ -2641,4 +2638,25 @@ main:focus {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent-strong);
+}
+
+/* Members / alumni responsive ---------------------------------------------- */
+
+/* .member-grid and .alumni-grid are both declared well below the shared 720px
+   breakpoint block, and a media query carries no extra specificity - so the
+   stacking rules written up there lost to the two-column base rules and the
+   roster stayed two-up on a phone, overflowing the viewport. These overrides
+   must stay after both definitions. */
+@media (max-width: 720px) {
+  .member-grid,
+  .alumni-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* "Internship" and the longer names are single words that can outgrow the text
+   column next to the photo, and they spill past the card edge without this. */
+.member-card-compact .profile-label,
+.member-card-compact h3 {
+  overflow-wrap: break-word;
 }
