@@ -79,35 +79,6 @@
   pct: PCT/KR2023/010341
   date: 2023-01-13
 
-- title: Thermally rearranged poly(benzoxazole-co-imide) separation membrane for membrane distillation and preparation method thereof
-  inventors: Ji Hoon Kim, So Young Lee, Moon Joo Lee, Won Hyo Lee, Young Moo Lee
-  country: Korea (KR), US, China
-  registration: Korean Patent Registration Number 10-1571393
-  us_patent: US Patent Registration Number 10,071,346
-  china_patent: Chinese Patent Registration Number ZL201480049776.0
-  pct: PCT/KR2014/008235
-  date: 2015-11-18
-
-- title: Thermally rearranged poly(benzoxazole-co-imide) separation membrane for pressure retarded osmosis and preparation method thereof
-  inventors: Ji Hoon Kim, Sang Hyun Park, Sang Min Lee, Sun Ju Moon, Na Rae Kang, Jong Myoung Lee, Ju-Sung Kim, Young Moo Lee
-  country: Korea (KR)
-  registration: Korean Patent Registration Number 10-1929992
-  pct: PCT/KR2017/001938
-  date: 2018-12-11
-
-- title: Preparation of crosslinked sulfonated hydrocarbon copolymer membrane and its water application
-  inventors: Ji Hoon Kim, Sang Min Lee, Sun Ju Moon, Sang Hyun Park, Na Rae Kang, Young Moo Lee
-  country: Korea (KR)
-  registration: Korean Patent Registration Number 10-1823050
-  pct: PCT/KR2017/001669
-  date: 2018-02-23
-
-- title: Crosslinked thermally-rearranged polyimide-benzoxazole membranes for organic solvent nanofiltration (OSN)
-  inventors: Jeong Kim, Ji Hoon Kim, Guangxi Dong, Ju Sung Kim, Hye Jin Jo, Young Moo Lee
-  country: Korea (KR)
-  registration: Korean Patent Registration Number 10-1925504
-  date: 2018-11-29
-
 - title: Thermally rearranged thin film composite membrane for organic solvent nanofiltration and preparation method thereof
   inventors: Ji Hoon Kim, Sang Hyun Park, Sun Ju Moon, Jun Tae Jung, Young Moo Lee
   country: Korea (KR)
@@ -120,8 +91,37 @@
   registration: Korean Patent Registration Number 10-1979685
   date: 2019-05-13
 
+- title: Thermally rearranged poly(benzoxazole-co-imide) separation membrane for pressure retarded osmosis and preparation method thereof
+  inventors: Ji Hoon Kim, Sang Hyun Park, Sang Min Lee, Sun Ju Moon, Na Rae Kang, Jong Myoung Lee, Ju-Sung Kim, Young Moo Lee
+  country: Korea (KR)
+  registration: Korean Patent Registration Number 10-1929992
+  pct: PCT/KR2017/001938
+  date: 2018-12-11
+
+- title: Crosslinked thermally-rearranged polyimide-benzoxazole membranes for organic solvent nanofiltration (OSN)
+  inventors: Jeong Kim, Ji Hoon Kim, Guangxi Dong, Ju Sung Kim, Hye Jin Jo, Young Moo Lee
+  country: Korea (KR)
+  registration: Korean Patent Registration Number 10-1925504
+  date: 2018-11-29
+
 - title: Nanocomposite membrane for separator of lithium secondary battery and preparation method thereof
   inventors: Ji Hoon Kim, So Young Lee, Moon Joo Lee, Hyung-Seok Lim, Hyung Kyun Yu, Joo Sung Lee, Kyung-Do Suh, Young Moo Lee
   country: Korea (KR)
   registration: Korean Patent Registration Number 10-1915328
   date: 2018-10-30
+
+- title: Preparation of crosslinked sulfonated hydrocarbon copolymer membrane and its water application
+  inventors: Ji Hoon Kim, Sang Min Lee, Sun Ju Moon, Sang Hyun Park, Na Rae Kang, Young Moo Lee
+  country: Korea (KR)
+  registration: Korean Patent Registration Number 10-1823050
+  pct: PCT/KR2017/001669
+  date: 2018-02-23
+
+- title: Thermally rearranged poly(benzoxazole-co-imide) separation membrane for membrane distillation and preparation method thereof
+  inventors: Ji Hoon Kim, So Young Lee, Moon Joo Lee, Won Hyo Lee, Young Moo Lee
+  country: Korea (KR), US, China
+  registration: Korean Patent Registration Number 10-1571393
+  us_patent: US Patent Registration Number 10,071,346
+  china_patent: Chinese Patent Registration Number ZL201480049776.0
+  pct: PCT/KR2014/008235
+  date: 2015-11-18

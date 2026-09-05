@@ -27,11 +27,10 @@ order they render. These are all **newest first**, so new entries go at the
 - `lab.recognitions.items`
 - `lab.invited_talks.items`
 
-Two things to know about `patents.yml`: a patent family registered in several
-countries is one entry with a combined `country` (`Korea (KR), US, China`)
-rather than one entry per country, and the oldest block — the 2015-2019
-PhD-era filings — is only loosely ordered. Everything from 2023 on is strictly
-newest-first; keep new entries that way.
+In `patents.yml`, a patent family registered in several countries is a single
+entry with a combined `country` (`Korea (KR), US, China`) and one `*_patent`
+field per additional registration, rather than one entry per country. It is
+dated by its Korean registration.
 
 ## Members (`_data/members.yml`)
 
