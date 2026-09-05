@@ -2,6 +2,8 @@
 
 MS<sup>3</sup>L GitHub Pages website for the Membrane-based Sustainable Separation Solutions Laboratory.
 
+Page content lives in `_data/*.yml`. `docs/content-guide.md` records what goes in which file and how entries are formatted, so a new member, paper or news item lands consistent with the ones already there.
+
 ## Local Preview
 
 This repository can be previewed with Jekyll. On Windows, Docker is the simplest option because it avoids host Ruby setup and works better with GitHub Pages dependencies.
