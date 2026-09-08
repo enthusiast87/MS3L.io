@@ -4,14 +4,26 @@
     <meta charset="utf-8">
     {% assign site_title = site.title_plain | default: site.title | strip_html %}
     {% assign page_title = page.title | strip_html %}
-    <title>{% if page_title %}{{ page_title }} | {% endif %}{{ site_title }}</title>
+    {%- comment -%}
+      The home page spends its title on the lab's full name rather than on the
+      word "Home": "MS3L" alone is a contested acronym, and the search result
+      is the only place a stranger sees what the lab actually does.
+    {%- endcomment -%}
+    {% if page.url == '/' %}
+      {% assign document_title = site_title | append: ' | ' | append: site.description %}
+    {% elsif page_title %}
+      {% assign document_title = page_title | append: ' | ' | append: site_title %}
+    {% else %}
+      {% assign document_title = site_title %}
+    {% endif %}
+    <title>{{ document_title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="icon" href="{{ '/assets/images/logo/ms3l-logo-frame.svg' | relative_url }}" type="image/svg+xml">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ site_title }}">
-    <meta property="og:title" content="{% if page_title %}{{ page_title }} | {% endif %}{{ site_title }}">
+    <meta property="og:title" content="{{ document_title }}">
     <meta property="og:description" content="{{ site.description }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta name="twitter:card" content="summary">
