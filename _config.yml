@@ -6,6 +6,11 @@ url: "https://enthusiast87.github.io"
 markdown: kramdown
 theme: null
 
+# Cloudflare Web Analytics beacon. Public by nature - it ships in the page
+# source - and only identifies which dashboard to report to. Injected in
+# _layouts/default.html, production builds only.
+cloudflare_analytics_token: "8cbbc8da2a5d4215918d3e4a6749ef14"
+
 exclude:
   - Gemfile
   - Gemfile.lock

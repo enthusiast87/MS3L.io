@@ -248,5 +248,15 @@
         });
       })();
     </script>
+
+    {%- comment -%}
+      Cloudflare Web Analytics. Renders nothing; the numbers are private to the
+      Cloudflare account. Production only, so local preview at localhost:4000
+      does not show up in the dashboard as traffic - GitHub Pages builds with
+      JEKYLL_ENV=production, the Docker dev flow does not set it.
+    {%- endcomment -%}
+    {%- if jekyll.environment == "production" -%}
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cloudflare_analytics_token }}"}'></script>
+    {%- endif -%}
   </body>
 </html>
