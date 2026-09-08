@@ -306,14 +306,17 @@ main {
   font-size: 1.3em;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #fff;
-  background: rgba(0, 92, 165, 0.86);
+  color: #005ca5;
+  background: rgba(0, 92, 165, 0.09);
 }
 
-.hero-acronym-line:nth-child(2) .hero-initial { background: rgba(3, 105, 167, 0.86); }
-.hero-acronym-line:nth-child(3) .hero-initial { background: rgba(6, 118, 168, 0.86); }
-.hero-acronym-line:nth-child(4) .hero-initial { background: rgba(7, 133, 157, 0.86); }
-.hero-acronym-line:nth-child(5) .hero-initial { background: rgba(8, 152, 146, 0.86); }
+/* The step is carried by the letter, with the column only tinted enough to
+   hold it together. Saturated blocks read as five badges and shout over the
+   heading next to them. */
+.hero-acronym-line:nth-child(2) .hero-initial { color: #0369a7; background: rgba(3, 105, 167, 0.09); }
+.hero-acronym-line:nth-child(3) .hero-initial { color: #0676a8; background: rgba(6, 118, 168, 0.09); }
+.hero-acronym-line:nth-child(4) .hero-initial { color: #07859d; background: rgba(7, 133, 157, 0.10); }
+.hero-acronym-line:nth-child(5) .hero-initial { color: #089892; background: rgba(8, 152, 146, 0.11); }
 
 .hero-acronym-word {
   display: flex;
