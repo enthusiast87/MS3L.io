@@ -11,6 +11,11 @@ theme: null
 # _layouts/default.html, production builds only.
 cloudflare_analytics_token: "8cbbc8da2a5d4215918d3e4a6749ef14"
 
+# Generates /sitemap.xml from the built pages, so Search Console has a page
+# list to crawl. The three redirect stubs already carry `sitemap: false`.
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.lock
