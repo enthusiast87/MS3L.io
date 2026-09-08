@@ -1,4 +1,12 @@
-<svg width="94" height="48" viewBox="0 0 94 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ms3l-title">
+<svg width="94" height="52" viewBox="0 0 94 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ms3l-title">
   <title id="ms3l-title">MS3L</title>
-  <text x="2" y="38" fill="#0B2F5B" font-family="Inter, Avenir Next, Montserrat, Segoe UI, Arial, sans-serif" font-weight="600" font-size="38" letter-spacing="-0.4">MS<tspan font-size="16" dy="-14">3</tspan><tspan font-size="38" dy="14">L</tspan></text>
+  <defs>
+    <linearGradient id="ms3l-ramp" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#005CA5"/>
+      <stop offset="0.45" stop-color="#0A7FA8"/>
+      <stop offset="1" stop-color="#089892"/>
+    </linearGradient>
+  </defs>
+  <text x="2" y="36" fill="#0B2F5B" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700" font-size="36" letter-spacing="-1.2">MS<tspan font-size="16" dy="-13" fill="url(#ms3l-ramp)">3</tspan><tspan font-size="36" dy="13" fill="#0B2F5B">L</tspan></text>
+  <rect x="2" y="44" width="62" height="4" rx="2" fill="url(#ms3l-ramp)"/>
 </svg>

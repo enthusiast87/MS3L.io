@@ -261,17 +261,27 @@ main {
    initial shares one auto-sized column - the words then align on a single
    left edge without hardcoding the width of "M". */
 .hero-acronym-block {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--line);
+  border-left: 0;
   border-radius: 14px;
-  border-left: 4px solid var(--brand-primary);
-  background: linear-gradient(160deg, #f4f9ff, #e9f2fb);
-  padding: 16px 20px;
+  background: linear-gradient(160deg, #f7fbff, #e9f2fb);
+  padding: 0;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   align-content: center;
-  align-items: baseline;
-  row-gap: 5px;
+  align-items: stretch;
   font-size: clamp(0.92rem, 0.98vw, 1.02rem);
+}
+
+.hero-acronym-block::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: var(--ms3l-gradient);
+  z-index: 2;
 }
 
 .hero-acronym-line {
@@ -280,17 +290,37 @@ main {
 
 .hero-initial,
 .hero-acronym-word {
-  font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.005em;
-  color: var(--muted);
   white-space: nowrap;
 }
 
+/* The initials get their own column, stepping along the brand ramp, so MS3L
+   reads down the left edge as a mark rather than as five stray capitals. */
 .hero-initial {
-  color: var(--accent-strong);
-  font-weight: 700;
-  font-size: 1.14em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  padding: 7px 0;
+  font-size: 1.3em;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+  background: rgba(0, 92, 165, 0.86);
+}
+
+.hero-acronym-line:nth-child(2) .hero-initial { background: rgba(3, 105, 167, 0.86); }
+.hero-acronym-line:nth-child(3) .hero-initial { background: rgba(6, 118, 168, 0.86); }
+.hero-acronym-line:nth-child(4) .hero-initial { background: rgba(7, 133, 157, 0.86); }
+.hero-acronym-line:nth-child(5) .hero-initial { background: rgba(8, 152, 146, 0.86); }
+
+.hero-acronym-word {
+  display: flex;
+  align-items: center;
+  padding: 7px 18px 7px 14px;
+  color: var(--text);
+  font-weight: 500;
 }
 
 .hero-identity-copy h1 {
