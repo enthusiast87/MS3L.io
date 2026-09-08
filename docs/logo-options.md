@@ -27,11 +27,13 @@ cannot clip the M or the L.
 
 | File | Use |
 | --- | --- |
-| `ms3l-avatar.png` | **Primary.** White ground, navy wordmark, solid `#005CA5` ring. Chat avatars, profile photos |
-| `ms3l-avatar-gradient.png` | Same, ring in the blue-to-teal gradient. Use where the slide deck's gradient is present |
+| `ms3l-avatar.png` | **Primary.** White ground, navy wordmark, blue-to-teal gradient ring. Chat avatars, profile photos |
+| `ms3l-avatar-circle.png` | The primary with a **transparent** background, so it sits on a coloured slide without a square patch. Use this one in decks |
+| `ms3l-avatar-fill.png` | **Co-primary.** Full-bleed gradient, white wordmark. Bold placements, slide corners, social |
+| `ms3l-avatar-solid.png` | Solid `#005CA5` ring instead of the gradient. Quieter alternate |
 | `ms3l-avatar-dark.png` | Navy ground, white wordmark, gradient ring. For dark placements |
-| `ms3l-avatar-fill.png` | Full-bleed gradient, white wordmark. Bold placements, slide corners |
-| `ms3l-lockup-horizontal.png` | Wordmark plus full lab name, gradient divider. Slides, letterhead, posters |
+| `ms3l-lockup-horizontal.png` | **Primary lockup.** Wordmark plus full lab name, gradient divider. Slides, letterhead, posters |
+| `ms3l-lockup-horizontal-white.png` | White, transparent background, for gradient and dark grounds |
 | `ms3l-lockup-horizontal-dark.png` | The same on navy |
 | `ms3l-ci-sheet.png` | Overview of the whole set, including how each reads at 26px |
 
@@ -54,3 +56,17 @@ from 700 once scaled down.
 `ms3l-logo.svg`, `ms3l-logo-blue-accent.svg`, `ms3l-logo-frame.svg` and
 `ms3l-logo-horizontal.svg` predate this set and are what the site renders. They
 are text-based SVGs and depend on Inter being available to the renderer.
+
+## Presentation template
+
+`assets/templates/MS3L_presentation_template.pptx` is a 16:9 deck built on the
+same palette and gradient: title, section divider, content, two-column, figure
+and closing. `MS3L_template_preview.png` shows all six.
+
+Use the transparent assets inside it - `ms3l-avatar-circle.png` and
+`ms3l-lockup-horizontal-white.png`. The opaque avatars carry a white or navy
+square that shows as a patch once placed on a gradient slide.
+
+The deck sets Inter by name. Where Inter is not installed PowerPoint falls back,
+so either install Inter or switch the template's font once to whatever the
+group's machines have.
