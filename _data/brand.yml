@@ -1,0 +1,50 @@
+# MS3L brand values. Single source for the palette so the stylesheet, the logo
+# set and the slide template cannot drift apart. Colours are KRICT's own, read
+# out of their stylesheets rather than picked by eye.
+palette:
+  - name: Lab navy
+    hex: "#0B2F5B"
+    role: Headings and emphasis
+  - name: KRICT blue
+    hex: "#005CA5"
+    role: Primary accent, links
+  - name: Mid
+    hex: "#0A7FA8"
+    role: Gradient midpoint
+  - name: KRICT teal
+    hex: "#089892"
+    role: Secondary accent
+  - name: Teal bright
+    hex: "#12D0BE"
+    role: Teal on a navy ground only, where #089892 goes too dark to read
+  - name: Surface
+    hex: "#F4F8FD"
+    role: Card and panel ground
+
+gradient: "linear-gradient(135deg, #005CA5 0%, #0A7FA8 45%, #089892 100%)"
+
+# Where each mark belongs. Files live in assets/images/logo/.
+marks:
+  - file: ms3l-avatar.png
+    use: Default. Chat and profile avatars
+  - file: ms3l-avatar-circle.png
+    use: Transparent ground. Use inside slides and on any colour
+  - file: ms3l-avatar-fill.png
+    use: Full-bleed gradient. Bold placements, social
+  - file: ms3l-avatar-dark.png
+    use: Dark grounds
+  - file: ms3l-avatar-solid.png
+    use: Solid ring alternate, quieter
+  - file: ms3l-favicon.png
+    use: Browser tab only. Reduced to M3 because four glyphs cannot resolve at 16px
+  - file: ms3l-lockup-horizontal.png
+    use: Slides, letterhead, posters
+  - file: ms3l-lockup-horizontal-white.png
+    use: The lockup on dark or gradient grounds. Transparent
+
+type:
+  slides: Pretendard, or Noto Sans KR where Pretendard is not installed
+  website: Inter, falling back to Noto Sans KR
+  fallback: Malgun Gothic - present on every Windows machine, last resort only
+
+sheet: /assets/images/logo/ms3l-brand-sheet.png
