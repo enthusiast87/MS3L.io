@@ -300,28 +300,25 @@ main {
 .hero-initial {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 38px;
-  padding: 7px 0;
+  padding: 6px 9px 6px 18px;
   font-size: 1.3em;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #005ca5;
-  background: rgba(0, 92, 165, 0.09);
 }
 
-/* The step is carried by the letter, with the column only tinted enough to
-   hold it together. Saturated blocks read as five badges and shout over the
-   heading next to them. */
-.hero-acronym-line:nth-child(2) .hero-initial { color: #0369a7; background: rgba(3, 105, 167, 0.09); }
-.hero-acronym-line:nth-child(3) .hero-initial { color: #0676a8; background: rgba(6, 118, 168, 0.09); }
-.hero-acronym-line:nth-child(4) .hero-initial { color: #07859d; background: rgba(7, 133, 157, 0.10); }
-.hero-acronym-line:nth-child(5) .hero-initial { color: #089892; background: rgba(8, 152, 146, 0.11); }
+/* The step is carried by the letter alone. Any column ground behind it - even a
+   9% tint - turns the five into badges that pull ahead of the heading beside
+   them. */
+.hero-acronym-line:nth-child(2) .hero-initial { color: #0369a7; }
+.hero-acronym-line:nth-child(3) .hero-initial { color: #0676a8; }
+.hero-acronym-line:nth-child(4) .hero-initial { color: #07859d; }
+.hero-acronym-line:nth-child(5) .hero-initial { color: #089892; }
 
 .hero-acronym-word {
   display: flex;
   align-items: center;
-  padding: 7px 18px 7px 14px;
+  padding: 6px 20px 6px 0;
   color: var(--text);
   font-weight: 500;
 }
