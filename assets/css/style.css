@@ -1,7 +1,10 @@
 :root {
-  --brand-primary: #0050a4;
-  --brand-secondary: #0096d6;
-  --brand-accent: #009e73;
+  /* KRICT's own brand values, so the site, the logo set and the group's slide
+     template all resolve to the same colours. */
+  --brand-primary: #005ca5;
+  --brand-secondary: #0a7fa8;
+  --brand-accent: #089892;
+  --ms3l-gradient: linear-gradient(135deg, #005ca5 0%, #0a7fa8 45%, #089892 100%);
   --brand-ink: #0b2f5b;
   --brand-bg: #eef6fc;
 
@@ -78,7 +81,7 @@ main {
   top: 0;
   z-index: 100;
   background:
-    linear-gradient(90deg, rgba(0, 80, 164, 0.08), rgba(0, 150, 214, 0.08)),
+    linear-gradient(90deg, rgba(0, 92, 165, 0.08), rgba(10, 127, 168, 0.08)),
     rgba(243, 248, 254, 0.94);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
@@ -142,7 +145,7 @@ main {
 }
 
 .nav-toggle[aria-expanded="true"] {
-  background: linear-gradient(135deg, rgba(0, 80, 164, 0.12), rgba(0, 150, 214, 0.18));
+  background: linear-gradient(135deg, rgba(0, 92, 165, 0.12), rgba(10, 127, 168, 0.18));
 }
 
 .site-nav {
@@ -164,12 +167,12 @@ main {
 
 .site-nav a:hover {
   color: var(--strong);
-  background: rgba(0, 80, 164, 0.14);
+  background: rgba(0, 92, 165, 0.14);
 }
 
 .site-nav a.is-active {
   color: #ffffff;
-  background: linear-gradient(135deg, var(--brand-primary), #0a6ec7);
+  background: var(--ms3l-gradient);
 }
 
 .nav-group {
@@ -194,7 +197,7 @@ main {
 .nav-group[open] summary,
 .nav-group summary:hover {
   color: var(--strong);
-  background: rgba(0, 80, 164, 0.14);
+  background: rgba(0, 92, 165, 0.14);
 }
 
 .nav-dropdown {
@@ -219,7 +222,7 @@ main {
 .hero {
   padding: 88px 0 60px;
   background:
-    radial-gradient(circle at top right, rgba(0, 150, 214, 0.3), transparent 36%),
+    radial-gradient(circle at top right, rgba(10, 127, 168, 0.3), transparent 36%),
     linear-gradient(180deg, #f1f7ff 0%, #e5eef9 100%);
   border-bottom: 1px solid var(--line);
 }
@@ -484,7 +487,7 @@ button.btn {
 
 .btn-primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--brand-primary), #0075d4);
+  background: var(--ms3l-gradient);
 }
 
 .btn-primary:hover {
@@ -1109,8 +1112,8 @@ a.card {
   align-items: center;
   padding: 3px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(0, 80, 164, 0.16);
-  background: rgba(0, 150, 214, 0.08);
+  border: 1px solid rgba(0, 92, 165, 0.16);
+  background: rgba(10, 127, 168, 0.08);
   color: var(--accent-strong);
   font-size: 0.72rem;
   font-weight: 700;
@@ -1269,8 +1272,8 @@ a.card {
   min-height: 32px;
   padding: 6px 11px;
   border-radius: 999px;
-  border: 1px solid rgba(0, 80, 164, 0.16);
-  background: rgba(0, 150, 214, 0.08);
+  border: 1px solid rgba(0, 92, 165, 0.16);
+  background: rgba(10, 127, 168, 0.08);
   color: var(--strong);
   font-size: 0.84rem;
   font-weight: 600;
@@ -1500,7 +1503,7 @@ a.card {
     margin-top: 6px;
     padding: 6px 0 0 12px;
     border: 0;
-    border-left: 2px solid rgba(0, 80, 164, 0.16);
+    border-left: 2px solid rgba(0, 92, 165, 0.16);
     border-radius: 0;
     box-shadow: none;
     background: transparent;
@@ -1756,7 +1759,7 @@ a.card {
 
 .research-details-button:hover {
   background: var(--accent-soft);
-  border-color: rgba(0, 80, 164, 0.3);
+  border-color: rgba(0, 92, 165, 0.3);
 }
 
 .research-details-button svg {
@@ -2046,7 +2049,7 @@ a.card {
   white-space: nowrap;
   font-weight: 800;
   color: var(--brand-primary);
-  background: rgba(0, 80, 164, 0.12);
+  background: rgba(0, 92, 165, 0.12);
   padding: 0 3px;
   border-radius: 4px;
 }
@@ -2585,7 +2588,7 @@ main:focus {
   padding: 16px 18px;
   background: var(--surface-soft);
   border: 1px solid var(--line);
-  border-left: 3px solid rgba(0, 80, 164, 0.28);
+  border-left: 3px solid rgba(0, 92, 165, 0.28);
   border-radius: 14px;
 }
 
@@ -2659,4 +2662,59 @@ main:focus {
 .member-card-compact .profile-label,
 .member-card-compact h3 {
   overflow-wrap: break-word;
+}
+
+/* Brand accents ------------------------------------------------------------ */
+
+/* Section headings carry a short gradient rule. 190px reads as an accent at the
+   heading sizes actually used; shorter and the ramp has no room to show, full
+   width and it becomes a divider that cuts the heading off from its lead. */
+.section-title::after,
+.section-title-sm::after,
+.hero-side-title::after {
+  content: "";
+  display: block;
+  width: 190px;
+  max-width: 100%;
+  height: 5px;
+  margin-top: 12px;
+  border-radius: 3px;
+  background: var(--ms3l-gradient);
+}
+
+.hero-side-title::after {
+  width: 60px;
+  height: 4px;
+  margin-top: 9px;
+}
+
+/* The page header card gets the same rule along its top edge. */
+.page-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--ms3l-gradient);
+}
+
+/* Card left edges. Applied to the two grids that carry real content cards,
+   not to .card everywhere - the compact list cards would look busy. */
+.home-overview-grid .card,
+.research-theme-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-overview-grid .card::before,
+.research-theme-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--ms3l-gradient);
 }
