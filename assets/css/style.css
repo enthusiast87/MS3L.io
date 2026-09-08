@@ -327,6 +327,18 @@ main {
   margin-bottom: 10px;
 }
 
+/* The hero wordmark makes the same move as the logo: the 3 is the one glyph
+   that belongs to this lab, so it is the one that carries the ramp. Scoped to
+   the hero - MS3L appears inline in body copy all over the site and should
+   stay in the running text colour there. */
+.hero-identity-copy h1 sup {
+  background: var(--ms3l-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero-identity-copy {
   display: flex;
   flex-direction: column;
