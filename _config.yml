@@ -23,6 +23,10 @@ exclude:
   - compose.dev.yaml
   - _config_dev.yml
   - README.md
+  # jekyll-readme-index is on by default for GitHub Pages, so this internal
+  # note was publishing as a real page at /assets/images/ and landing in the
+  # sitemap.
+  - assets/images/README.md
   - certs/
   - docs/
   - scripts/
