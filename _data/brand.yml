@@ -36,7 +36,13 @@ marks:
   - file: ms3l-avatar-solid.png
     use: Solid ring alternate, quieter
   - file: ms3l-favicon.png
-    use: Browser tab only. Reduced to M3 because four glyphs cannot resolve at 16px
+    use: >-
+      Browser tab. Reduced to S3, not M3 - the 3 counts the three S words
+      (Sustainable, Separation, Solutions), so S3 is the part of the name that
+      survives shortening. Four glyphs cannot resolve at 16px.
+  - file: ms3l-favicon-light.png
+    use: The same mark on white with a navy S and a teal 3. Bookmark bars and
+      app icons, where the tile is large enough to keep its edge
   - file: ms3l-lockup-horizontal.png
     use: Slides, letterhead, posters
   - file: ms3l-lockup-horizontal-white.png
