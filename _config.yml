@@ -33,6 +33,7 @@ exclude:
   - certs/
   - docs/
   - scripts/
+  - assets/templates/
   - vendor/
   - .venv/
   - .bundle/

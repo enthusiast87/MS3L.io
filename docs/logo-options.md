@@ -59,9 +59,9 @@ are text-based SVGs and depend on Inter being available to the renderer.
 
 ## Presentation template
 
-`assets/templates/MS3L_presentation_template.pptx` is a 16:9 deck built on the
+The deck is a 16:9 file built on the
 same palette and gradient: title, section divider, content, two-column, figure
-and closing. `MS3L_template_preview.png` shows all six.
+and closing. 
 
 Use the transparent assets inside it - `ms3l-avatar-circle.png` and
 `ms3l-lockup-horizontal-white.png`. The opaque avatars carry a white or navy
@@ -73,7 +73,7 @@ group's machines have.
 
 ## Poster template
 
-`assets/templates/MS3L_poster_template.pptx` is a 36 x 48 in portrait board -
+The poster is 36 x 48 in portrait -
 the common conference size, and what AIChE boards take. Three columns: text on
 the left, figures in the middle, results and conclusions on the right, with a
 gradient header band carrying the lockup, title, authors and affiliations, and
@@ -81,4 +81,17 @@ a footer bar with contact and the site address.
 
 Body copy is set at 26 pt, which stays readable from about 1.5 m. If you rescale
 the board, scale the type with it rather than leaving it at 26 pt.
-`MS3L_poster_preview.png` shows the layout.
+
+### Where the template files live
+
+They are not in this repository. It is public, so anything committed here is
+downloadable by anyone with the URL, and the templates are for the group.
+
+What is versioned is how they are built: `scripts/make_deck_template.py` and
+`scripts/make_poster_template.py`. Run either to regenerate into
+`assets/templates/`, which is gitignored and excluded from the build. Hand the
+built files out directly.
+
+To change a layout or a colour, edit the generator and re-run it rather than
+editing slides by hand - that is what keeps the deck, the poster and the site on
+one palette.

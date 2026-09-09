@@ -6,3 +6,9 @@ _site/
 vendor/
 *.log
 certs/*.crt
+
+# Group templates. The generators in scripts/ are versioned; the built decks are
+# not - this repository is public, so anything committed here is downloadable by
+# anyone. Regenerate with scripts/make_*_template.py and hand the files out
+# directly.
+assets/templates/

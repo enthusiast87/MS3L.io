@@ -1,0 +1,118 @@
+from pptx import Presentation
+from pptx.util import Inches, Pt
+from pptx.dml.color import RGBColor
+from pptx.enum.text import PP_ALIGN
+from pptx.enum.shapes import MSO_SHAPE
+
+FONT = "Noto Sans KR"
+NAVY  = RGBColor(0x0B,0x2F,0x5B); BLUE = RGBColor(0x00,0x75,0xC2)
+TEAL  = RGBColor(0x00,0xAD,0xA9); WHITE= RGBColor(0xFF,0xFF,0xFF)
+GREY  = RGBColor(0x5B,0x6F,0x84); LIGHT= RGBColor(0xF4,0xF8,0xFD)
+LINE  = RGBColor(0xD6,0xE2,0xEE); PALE = RGBColor(0xE2,0xF4,0xF7)
+PALE2 = RGBColor(0xBF,0xE9,0xEE); PALE3 = RGBColor(0xCB,0xEC,0xF1)
+
+prs = Presentation()
+prs.slide_width, prs.slide_height = Inches(36), Inches(48)   # common poster board
+W, H = prs.slide_width, prs.slide_height
+s = prs.slides.add_slide(prs.slide_layouts[6])
+
+def grad(sh, a=45.0):
+    sh.fill.gradient(); st = sh.fill.gradient_stops
+    st[0].color.rgb, st[0].position = BLUE, 0.0
+    st[1].color.rgb, st[1].position = TEAL, 1.0
+    sh.fill.gradient_angle = a; sh.line.fill.background()
+
+def rect(x, y, w, h): return s.shapes.add_shape(MSO_SHAPE.RECTANGLE, x, y, w, h)
+
+def solid(sh, c, line=None):
+    sh.fill.solid(); sh.fill.fore_color.rgb = c
+    if line is not None:
+        sh.line.color.rgb = line; sh.line.width = Pt(1)
+    else:
+        sh.line.fill.background()
+
+def text(x, y, w, h, t, size, color, bold=False, align=PP_ALIGN.LEFT, space=1.0):
+    tb = s.shapes.add_textbox(x, y, w, h); tf = tb.text_frame; tf.word_wrap = True
+    tf.margin_left = tf.margin_right = tf.margin_top = tf.margin_bottom = 0
+    p = tf.paragraphs[0]; p.alignment = align; p.line_spacing = space
+    r = p.add_run(); r.text = t
+    r.font.size, r.font.bold, r.font.name = Pt(size), bold, FONT
+    r.font.color.rgb = color
+    return tb
+
+L = "assets/images/logo"
+solid(rect(0, 0, W, H), RGBColor(0xEC,0xF3,0xFB))
+
+# ---- header band -------------------------------------------------------
+BAND = Inches(9.4)
+grad(rect(0, 0, W, BAND), 315.0)
+s.shapes.add_picture(f"{L}/ms3l-lockup-horizontal-white.png", Inches(1.6), Inches(0.9), width=Inches(13.5))
+s.shapes.add_picture(f"{L}/ms3l-avatar-circle.png", Inches(31.8), Inches(1.0), width=Inches(2.7))
+text(Inches(1.6), Inches(3.6), Inches(33), Inches(2.6),
+     "Poster title goes here, one or two lines at most", 78, WHITE, True, space=1.05)
+text(Inches(1.6), Inches(6.55), Inches(33), Inches(0.9),
+     "Jihoon Kim¹²*, Coauthor One¹, Coauthor Two²", 34, PALE, True)
+text(Inches(1.6), Inches(7.55), Inches(33), Inches(1.5),
+     "¹ Chemical Process Technology Division, Korea Research Institute of Chemical Technology (KRICT), Daejeon, Republic of Korea\n"
+     "² Advanced Materials and Chemical Engineering, University of Science and Technology (UST)    •    * jh.kim@krict.re.kr",
+     24, PALE2, space=1.35)
+
+# ---- columns -----------------------------------------------------------
+M = Inches(1.6); GAP = Inches(1.1)
+COLW = int((W - 2*M - 2*GAP) / 3)
+TOP = BAND + Inches(1.4)
+BOTBAR = Inches(3.2)
+COLH = H - TOP - BOTBAR - Inches(1.2)
+
+BODY = ("Replace with your text. Body copy at this size stays readable from about 1.5 m, "
+        "which is where people stand at a poster board.\n\n"
+        "Keep each section to a few short paragraphs and let the figures carry the argument.")
+
+def panel(cx, y, h, title):
+    x = M + cx*(COLW+GAP)
+    solid(rect(x, y, COLW, h), WHITE, LINE)
+    grad(rect(x, y, COLW, Inches(0.16)), 0.0)
+    text(x+Inches(0.8), y+Inches(0.65), COLW-Inches(1.6), Inches(1.0), title, 40, NAVY, True)
+    grad(rect(x+Inches(0.8), y+Inches(1.75), Inches(3.4), Inches(0.13)), 0.0)
+    return x
+
+def card(cx, y, h, title, body=BODY):
+    x = panel(cx, y, h, title)
+    text(x+Inches(0.8), y+Inches(2.3), COLW-Inches(1.6), h-Inches(3.0), body, 26, GREY, space=1.45)
+
+def figure(cx, y, h, cap):
+    x = M + cx*(COLW+GAP)
+    solid(rect(x, y, COLW, h), WHITE, LINE)
+    grad(rect(x, y, COLW, Inches(0.16)), 0.0)
+    solid(rect(x+Inches(0.8), y+Inches(0.9), COLW-Inches(1.6), h-Inches(2.9)), LIGHT, LINE)
+    text(x+Inches(0.8), y+h/2-Inches(0.5), COLW-Inches(1.6), Inches(0.9),
+         "Place figure here", 30, RGBColor(0x9A,0xAE,0xC2), align=PP_ALIGN.CENTER)
+    text(x+Inches(0.8), y+h-Inches(1.6), COLW-Inches(1.6), Inches(1.1), cap, 24, GREY, space=1.35)
+
+card(0, TOP,              Inches(11.5), "1. Introduction")
+card(0, TOP+Inches(12.3), Inches(11.5), "2. Materials and methods")
+card(0, TOP+Inches(24.6), COLH-Inches(24.6), "3. Experimental setup")
+
+figure(1, TOP,              Inches(17.0), "Figure 1. Caption describing what the reader should take from this panel.")
+figure(1, TOP+Inches(17.8), COLH-Inches(17.8), "Figure 2. Caption.")
+
+card(2, TOP, Inches(17.0), "4. Results")
+x = panel(2, TOP+Inches(17.8), COLH-Inches(17.8), "5. Conclusions")
+for i, b in enumerate(["First conclusion in one line.", "Second conclusion.", "Third conclusion."]):
+    yy = TOP + Inches(20.2 + i*1.6)
+    solid(s.shapes.add_shape(MSO_SHAPE.OVAL, x+Inches(0.8), yy+Inches(0.18), Inches(0.3), Inches(0.3)), TEAL)
+    text(x+Inches(1.45), yy, COLW-Inches(2.3), Inches(1.3), b, 27, NAVY, space=1.3)
+text(x+Inches(0.8), TOP+Inches(26.0), COLW-Inches(1.6), Inches(2.4),
+     "Acknowledgements. Funding source and grant number.", 23, GREY, space=1.4)
+
+# ---- footer ------------------------------------------------------------
+grad(rect(0, H-BOTBAR, W, BOTBAR), 315.0)
+text(Inches(1.6), H-BOTBAR+Inches(0.9), Inches(22), Inches(1.4),
+     "Membrane-based Sustainable Separation Solutions Laboratory  •  KRICT", 34, WHITE, True)
+text(Inches(1.6), H-BOTBAR+Inches(1.95), Inches(22), Inches(0.9),
+     "jh.kim@krict.re.kr    •    +82-42-860-7506", 26, PALE3)
+text(Inches(21.5), H-BOTBAR+Inches(1.3), Inches(12.9), Inches(1.0),
+     "https://ms3l.org", 28, PALE, align=PP_ALIGN.RIGHT)
+
+prs.save("assets/templates/MS3L_poster_template.pptx")
+print("poster saved 36x48 in")
