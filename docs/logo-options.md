@@ -88,8 +88,16 @@ They are not in this repository. It is public, so anything committed here is
 downloadable by anyone with the URL, and the templates are for the group.
 
 What is versioned is how they are built: `scripts/make_deck_template.py` and
-`scripts/make_poster_template.py`. Run either to regenerate into
-`assets/templates/`, which is gitignored and excluded from the build. Hand the
+`scripts/make_poster_template.py`. Run either to regenerate into `assets/templates/`, which is gitignored and
+excluded from the build:
+
+```
+pip install python-pptx
+python scripts/make_deck_template.py
+python scripts/make_poster_template.py
+```
+
+Both resolve their own paths, so they work from any working directory. Hand the
 built files out directly.
 
 To change a layout or a colour, edit the generator and re-run it rather than

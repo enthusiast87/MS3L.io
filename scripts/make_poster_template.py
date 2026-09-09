@@ -1,3 +1,17 @@
+"""Regenerate the group poster template.
+
+    pip install python-pptx
+    python scripts/make_poster_template.py
+
+Writes into assets/templates/, which is gitignored and excluded from the site -
+the built file is handed out directly rather than published. Change a layout or
+a colour here and re-run; do not edit the slides by hand, or the deck, the
+poster and the website stop agreeing.
+"""
+import os
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+os.makedirs("assets/templates", exist_ok=True)
+
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
