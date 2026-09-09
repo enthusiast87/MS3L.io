@@ -58,18 +58,19 @@ L = "assets/images/logo"
 solid(rect(0, 0, W, H), RGBColor(0xEC,0xF3,0xFB))
 
 # ---- header band -------------------------------------------------------
-BAND = Inches(9.4)
+BAND = Inches(6.4)
 grad(rect(0, 0, W, BAND), 315.0)
-s.shapes.add_picture(f"{L}/ms3l-lockup-horizontal-white.png", Inches(1.6), Inches(0.9), width=Inches(13.5))
-s.shapes.add_picture(f"{L}/ms3l-avatar-circle.png", Inches(31.8), Inches(1.0), width=Inches(2.7))
-text(Inches(1.6), Inches(3.6), Inches(33), Inches(2.6),
-     "Poster title goes here, one or two lines at most", 78, WHITE, True, space=1.05)
-text(Inches(1.6), Inches(6.55), Inches(33), Inches(0.9),
-     "Jihoon Kim¹²*, Coauthor One¹, Coauthor Two²", 34, PALE, True)
-text(Inches(1.6), Inches(7.55), Inches(33), Inches(1.5),
+s.shapes.add_picture(f"{L}/ms3l-lockup-horizontal-white.png", Inches(1.6), Inches(0.62), width=Inches(10.6))
+s.shapes.add_picture(f"{L}/ms3l-avatar-circle.png", Inches(32.3), Inches(0.62), width=Inches(2.1))
+s.shapes.add_picture("assets/images/logos/krict-logo-white.png", Inches(27.6), Inches(1.05), width=Inches(4.0))
+text(Inches(1.6), Inches(2.55), Inches(33), Inches(2.1),
+     "Poster title goes here, one or two lines at most", 60, WHITE, True, space=1.06)
+text(Inches(1.6), Inches(4.52), Inches(33), Inches(0.8),
+     "Jihoon Kim¹²*, Coauthor One¹, Coauthor Two²", 28, PALE, True)
+text(Inches(1.6), Inches(5.30), Inches(33), Inches(1.2),
      "¹ Chemical Process Technology Division, Korea Research Institute of Chemical Technology (KRICT), Daejeon, Republic of Korea\n"
      "² Advanced Materials and Chemical Engineering, University of Science and Technology (UST)    •    * jh.kim@krict.re.kr",
-     24, PALE2, space=1.35)
+     20, PALE2, space=1.32)
 
 # ---- columns -----------------------------------------------------------
 M = Inches(1.6); GAP = Inches(1.1)
