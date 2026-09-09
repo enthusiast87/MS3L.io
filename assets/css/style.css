@@ -1,10 +1,13 @@
 :root {
-  /* KRICT's own brand values, so the site, the logo set and the group's slide
-     template all resolve to the same colours. */
-  --brand-primary: #005ca5;
-  --brand-secondary: #0a7fa8;
-  --brand-accent: #089892;
-  --ms3l-gradient: linear-gradient(135deg, #005ca5 0%, #0a7fa8 45%, #089892 100%);
+  /* KRICT's published CI values (krict.re.kr/kor/sub01_05_01.do): PANTONE 3015C,
+     3005C and 632C. They are bright, so they are used as graphics - the
+     gradient, rules, fills - where contrast minimums do not apply. Text uses
+     --brand-primary, the only one of the three that clears 4.5:1 on white
+     (4.86:1); headings and body stay on --brand-ink at 13.4:1. */
+  --brand-primary: #0075c2;
+  --brand-secondary: #0099d9;
+  --brand-accent: #00ada9;
+  --ms3l-gradient: linear-gradient(135deg, #0075c2 0%, #0099d9 45%, #00ada9 100%);
   --brand-ink: #0b2f5b;
   --brand-bg: #eef6fc;
 
@@ -304,16 +307,17 @@ main {
   font-size: 1.3em;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #005ca5;
+  color: #0075c2;
 }
 
 /* The step is carried by the letter alone. Any column ground behind it - even a
    9% tint - turns the five into badges that pull ahead of the heading beside
-   them. */
-.hero-acronym-line:nth-child(2) .hero-initial { color: #0369a7; }
-.hero-acronym-line:nth-child(3) .hero-initial { color: #0676a8; }
-.hero-acronym-line:nth-child(4) .hero-initial { color: #07859d; }
-.hero-acronym-line:nth-child(5) .hero-initial { color: #089892; }
+   them. These are text, so the ramp stops at #009b96 (3.4:1) rather than the CI
+   teal #00ada9, which is 2.78:1 and fails even the large-text minimum. */
+.hero-acronym-line:nth-child(2) .hero-initial { color: #0083bd; }
+.hero-acronym-line:nth-child(3) .hero-initial { color: #0090b4; }
+.hero-acronym-line:nth-child(4) .hero-initial { color: #0096a5; }
+.hero-acronym-line:nth-child(5) .hero-initial { color: #009b96; }
 
 .hero-acronym-word {
   display: flex;
@@ -2759,4 +2763,38 @@ main:focus {
   inset: 0 auto 0 0;
   width: 4px;
   background: var(--ms3l-gradient);
+}
+
+/* Institutional mark ------------------------------------------------------- */
+
+.brand-marks {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark-divider {
+  width: 1px;
+  height: 26px;
+  background: var(--line);
+  flex: none;
+}
+
+.brand-affiliation {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.footer-affiliation {
+  height: 30px;
+  width: auto;
+  display: block;
+  margin-top: 12px;
+}
+
+@media (max-width: 560px) {
+  .brand-affiliation { height: 21px; }
+  .brand-mark-divider { height: 21px; }
+  .brand-marks { gap: 10px; }
 }

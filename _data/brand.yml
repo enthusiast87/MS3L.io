@@ -4,24 +4,31 @@
 palette:
   - name: Lab navy
     hex: "#0B2F5B"
-    role: Headings and emphasis
+    role: Headings and body emphasis. 13.4:1 on white
   - name: KRICT blue
-    hex: "#005CA5"
-    role: Primary accent, links
-  - name: Mid
-    hex: "#0A7FA8"
-    role: Gradient midpoint
+    hex: "#0075C2"
+    pantone: 3015C
+    role: Links and small text - the only CI colour that clears 4.5:1 (4.86:1)
+  - name: KRICT blue, light
+    hex: "#0099D9"
+    pantone: 3005C
+    role: Gradient midpoint. Graphics only, 3.2:1
   - name: KRICT teal
-    hex: "#089892"
-    role: Secondary accent
-  - name: Teal bright
-    hex: "#12D0BE"
-    role: Teal on a navy ground only, where #089892 goes too dark to read
+    hex: "#00ADA9"
+    pantone: 632C
+    role: Gradient end. Graphics only - 2.78:1, never as text
+  - name: Teal, text-safe
+    hex: "#009B96"
+    role: Where the teal end of the ramp has to be a letter. 3.4:1
   - name: Surface
     hex: "#F4F8FD"
     role: Card and panel ground
 
-gradient: "linear-gradient(135deg, #005CA5 0%, #0A7FA8 45%, #089892 100%)"
+# Values are KRICT's published CI (krict.re.kr/kor/sub01_05_01.do). They are
+# bright, so the rule is by role: CI colours carry the graphics, and text falls
+# back to #0075C2 or the lab navy.
+
+gradient: "linear-gradient(135deg, #0075C2 0%, #0099D9 45%, #00ADA9 100%)"
 
 # Where each mark belongs. Files live in assets/images/logo/.
 marks:
@@ -47,6 +54,13 @@ marks:
     use: Slides, letterhead, posters
   - file: ms3l-lockup-horizontal-white.png
     use: The lockup on dark or gradient grounds. Transparent
+  - file: logos/krict-logo.png
+    use: >-
+      The institution's own mark, from KRICT's CI page. Sits beside the MS3L
+      wordmark in the header and under the institution line in the footer, so
+      where the lab sits is readable at a glance
+  - file: logos/krict-logo-white.png
+    use: The same mark in white, for dark and gradient grounds
 
 type:
   slides: Pretendard, or Noto Sans KR where Pretendard is not installed

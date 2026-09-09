@@ -48,9 +48,14 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand">
-          <a class="brand-title brand-logo" href="{{ '/' | relative_url }}" aria-label="MS3L home">
-            <img class="brand-logo-image" src="{{ site.data.lab.logo_image | relative_url }}" alt="MS3L">
-          </a>
+          <div class="brand-marks">
+            <a class="brand-title brand-logo" href="{{ '/' | relative_url }}" aria-label="MS3L home">
+              <img class="brand-logo-image" src="{{ site.data.lab.logo_image | relative_url }}" alt="MS3L">
+            </a>
+            <span class="brand-mark-divider" aria-hidden="true"></span>
+            <img class="brand-affiliation" src="{{ '/assets/images/logos/krict-logo.png' | relative_url }}"
+                 alt="{{ site.data.lab.institution }}">
+          </div>
           <div class="brand-subtitle">{{ site.data.lab.full_name }}</div>
         </div>
 
@@ -114,6 +119,8 @@
           {% assign footer_pi = site.data.members | where: "role_group", "Principal Investigator" | first %}
           <div>{{ footer_pi.name }} | {{ footer_pi.role_group }}</div>
           <div>{{ site.data.lab.institution }}</div>
+          <img class="footer-affiliation" src="{{ '/assets/images/logos/krict-logo.png' | relative_url }}"
+               alt="{{ site.data.lab.institution }}">
         </div>
         <div class="footer-right">
           {% assign footer_email = site.data.lab.contact.emails | first %}
