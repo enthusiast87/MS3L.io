@@ -1,11 +1,8 @@
 title: MS<sup>3</sup>L
 title_plain: MS3L
 description: Membrane-based Sustainable Separation Solutions Laboratory
-# Custom domain. The CNAME file at the repo root is what GitHub Pages reads;
-# these two drive every absolute URL Jekyll writes - canonical tags, OpenGraph,
-# the sitemap - so they have to move together with it.
-baseurl: ""
-url: "https://ms3l.org"
+baseurl: "/MS3L.io"
+url: "https://enthusiast87.github.io"
 markdown: kramdown
 theme: null
 
