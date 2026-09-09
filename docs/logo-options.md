@@ -95,8 +95,16 @@ They are also reproducible: `scripts/make_deck_template.py` and
 ```
 pip install python-pptx
 python scripts/make_deck_template.py
+python scripts/make_deck_template_gradient.py
 python scripts/make_poster_template.py
 ```
+
+There are two decks on purpose. `MS3L_presentation_template.pptx` follows the
+group's existing white deck and is the default for internal and institutional
+use. `MS3L_presentation_template_gradient.pptx` leads with the CI ramp and
+matches the website; use it for conference talks and anywhere the deck should
+look like the lab rather than like a report. Both carry the same marks, palette
+and slide set.
 
 Both resolve their own paths, so they work from any working directory.
 
