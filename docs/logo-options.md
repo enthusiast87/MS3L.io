@@ -70,3 +70,15 @@ square that shows as a patch once placed on a gradient slide.
 The deck sets Inter by name. Where Inter is not installed PowerPoint falls back,
 so either install Inter or switch the template's font once to whatever the
 group's machines have.
+
+## Poster template
+
+`assets/templates/MS3L_poster_template.pptx` is a 36 x 48 in portrait board -
+the common conference size, and what AIChE boards take. Three columns: text on
+the left, figures in the middle, results and conclusions on the right, with a
+gradient header band carrying the lockup, title, authors and affiliations, and
+a footer bar with contact and the site address.
+
+Body copy is set at 26 pt, which stays readable from about 1.5 m. If you rescale
+the board, scale the type with it rather than leaving it at 26 pt.
+`MS3L_poster_preview.png` shows the layout.
