@@ -1,8 +1,11 @@
 title: MS<sup>3</sup>L
 title_plain: MS3L
 description: Membrane-based Sustainable Separation Solutions Laboratory
-baseurl: "/MS3L.io"
-url: "https://enthusiast87.github.io"
+# Custom domain, registered in Settings > Pages. The CNAME file is kept in the
+# repo so the setting survives a redeploy, and url/baseurl have to match it -
+# they drive canonical tags, OpenGraph and the sitemap.
+baseurl: ""
+url: "https://ms3l.org"
 markdown: kramdown
 theme: null
 
