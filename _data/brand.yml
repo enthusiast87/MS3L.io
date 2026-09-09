@@ -68,3 +68,8 @@ type:
   fallback: Malgun Gothic - present on every Windows machine, last resort only
 
 sheet: /assets/images/logo/ms3l-brand-sheet.png
+
+templates:
+  deck: /assets/templates/MS3L_presentation_template.pptx
+  poster: /assets/templates/MS3L_poster_template.pptx
+  site: https://ms3l.org
