@@ -84,12 +84,13 @@ the board, scale the type with it rather than leaving it at 26 pt.
 
 ### Where the template files live
 
-They are not in this repository. It is public, so anything committed here is
-downloadable by anyone with the URL, and the templates are for the group.
+`assets/templates/`, versioned like everything else so they are kept, have a
+history, and arrive on every machine with a pull. They are excluded from the
+site build, so they never appear on ms3l.org - but this repository is public,
+so treat them as internal-by-convention rather than private.
 
-What is versioned is how they are built: `scripts/make_deck_template.py` and
-`scripts/make_poster_template.py`. Run either to regenerate into `assets/templates/`, which is gitignored and
-excluded from the build:
+They are also reproducible: `scripts/make_deck_template.py` and
+`scripts/make_poster_template.py`. Run either to regenerate into `assets/templates/`:
 
 ```
 pip install python-pptx
@@ -97,8 +98,7 @@ python scripts/make_deck_template.py
 python scripts/make_poster_template.py
 ```
 
-Both resolve their own paths, so they work from any working directory. Hand the
-built files out directly.
+Both resolve their own paths, so they work from any working directory.
 
 To change a layout or a colour, edit the generator and re-run it rather than
 editing slides by hand - that is what keeps the deck, the poster and the site on
