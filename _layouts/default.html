@@ -184,7 +184,11 @@
           const insideAnyGroup = navGroups.some((group) => group.contains(event.target));
           const clickedNavToggle = navToggle && navToggle.contains(event.target);
           if (!insideAnyGroup) {
-            navGroups.forEach((group) => group.removeAttribute('open'));
+            // only touch the ones that are open - this runs on every click on
+            // the page, and removeAttribute invalidates style either way
+            navGroups.forEach((group) => {
+              if (group.hasAttribute('open')) group.removeAttribute('open');
+            });
           }
           if (!clickedNavToggle && nav && navToggle && mobileQuery.matches && !nav.contains(event.target)) {
             closeMobileNav();
@@ -257,11 +261,29 @@
         const targets = document.querySelectorAll('.section .card, .section .list-card, .news-card, .research-card');
         if (!targets.length) return;
 
+        // The reveal is a one-shot, so its classes come off once it has played.
+        // Left on, .reveal's `transform` and `transition` outrank .card-link's
+        // own - same specificity, later in the sheet - and the card's hover lift
+        // never fires and its shadow never eases.
+        function settle(el) {
+          el.classList.remove('reveal', 'is-visible');
+          el.style.removeProperty('--reveal-delay');
+        }
+
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (!entry.isIntersecting) return;
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
+            const el = entry.target;
+            el.classList.add('is-visible');
+            observer.unobserve(el);
+            el.addEventListener('transitionend', function onEnd(event) {
+              // children and pseudo-elements bubble their own transitions here
+              if (event.target !== el || event.propertyName !== 'opacity') return;
+              el.removeEventListener('transitionend', onEnd);
+              settle(el);
+            });
+            // transitionend does not fire for a tab that was never painted
+            setTimeout(() => settle(el), 900);
           });
         }, { rootMargin: '0px 0px 6% 0px', threshold: 0.01 });
 
