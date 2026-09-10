@@ -150,3 +150,15 @@ The `.member-grid` / `.alumni-grid` overrides therefore sit at the bottom of the
 file, after both definitions. Put new responsive overrides after the rule they
 are meant to beat, and check the computed `grid-template-columns` at a narrow
 width rather than reading the cascade.
+
+The same trap catches JS-applied classes, and it bit a second time. The scroll
+reveal's `.reveal` / `.reveal.is-visible` rules live near the end of the file
+and were left on the element permanently, so they outranked `.card-link`'s
+`transform` and `transition` - identical specificity, later wins - and the card
+hover lift never fired at all. The fix was to stop the classes outliving the
+animation rather than to fight the cascade; see
+[the performance notes](performance-notes.md).
+
+The lesson both times: a rule that loses here loses *silently*. Check the
+computed value on the element, at the viewport and pointer type you care about,
+rather than reading down the stylesheet.
