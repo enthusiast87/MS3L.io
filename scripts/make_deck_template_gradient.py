@@ -6,7 +6,9 @@
 The alternative to make_deck_template.py. That one follows the group's existing
 white deck; this one leads with the KRICT CI ramp - gradient title and closing
 slides, gradient rules on the content slides. Use it where a deck should look
-like the website rather than like a report.
+like the website rather than like a report. The institute mark is joined to the
+lab's own on every slide that carries a mark, so the deck reads as a group
+inside KRICT rather than as a lab standing on its own.
 
 Writes assets/templates/MS3L_presentation_template_gradient.pptx.
 """
@@ -40,6 +42,7 @@ LOCKW = f"{L}/ms3l-lockup-horizontal-white.png"
 MARK = f"{L}/ms3l-avatar-circle.png"
 KRICT = "assets/images/logos/krict-logo.png"
 KRICTW = "assets/images/logos/krict-logo-white.png"
+KRICT_AR = 1200 / 379              # the wordmark as supplied, width over height
 M = Inches(0.85)
 
 
@@ -72,26 +75,39 @@ def text(s, x, y, w, h, t, size, color, bold=False, align=PP_ALIGN.LEFT, space=1
     return tb
 
 
+def endorse(s, right, cy, mh, kh, krict=KRICT, rule=LINE):
+    """The lab ring, a hairline, then the institute wordmark - one lockup ending
+    at `right` and centred on `cy`. Joined rather than parked in opposite
+    corners, which is what makes MS3L read as a group within KRICT."""
+    kw = int(kh * KRICT_AR)
+    kx = right - kw
+    s.shapes.add_picture(krict, kx, cy - kh // 2, height=kh)
+    rx = kx - Inches(0.18)
+    solid(rect(s, rx, cy - mh // 2 + Inches(0.03), Inches(0.014), mh - Inches(0.06)), rule)
+    s.shapes.add_picture(MARK, rx - Inches(0.18) - mh, cy - mh // 2, height=mh)
+
+
 def chrome(s, n, title):
     grad(rect(s, 0, 0, W, Inches(0.10)))
     text(s, M, Inches(0.52), Inches(9.4), Inches(0.7), title, 28, NAVY, True)
     grad(rect(s, M, Inches(1.16), Inches(1.5), Inches(0.05)))
-    s.shapes.add_picture(MARK, W - Inches(1.78), Inches(0.52), height=Inches(0.42))
-    solid(rect(s, W - Inches(1.24), Inches(0.56), Inches(0.01), Inches(0.34)), LINE)
-    s.shapes.add_picture(KRICT, W - Inches(1.15), Inches(0.60), height=Inches(0.26))
-    text(s, W - Inches(1.35), H - Inches(0.52), Inches(0.7), Inches(0.3),
+    endorse(s, W - M, Inches(0.73), Inches(0.42), Inches(0.26))
+    text(s, W - Inches(1.55), H - Inches(0.52), Inches(0.7), Inches(0.3),
          str(n), 12, GREY, align=PP_ALIGN.RIGHT)
 
 
 # 1 title -------------------------------------------------------------------
 s = prs.slides.add_slide(BLANK); grad(rect(s, 0, 0, W, H), 315.0)
 s.shapes.add_picture(LOCKW, M, Inches(1.95), width=Inches(7.9))
-s.shapes.add_picture(KRICTW, W - Inches(3.05), Inches(0.72), width=Inches(2.2))
+solid(rect(s, M + Inches(8.32), Inches(2.03), Inches(0.016), Inches(1.20)), PALE2)
+_kh = Inches(0.74)
+s.shapes.add_picture(KRICTW, M + Inches(8.80), Inches(2.63) - _kh // 2, height=_kh)
 text(s, M, Inches(4.05), Inches(10.6), Inches(0.9), "Title", 38, WHITE, True)
 text(s, M, Inches(4.92), Inches(10.6), Inches(0.6), "Sub-title", 20, PALE)
 text(s, M, Inches(5.72), Inches(10.6), Inches(0.5), "Name", 15, WHITE, True)
-text(s, M, Inches(6.10), Inches(10.6), Inches(0.5),
-     "Membrane-based Sustainable Separation Solutions Laboratory, KRICT", 13, PALE2)
+text(s, M, Inches(6.10), Inches(11.4), Inches(0.5),
+     "Membrane-based Sustainable Separation Solutions Laboratory"
+     "  ·  Korea Research Institute of Chemical Technology", 13, PALE2)
 text(s, M, Inches(6.46), Inches(10.6), Inches(0.4), "2026.00.00.", 12, PALE2)
 
 # 2 section divider ---------------------------------------------------------
@@ -100,7 +116,7 @@ grad(rect(s, 0, 0, Inches(0.40), H), 270.0)
 text(s, Inches(1.5), Inches(3.05), Inches(9), Inches(0.5), "01", 16, TEAL, True)
 text(s, Inches(1.5), Inches(3.48), Inches(10), Inches(1.0), "Section title", 40, NAVY, True)
 grad(rect(s, Inches(1.5), Inches(4.62), Inches(2.0), Inches(0.07)))
-s.shapes.add_picture(MARK, W - Inches(1.85), H - Inches(1.75), width=Inches(0.95))
+endorse(s, W - M, H - Inches(1.28), Inches(0.95), Inches(0.34))
 
 # 3 content -----------------------------------------------------------------
 s = prs.slides.add_slide(BLANK); solid(rect(s, 0, 0, W, H), WHITE); chrome(s, 3, "Content #1")
@@ -136,6 +152,11 @@ s.shapes.add_picture(MARK, Inches(6.07), Inches(1.90), width=Inches(1.5))
 text(s, M, Inches(3.85), W - 2 * M, Inches(0.8), "Thank you", 36, WHITE, True, PP_ALIGN.CENTER)
 text(s, M, Inches(4.80), W - 2 * M, Inches(0.4), "jh.kim@krict.re.kr", 15, PALE, align=PP_ALIGN.CENTER)
 text(s, M, Inches(5.20), W - 2 * M, Inches(0.4), "https://ms3l.org", 14, PALE2, align=PP_ALIGN.CENTER)
+solid(rect(s, (W - Inches(1.1)) // 2, Inches(5.82), Inches(1.1), Inches(0.014)), PALE2)
+_kh = Inches(0.46)
+s.shapes.add_picture(KRICTW, (W - int(_kh * KRICT_AR)) // 2, Inches(6.08), height=_kh)
+text(s, M, Inches(6.72), W - 2 * M, Inches(0.35),
+     "Korea Research Institute of Chemical Technology", 11, PALE2, align=PP_ALIGN.CENTER)
 
 prs.save("assets/templates/MS3L_presentation_template_gradient.pptx")
 print("gradient deck built")

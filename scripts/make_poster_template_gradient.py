@@ -3,10 +3,13 @@
     pip install python-pptx
     python scripts/make_poster_template_gradient.py
 
-Writes into assets/templates/, which is gitignored and excluded from the site -
+Writes into assets/templates/, which is tracked but excluded from the site -
 the built file is handed out directly rather than published. Change a layout or
 a colour here and re-run; do not edit the slides by hand, or the deck, the
 poster and the website stop agreeing.
+
+The header joins the institute wordmark to the lab lockup rather than parking it
+in the far corner, so the board reads as a group within KRICT.
 """
 import os
 os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -60,9 +63,10 @@ solid(rect(0, 0, W, H), RGBColor(0xEC,0xF3,0xFB))
 # ---- header band -------------------------------------------------------
 BAND = Inches(6.4)
 grad(rect(0, 0, W, BAND), 315.0)
-s.shapes.add_picture(f"{L}/ms3l-lockup-horizontal-white.png", Inches(1.6), Inches(0.62), width=Inches(10.6))
+s.shapes.add_picture(f"{L}/ms3l-lockup-horizontal-white.png", Inches(1.6), Inches(0.62), width=Inches(10.0))
+solid(rect(Inches(12.15), Inches(0.72), Inches(0.05), Inches(1.52)), PALE2)
+s.shapes.add_picture("assets/images/logos/krict-logo-white.png", Inches(12.75), Inches(0.83), width=Inches(4.12))
 s.shapes.add_picture(f"{L}/ms3l-avatar-circle.png", Inches(32.3), Inches(0.62), width=Inches(2.1))
-s.shapes.add_picture("assets/images/logos/krict-logo-white.png", Inches(27.6), Inches(1.05), width=Inches(4.0))
 text(Inches(1.6), Inches(2.55), Inches(33), Inches(2.1),
      "Poster title goes here, one or two lines at most", 60, WHITE, True, space=1.06)
 text(Inches(1.6), Inches(4.52), Inches(33), Inches(0.8),
@@ -123,8 +127,9 @@ text(x+Inches(0.8), TOP+Inches(26.0), COLW-Inches(1.6), Inches(2.4),
 # ---- footer ------------------------------------------------------------
 grad(rect(0, H-BOTBAR, W, BOTBAR), 315.0)
 text(Inches(1.6), H-BOTBAR+Inches(0.9), Inches(22), Inches(1.4),
-     "Membrane-based Sustainable Separation Solutions Laboratory  •  KRICT", 34, WHITE, True)
-text(Inches(1.6), H-BOTBAR+Inches(1.95), Inches(22), Inches(0.9),
+     "Membrane-based Sustainable Separation Solutions Laboratory", 34, WHITE, True)
+text(Inches(1.6), H-BOTBAR+Inches(1.95), Inches(24), Inches(0.9),
+     "Chemical Process Technology Division, KRICT    •    "
      "jh.kim@krict.re.kr    •    +82-42-860-7506", 26, PALE3)
 text(Inches(21.5), H-BOTBAR+Inches(1.3), Inches(12.9), Inches(1.0),
      "https://ms3l.org", 28, PALE, align=PP_ALIGN.RIGHT)

@@ -108,6 +108,17 @@ look like the lab rather than like a report. Both carry the same marks, palette
 and slide set. The poster comes in the same two, on the same rule: the plain
 file is white, `_gradient` leads with the ramp.
 
+### Showing the institute
+
+The gradient set carries the KRICT mark joined to the lab's own - lockup,
+hairline, wordmark - rather than parking the two in opposite corners, and every
+slide that carries a mark carries both. Two marks at opposite ends of a header
+read as two organisations of equal standing; joined with a rule they read as a
+group and the institute it sits in, which is what MS3L is. The title and closing
+slides spell "Korea Research Institute of Chemical Technology" out in full, and
+the poster footer names the division, so the affiliation survives a black and
+white printout where the logos go flat.
+
 Both resolve their own paths, so they work from any working directory.
 
 To change a layout or a colour, edit the generator and re-run it rather than
