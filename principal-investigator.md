@@ -19,14 +19,14 @@ title: Principal Investigator
 
         <div class="pi-current">
           <div class="pi-current-head">
-            <span class="pi-current-label">Current appointments</span>
+            <span class="pi-current-label">Current positions</span>
             <span class="pi-current-period">{{ pi.current_period }}</span>
           </div>
-          <ul class="pi-appointments">
-            {% for appointment in pi.current_appointments %}
+          <ul class="pi-positions">
+            {% for position in pi.current_positions %}
             <li>
-              <span class="pi-appointment-title">{{ appointment.title }}</span>
-              <span class="pi-appointment-org">{{ appointment.organization }}</span>
+              <span class="pi-position-title">{{ position.title }}</span>
+              <span class="pi-position-org">{{ position.organization }}</span>
             </li>
             {% endfor %}
           </ul>

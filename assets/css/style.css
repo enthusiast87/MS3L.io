@@ -1035,10 +1035,10 @@ a.card {
   color: var(--strong);
 }
 
-/* PI current appointments -------------------------------------------------
+/* PI current positions ----------------------------------------------------
    Two concurrent posts that share one start date. Each row pairs a job title
-   with its own institution, and the period is stated once underneath instead
-   of being repeated on both. */
+   with its own institution, and the period is stated once in the block's head
+   instead of being repeated on both. */
 
 /* The current posts used to be two unadorned lines under the name, while the
    career list below had a heading, a period column and a rule between every
@@ -1085,7 +1085,7 @@ a.card {
   font-variant-numeric: tabular-nums;
 }
 
-.pi-appointments {
+.pi-positions {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1093,35 +1093,28 @@ a.card {
   gap: 7px;
 }
 
-.pi-appointments li {
+.pi-positions li {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0 8px;
 }
 
-.pi-appointment-title {
+.pi-position-title {
   color: var(--strong);
   font-weight: 700;
   font-size: 1.06rem;
 }
 
-.pi-appointment-org {
+.pi-position-org {
   color: var(--text);
   font-size: 0.95rem;
 }
 
-.pi-appointment-org::before {
+.pi-position-org::before {
   content: "—";
   margin-right: 8px;
   color: var(--line);
-}
-
-.pi-appointment-period {
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-variant-numeric: tabular-nums;
 }
 
 .pi-research-focus {
