@@ -1090,14 +1090,20 @@ a.card {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 7px;
+  /* Wider than the row-gap inside a position below, so that when an institution
+     wraps onto its own line it still groups with its own title rather than
+     floating between the two. */
+  gap: 13px;
 }
 
 .pi-positions li {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0 8px;
+  /* The row-gap was 0. Whether the institution wraps depends on how long its
+     name is, not on the viewport - the UST post wraps at 900px as readily as at
+     390 - so it wrapped flush against its own title at plenty of widths. */
+  gap: 2px 8px;
 }
 
 .pi-position-title {
@@ -1106,15 +1112,18 @@ a.card {
   font-size: 1.06rem;
 }
 
+/* The dash trails the title instead of leading the institution. Same line when
+   both fit; when they do not, it stays at the end of the title and reads as
+   "continues below" rather than being orphaned at the start of the next line. */
+.pi-position-title::after {
+  content: " —";
+  font-weight: 400;
+  color: var(--line);
+}
+
 .pi-position-org {
   color: var(--text);
   font-size: 0.95rem;
-}
-
-.pi-position-org::before {
-  content: "—";
-  margin-right: 8px;
-  color: var(--line);
 }
 
 .pi-research-focus {
