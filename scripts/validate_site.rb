@@ -87,6 +87,11 @@ Array(loaded[:patents]).each_with_index do |p, i|
   %w[title registration].each do |k|
     errors << "patents[#{i}].#{k} is required" if p[k].to_s.strip.empty?
   end
+  Array(p['foreign']).each_with_index do |f, j|
+    %w[country registration].each do |k|
+      errors << "patents[#{i}].foreign[#{j}].#{k} is required" if f[k].to_s.strip.empty?
+    end
+  end
 end
 
 Array(loaded.dig(:lab, 'technology_impact', 'logos')).each_with_index do |logo, i|

@@ -17,21 +17,21 @@ title: Patents
       {% for patent in patents %}
       <article class="news-card news-card-text-only publication-entry">
         <div class="news-card-body">
-          <div class="list-meta">{% if patent.date %}{{ patent.date | date: "%Y" }}{% else %}N/A{% endif %} · {{ patent.country | default: "Korea (KR)" }}</div>
+          {% capture countries %}{{ patent.country | default: "KR" }}{% for reg in patent.foreign %}, {{ reg.country }}{% endfor %}{% endcapture %}
+          <div class="list-meta">{% if patent.date %}{{ patent.date | date: "%Y" }}{% else %}N/A{% endif %} · {{ countries }}</div>
           <h2 class="news-card-title">{{ patent.title }}</h2>
           <p class="publication-authors">{% include highlight-members.html text=patent.inventors %}</p>
           <p class="publication-doi">{{ patent.registration }}</p>
           {% if patent.pct %}
           <p class="publication-doi">PCT: {{ patent.pct }}</p>
           {% endif %}
-          {% if patent.us_patent %}
-          <p class="publication-doi">{{ patent.us_patent }}</p>
-          {% endif %}
-          {% if patent.china_patent %}
-          <p class="publication-doi">{{ patent.china_patent }}</p>
-          {% endif %}
-          {% if patent.japan_patent %}
-          <p class="publication-doi">{{ patent.japan_patent }}</p>
+          {% if patent.foreign %}
+          <div class="patent-foreign">
+            <p class="patent-foreign-label">Also registered abroad</p>
+            {% for reg in patent.foreign %}
+            <p class="patent-foreign-item"><span class="patent-country">{{ reg.country }}</span>{{ reg.registration }}{% if reg.date %}<span class="patent-foreign-date"> · registered {{ reg.date | date: "%Y-%m-%d" }}</span>{% endif %}</p>
+            {% endfor %}
+          </div>
           {% endif %}
         </div>
       </article>

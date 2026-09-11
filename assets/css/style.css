@@ -1220,6 +1220,52 @@ a.card {
   margin: 6px 0 0;
 }
 
+/* Registrations outside Korea. A granted foreign patent is a separate national
+   examination, not a footnote to the Korean number, and as one more
+   .publication-doi line it read as the latter. Given its own block, with the
+   date each office granted on - which the single `date` field, reserved for the
+   Korean registration, has nowhere to put. */
+.patent-foreign {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+}
+
+.patent-foreign-label {
+  margin: 0 0 8px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.patent-foreign-item {
+  margin: 6px 0 0;
+}
+
+.patent-foreign-date {
+  color: #5b6f84;
+}
+
+/* WIPO ST.3 code, set as a chip so the jurisdiction reads before the number. */
+.patent-country {
+  display: inline-block;
+  min-width: 30px;
+  margin-right: 9px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: var(--ms3l-gradient);
+  text-align: center;
+  vertical-align: 1px;
+}
+
 .author-highlight {
   font-weight: 700;
   color: var(--accent-strong);

@@ -28,15 +28,36 @@ order they render. These are all **newest first**, so new entries go at the
 - `lab.invited_talks.items`
 
 In `patents.yml`, a patent family registered in several countries is a single
-entry with a combined `country` (`Korea (KR), US, China`) and one `*_patent`
-field per additional registration, rather than one entry per country. It is
-dated by its Korean registration, so a later foreign registration does not move
-the entry up the file.
+entry rather than one entry per country. The entry describes the Korean
+registration; every other jurisdiction goes in a `foreign` list:
 
-`patents.md` renders those fields from a hardcoded list - `us_patent`,
-`china_patent`, `japan_patent`. A new jurisdiction needs a matching block in the
-template or the field is simply not displayed, with nothing to indicate it was
-dropped.
+```yaml
+- title: Method for continuous recovering styrene monomer from waste polystyrene
+  inventors: ...
+  country: KR
+  registration: Korean Patent Registration Number 10-2551161
+  pct: PCT/KR2023/005183
+  foreign:
+    - country: JP
+      registration: Japanese Patent Registration Number 7899343
+      date: 2026-07-24
+  date: 2023-06-29
+```
+
+Countries are WIPO ST.3 codes - `KR`, `US`, `CN`, `JP` - so the meta line reads
+the same way whichever office granted. The template builds that line by
+appending each `foreign` country to the entry's own, so there is no combined
+country string to keep in step with the registrations underneath it.
+
+The entry's `date` is the Korean registration, which fixes its position in the
+file; a foreign registration granted years later does not move it up. Each
+`foreign` entry carries its own `date`, and that is where a foreign grant date
+belongs - it has nowhere else to go.
+
+Add a foreign registration by adding to the list, not by inventing a field. The
+old shape was one hardcoded `us_patent` / `china_patent` field per country with
+a matching block in `patents.md`, and a field added without its block sat in the
+data displaying nothing, with no error to notice.
 
 ## Members (`_data/members.yml`)
 
