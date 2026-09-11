@@ -30,7 +30,13 @@ order they render. These are all **newest first**, so new entries go at the
 In `patents.yml`, a patent family registered in several countries is a single
 entry with a combined `country` (`Korea (KR), US, China`) and one `*_patent`
 field per additional registration, rather than one entry per country. It is
-dated by its Korean registration.
+dated by its Korean registration, so a later foreign registration does not move
+the entry up the file.
+
+`patents.md` renders those fields from a hardcoded list - `us_patent`,
+`china_patent`, `japan_patent`. A new jurisdiction needs a matching block in the
+template or the field is simply not displayed, with nothing to indicate it was
+dropped.
 
 ## Members (`_data/members.yml`)
 

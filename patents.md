@@ -30,6 +30,9 @@ title: Patents
           {% if patent.china_patent %}
           <p class="publication-doi">{{ patent.china_patent }}</p>
           {% endif %}
+          {% if patent.japan_patent %}
+          <p class="publication-doi">{{ patent.japan_patent }}</p>
+          {% endif %}
         </div>
       </article>
       {% endfor %}
