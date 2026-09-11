@@ -1040,12 +1040,57 @@ a.card {
    with its own institution, and the period is stated once underneath instead
    of being repeated on both. */
 
+/* The current posts used to be two unadorned lines under the name, while the
+   career list below had a heading, a period column and a rule between every
+   row. The eye went to the history rather than to where he works now, and the
+   top career row ends in February 2026, close enough to today to be misread as
+   current. The current posts get the bounded block instead. */
+.pi-current {
+  position: relative;
+  margin-top: 14px;
+  padding: 14px 18px 15px 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  overflow: hidden;
+}
+
+.pi-current::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--ms3l-gradient);
+}
+
+.pi-current-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-bottom: 9px;
+}
+
+.pi-current-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.pi-current-period {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
 .pi-appointments {
   list-style: none;
-  margin: 2px 0 0;
+  margin: 0;
   padding: 0;
   display: grid;
-  gap: 5px;
+  gap: 7px;
 }
 
 .pi-appointments li {
@@ -1057,11 +1102,12 @@ a.card {
 
 .pi-appointment-title {
   color: var(--strong);
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.06rem;
 }
 
 .pi-appointment-org {
-  color: var(--muted);
+  color: var(--text);
   font-size: 0.95rem;
 }
 
@@ -1080,6 +1126,12 @@ a.card {
 
 .pi-research-focus {
   margin-top: 16px;
+}
+
+.pi-career-heading {
+  margin-top: 22px;
+  font-size: 1.05rem;
+  color: var(--muted);
 }
 
 /* PI career ---------------------------------------------------------------

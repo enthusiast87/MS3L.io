@@ -17,19 +17,24 @@ title: Principal Investigator
         <div class="profile-label">Principal Investigator</div>
         <h2>{{ member_pi.name }}</h2>
 
-        <ul class="pi-appointments">
-          {% for appointment in pi.current_appointments %}
-          <li>
-            <span class="pi-appointment-title">{{ appointment.title }}</span>
-            <span class="pi-appointment-org">{{ appointment.organization }}</span>
-          </li>
-          {% endfor %}
-        </ul>
-        <p class="pi-appointment-period">{{ pi.current_period }}</p>
+        <div class="pi-current">
+          <div class="pi-current-head">
+            <span class="pi-current-label">Current appointments</span>
+            <span class="pi-current-period">{{ pi.current_period }}</span>
+          </div>
+          <ul class="pi-appointments">
+            {% for appointment in pi.current_appointments %}
+            <li>
+              <span class="pi-appointment-title">{{ appointment.title }}</span>
+              <span class="pi-appointment-org">{{ appointment.organization }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
 
         <p class="pi-research-focus"><strong>Research focus:</strong> {{ member_pi.research }}</p>
 
-        <h3>Career</h3>
+        <h3 class="pi-career-heading">Career history</h3>
         <ul class="pi-career">
           {% for item in pi.career %}
           <li class="pi-career-item">
