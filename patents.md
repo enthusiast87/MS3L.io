@@ -21,17 +21,12 @@ title: Patents
           <div class="list-meta">{% if patent.date %}{{ patent.date | date: "%Y" }}{% else %}N/A{% endif %} · {{ countries }}</div>
           <h2 class="news-card-title">{{ patent.title }}</h2>
           <p class="publication-authors">{% include highlight-members.html text=patent.inventors %}</p>
-          <p class="publication-doi">{{ patent.registration }}</p>
+          <p class="publication-doi">{{ patent.registration }}{% if patent.date %}<span class="patent-reg-date"> · registered {{ patent.date | date: "%Y-%m-%d" }}</span>{% endif %}</p>
+          {% for reg in patent.foreign %}
+          <p class="publication-doi">{{ reg.registration }}{% if reg.date %}<span class="patent-reg-date"> · registered {{ reg.date | date: "%Y-%m-%d" }}</span>{% endif %}</p>
+          {% endfor %}
           {% if patent.pct %}
           <p class="publication-doi">PCT: {{ patent.pct }}</p>
-          {% endif %}
-          {% if patent.foreign %}
-          <div class="patent-foreign">
-            <p class="patent-foreign-label">Also registered abroad</p>
-            {% for reg in patent.foreign %}
-            <p class="patent-foreign-item"><span class="patent-country">{{ reg.country }}</span>{{ reg.registration }}{% if reg.date %}<span class="patent-foreign-date"> · registered {{ reg.date | date: "%Y-%m-%d" }}</span>{% endif %}</p>
-            {% endfor %}
-          </div>
           {% endif %}
         </div>
       </article>
