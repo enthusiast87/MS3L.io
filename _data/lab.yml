@@ -275,6 +275,43 @@ join_us:
   body: MS<sup>3</sup>L welcomes students and researchers who are interested in membrane science, sustainable separations, and process innovation for chemical, energy, and environmental systems.
   cta_label: Contact MS<sup>3</sup>L
   cta_url: /contact
+  work:
+    title: What you would take on
+    lead: >-
+      We are looking for people who want to own a separation problem from the first idea to the
+      unit that runs it - not only to characterise a material, but to decide what the process
+      should be and then prove it works outside the lab.
+    items:
+      - title: A separation nobody has designed yet
+        summary: >-
+          Much of our work has no standard unit operation behind it. Splitting an organic acid from
+          its alkali salt, recovering acid and catalyst so they return to the reactor, coupling
+          reaction and separation in one loop: the open question is usually what the separation
+          train should be, not which membrane to drop into someone else's.
+        detail: CO<sub>2</sub> utilization for climate crisis response (NST Global TOP, 2025-2030) | Carbon-neutral chemical processes through digital transformation (KRICT, 2024-2029)
+      - title: Materials built against a real stream
+        summary: >-
+          Ion-exchange and solvent-stable membranes designed for the feed they will actually meet -
+          selectivity between ions of the same charge, survival in organic solvents and at
+          temperature, and performance that holds when the film is made by the metre instead of on
+          a coupon.
+        detail: Polymer platform materials from organic resources and CO<sub>2</sub> (NRF, 2022-2027) | AI-powered biomass fractionation and conversion (NRF, 2026-2030)
+      - title: Proof at a scale someone can buy
+        summary: >-
+          The group runs its own pilot rather than stopping at a data point. Bipolar membrane
+          electrodialysis was carried from a single cell to a continuous skid making about 110 kg
+          of lactic acid a day at the KRICT demonstration centre in Yeosu, and separation trains
+          designed here have gone to industry at plant scale.
+        detail: 3 kT/yr continuous plastic recycling plant (Lotte Chemical) | High-purity acetophenone purification train (SK picglobal)
+  positions:
+    title: Positions we host
+    items:
+      - title: Graduate students
+        summary: M.S. and Ph.D. study through the UST Advanced Materials and Chemical Engineering programme, based at KRICT in Daejeon.
+      - title: Postdoctoral researchers
+        summary: Fixed-term research posts at KRICT, normally attached to one of the group's funded projects.
+      - title: Internship researchers
+        summary: Internship master researcher posts for degree holders, and visiting students who want to try the work before committing to it.
 
 contact:
   title: Contact

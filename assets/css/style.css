@@ -2983,6 +2983,17 @@ a.news-link-chip { display: inline-flex; align-items: center; padding: 4px 12px;
 a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 
 /* Join Us: numbered checklist */
+/* The funded work behind each card on Join Us. Set quiet: it is evidence for
+   the claim above it, not a second claim. */
+.joinus-grounding {
+  margin: 12px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
 .joinus-steps { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
 .joinus-steps li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 12px; align-items: start; }
 .joinus-step-num { width: 26px; height: 26px; border-radius: 50%; background: #0075c2; color: #fff; font-size: 0.82rem; font-weight: 700; display: grid; place-items: center; margin-top: 1px; }
