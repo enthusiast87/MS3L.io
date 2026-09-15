@@ -189,3 +189,34 @@ animation rather than to fight the cascade; see
 The lesson both times: a rule that loses here loses *silently*. Check the
 computed value on the element, at the viewport and pointer type you care about,
 rather than reading down the stylesheet.
+
+## CSS: rules outlive the markup that used them
+
+A redesign that removes markup leaves its rules behind, and nothing complains.
+By 2026-09-15 the stylesheet carried 583 lines - about a fifth of it - that no
+page could reach: the hero acrostic column, an old hero card, a metrics strip, a
+logo strip, a CTA panel, the modal layout that predated `.content-modal`, and
+the news link list and figure Enlarge button the September redesign replaced.
+
+`python scripts/find_dead_css.py` lists selectors no template can produce. It
+reads class attributes, and also the classes the layout's JS adds at runtime -
+`reveal`, `is-visible`, `modal-open` appear in no class attribute and deleting
+their rules would break the animation with nothing to show for it in the diff.
+
+Two things to know before deleting what it prints.
+
+**Parse the stylesheet, do not scan it.** The comments in this file contain
+braces and selector-like fragments. A regex scanner reads those as rules: a
+first attempt at this proposed removing 1248 lines including `@media (hover:
+hover)` and `.research-figure-stage`, both live. The script uses `tinycss2`, and
+a serialize-without-changes pass should return the file byte for byte before you
+trust anything it says.
+
+**Then prove the deletion changed nothing.** Save the live pages, inline the old
+stylesheet into one copy and the new one into another, render both and compare
+every element's box and computed style. Removing the 583 lines was checked this
+way across ten pages and 1810 elements, and matched exactly - except the hero
+particles, which sit at whatever point their animation had reached, and which
+matched too once `prefers-reduced-motion: reduce` was emulated. Without that
+comparison the only evidence is that the pages still look about right, which is
+not evidence.
