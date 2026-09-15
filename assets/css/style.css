@@ -2983,15 +2983,15 @@ a.news-link-chip { display: inline-flex; align-items: center; padding: 4px 12px;
 a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 
 /* Join Us: numbered checklist */
-/* The funded work behind each card on Join Us. Set quiet: it is evidence for
-   the claim above it, not a second claim. */
-.joinus-grounding {
-  margin: 12px 0 0;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-  font-size: 0.8rem;
-  line-height: 1.55;
-  color: var(--muted);
+/* .card p is margin: 0, which is right for the single paragraph most cards
+   carry and wrong the moment one carries three - they closed up against each
+   other on Join Us. Only pairs are touched, so every other card is unchanged. */
+.card p + p {
+  margin-top: 10px;
+}
+
+.card p + p.joinus-send {
+  margin-top: 18px;
 }
 
 .joinus-steps { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }

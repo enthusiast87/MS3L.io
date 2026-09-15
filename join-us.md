@@ -21,9 +21,6 @@ title: Join Us
         <div class="card">
           <h3>{{ item.title }}</h3>
           <p>{{ item.summary }}</p>
-          {% if item.detail %}
-          <p class="joinus-grounding">{{ item.detail }}</p>
-          {% endif %}
         </div>
         {% endfor %}
       </div>
@@ -55,9 +52,10 @@ title: Join Us
         </div>
         <div class="card">
           <h3>Where to send it</h3>
-          <p><strong>Jihoon Kim</strong> | Principal Investigator<br>{{ site.data.lab.institution }}, Daejeon</p>
+          <p><strong>Jihoon Kim</strong> | Principal Investigator</p>
+          <p>{{ site.data.lab.institution }}, Daejeon</p>
           <p><a class="inline-link" href="mailto:{{ primary_email }}">{{ primary_email }}</a></p>
-          <p><a class="btn btn-primary" href="mailto:{{ primary_email }}">Email the PI</a></p>
+          <p class="joinus-send"><a class="btn btn-primary" href="mailto:{{ primary_email }}">Email the PI</a></p>
         </div>
       </div>
     </section>

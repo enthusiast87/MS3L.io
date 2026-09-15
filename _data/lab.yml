@@ -278,31 +278,20 @@ join_us:
   work:
     title: What you would take on
     lead: >-
-      We are looking for people who want to own a separation problem from the first idea to the
-      unit that runs it - not only to characterise a material, but to decide what the process
-      should be and then prove it works outside the lab.
+      People who want to own a separation problem from the first idea to the unit that runs it.
     items:
       - title: A separation nobody has designed yet
         summary: >-
-          Much of our work has no standard unit operation behind it. Splitting an organic acid from
-          its alkali salt, recovering acid and catalyst so they return to the reactor, coupling
-          reaction and separation in one loop: the open question is usually what the separation
-          train should be, not which membrane to drop into someone else's.
-        detail: CO<sub>2</sub> utilization for climate crisis response (NST Global TOP, 2025-2030) | Carbon-neutral chemical processes through digital transformation (KRICT, 2024-2029)
+          Most of our work has no standard unit operation to start from. The open question is what
+          the separation train should be, not which membrane goes into someone else's.
       - title: Materials built against a real stream
         summary: >-
-          Ion-exchange and solvent-stable membranes designed for the feed they will actually meet -
-          selectivity between ions of the same charge, survival in organic solvents and at
-          temperature, and performance that holds when the film is made by the metre instead of on
-          a coupon.
-        detail: Polymer platform materials from organic resources and CO<sub>2</sub> (NRF, 2022-2027) | AI-powered biomass fractionation and conversion (NRF, 2026-2030)
+          Membranes made for the feed they will actually meet: selective between ions of the same
+          charge, stable in solvent and heat, and still good when made by the metre.
       - title: Proof at a scale someone can buy
         summary: >-
-          The group runs its own pilot rather than stopping at a data point. Bipolar membrane
-          electrodialysis was carried from a single cell to a continuous skid making about 110 kg
-          of lactic acid a day at the KRICT demonstration centre in Yeosu, and separation trains
-          designed here have gone to industry at plant scale.
-        detail: 3 kT/yr continuous plastic recycling plant (Lotte Chemical) | High-purity acetophenone purification train (SK picglobal)
+          We run our own pilot. Work here has gone from a coupon to a continuous skid, and from a
+          skid to plant designs industry has bought.
   positions:
     title: Positions we host
     items:
