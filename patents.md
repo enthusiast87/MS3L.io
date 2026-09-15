@@ -13,14 +13,17 @@ title: Patents
       <p>{{ patent_page.summary }}</p>
     </div>
 
-    <div class="news-feed">
+    <div class="pub-list">
+      {% assign prev_year = "" %}
       {% for patent in patents %}
-      <article class="news-card news-card-text-only publication-entry">
-        <div class="news-card-body">
-          {% capture countries %}{{ patent.country | default: "KR" }}{% for reg in patent.foreign %}, {{ reg.country }}{% endfor %}{% endcapture %}
-          <div class="list-meta">{% if patent.date %}{{ patent.date | date: "%Y" }}{% else %}N/A{% endif %} · {{ countries }}</div>
-          <h2 class="news-card-title">{{ patent.title }}</h2>
-          <p class="publication-authors">{% include highlight-members.html text=patent.inventors %}</p>
+      {% assign year = patent.date | date: "%Y" | default: "N/A" %}
+      {% capture countries %}{{ patent.country | default: "KR" }}{% for reg in patent.foreign %}, {{ reg.country }}{% endfor %}{% endcapture %}
+      <article class="pub-row{% if year != prev_year %} pub-year-start{% endif %}">
+        <div class="pub-year">{% if year != prev_year %}{{ year }}{% endif %}</div>
+        <div>
+          <h3 class="pub-title">{{ patent.title }}</h3>
+          <p class="pub-meta">{{ countries }}</p>
+          <p class="pub-authors">{% include highlight-members.html text=patent.inventors %}</p>
           <p class="publication-doi">{{ patent.registration }}{% if patent.date %}<span class="patent-reg-date"> · registered {{ patent.date | date: "%Y-%m-%d" }}</span>{% endif %}</p>
           {% for reg in patent.foreign %}
           <p class="publication-doi">{{ reg.registration }}{% if reg.date %}<span class="patent-reg-date"> · registered {{ reg.date | date: "%Y-%m-%d" }}</span>{% endif %}</p>
@@ -30,6 +33,7 @@ title: Patents
           {% endif %}
         </div>
       </article>
+      {% assign prev_year = year %}
       {% endfor %}
     </div>
   </div>
