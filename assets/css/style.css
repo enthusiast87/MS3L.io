@@ -2870,3 +2870,119 @@ main:focus {
   .brand-mark-divider { height: 21px; }
   .brand-marks { gap: 10px; }
 }
+
+
+/* ============================================================
+   Proposed improvements (2026-09) — appended after base styles
+   ============================================================ */
+
+/* Home hero: single identity block replaces acronym stack + duplicate h1 */
+.hero-identity-v2 h1 {
+  margin: 0 0 4px;
+  font-size: clamp(2.4rem, 4.5vw, 3.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--strong);
+}
+.hero-identity-v2 h1 sup {
+  background: var(--ms3l-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.hero-fullname { margin: 0 0 14px; font-weight: 600; font-size: 1.04rem; color: var(--text); }
+.hero-fullname b { font-weight: 800; }
+.hero-fullname b:nth-of-type(1) { color: #0075c2; }
+.hero-fullname b:nth-of-type(2) { color: #0083bd; }
+.hero-fullname b:nth-of-type(3) { color: #0090b4; }
+.hero-fullname b:nth-of-type(4) { color: #0096a5; }
+.hero-fullname b:nth-of-type(5) { color: #009b96; }
+.hero-identity-v2 .hero-mission { margin: 0; font-size: 1.04rem; }
+.hero-main { gap: 18px; }
+.hero-process { min-height: 140px; padding: 18px 20px; }
+.separation-visual { height: 112px; }
+.flow-line-one { top: 40px; }
+.flow-line-two { top: 84px; }
+.membrane-layer { top: 14px; height: 92px; }
+.side-news-item:first-of-type { border-top: 0; padding-top: 4px; }
+
+/* Home section rhythm: nav-duplicating grids become quiet tiles */
+.home-overview-grid .card,
+.impact-card { background: rgba(255, 255, 255, 0.6); box-shadow: none; }
+.home-overview-grid .card::before { width: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .home-overview-grid .card-link:hover,
+  .impact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(15, 43, 70, 0.1);
+    background: #ffffff;
+  }
+}
+
+/* Home closing contact banner on brand navy */
+.page-card.contact-banner {
+  color: #ffffff;
+  border: 0;
+  background:
+    radial-gradient(circle at 82% 16%, rgba(64, 219, 210, 0.2), transparent 30%),
+    linear-gradient(125deg, #062c54 0%, #075e88 56%, #008a91 100%);
+}
+.page-card.contact-banner::before { display: none; }
+.contact-banner-copy h2 { color: #ffffff; }
+.contact-banner-copy p { color: rgba(255, 255, 255, 0.82); }
+.contact-banner-meta strong { color: #ffffff; }
+.contact-banner .inline-link { color: #7ee5dd; }
+.contact-banner .btn-primary { background: #ffffff; color: var(--brand-ink); }
+.contact-banner .btn-primary:hover { opacity: 1; background: #e8f6f9; }
+
+@media (max-width: 720px) {
+  .hero-process { grid-template-columns: 1fr; min-height: 0; }
+  .separation-visual { display: none; }
+  .hero-identity-v2 h1 { font-size: 2.2rem; }
+}
+
+/* Publications: compact year-rail list replaces card feed */
+.pub-list {
+  margin-top: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius, 14px);
+  padding: 6px 26px;
+  box-shadow: var(--shadow-soft, 0 10px 24px rgba(15, 43, 70, 0.06));
+}
+.pub-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 22px; padding: 16px 0; border-top: 1px solid var(--line); }
+.pub-list .pub-row:first-child { border-top: 0; }
+.pub-row.pub-year-start:not(:first-child) { border-top: 1px solid rgba(0, 117, 194, 0.35); }
+.pub-year { font-weight: 800; font-size: 1.02rem; letter-spacing: -0.01em; color: #0075c2; line-height: 1.5; }
+.pub-title { margin: 0 0 4px; font-size: 1rem; line-height: 1.45; font-weight: 700; }
+.pub-meta { margin: 0 0 6px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em; color: var(--muted, #5b708a); }
+.pub-authors { margin: 0; font-size: 0.86rem; line-height: 1.55; color: var(--muted, #5b708a); }
+@media (max-width: 640px) {
+  .pub-row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .pub-row:not(.pub-year-start) .pub-year { display: none; }
+}
+
+/* Research: whole card opens the details modal */
+.research-card-clickable { cursor: pointer; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+/* Guarded like the other lift-and-shadow hovers: a tap applies :hover, and a
+   32px blurred shadow repainting as the dialog opens is work at the worst
+   moment. See docs/performance-notes.md. */
+@media (hover: hover) and (pointer: fine) {
+  .research-card-clickable:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(15, 43, 70, 0.14); }
+}
+.research-card-clickable:focus-visible { outline: 3px solid rgba(0, 117, 194, 0.45); outline-offset: 2px; }
+.research-card-clickable .research-card-figure { pointer-events: none; }
+.research-details-figure { margin: 14px 0 0; }
+.research-details-figure img { max-width: 100%; border-radius: 10px; }
+
+/* News: related-link chips */
+.news-link-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
+.news-links-label-chip { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted, #5b708a); }
+a.news-link-chip { display: inline-flex; align-items: center; padding: 4px 12px; border: 1px solid rgba(0, 117, 194, 0.35); border-radius: 999px; font-size: 0.82rem; font-weight: 600; color: #0075c2; text-decoration: none; background: rgba(0, 117, 194, 0.05); }
+a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
+
+/* Join Us: numbered checklist */
+.joinus-steps { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.joinus-steps li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 12px; align-items: start; }
+.joinus-step-num { width: 26px; height: 26px; border-radius: 50%; background: #0075c2; color: #fff; font-size: 0.82rem; font-weight: 700; display: grid; place-items: center; margin-top: 1px; }

@@ -33,30 +33,27 @@ title: Publications
     {% endif %}
 
     <h2 class="section-title section-title-sm all-publications-title">All publications</h2>
-    <div class="news-feed">
+    <div class="pub-list">
+      {% assign prev_year = "" %}
       {% for item in site.data.publications %}
-      <article class="news-card news-card-text-only publication-entry">
-        <div class="news-card-body">
-          <div class="list-meta">{{ item.venue }} · {{ item.year }}</div>
+      <article class="pub-row{% if item.year != prev_year %} pub-year-start{% endif %}">
+        <div class="pub-year">{% if item.year != prev_year %}{{ item.year }}{% endif %}</div>
+        <div>
           {% if item.url %}
-          <h2 class="news-card-title"><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></h2>
+          <h3 class="pub-title"><a class="publication-link" href="{{ item.url }}">{{ item.title }}</a></h3>
           {% else %}
-          <h2 class="news-card-title">{{ item.title }}</h2>
+          <h3 class="pub-title">{{ item.title }}</h3>
           {% endif %}
+          <p class="pub-meta">{{ item.venue }}</p>
           {% if item.authors %}
-          <p class="publication-authors">{% include highlight-members.html text=item.authors %}</p>
-          {% endif %}
-          {% if item.summary %}
-          <p>{{ item.summary }}</p>
-          {% endif %}
-          {% if item.doi %}
-          <p class="publication-doi">DOI: <a class="inline-link" href="{{ item.url }}">{{ item.doi }}</a></p>
+          <p class="pub-authors">{% include highlight-members.html text=item.authors %}</p>
           {% endif %}
           {% if item.support %}
           <p class="publication-support"><strong>Support:</strong> {{ item.support }}</p>
           {% endif %}
         </div>
       </article>
+      {% assign prev_year = item.year %}
       {% endfor %}
     </div>
   </div>

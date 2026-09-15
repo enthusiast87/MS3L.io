@@ -231,6 +231,18 @@
           opener.addEventListener('click', () => {
             openModal(opener.getAttribute('data-modal-open'));
           });
+
+          // The research cards announce themselves with role="button" and take
+          // focus with tabindex, but they are <article>s, so Enter and Space do
+          // nothing unless wired up. Real buttons already fire a click from the
+          // keyboard - listening as well would open the dialog twice and lose
+          // the element to return focus to.
+          if (opener.tagName === 'BUTTON') return;
+          opener.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ' && event.key !== 'Spacebar') return;
+            event.preventDefault();
+            openModal(opener.getAttribute('data-modal-open'));
+          });
         });
 
         modalClosers.forEach((closer) => {

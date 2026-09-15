@@ -12,18 +12,6 @@ title: Contact
       <p><strong>Institution:</strong> {{ site.data.lab.institution }}</p>
       <p><strong>Address:</strong> {{ contact.address }}</p>
 
-      {% if contact.position_inquiry_note %}
-      <h2>Position inquiries</h2>
-      <p>{{ contact.position_inquiry_note }}</p>
-      {% if contact.position_inquiry_items %}
-      <ul>
-        {% for item in contact.position_inquiry_items %}
-        <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-      {% endif %}
-
       <p><strong>Email:</strong></p>
       <ul>
         {% for item in contact.emails %}
@@ -31,6 +19,8 @@ title: Contact
         {% endfor %}
       </ul>
       <p><strong>Phone:</strong> {{ contact.phone }}</p>
+
+      <p>Interested in joining the lab? See <a class="inline-link" href="{{ '/join-us' | relative_url }}">Join Us</a> for positions and how to reach out.</p>
     </div>
   </div>
 </div>

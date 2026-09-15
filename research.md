@@ -8,20 +8,19 @@ title: Research
       <h1>Research Themes</h1>
       <p>
         MS<sup>3</sup>L develops membrane-enabled separations for sustainable chemical processing,
-        circular resource systems, and energy-related applications.
+        circular resource systems, and energy-related applications. Select a theme to see its
+        figure, core topics, methods, and selected papers.
       </p>
     </div>
 
     <div class="card-grid two research-theme-grid">
       {% for item in site.data.research %}
-      <article class="research-card">
-        <button class="research-card-figure" type="button" data-modal-open="research-figure-{{ forloop.index }}" aria-label="Enlarge the {{ item.title }} figure">
+      <article class="research-card research-card-clickable" role="button" tabindex="0"
+               data-modal-open="research-details-{{ forloop.index }}"
+               aria-label="Open {{ item.title }} details">
+        <div class="research-card-figure">
           <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}" loading="lazy">
-          <span class="research-figure-expand">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M9 21H3v-6"></path><path d="M21 3l-7 7"></path><path d="M3 21l7-7"></path></svg>
-            Enlarge
-          </span>
-        </button>
+        </div>
 
         <div class="research-card-caption">
           <div class="research-card-label">{{ item.title }}</div>
@@ -38,10 +37,10 @@ title: Research
           </div>
           {% endif %}
           <div class="research-card-actions">
-            <button class="research-details-button" type="button" data-modal-open="research-details-{{ forloop.index }}">
+            <span class="research-details-button">
               Details
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
-            </button>
+            </span>
           </div>
         </div>
       </article>
@@ -51,22 +50,10 @@ title: Research
 </div>
 
 {% comment %}
-  Two dialogs per theme, both driven by the modal handlers already in the
-  default layout: the figure on its own, and the detail the card leaves out.
+  One dialog per theme: the whole card opens it, matching the card-link grammar
+  used on the home page. The figure lives inside the dialog with its caption.
 {% endcomment %}
 {% for item in site.data.research %}
-<div class="content-modal" id="research-figure-{{ forloop.index }}" hidden>
-  <div class="content-modal-panel research-figure-panel">
-    <button class="modal-close" type="button" data-modal-close>Close</button>
-    <div class="research-figure-stage">
-      <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}">
-    </div>
-    {% if item.visual_caption %}
-    <p class="research-figure-caption">{{ item.visual_caption }}</p>
-    {% endif %}
-  </div>
-</div>
-
 <div class="content-modal" id="research-details-{{ forloop.index }}" hidden>
   <div class="content-modal-panel research-details-panel">
     <button class="modal-close" type="button" data-modal-close>Close</button>
@@ -76,6 +63,13 @@ title: Research
       <h2>{{ item.one_liner }}</h2>
       <p>{{ item.why_it_matters }}</p>
     </div>
+
+    <div class="research-figure-stage research-details-figure">
+      <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}">
+    </div>
+    {% if item.visual_caption %}
+    <p class="research-figure-caption">{{ item.visual_caption }}</p>
+    {% endif %}
 
     {% if item.visual_points %}
     <section class="research-details-section">
