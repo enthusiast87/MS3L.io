@@ -105,8 +105,10 @@
   <path class="dgm-flow" d="M314,66 L348,66"/>
   <text class="dgm-sub" x="348" y="56" text-anchor="end">purified</text>
 
-  <path class="dgm-flow dgm-flow-faint" d="M180,16 L180,38" marker-end="url(#dgm-arrow-faint)"/>
-  <text class="dgm-sub" x="190" y="24">wash solvent</text>
+  <text class="dgm-sub" x="180" y="14" text-anchor="middle">fresh wash solvent into every stage</text>
+  <path class="dgm-flow dgm-flow-faint" d="M84,20 L84,38" marker-end="url(#dgm-arrow-faint)"/>
+  <path class="dgm-flow dgm-flow-faint" d="M180,20 L180,38" marker-end="url(#dgm-arrow-faint)"/>
+  <path class="dgm-flow dgm-flow-faint" d="M276,20 L276,38" marker-end="url(#dgm-arrow-faint)"/>
 
   <rect class="dgm-stream" x="46" y="126" width="268" height="34" rx="6"/>
   <text class="dgm-sub" x="56" y="147">what the membrane lets through, stage by stage</text>
@@ -154,36 +156,38 @@
   <g transform="translate(232,86)"><circle class="dgm-solvent dgm-a-shed-down dgm-d2" r="3"/></g>
 </svg>
 
-{%- when "osmotic-power" -%}
+{%- when "diffusion-dialysis" -%}
 <svg class="dgm" viewBox="0 0 360 196" role="img" aria-label="{{ include.alt }}">
-  <rect class="dgm-stream" x="30" y="40" width="122" height="116" rx="8"/>
-  <text class="dgm-label" x="40" y="58">Fresh</text>
-  <text class="dgm-sub" x="40" y="71">low salinity</text>
+  <rect class="dgm-stream" x="36" y="40" width="122" height="120" rx="8"/>
+  <text class="dgm-label" x="46" y="58">Acid salt</text>
+  <text class="dgm-sub" x="46" y="71">cation + acid anion</text>
 
-  <rect class="dgm-mem" x="158" y="30" width="9" height="136" rx="4.5"/>
+  <rect class="dgm-mem" x="164" y="30" width="9" height="140" rx="4.5"/>
+  <text class="dgm-sub" x="168.5" y="24" text-anchor="middle">CEM</text>
 
-  <rect class="dgm-stream dgm-stream-draw" x="173" y="40" width="122" height="116" rx="8"/>
-  <text class="dgm-label" x="183" y="58">Draw</text>
-  <text class="dgm-sub" x="183" y="71">high salinity,</text>
-  <text class="dgm-sub" x="183" y="83">held under pressure</text>
+  <rect class="dgm-stream dgm-stream-base" x="179" y="40" width="122" height="120" rx="8"/>
+  <text class="dgm-label" x="189" y="58">CO<tspan font-size="7.5" dy="2">2</tspan><tspan dy="-2"> stream</tspan></text>
+  <text class="dgm-sub" x="189" y="71">carbonate forms here</text>
 
-  <path class="dgm-flow" d="M6,60 L26,60"/>
-  <path class="dgm-flow" d="M299,98 L322,98"/>
+  <path class="dgm-flow" d="M8,60 L32,60"/>
+  <path class="dgm-flow" d="M305,60 L348,60"/>
+  <text class="dgm-sub" x="348" y="50" text-anchor="end">mineral</text>
+  <path class="dgm-flow" d="M92,164 L92,190"/>
+  <text class="dgm-sub" x="100" y="186">purified acid</text>
 
-  {%- comment -%} the rotor the pressurised flow turns {%- endcomment -%}
-  <circle cx="338" cy="98" r="15" fill="none" stroke="#bdd0e4" stroke-width="1.5"/>
-  <g class="dgm-a-spin">
-    <path d="M338,86 L341,97 L335,97 z" fill="#0075c2"/>
-    <path d="M348,104 L337,101 L340,96 z" fill="#0099d9"/>
-    <path d="M328,104 L339,101 L336,96 z" fill="#00ada9"/>
+  {%- comment -%} cations cross, acid anions do not {%- endcomment -%}
+  <g transform="translate(134,104)">
+    <circle class="dgm-ion-pos dgm-a-cross dgm-d1" r="3.6"/>
+    <circle class="dgm-ion-pos dgm-a-cross dgm-d4" cy="22" r="3.6"/>
   </g>
-  <text class="dgm-sub" x="338" y="126" text-anchor="middle">power</text>
-
-  <g transform="translate(128,96)">
-    <circle class="dgm-solvent dgm-a-cross dgm-d1" r="3.4"/>
-    <circle class="dgm-solvent dgm-a-cross dgm-d3" cy="20" r="3.4"/>
-    <circle class="dgm-solvent dgm-a-cross dgm-d5" cy="-20" r="3.4"/>
+  <g transform="translate(128,86)">
+    <circle class="dgm-ion-keep dgm-a-bounce dgm-d2" r="4"/>
+    <circle class="dgm-ion-keep dgm-a-bounce dgm-d5" cy="46" r="4"/>
   </g>
+
+  {%- comment -%} what the arriving cation becomes {%- endcomment -%}
+  <rect x="246" y="120" width="34" height="18" rx="3" fill="#cfe6d9" stroke="#8cc3a6" stroke-width="1"/>
+  <text class="dgm-sub" x="263" y="133" text-anchor="middle">solid</text>
 </svg>
 
 {%- endcase -%}

@@ -614,6 +614,7 @@ a.card {
 
 /* One gap between the page intro card and whatever list follows it, so the
    Impact pages line up with each other regardless of their content type. */
+.page-card + .page-card,
 .page-card + .card-grid,
 .page-card + .news-feed,
 .page-card + .profile-section,
@@ -2433,8 +2434,10 @@ a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 .dgm-grid {
   display: grid;
   /* Two across, not three. At three the 360-wide viewBox scales to about 300
-     and the labels inside it go with it, down to the point of being unreadable. */
-  grid-template-columns: repeat(auto-fit, minmax(408px, 1fr));
+     and the labels inside it go with it, down to the point of being unreadable.
+     min() so the track can still fall below 408 on a narrow phone - a bare
+     minmax(408px, 1fr) holds that width and overflows the screen. */
+  grid-template-columns: repeat(auto-fit, minmax(min(408px, 100%), 1fr));
   gap: 18px;
   margin-top: 18px;
 }
@@ -2494,7 +2497,6 @@ a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 @keyframes dgm-cross { 0% { transform: translateX(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateX(96px); opacity: 0 } }
 @keyframes dgm-bounce { 0%, 100% { transform: translateX(0); opacity: 0.9 } 45% { transform: translateX(26px) } 55% { transform: translateX(26px) } }
 @keyframes dgm-carry { 0% { transform: translateX(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateX(200px); opacity: 0 } }
-@keyframes dgm-spin { to { transform: rotate(360deg) } }
 
 .dgm-a-up { animation: dgm-up 3.2s linear infinite; }
 .dgm-a-down { animation: dgm-down 3.2s linear infinite; }
@@ -2503,7 +2505,6 @@ a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 .dgm-a-cross { animation: dgm-cross 3.4s linear infinite; }
 .dgm-a-bounce { animation: dgm-bounce 2.6s ease-in-out infinite; }
 .dgm-a-carry { animation: dgm-carry 4.2s linear infinite; }
-.dgm-a-spin { animation: dgm-spin 2.4s linear infinite; transform-origin: center; transform-box: fill-box; }
 
 .dgm-d1 { animation-delay: 0s }
 .dgm-d2 { animation-delay: 0.7s }
@@ -2513,7 +2514,7 @@ a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 
 @media (prefers-reduced-motion: reduce) {
   .dgm-a-up, .dgm-a-down, .dgm-a-shed-up, .dgm-a-shed-down,
-  .dgm-a-cross, .dgm-a-bounce, .dgm-a-carry, .dgm-a-spin {
+  .dgm-a-cross, .dgm-a-bounce, .dgm-a-carry {
     animation: none;
     opacity: 0.9;
   }
