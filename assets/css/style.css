@@ -2496,7 +2496,7 @@ a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 @keyframes dgm-shed-down { 0% { transform: translateY(0); opacity: 0 } 18%, 82% { opacity: 0.95 } 100% { transform: translateY(24px); opacity: 0 } }
 @keyframes dgm-cross { 0% { transform: translateX(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateX(96px); opacity: 0 } }
 @keyframes dgm-bounce { 0%, 100% { transform: translateX(0); opacity: 0.9 } 45% { transform: translateX(26px) } 55% { transform: translateX(26px) } }
-@keyframes dgm-carry { 0% { transform: translateX(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateX(200px); opacity: 0 } }
+@keyframes dgm-spin { to { transform: rotate(360deg) } }
 
 .dgm-a-up { animation: dgm-up 3.2s linear infinite; }
 .dgm-a-down { animation: dgm-down 3.2s linear infinite; }
@@ -2504,7 +2504,9 @@ a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 .dgm-a-shed-down { animation: dgm-shed-down 3.2s linear infinite; }
 .dgm-a-cross { animation: dgm-cross 3.4s linear infinite; }
 .dgm-a-bounce { animation: dgm-bounce 2.6s ease-in-out infinite; }
-.dgm-a-carry { animation: dgm-carry 4.2s linear infinite; }
+/* Nine seconds a turn. The first attempt ran at 2.4 and the rotor read as a
+   smear - fast enough that it was not recognisable as a turbine at all. */
+.dgm-a-spin { animation: dgm-spin 9s linear infinite; transform-origin: center; transform-box: fill-box; }
 
 .dgm-d1 { animation-delay: 0s }
 .dgm-d2 { animation-delay: 0.7s }
@@ -2514,7 +2516,7 @@ a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 
 @media (prefers-reduced-motion: reduce) {
   .dgm-a-up, .dgm-a-down, .dgm-a-shed-up, .dgm-a-shed-down,
-  .dgm-a-cross, .dgm-a-bounce, .dgm-a-carry {
+  .dgm-a-cross, .dgm-a-bounce, .dgm-a-spin {
     animation: none;
     opacity: 0.9;
   }

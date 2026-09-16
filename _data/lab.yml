@@ -62,26 +62,17 @@ introduction:
           A dense membrane separates a feed from an extractant. The target molecule crosses the
           membrane into the extractant and leaves as product; larger species are rejected and stay
           in the feed, which leaves separately.
-      - key: staged-fractionation
-        title: Sharpening a cut, stage by stage
+      - key: retention
+        title: Holding the product back and washing the rest through
         summary: >-
-          <strong>Driven by pressure, with fresh wash solvent into every stage.</strong> Resolves
-          species too close in size for one pass to separate, which is what purifying a product
-          from its own by-products asks for.
+          <strong>Driven by pressure.</strong> With fresh wash solvent into every stage it sharpens
+          a cut between species of nearly the same size; without it the same stages simply take
+          solvent away, until a stream too dilute to be worth touching is concentrated enough to
+          crystallise or sell.
         alt: >-
-          Three membrane stages in series, each fed with fresh wash solvent. What passes each
-          membrane is collected below and the retained product carries on to the next stage, so
-          the product leaving the last stage is purified.
-      - key: concentration
-        title: Making a thin stream worth recovering
-        summary: >-
-          <strong>Driven by a temperature or pressure difference.</strong> Concentrates a stream
-          too dilute to be worth touching until the value can be crystallised or sold, and hands
-          back water clean enough to use again.
-        alt: >-
-          A dilute stream flows along one side of a membrane. Water passes through into a recovery
-          channel below while the dissolved value is retained, growing more concentrated toward the
-          outlet.
+          Two membrane stages in series. The product is retained and carried from stage to stage,
+          growing more concentrated, while solvent and smaller species pass through each membrane
+          into a collection channel below. Fresh wash solvent can be fed to each stage.
       - key: diffusion-dialysis
         title: Moving one ion and leaving the other
         summary: >-
@@ -93,6 +84,16 @@ introduction:
           Diffusion dialysis across a cation-exchange membrane. Cations from an acid salt stream
           cross into a carbon dioxide stream, where they form a solid carbonate; the acid anions
           are held back and the purified acid leaves on the feed side.
+      - key: osmotic-power
+        title: Getting work out of a salinity difference
+        summary: >-
+          <strong>Driven by the osmotic pressure between two waters.</strong> Where fresh meets
+          brine, water crosses the membrane on its own and arrives pressurised on the far side,
+          and that pressure turns a turbine. The gradient was going to be discarded anyway.
+        alt: >-
+          A membrane separates fresh water from a pressurised high-salinity draw solution. Water
+          crosses into the draw side, and the pressurised flow leaving it turns a turbine to
+          generate power.
   principal_investigator:
     name: Jihoon Kim
     current_period: March 2026 - present
