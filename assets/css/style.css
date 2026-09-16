@@ -2418,3 +2418,103 @@ a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 .joinus-steps { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
 .joinus-steps li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 12px; align-items: start; }
 .joinus-step-num { width: 26px; height: 26px; border-radius: 50%; background: #0075c2; color: #fff; font-size: 0.82rem; font-weight: 700; display: grid; place-items: center; margin-top: 1px; }
+
+
+/* Process diagrams ---------------------------------------------------------
+   One drawing vocabulary shared by every schematic on Introduction, so five
+   pictures read as one language rather than five styles: a membrane is always a
+   gradient bar, a bipolar membrane the darker one, a compartment a soft panel
+   tinted by what it holds, a species a dot in its own colour.
+
+   Everything that moves moves by `transform`. The hero particles animate `left`
+   and invalidate layout document-wide for it - see docs/redesign-notes.md - and
+   five more of those on one page would be worse than the problem they solve. */
+
+.dgm-grid {
+  display: grid;
+  /* Two across, not three. At three the 360-wide viewBox scales to about 300
+     and the labels inside it go with it, down to the point of being unreadable. */
+  grid-template-columns: repeat(auto-fit, minmax(408px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.dgm-card {
+  padding: 18px 20px 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.dgm-card h3 {
+  margin: 0 0 6px;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
+  font-size: 1.05rem;
+  color: var(--strong);
+}
+
+.dgm-card > p {
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.dgm {
+  contain: layout paint;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dgm-stream { fill: var(--surface-soft); stroke: var(--line); stroke-width: 1; }
+.dgm-stream-acid { fill: #fdf3e7; stroke: #e2c199; }
+.dgm-stream-base { fill: #eaf5ef; stroke: #a2d2b8; }
+.dgm-stream-draw { fill: #e6f1fb; stroke: #a8c8e6; }
+.dgm-mem { fill: url(#dgm-mem-grad); }
+.dgm-mem-bp { fill: url(#dgm-bp-grad); }
+.dgm-mem-label { font-size: 8.5px; font-weight: 700; letter-spacing: 0.06em; fill: #ffffff; }
+.dgm-label { font-size: 12px; font-weight: 700; fill: var(--strong); }
+.dgm-sub { font-size: 10px; fill: var(--muted); }
+.dgm-flow { fill: none; stroke: var(--accent-strong); stroke-width: 1.6; marker-end: url(#dgm-arrow); }
+.dgm-flow-faint { stroke: #9ab6d2; stroke-dasharray: 3 3; }
+
+.dgm-ion-neg { fill: var(--brand-secondary); }
+.dgm-ion-pos { fill: var(--brand-accent); }
+.dgm-ion-h { fill: #dd9433; }
+.dgm-ion-oh { fill: #2f9663; }
+.dgm-ion-keep { fill: var(--brand-ink); }
+.dgm-ion-pass { fill: var(--brand-secondary); }
+.dgm-solvent { fill: #7fc4e8; }
+
+@keyframes dgm-up { 0% { transform: translateY(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateY(-46px); opacity: 0 } }
+@keyframes dgm-down { 0% { transform: translateY(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateY(46px); opacity: 0 } }
+@keyframes dgm-shed-up { 0% { transform: translateY(0); opacity: 0 } 18%, 82% { opacity: 0.95 } 100% { transform: translateY(-24px); opacity: 0 } }
+@keyframes dgm-shed-down { 0% { transform: translateY(0); opacity: 0 } 18%, 82% { opacity: 0.95 } 100% { transform: translateY(24px); opacity: 0 } }
+@keyframes dgm-cross { 0% { transform: translateX(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateX(96px); opacity: 0 } }
+@keyframes dgm-bounce { 0%, 100% { transform: translateX(0); opacity: 0.9 } 45% { transform: translateX(26px) } 55% { transform: translateX(26px) } }
+@keyframes dgm-carry { 0% { transform: translateX(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateX(200px); opacity: 0 } }
+@keyframes dgm-spin { to { transform: rotate(360deg) } }
+
+.dgm-a-up { animation: dgm-up 3.2s linear infinite; }
+.dgm-a-down { animation: dgm-down 3.2s linear infinite; }
+.dgm-a-shed-up { animation: dgm-shed-up 3.2s linear infinite; }
+.dgm-a-shed-down { animation: dgm-shed-down 3.2s linear infinite; }
+.dgm-a-cross { animation: dgm-cross 3.4s linear infinite; }
+.dgm-a-bounce { animation: dgm-bounce 2.6s ease-in-out infinite; }
+.dgm-a-carry { animation: dgm-carry 4.2s linear infinite; }
+.dgm-a-spin { animation: dgm-spin 2.4s linear infinite; transform-origin: center; transform-box: fill-box; }
+
+.dgm-d1 { animation-delay: 0s }
+.dgm-d2 { animation-delay: 0.7s }
+.dgm-d3 { animation-delay: 1.4s }
+.dgm-d4 { animation-delay: 2.1s }
+.dgm-d5 { animation-delay: 2.8s }
+
+@media (prefers-reduced-motion: reduce) {
+  .dgm-a-up, .dgm-a-down, .dgm-a-shed-up, .dgm-a-shed-down,
+  .dgm-a-cross, .dgm-a-bounce, .dgm-a-carry, .dgm-a-spin {
+    animation: none;
+    opacity: 0.9;
+  }
+}

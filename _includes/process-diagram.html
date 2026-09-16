@@ -1,0 +1,189 @@
+{%- comment -%}
+  One schematic per key, drawn in the shared vocabulary defined in style.css
+  under "Process diagrams": a gradient bar is a membrane, the darker bar a
+  bipolar membrane, a soft panel a compartment tinted by what it holds, a dot a
+  species. All five share the 360x196 viewBox so they line up across the grid.
+
+  The aria-label carries the same information the drawing does, because a
+  schematic that only exists as shapes says nothing to a screen reader.
+{%- endcomment -%}
+{%- case include.key -%}
+
+{%- when "salt-split" -%}
+<svg class="dgm" viewBox="0 0 360 196" role="img" aria-label="{{ include.alt }}">
+  <rect class="dgm-mem-bp" x="86" y="18" width="188" height="7" rx="3"/>
+  <text class="dgm-mem-label" x="180" y="23.5" text-anchor="middle">BP</text>
+
+  <rect class="dgm-stream dgm-stream-acid" x="86" y="29" width="188" height="40" rx="6"/>
+  <text class="dgm-label" x="96" y="46">Acid</text>
+  <text class="dgm-sub" x="96" y="59">recovered product</text>
+
+  <rect class="dgm-mem" x="86" y="73" width="188" height="7" rx="3"/>
+  <text class="dgm-mem-label" x="180" y="78.5" text-anchor="middle">AEM</text>
+
+  <rect class="dgm-stream" x="86" y="84" width="188" height="40" rx="6"/>
+  <text class="dgm-label" x="96" y="101">Salt feed</text>
+  <text class="dgm-sub" x="96" y="114">e.g. sodium lactate</text>
+
+  <rect class="dgm-mem" x="86" y="128" width="188" height="7" rx="3"/>
+  <text class="dgm-mem-label" x="180" y="133.5" text-anchor="middle">CEM</text>
+
+  <rect class="dgm-stream dgm-stream-base" x="86" y="139" width="188" height="40" rx="6"/>
+  <text class="dgm-label" x="96" y="156">Base</text>
+  <text class="dgm-sub" x="96" y="169">returned upstream</text>
+
+  <rect class="dgm-mem-bp" x="86" y="183" width="188" height="7" rx="3"/>
+  <text class="dgm-mem-label" x="180" y="188.5" text-anchor="middle">BP</text>
+
+  <path class="dgm-flow" d="M26,104 L82,104"/>
+  <path class="dgm-flow" d="M278,49 L334,49"/>
+  <path class="dgm-flow" d="M278,159 L334,159"/>
+
+  <g transform="translate(214,100)">
+    <circle class="dgm-ion-neg dgm-a-up dgm-d1" r="3.4"/>
+    <circle class="dgm-ion-neg dgm-a-up dgm-d3" cx="15" r="3.4"/>
+  </g>
+  <g transform="translate(228,108)">
+    <circle class="dgm-ion-pos dgm-a-down dgm-d2" r="3.4"/>
+    <circle class="dgm-ion-pos dgm-a-down dgm-d4" cx="15" r="3.4"/>
+  </g>
+  <g transform="translate(208,28)">
+    <circle class="dgm-ion-h dgm-a-shed-down dgm-d1" r="2.6"/>
+    <circle class="dgm-ion-h dgm-a-shed-down dgm-d3" cx="13" r="2.6"/>
+  </g>
+  <g transform="translate(208,180)">
+    <circle class="dgm-ion-oh dgm-a-shed-up dgm-d2" r="2.6"/>
+    <circle class="dgm-ion-oh dgm-a-shed-up dgm-d4" cx="13" r="2.6"/>
+  </g>
+</svg>
+
+{%- when "selective-recovery" -%}
+<svg class="dgm" viewBox="0 0 360 196" role="img" aria-label="{{ include.alt }}">
+  <rect class="dgm-stream" x="40" y="36" width="125" height="124" rx="8"/>
+  <text class="dgm-label" x="50" y="54">Feed</text>
+  <text class="dgm-sub" x="50" y="67">broth or mixed liquid</text>
+
+  <rect class="dgm-mem" x="170" y="26" width="9" height="144" rx="4.5"/>
+
+  <rect class="dgm-stream dgm-stream-draw" x="184" y="36" width="125" height="124" rx="8"/>
+  <text class="dgm-label" x="194" y="54">Extractant</text>
+  <text class="dgm-sub" x="194" y="67">never mixes with it</text>
+
+  <path class="dgm-flow" d="M10,58 L36,58"/>
+  <path class="dgm-flow" d="M313,58 L348,58"/>
+  <text class="dgm-sub" x="348" y="48" text-anchor="end">product</text>
+  <path class="dgm-flow" d="M100,164 L100,190"/>
+  <text class="dgm-sub" x="108" y="186">rest of the feed</text>
+
+  <g transform="translate(140,104)">
+    <circle class="dgm-ion-pass dgm-a-cross dgm-d1" r="3.6"/>
+    <circle class="dgm-ion-pass dgm-a-cross dgm-d3" cy="18" r="3.6"/>
+    <circle class="dgm-ion-pass dgm-a-cross dgm-d5" cy="36" r="3.6"/>
+  </g>
+  <g transform="translate(112,86)">
+    <circle class="dgm-ion-keep dgm-a-bounce dgm-d2" r="4.4"/>
+    <circle class="dgm-ion-keep dgm-a-bounce dgm-d4" cy="22" r="4.4"/>
+  </g>
+</svg>
+
+{%- when "staged-fractionation" -%}
+<svg class="dgm" viewBox="0 0 360 196" role="img" aria-label="{{ include.alt }}">
+  <rect class="dgm-stream" x="46" y="42" width="76" height="48" rx="6"/>
+  <rect class="dgm-stream" x="142" y="42" width="76" height="48" rx="6"/>
+  <rect class="dgm-stream" x="238" y="42" width="76" height="48" rx="6"/>
+  <text class="dgm-sub" x="84" y="86" text-anchor="middle">stage 1</text>
+  <text class="dgm-sub" x="180" y="86" text-anchor="middle">stage 2</text>
+  <text class="dgm-sub" x="276" y="86" text-anchor="middle">stage 3</text>
+
+  <rect class="dgm-mem" x="46" y="90" width="76" height="6" rx="3"/>
+  <rect class="dgm-mem" x="142" y="90" width="76" height="6" rx="3"/>
+  <rect class="dgm-mem" x="238" y="90" width="76" height="6" rx="3"/>
+
+  <path class="dgm-flow" d="M10,66 L42,66"/>
+  <path class="dgm-flow" d="M122,66 L142,66"/>
+  <path class="dgm-flow" d="M218,66 L238,66"/>
+  <path class="dgm-flow" d="M314,66 L348,66"/>
+  <text class="dgm-sub" x="348" y="56" text-anchor="end">purified</text>
+
+  <path class="dgm-flow dgm-flow-faint" d="M180,16 L180,38" marker-end="url(#dgm-arrow-faint)"/>
+  <text class="dgm-sub" x="190" y="24">wash solvent</text>
+
+  <rect class="dgm-stream" x="46" y="126" width="268" height="34" rx="6"/>
+  <text class="dgm-sub" x="56" y="147">what the membrane lets through, stage by stage</text>
+
+  <g transform="translate(84,80)"><circle class="dgm-ion-pass dgm-a-shed-down dgm-d1" r="3.2"/></g>
+  <g transform="translate(180,80)"><circle class="dgm-ion-pass dgm-a-shed-down dgm-d3" r="3.2"/></g>
+  <g transform="translate(276,80)"><circle class="dgm-ion-pass dgm-a-shed-down dgm-d5" r="3.2"/></g>
+
+  <g transform="translate(58,62)">
+    <circle class="dgm-ion-keep dgm-a-carry dgm-d2" r="4.2"/>
+    <circle class="dgm-ion-keep dgm-a-carry dgm-d4" cy="12" r="4.2"/>
+  </g>
+</svg>
+
+{%- when "concentration" -%}
+<svg class="dgm" viewBox="0 0 360 196" role="img" aria-label="{{ include.alt }}">
+  <rect class="dgm-stream" x="40" y="40" width="260" height="50" rx="7"/>
+  <text class="dgm-label" x="50" y="58">Dilute stream</text>
+  <text class="dgm-sub" x="50" y="71">too dilute to be worth recovering</text>
+
+  <rect class="dgm-mem" x="40" y="94" width="260" height="7" rx="3.5"/>
+  <text class="dgm-mem-label" x="170" y="99.5" text-anchor="middle">MEMBRANE</text>
+
+  <rect class="dgm-stream dgm-stream-draw" x="40" y="120" width="260" height="40" rx="7"/>
+  <text class="dgm-label" x="50" y="138">Water</text>
+  <text class="dgm-sub" x="50" y="151">recovered for reuse</text>
+
+  <path class="dgm-flow" d="M10,64 L36,64"/>
+  <path class="dgm-flow" d="M304,64 L348,64"/>
+  <text class="dgm-sub" x="348" y="52" text-anchor="end">concentrate</text>
+
+  {%- comment -%} solute stays and crowds toward the outlet {%- endcomment -%}
+  <circle class="dgm-ion-keep" cx="86" cy="80" r="3.4" opacity="0.85"/>
+  <circle class="dgm-ion-keep" cx="140" cy="78" r="3.4" opacity="0.85"/>
+  <circle class="dgm-ion-keep" cx="196" cy="81" r="3.4" opacity="0.9"/>
+  <circle class="dgm-ion-keep" cx="214" cy="76" r="3.4" opacity="0.9"/>
+  <circle class="dgm-ion-keep" cx="246" cy="80" r="3.4"/>
+  <circle class="dgm-ion-keep" cx="262" cy="74" r="3.4"/>
+  <circle class="dgm-ion-keep" cx="276" cy="82" r="3.4"/>
+  <circle class="dgm-ion-keep" cx="288" cy="75" r="3.4"/>
+
+  <g transform="translate(70,86)"><circle class="dgm-solvent dgm-a-shed-down dgm-d1" r="3"/></g>
+  <g transform="translate(124,86)"><circle class="dgm-solvent dgm-a-shed-down dgm-d3" r="3"/></g>
+  <g transform="translate(178,86)"><circle class="dgm-solvent dgm-a-shed-down dgm-d5" r="3"/></g>
+  <g transform="translate(232,86)"><circle class="dgm-solvent dgm-a-shed-down dgm-d2" r="3"/></g>
+</svg>
+
+{%- when "osmotic-power" -%}
+<svg class="dgm" viewBox="0 0 360 196" role="img" aria-label="{{ include.alt }}">
+  <rect class="dgm-stream" x="30" y="40" width="122" height="116" rx="8"/>
+  <text class="dgm-label" x="40" y="58">Fresh</text>
+  <text class="dgm-sub" x="40" y="71">low salinity</text>
+
+  <rect class="dgm-mem" x="158" y="30" width="9" height="136" rx="4.5"/>
+
+  <rect class="dgm-stream dgm-stream-draw" x="173" y="40" width="122" height="116" rx="8"/>
+  <text class="dgm-label" x="183" y="58">Draw</text>
+  <text class="dgm-sub" x="183" y="71">high salinity,</text>
+  <text class="dgm-sub" x="183" y="83">held under pressure</text>
+
+  <path class="dgm-flow" d="M6,60 L26,60"/>
+  <path class="dgm-flow" d="M299,98 L322,98"/>
+
+  {%- comment -%} the rotor the pressurised flow turns {%- endcomment -%}
+  <circle cx="338" cy="98" r="15" fill="none" stroke="#bdd0e4" stroke-width="1.5"/>
+  <g class="dgm-a-spin">
+    <path d="M338,86 L341,97 L335,97 z" fill="#0075c2"/>
+    <path d="M348,104 L337,101 L340,96 z" fill="#0099d9"/>
+    <path d="M328,104 L339,101 L336,96 z" fill="#00ada9"/>
+  </g>
+  <text class="dgm-sub" x="338" y="126" text-anchor="middle">power</text>
+
+  <g transform="translate(128,96)">
+    <circle class="dgm-solvent dgm-a-cross dgm-d1" r="3.4"/>
+    <circle class="dgm-solvent dgm-a-cross dgm-d3" cy="20" r="3.4"/>
+    <circle class="dgm-solvent dgm-a-cross dgm-d5" cy="-20" r="3.4"/>
+  </g>
+</svg>
+
+{%- endcase -%}

@@ -31,5 +31,23 @@ title: Introduction
         {% endfor %}
       </div>
     </div>
+
+    {% assign separations = lab.introduction.separations %}
+    {% if separations %}
+    <section class="page-card">
+      <h2>{{ separations.title }}</h2>
+      <p>{{ separations.lead }}</p>
+      {% include diagram-defs.html %}
+      <div class="dgm-grid">
+        {% for item in separations.items %}
+        <article class="dgm-card">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.summary }}</p>
+          {% include process-diagram.html key=item.key alt=item.alt %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
   </div>
 </div>
