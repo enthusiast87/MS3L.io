@@ -88,39 +88,43 @@
 
 {%- when "retention" -%}
 <svg class="dgm" viewBox="0 0 360 196" role="img" aria-label="{{ include.alt }}">
-  <text class="dgm-sub" x="180" y="16" text-anchor="middle">wash solvent, when the job is to sharpen a cut</text>
-  <path class="dgm-flow dgm-flow-faint" d="M108,22 L108,44" marker-end="url(#dgm-arrow-faint)"/>
-  <path class="dgm-flow dgm-flow-faint" d="M252,22 L252,44" marker-end="url(#dgm-arrow-faint)"/>
+  {%- comment -%} wash into the first stage only. Adding it to the second would
+      hold the volume up, which is the opposite of what that stage is for {%- endcomment -%}
+  <text class="dgm-sub" x="108" y="18" text-anchor="middle">wash solvent</text>
+  <path class="dgm-flow dgm-flow-faint" d="M108,24 L108,44" marker-end="url(#dgm-arrow-faint)"/>
+  <text class="dgm-sub" x="252" y="18" text-anchor="middle">no wash</text>
 
   <rect class="dgm-stream" x="46" y="48" width="124" height="48" rx="6"/>
   <rect class="dgm-stream" x="190" y="48" width="124" height="48" rx="6"/>
-  <text class="dgm-sub" x="108" y="116" text-anchor="middle">stage 1</text>
-  <text class="dgm-sub" x="252" y="116" text-anchor="middle">stage 2</text>
 
   <rect class="dgm-mem" x="46" y="96" width="124" height="6" rx="3"/>
   <rect class="dgm-mem" x="190" y="96" width="124" height="6" rx="3"/>
+
+  <text class="dgm-sub" x="108" y="116" text-anchor="middle">diafiltration</text>
+  <text class="dgm-sub" x="252" y="116" text-anchor="middle">concentration</text>
 
   <path class="dgm-flow" d="M10,72 L42,72"/>
   <path class="dgm-flow" d="M170,72 L190,72"/>
   <path class="dgm-flow" d="M314,72 L350,72"/>
   <text class="dgm-sub" x="350" y="62" text-anchor="end">concentrated</text>
 
-  {%- comment -%} the retained species, crowding as solvent leaves {%- endcomment -%}
-  <circle class="dgm-ion-keep" cx="74" cy="66" r="3.6" opacity="0.9"/>
-  <circle class="dgm-ion-keep" cx="128" cy="70" r="3.6" opacity="0.9"/>
-  <circle class="dgm-ion-keep" cx="216" cy="64" r="3.6"/>
-  <circle class="dgm-ion-keep" cx="232" cy="72" r="3.6"/>
-  <circle class="dgm-ion-keep" cx="256" cy="66" r="3.6"/>
-  <circle class="dgm-ion-keep" cx="272" cy="74" r="3.6"/>
-  <circle class="dgm-ion-keep" cx="290" cy="67" r="3.6"/>
+  {%- comment -%} same product, same count, less and less liquid around it {%- endcomment -%}
+  <circle class="dgm-ion-keep" cx="72" cy="64" r="3.6"/>
+  <circle class="dgm-ion-keep" cx="104" cy="76" r="3.6"/>
+  <circle class="dgm-ion-keep" cx="140" cy="66" r="3.6"/>
+  <circle class="dgm-ion-keep" cx="236" cy="64" r="3.6"/>
+  <circle class="dgm-ion-keep" cx="252" cy="74" r="3.6"/>
+  <circle class="dgm-ion-keep" cx="268" cy="64" r="3.6"/>
+  <circle class="dgm-ion-keep" cx="262" cy="86" r="3.6"/>
+  <circle class="dgm-ion-keep" cx="282" cy="76" r="3.6"/>
 
   <rect class="dgm-stream dgm-stream-draw" x="46" y="128" width="268" height="34" rx="6"/>
-  <text class="dgm-sub" x="56" y="149">solvent, and whatever the membrane let through</text>
+  <text class="dgm-sub" x="56" y="149">what the membrane let through, and the solvent with it</text>
 
-  <g transform="translate(96,88)"><circle class="dgm-solvent dgm-a-shed-down dgm-d1" r="3.2"/></g>
-  <g transform="translate(144,88)"><circle class="dgm-solvent dgm-a-shed-down dgm-d3" r="3.2"/></g>
-  <g transform="translate(240,88)"><circle class="dgm-solvent dgm-a-shed-down dgm-d2" r="3.2"/></g>
-  <g transform="translate(288,88)"><circle class="dgm-solvent dgm-a-shed-down dgm-d5" r="3.2"/></g>
+  <g transform="translate(88,88)"><circle class="dgm-ion-pass dgm-a-shed-down dgm-d1" r="3.2"/></g>
+  <g transform="translate(132,88)"><circle class="dgm-ion-pass dgm-a-shed-down dgm-d3" r="3.2"/></g>
+  <g transform="translate(212,88)"><circle class="dgm-solvent dgm-a-shed-down dgm-d2" r="3.2"/></g>
+  <g transform="translate(296,88)"><circle class="dgm-solvent dgm-a-shed-down dgm-d5" r="3.2"/></g>
 </svg>
 
 {%- when "diffusion-dialysis" -%}
@@ -155,6 +159,39 @@
   {%- comment -%} what the arriving cation becomes {%- endcomment -%}
   <rect x="246" y="120" width="34" height="18" rx="3" fill="#cfe6d9" stroke="#8cc3a6" stroke-width="1"/>
   <text class="dgm-sub" x="263" y="133" text-anchor="middle">solid</text>
+</svg>
+
+{%- when "md-crystallization" -%}
+<svg class="dgm" viewBox="0 0 360 196" role="img" aria-label="{{ include.alt }}">
+  <rect class="dgm-stream dgm-stream-acid" x="40" y="40" width="258" height="52" rx="7"/>
+  <text class="dgm-label" x="50" y="58">Warm feed</text>
+  <text class="dgm-sub" x="50" y="71">the salt cannot follow the vapour</text>
+
+  <rect class="dgm-mem" x="40" y="96" width="258" height="7" rx="3.5"/>
+  <text class="dgm-mem-label" x="169" y="101.5" text-anchor="middle">HYDROPHOBIC</text>
+
+  <rect class="dgm-stream dgm-stream-draw" x="40" y="120" width="258" height="40" rx="7"/>
+  <text class="dgm-label" x="50" y="138">Distillate</text>
+  <text class="dgm-sub" x="50" y="151">cooler, and clean</text>
+
+  <path class="dgm-flow" d="M10,64 L36,64"/>
+  <path class="dgm-flow" d="M302,64 L348,64"/>
+  <text class="dgm-sub" x="348" y="52" text-anchor="end">crystals</text>
+
+  {%- comment -%} past saturation the mineral stops being dissolved {%- endcomment -%}
+  <circle class="dgm-ion-keep" cx="150" cy="82" r="3" opacity="0.8"/>
+  <circle class="dgm-ion-keep" cx="186" cy="80" r="3" opacity="0.85"/>
+  <g fill="#0b2f5b">
+    <rect x="222" y="76" width="7" height="7" rx="1" transform="rotate(20 225.5 79.5)"/>
+    <rect x="244" y="80" width="8" height="8" rx="1" transform="rotate(-15 248 84)"/>
+    <rect x="264" y="74" width="9" height="9" rx="1" transform="rotate(35 268.5 78.5)"/>
+    <rect x="280" y="82" width="8" height="8" rx="1" transform="rotate(-8 284 86)"/>
+  </g>
+
+  <g transform="translate(78,88)"><circle class="dgm-solvent dgm-a-shed-down dgm-d1" r="3"/></g>
+  <g transform="translate(120,88)"><circle class="dgm-solvent dgm-a-shed-down dgm-d3" r="3"/></g>
+  <g transform="translate(164,88)"><circle class="dgm-solvent dgm-a-shed-down dgm-d5" r="3"/></g>
+  <g transform="translate(204,88)"><circle class="dgm-solvent dgm-a-shed-down dgm-d2" r="3"/></g>
 </svg>
 
 {%- when "osmotic-power" -%}

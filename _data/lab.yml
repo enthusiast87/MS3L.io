@@ -36,60 +36,62 @@ introduction:
     - Resource recovery from complex liquid streams
     - Membrane-enabled energy and electrochemical separations
   separations:
-    title: Five separations
+    title: Six separations
     lead: >-
-      Separation is not one operation. Most of the group's work is built from five moves, each with
-      its own driving force; the research themes are these moves put to a problem.
+      Separation is not one operation, and the group does not work on one. Each of these runs on a
+      different driving force; the research themes are these put to a problem.
     items:
       - key: salt-split
-        title: Splitting a salt back into acid and base
+        title: A salt back into its acid and base
         summary: >-
-          <strong>Driven by an electric field alone.</strong> Recovers the acid and the base
-          separately from one salt stream - organic and inorganic acids, bases and non-ionic
-          species together - consuming no reagent and leaving no waste salt behind.
+          <strong>Electric field.</strong> One stream in, acid and base out separately, no reagent
+          spent and no waste salt left.
         alt: >-
           Bipolar membrane electrodialysis. A salt feed enters the middle compartment; anions cross
           an anion-exchange membrane into the acid compartment above and cations cross a
           cation-exchange membrane into the base compartment below, while bipolar membranes at
           either end supply hydrogen and hydroxide ions.
       - key: selective-recovery
-        title: Taking one molecule out of a mixture
+        title: One molecule out of a mixture
         summary: >-
-          <strong>Driven by the concentration difference across a dense membrane.</strong> Draws
-          one product into an extractant that never mixes with the feed, without boiling anything -
-          so a fuel can be taken from a broth while the broth keeps working.
+          <strong>Concentration difference.</strong> The target crosses into an extractant that
+          never mixes with the feed, and nothing is boiled.
         alt: >-
           A dense membrane separates a feed from an extractant. The target molecule crosses the
           membrane into the extractant and leaves as product; larger species are rejected and stay
           in the feed, which leaves separately.
       - key: retention
-        title: Holding the product back and washing the rest through
+        title: A cut sharpened, then a volume reduced
         summary: >-
-          <strong>Driven by pressure.</strong> With fresh wash solvent into every stage it sharpens
-          a cut between species of nearly the same size; without it the same stages simply take
-          solvent away, until a stream too dilute to be worth touching is concentrated enough to
-          crystallise or sell.
+          <strong>Pressure.</strong> Wash solvent into the first stage to sharpen the cut, none
+          into the second so the volume comes down.
         alt: >-
-          Two membrane stages in series. The product is retained and carried from stage to stage,
-          growing more concentrated, while solvent and smaller species pass through each membrane
-          into a collection channel below. Fresh wash solvent can be fed to each stage.
+          Two membrane stages in series. The first is fed fresh wash solvent, which carries smaller
+          species through the membrane while the product is retained at constant volume. The second
+          has no wash, so solvent leaves and the retained product concentrates.
       - key: diffusion-dialysis
-        title: Moving one ion and leaving the other
+        title: One ion moved, the other left
         summary: >-
-          <strong>Driven by the concentration gradient alone - no current, no pressure.</strong> A
-          cation-exchange membrane passes the cations and holds the anions back, which is how a
-          salt can be carbonated for CO<sub>2</sub> mineralisation while the acid is purified where
-          it stands.
+          <strong>Concentration gradient - no current, no pressure.</strong> Cations cross and the
+          acid anions stay, carbonating for CO<sub>2</sub> mineralisation.
         alt: >-
           Diffusion dialysis across a cation-exchange membrane. Cations from an acid salt stream
           cross into a carbon dioxide stream, where they form a solid carbonate; the acid anions
           are held back and the purified acid leaves on the feed side.
-      - key: osmotic-power
-        title: Getting work out of a salinity difference
+      - key: md-crystallization
+        title: Concentrated past saturation, then crystallised
         summary: >-
-          <strong>Driven by the osmotic pressure between two waters.</strong> Where fresh meets
-          brine, water crosses the membrane on its own and arrives pressurised on the far side,
-          and that pressure turns a turbine. The gradient was going to be discarded anyway.
+          <strong>Temperature difference.</strong> Vapour crosses a hydrophobic membrane and the
+          salt cannot, until the stream saturates and the mineral comes out solid.
+        alt: >-
+          Membrane distillation with crystallisation. A warm feed runs along a hydrophobic
+          membrane; water vapour crosses to a cooler distillate channel while dissolved salt is
+          retained, and the feed concentrates past saturation so crystals form and are collected.
+      - key: osmotic-power
+        title: Work out of a salinity difference
+        summary: >-
+          <strong>Osmotic pressure.</strong> Water crosses to the brine on its own and arrives
+          pressurised; the pressure turns a turbine.
         alt: >-
           A membrane separates fresh water from a pressurised high-salinity draw solution. Water
           crosses into the draw side, and the pressurised flow leaving it turns a turbine to
