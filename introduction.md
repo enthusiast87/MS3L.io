@@ -33,7 +33,7 @@ title: Introduction
     </div>
 
     {% assign separations = lab.introduction.separations %}
-    {% if separations %}
+    {% if separations and separations.published %}
     <section class="page-card">
       <h2>{{ separations.title }}</h2>
       <p>{{ separations.lead }}</p>

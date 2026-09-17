@@ -210,13 +210,17 @@
   <path class="dgm-flow" d="M4,64 L22,64"/>
   <path class="dgm-flow" d="M275,100 L292,100"/>
 
-  {%- comment -%} the rotor the pressurised flow turns. Nine seconds a turn: at
-      the 2.4 it first had, it read as a blur and not as a turbine {%- endcomment -%}
+  {%- comment -%} One blade, placed three times at 120 degrees about the hub, so
+      the shape is symmetric about (322,100) by construction. transform-box:
+      fill-box spins about the centre of the bounding box, and three blades drawn
+      freehand had a box centred 3.5px above the hub - which is a wobble, not a
+      rotation. Nine seconds a turn; at the 2.4 it started with it read as a
+      smear rather than a turbine. {%- endcomment -%}
   <circle cx="322" cy="100" r="22" fill="#f2f8fd" stroke="#bdd0e4" stroke-width="1.5"/>
-  <g class="dgm-a-spin">
-    <path d="M322,82 C327,90 327,95 324,99 L320,99 C317,95 317,90 322,82 z" fill="#0075c2"/>
-    <path d="M338,110 C329,111 324,109 322,104 L324,101 C329,100 334,103 338,110 z" fill="#0099d9"/>
-    <path d="M306,110 C310,103 315,100 320,101 L322,104 C320,109 315,111 306,110 z" fill="#00ada9"/>
+  <g class="dgm-a-spin" style="transform-box: view-box; transform-origin: 322px 100px;">
+    <path d="M322,100 C326.5,92 326.5,85 322,78 C317.5,85 317.5,92 322,100 z" fill="#0075c2"/>
+    <path d="M322,100 C326.5,92 326.5,85 322,78 C317.5,85 317.5,92 322,100 z" fill="#0099d9" transform="rotate(120 322 100)"/>
+    <path d="M322,100 C326.5,92 326.5,85 322,78 C317.5,85 317.5,92 322,100 z" fill="#00ada9" transform="rotate(240 322 100)"/>
   </g>
   <circle cx="322" cy="100" r="3" fill="#0b2f5b"/>
   <text class="dgm-sub" x="322" y="136" text-anchor="middle">power</text>

@@ -36,6 +36,9 @@ introduction:
     - Resource recovery from complex liquid streams
     - Membrane-enabled energy and electrochemical separations
   separations:
+    # Off the live site until the set is settled. Flip to true to publish; the
+    # section renders only when this is true, so nothing else has to move.
+    published: false
     title: Six separations
     lead: >-
       Separation is not one operation, and the group does not work on one. Each of these runs on a

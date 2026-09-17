@@ -2505,8 +2505,14 @@ a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
 .dgm-a-cross { animation: dgm-cross 3.4s linear infinite; }
 .dgm-a-bounce { animation: dgm-bounce 2.6s ease-in-out infinite; }
 /* Nine seconds a turn. The first attempt ran at 2.4 and the rotor read as a
-   smear - fast enough that it was not recognisable as a turbine at all. */
-.dgm-a-spin { animation: dgm-spin 9s linear infinite; transform-origin: center; transform-box: fill-box; }
+   smear - fast enough that it was not recognisable as a turbine at all.
+
+   No transform-origin here: whatever spins has to name its own centre in
+   viewBox coordinates. `transform-box: fill-box` with `center` looks right and
+   is not - it spins about the middle of the bounding box, and a three-bladed
+   rotor reaches 22px up but only 11px down, so its box sits 4px above the hub
+   and the thing wobbles instead of turning. */
+.dgm-a-spin { animation: dgm-spin 9s linear infinite; }
 
 .dgm-d1 { animation-delay: 0s }
 .dgm-d2 { animation-delay: 0.7s }
