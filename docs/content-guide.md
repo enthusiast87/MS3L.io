@@ -28,9 +28,36 @@ order they render. These are all **newest first**, so new entries go at the
 - `lab.invited_talks.items`
 
 In `patents.yml`, a patent family registered in several countries is a single
-entry with a combined `country` (`Korea (KR), US, China`) and one `*_patent`
-field per additional registration, rather than one entry per country. It is
-dated by its Korean registration.
+entry rather than one entry per country. The entry describes the Korean
+registration; every other jurisdiction goes in a `foreign` list:
+
+```yaml
+- title: Method for continuous recovering styrene monomer from waste polystyrene
+  inventors: ...
+  country: KR
+  registration: Korean Patent Registration Number 10-2551161
+  pct: PCT/KR2023/005183
+  foreign:
+    - country: JP
+      registration: Japanese Patent Registration Number 7899343
+      date: 2026-07-24
+  date: 2023-06-29
+```
+
+Countries are WIPO ST.3 codes - `KR`, `US`, `CN`, `JP` - so the meta line reads
+the same way whichever office granted. The template builds that line by
+appending each `foreign` country to the entry's own, so there is no combined
+country string to keep in step with the registrations underneath it.
+
+The entry's `date` is the Korean registration, which fixes its position in the
+file; a foreign registration granted years later does not move it up. Each
+`foreign` entry carries its own `date`, and that is where a foreign grant date
+belongs - it has nowhere else to go.
+
+Add a foreign registration by adding to the list, not by inventing a field. The
+old shape was one hardcoded `us_patent` / `china_patent` field per country with
+a matching block in `patents.md`, and a field added without its block sat in the
+data displaying nothing, with no error to notice.
 
 ## Members (`_data/members.yml`)
 
@@ -154,3 +181,46 @@ The `.member-grid` / `.alumni-grid` overrides therefore sit at the bottom of the
 file, after both definitions. Put new responsive overrides after the rule they
 are meant to beat, and check the computed `grid-template-columns` at a narrow
 width rather than reading the cascade.
+
+The same trap catches JS-applied classes, and it bit a second time. The scroll
+reveal's `.reveal` / `.reveal.is-visible` rules live near the end of the file
+and were left on the element permanently, so they outranked `.card-link`'s
+`transform` and `transition` - identical specificity, later wins - and the card
+hover lift never fired at all. The fix was to stop the classes outliving the
+animation rather than to fight the cascade; see
+[the performance notes](performance-notes.md).
+
+The lesson both times: a rule that loses here loses *silently*. Check the
+computed value on the element, at the viewport and pointer type you care about,
+rather than reading down the stylesheet.
+
+## CSS: rules outlive the markup that used them
+
+A redesign that removes markup leaves its rules behind, and nothing complains.
+By 2026-09-15 the stylesheet carried 583 lines - about a fifth of it - that no
+page could reach: the hero acrostic column, an old hero card, a metrics strip, a
+logo strip, a CTA panel, the modal layout that predated `.content-modal`, and
+the news link list and figure Enlarge button the September redesign replaced.
+
+`python scripts/find_dead_css.py` lists selectors no template can produce. It
+reads class attributes, and also the classes the layout's JS adds at runtime -
+`reveal`, `is-visible`, `modal-open` appear in no class attribute and deleting
+their rules would break the animation with nothing to show for it in the diff.
+
+Two things to know before deleting what it prints.
+
+**Parse the stylesheet, do not scan it.** The comments in this file contain
+braces and selector-like fragments. A regex scanner reads those as rules: a
+first attempt at this proposed removing 1248 lines including `@media (hover:
+hover)` and `.research-figure-stage`, both live. The script uses `tinycss2`, and
+a serialize-without-changes pass should return the file byte for byte before you
+trust anything it says.
+
+**Then prove the deletion changed nothing.** Save the live pages, inline the old
+stylesheet into one copy and the new one into another, render both and compare
+every element's box and computed style. Removing the 583 lines was checked this
+way across ten pages and 1810 elements, and matched exactly - except the hero
+particles, which sit at whatever point their animation had reached, and which
+matched too once `prefers-reduced-motion: reduce` was emulated. Without that
+comparison the only evidence is that the pages still look about right, which is
+not evidence.

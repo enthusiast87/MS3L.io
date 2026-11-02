@@ -43,7 +43,12 @@ def entries(path):
             continue
         if current is None:
             continue
-        match = re.match(r"^\s{2,}([A-Za-z0-9_]+):\s*(.*)$", line)
+        # Exactly two spaces, so only the entry's own keys are read. Nested
+        # mappings sit at six - patents.yml `foreign:` carries its own
+        # `registration` and `date`, news.yml nests too - and a looser match
+        # overwrites the entry's value with the nested one, validating a field
+        # that was never the one in question.
+        match = re.match(r"^\s{2}([A-Za-z0-9_]+):\s*(.*)$", line)
         if match:
             current[match.group(1)] = clean_value(match.group(2))
     if current is not None:

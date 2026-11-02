@@ -9,19 +9,10 @@ title: Home
   <div class="container">
     <div class="hero-board">
       <div class="hero-main">
-        <div class="hero-identity">
-          <div class="hero-acronym-block" aria-label="{{ lab.full_name | strip_html }}">
-            <div class="hero-acronym-line"><span class="hero-initial">M</span><span class="hero-acronym-word">embrane-based</span></div>
-            <div class="hero-acronym-line"><span class="hero-initial">S</span><span class="hero-acronym-word">ustainable</span></div>
-            <div class="hero-acronym-line"><span class="hero-initial">S</span><span class="hero-acronym-word">eparation</span></div>
-            <div class="hero-acronym-line"><span class="hero-initial">S</span><span class="hero-acronym-word">olutions</span></div>
-            <div class="hero-acronym-line"><span class="hero-initial">L</span><span class="hero-acronym-word">aboratory</span></div>
-          </div>
-          <div class="hero-identity-copy">
-            <h1>MS<sup>3</sup>L</h1>
-            <p class="hero-mission">{{ lab.hero.mission }}</p>
-            <p class="hero-subcopy">{{ lab.subtitle }}</p>
-          </div>
+        <div class="hero-identity-v2">
+          <h1>MS<sup>3</sup>L</h1>
+          <p class="hero-fullname"><b>M</b>embrane-based <b>S</b>ustainable <b>S</b>eparation <b>S</b>olutions <b>L</b>aboratory</p>
+          <p class="hero-mission">{{ lab.hero.mission }}</p>
         </div>
 
         <div class="hero-process" aria-hidden="true">

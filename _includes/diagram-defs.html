@@ -1,0 +1,25 @@
+{%- comment -%}
+  Gradients and the arrowhead every process diagram references, emitted once per
+  page. Each diagram is its own <svg>, but `url(#id)` resolves against the whole
+  document, so repeating these inside all five would only duplicate ids.
+{%- endcomment -%}
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <linearGradient id="dgm-mem-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0075c2"/>
+      <stop offset="100%" stop-color="#00ada9"/>
+    </linearGradient>
+    <linearGradient id="dgm-bp-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0b2f5b"/>
+      <stop offset="100%" stop-color="#0075c2"/>
+    </linearGradient>
+    <marker id="dgm-arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#0075c2"/>
+    </marker>
+    <marker id="dgm-arrow-faint" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9 z" fill="#9ab6d2"/>
+    </marker>
+  </defs>
+</svg>

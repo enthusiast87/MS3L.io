@@ -33,19 +33,13 @@ title: News
           {% if item.note %}<p class="news-note">{{ item.note }}</p>{% endif %}
 
           {% if item.links %}
-          <div class="news-links">
-            <span class="news-links-label">Related links</span>
+          <div class="news-link-chips">
+            <span class="news-links-label-chip">Related</span>
             {% for link in item.links %}
-            <a class="publication-link" href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}<span class="news-links-sep">/</span>{% endunless %}
+            <a class="news-link-chip" href="{{ link.url }}">{{ link.label }}</a>
             {% endfor %}
           </div>
           {% endif %}
-
-          <div class="detail-actions">
-            {% if item.url %}
-            <a class="btn btn-primary btn-compact" href="{{ item.url }}">Read more</a>
-            {% endif %}
-          </div>
         </div>
       </article>
       {% endfor %}

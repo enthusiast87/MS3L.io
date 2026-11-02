@@ -239,15 +239,6 @@ main {
   line-height: 1.2;
 }
 
-.hero-identity {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 20px;
-  flex: 1;
-}
-
-.hero-identity-copy,
 .hero-main,
 .hero-side,
 .page-card,
@@ -260,104 +251,9 @@ main {
   min-width: 0;
 }
 
-/* The block is an acrostic of MS3L. The lines are display:contents so every
-   initial shares one auto-sized column - the words then align on a single
-   left edge without hardcoding the width of "M". */
-.hero-acronym-block {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-left: 0;
-  border-radius: 14px;
-  background: linear-gradient(160deg, #f7fbff, #e9f2fb);
-  padding: 0;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-content: center;
-  align-items: stretch;
-  font-size: clamp(0.92rem, 0.98vw, 1.02rem);
-}
-
-.hero-acronym-block::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 5px;
-  background: var(--ms3l-gradient);
-  z-index: 2;
-}
-
-.hero-acronym-line {
-  display: contents;
-}
-
-.hero-initial,
-.hero-acronym-word {
-  line-height: 1.5;
-  letter-spacing: -0.005em;
-  white-space: nowrap;
-}
-
-/* The initials get their own column, stepping along the brand ramp, so MS3L
-   reads down the left edge as a mark rather than as five stray capitals. */
-.hero-initial {
-  display: flex;
-  align-items: center;
-  padding: 6px 9px 6px 18px;
-  font-size: 1.3em;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #0075c2;
-}
-
-/* The step is carried by the letter alone. Any column ground behind it - even a
-   9% tint - turns the five into badges that pull ahead of the heading beside
-   them. These are text, so the ramp stops at #009b96 (3.4:1) rather than the CI
-   teal #00ada9, which is 2.78:1 and fails even the large-text minimum. */
-.hero-acronym-line:nth-child(2) .hero-initial { color: #0083bd; }
-.hero-acronym-line:nth-child(3) .hero-initial { color: #0090b4; }
-.hero-acronym-line:nth-child(4) .hero-initial { color: #0096a5; }
-.hero-acronym-line:nth-child(5) .hero-initial { color: #009b96; }
-
-.hero-acronym-word {
-  display: flex;
-  align-items: center;
-  padding: 6px 20px 6px 0;
-  color: var(--text);
-  font-weight: 500;
-}
-
-.hero-identity-copy h1 {
-  margin-bottom: 10px;
-}
-
-/* The hero wordmark makes the same move as the logo: the 3 is the one glyph
-   that belongs to this lab, so it is the one that carries the ramp. Scoped to
-   the hero - MS3L appears inline in body copy all over the site and should
-   stay in the running text colour there. */
-.hero-identity-copy h1 sup {
-  background: var(--ms3l-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero-identity-copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .hero-mission {
   margin-top: 0;
   font-size: 1.04rem;
-}
-
-.hero-subcopy {
-  margin-top: 8px !important;
-  font-size: 0.9rem !important;
-  color: var(--muted);
 }
 
 .hero-board {
@@ -397,10 +293,6 @@ main {
   margin: 0 0 14px;
 }
 
-.hero-side-heading {
-  margin-top: 22px !important;
-}
-
 .side-news-item {
   border-top: 1px dashed #c6d9ee;
   padding: 10px 0;
@@ -435,27 +327,6 @@ main {
   align-self: flex-start;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.45fr 0.95fr;
-  gap: 36px;
-  align-items: center;
-}
-
-.eyebrow {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 8px 12px;
-  margin-bottom: 18px;
-}
-
 .hero h1 {
   margin: 0 0 18px;
   font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
@@ -472,44 +343,11 @@ main {
   color: var(--muted);
 }
 
-.hero-copy {
-  max-width: 760px;
-}
-
 .hero-actions {
   margin-top: 20px;
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-}
-
-.hero-metrics {
-  margin-top: 24px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.metric-card {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 16px 18px;
-}
-
-.metric-label {
-  margin-bottom: 8px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #98a2b3;
-}
-
-.metric-card strong {
-  font-size: 0.98rem;
-  line-height: 1.5;
-  color: var(--strong);
 }
 
 .btn {
@@ -523,12 +361,6 @@ main {
 button.btn {
   font: inherit;
   cursor: pointer;
-}
-
-.btn-compact {
-  padding: 9px 13px;
-  border-radius: 10px;
-  font-size: 0.9rem;
 }
 
 .btn-primary {
@@ -550,7 +382,6 @@ button.btn {
   background: #ffffff;
 }
 
-.hero-card,
 .card,
 .page-card {
   display: block;
@@ -558,53 +389,6 @@ button.btn {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-}
-
-.hero-card {
-  padding: 28px;
-  background: rgba(255, 255, 255, 0.85);
-}
-
-.hero-card-photo {
-  height: 180px;
-  border-radius: 16px;
-  background:
-    linear-gradient(145deg, rgba(15, 118, 110, 0.18), rgba(255, 255, 255, 0.85)),
-    linear-gradient(135deg, #dce9e4, #f7fbfa);
-  border: 1px solid var(--line);
-  margin-bottom: 18px;
-}
-
-.hero-card h3 {
-  margin: 0 0 6px;
-  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
-  font-size: 1.2rem;
-  color: var(--strong);
-}
-
-.hero-card .role {
-  font-size: 0.94rem;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-
-.hero-card-affiliation {
-  font-size: 0.88rem;
-  color: var(--accent-strong);
-  margin-bottom: 14px;
-}
-
-.hero-card-links {
-  margin-top: 18px;
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.hero-card-links a {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--accent);
 }
 
 .inline-link,
@@ -617,40 +401,8 @@ button.btn {
   text-decoration: underline;
 }
 
-.credibility-strip {
-  padding: 0 0 24px;
-}
-
-.credibility-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.credibility-item {
-  padding: 18px 20px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-}
-
-.credibility-label {
-  margin-bottom: 6px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
 .section {
   padding: 56px 0;
-}
-
-.section-emphasis {
-  background: linear-gradient(180deg, #e5f1fb 0%, #f3f8fd 100%);
-  border-top: 1px solid #c9d9ea;
-  border-bottom: 1px solid #c9d9ea;
 }
 
 .section-soft {
@@ -703,9 +455,15 @@ button.btn {
   transition: transform .15s ease, box-shadow .15s ease;
 }
 
-.card-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 46px rgba(15, 43, 70, 0.14);
+/* Guarded, because a touch device applies :hover on tap - and this rule is the
+   one expensive hover on the site. A 46px blurred shadow repaints for 150ms at
+   the moment the tap starts a navigation, which is exactly when INP is being
+   measured. Nothing is lost on touch: the card was about to leave the screen. */
+@media (hover: hover) and (pointer: fine) {
+  .card-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 46px rgba(15, 43, 70, 0.14);
+  }
 }
 
 a.card {
@@ -752,40 +510,12 @@ a.card {
   color: var(--muted);
 }
 
-.split-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-  gap: 28px;
-  align-items: stretch;
-}
-
 .list-card {
   padding: 18px 20px;
   background: var(--surface-soft);
   border: 1px solid var(--line);
   border-radius: 16px;
   margin-bottom: 14px;
-}
-
-.list-card-thumb {
-  margin: -4px 0 12px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-  background:
-    linear-gradient(145deg, rgba(0, 79, 159, 0.12), rgba(255, 255, 255, 0.9)),
-    linear-gradient(135deg, #dce9f7, #f6faff);
-}
-
-.list-card-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  margin: 0;
-  max-width: none;
-  max-height: none;
 }
 
 .list-meta {
@@ -808,38 +538,6 @@ a.card {
   margin-top: 22px;
   display: grid;
   gap: 18px;
-}
-
-.content-feed {
-  margin-top: 22px;
-  display: grid;
-  gap: 16px;
-}
-
-.content-item-card {
-  padding: clamp(18px, 3vw, 24px);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.content-item-title {
-  margin: 0;
-  color: var(--strong);
-  font-size: clamp(1.08rem, 2vw, 1.28rem);
-  line-height: 1.38;
-}
-
-.content-item-card p {
-  margin: 10px 0 0;
-  color: var(--muted);
-}
-
-.content-item-detail {
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-  font-size: 0.9rem;
 }
 
 .news-card {
@@ -897,33 +595,6 @@ a.card {
   font-style: italic;
 }
 
-.news-links {
-  margin-top: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  font-size: 0.92rem;
-}
-
-.news-links-label {
-  font-weight: 700;
-  color: var(--strong);
-  margin-right: 2px;
-}
-
-.news-links-sep {
-  color: #93a6ba;
-}
-
-.detail-actions {
-  margin-top: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-}
-
 .list-card img {
   max-width: 220px;
   max-height: 84px;
@@ -931,15 +602,6 @@ a.card {
   height: auto;
   display: block;
   margin-bottom: 10px;
-}
-
-.list-card-thumb img {
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  max-height: none;
-  object-fit: cover;
-  margin: 0;
 }
 
 .page-wrap {
@@ -952,9 +614,9 @@ a.card {
 
 /* One gap between the page intro card and whatever list follows it, so the
    Impact pages line up with each other regardless of their content type. */
+.page-card + .page-card,
 .page-card + .card-grid,
 .page-card + .news-feed,
-.page-card + .content-feed,
 .page-card + .profile-section,
 .page-card + .publication-featured-section,
 .page-card + .section-title {
@@ -1029,51 +691,109 @@ a.card {
   color: var(--strong);
 }
 
-/* PI current appointments -------------------------------------------------
+/* PI current positions ----------------------------------------------------
    Two concurrent posts that share one start date. Each row pairs a job title
-   with its own institution, and the period is stated once underneath instead
-   of being repeated on both. */
+   with its own institution, and the period is stated once in the block's head
+   instead of being repeated on both. */
 
-.pi-appointments {
-  list-style: none;
-  margin: 2px 0 0;
-  padding: 0;
-  display: grid;
-  gap: 5px;
+/* The current posts used to be two unadorned lines under the name, while the
+   career list below had a heading, a period column and a rule between every
+   row. The eye went to the history rather than to where he works now, and the
+   top career row ends in February 2026, close enough to today to be misread as
+   current. The current posts get the bounded block instead. */
+.pi-current {
+  position: relative;
+  margin-top: 14px;
+  padding: 14px 18px 15px 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  overflow: hidden;
 }
 
-.pi-appointments li {
+.pi-current::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--ms3l-gradient);
+}
+
+.pi-current-head {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0 8px;
+  gap: 4px 12px;
+  margin-bottom: 9px;
 }
 
-.pi-appointment-title {
-  color: var(--strong);
-  font-weight: 600;
+.pi-current-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
 }
 
-.pi-appointment-org {
+.pi-current-period {
+  font-size: 0.82rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
 }
 
-.pi-appointment-org::before {
-  content: "—";
-  margin-right: 8px;
+.pi-positions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  /* Wider than the row-gap inside a position below, so that when an institution
+     wraps onto its own line it still groups with its own title rather than
+     floating between the two. */
+  gap: 13px;
+}
+
+.pi-positions li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  /* The row-gap was 0. Whether the institution wraps depends on how long its
+     name is, not on the viewport - the UST post wraps at 900px as readily as at
+     390 - so it wrapped flush against its own title at plenty of widths. */
+  gap: 2px 8px;
+}
+
+.pi-position-title {
+  color: var(--strong);
+  font-weight: 700;
+  font-size: 1.06rem;
+}
+
+/* The dash trails the title instead of leading the institution. Same line when
+   both fit; when they do not, it stays at the end of the title and reads as
+   "continues below" rather than being orphaned at the start of the next line. */
+.pi-position-title::after {
+  content: " —";
+  font-weight: 400;
   color: var(--line);
 }
 
-.pi-appointment-period {
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-variant-numeric: tabular-nums;
+.pi-position-org {
+  color: var(--text);
+  /* 0.9, not 0.95, because at 0.95 the KRICT post needed 894px of a column that
+     is 878px at its widest - sixteen short - and wrapped while the shorter UST
+     post did not, leaving the two entries in different shapes. Matches
+     .pi-career-affiliation, and the title still carries the weight. */
+  font-size: 0.9rem;
 }
 
 .pi-research-focus {
   margin-top: 16px;
+}
+
+.pi-career-heading {
+  margin-top: 22px;
+  font-size: 1.05rem;
+  color: var(--muted);
 }
 
 /* PI career ---------------------------------------------------------------
@@ -1205,56 +925,21 @@ a.card {
   font-size: 0.86rem;
 }
 
-.member-note {
-  margin-top: 24px;
-}
-
 .publication-authors,
 .publication-doi {
   margin: 6px 0 0;
 }
 
-.author-highlight {
-  font-weight: 700;
-  color: var(--accent-strong);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.publication-note {
-  margin-top: 6px;
-  font-size: 0.86rem;
-  color: #6b7280;
+/* Every line here is a granted registration, Korean or not, so they are set
+   alike and each carries the date its office granted on. They were briefly a
+   separate block with a country chip, which restated the jurisdiction the
+   number already names - "US" in front of "US Patent Registration Number". */
+.patent-reg-date {
+  color: var(--muted);
 }
 
 .publication-support {
   margin: 10px 0 0;
-}
-
-.trl-badge {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid #bddad4;
-  background: #ebf7f4;
-  color: var(--accent-strong) !important;
-  font-size: 0.82rem !important;
-  font-weight: 700;
-}
-
-.contact-summary p {
-  margin: 0 0 14px;
-}
-
-.contact-summary {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-summary h2 {
-  margin-top: 0;
 }
 
 .contact-summary-meta {
@@ -1264,11 +949,6 @@ a.card {
 .contact-summary-email {
   margin-top: 2px;
   font-weight: 600;
-}
-
-.contact-summary .btn {
-  margin-top: auto;
-  align-self: flex-start;
 }
 
 .contact-banner {
@@ -1360,47 +1040,6 @@ a.card {
   min-height: calc(1.65em * 2);
 }
 
-.research-theme-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  align-items: stretch;
-}
-
-.logo-strip {
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.logo-chip {
-  display: grid;
-  gap: 10px;
-  justify-items: center;
-  align-content: start;
-  padding: 16px 14px;
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  text-align: center;
-}
-
-.logo-chip img {
-  width: 100%;
-  max-width: 180px;
-  height: 64px;
-  object-fit: contain;
-  display: block;
-}
-
-.logo-chip span {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--strong);
-  line-height: 1.35;
-}
-
 .impact-experience-card {
   height: 100%;
 }
@@ -1414,7 +1053,6 @@ a.card {
   font-size: 0.92rem !important;
 }
 
-.hero-card-photo img,
 .profile-photo img {
   width: 100%;
   height: 100%;
@@ -1485,27 +1123,6 @@ a.card {
   font-weight: 600;
 }
 
-.cta-panel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 28px;
-}
-
-.cta-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.topic-list {
-  margin-top: 16px;
-}
-
-.topic-list li {
-  margin-bottom: 6px;
-}
-
 @media (max-width: 1040px) {
   .header-inner {
     grid-template-columns: 1fr auto;
@@ -1556,11 +1173,8 @@ a.card {
   }
 
   .hero-board,
-  .hero-grid,
-  .split-grid,
   .news-card,
-  .profile-card,
-  .profile-card-highlight {
+  .profile-card{
     grid-template-columns: 1fr;
   }
 
@@ -1569,10 +1183,7 @@ a.card {
   }
 
   .card-grid.three,
-  .card-grid.two,
-  .credibility-grid,
-  .research-theme-row,
-  .logo-strip {
+  .card-grid.two{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1589,16 +1200,14 @@ a.card {
     min-height: 0;
   }
 
-  .hero-metrics {
-    grid-template-columns: 1fr;
-  }
+  
 
   .contact-banner {
     grid-template-columns: 1fr;
     align-items: start;
   }
 
-  .cta-panel,
+  
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -1610,15 +1219,11 @@ a.card {
 }
 
 @media (max-width: 720px) {
-  .hero-grid,
-  .split-grid,
-  .credibility-grid,
+  
   .home-overview-grid,
-  .research-theme-row,
   .card-grid.four,
   .card-grid.three,
-  .card-grid.two,
-  .logo-strip {
+  .card-grid.two{
     grid-template-columns: 1fr;
   }
 
@@ -1626,9 +1231,7 @@ a.card {
     padding: 40px 0 28px;
   }
 
-  .hero-identity {
-    grid-template-columns: 1fr;
-  }
+  
 
   .hero-process {
     grid-template-columns: 1fr;
@@ -1639,11 +1242,7 @@ a.card {
     margin-top: 12px;
   }
 
-  .hero-acronym-block {
-    width: fit-content;
-    justify-content: center;
-    font-size: 1rem;
-  }
+  
 
   .hero-main,
   .hero-side,
@@ -1659,8 +1258,6 @@ a.card {
     max-width: none;
   }
 }
-
-
 
 /* Research theme cards ----------------------------------------------------- */
 
@@ -1703,27 +1300,6 @@ a.card {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.research-figure-expand {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 11px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.93);
-  color: var(--strong);
-  font-size: 0.76rem;
-  font-weight: 600;
-  box-shadow: 0 4px 14px rgba(15, 43, 70, 0.16);
-}
-
-.research-card-figure:hover .research-figure-expand {
-  background: #ffffff;
 }
 
 .research-card-figure:focus-visible {
@@ -1890,15 +1466,6 @@ a.card {
 
 /* Figure lightbox ---------------------------------------------------------- */
 
-/* Every figure opens at the same panel size, so the dialog does not jump
-   between themes. */
-.content-modal-panel.research-figure-panel {
-  width: min(920px, 100%);
-  max-width: min(920px, 100%);
-  max-height: calc(100vh - 48px);
-  padding: 56px 20px 20px;
-}
-
 /* A fixed 25:18 stage, matching the figures' own ratio. The image is centred
    and capped at its natural size: the sources run 667-1280px and cannot be
    re-rendered, so the smallest one sits with white around it rather than being
@@ -1931,17 +1498,6 @@ a.card {
   font-size: 0.9rem;
 }
 
-.research-theme-card .theme-paper-inline {
-  margin-top: auto;
-  padding-top: 12px;
-  border-top: 1px dashed var(--line);
-}
-
-.theme-paper-inline a {
-  font-size: 0.92rem;
-  line-height: 1.5;
-}
-
 .theme-cta {
   margin: 14px 2px 0;
 }
@@ -1949,14 +1505,6 @@ a.card {
 .section-title-sm {
   font-size: 1.45rem;
   margin-bottom: 14px;
-}
-
-.profile-card-highlight {
-  grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
-}
-
-.profile-photo-lg {
-  min-height: 340px;
 }
 
 .member-grid {
@@ -2089,7 +1637,6 @@ a.card {
   }
 }
 
-
 .member-highlight {
   display: inline;
   white-space: nowrap;
@@ -2100,11 +1647,9 @@ a.card {
   border-radius: 4px;
 }
 
-
 .publication-authors {
   line-height: 1.8;
 }
-
 
 body.modal-open {
   overflow: hidden;
@@ -2155,55 +1700,6 @@ body.modal-open {
   cursor: pointer;
 }
 
-.modal-layout {
-  display: grid;
-  grid-template-columns: minmax(240px, 0.85fr) minmax(0, 1.15fr);
-  gap: 24px;
-  align-items: start;
-  padding-top: 10px;
-}
-
-.modal-media {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  overflow: hidden;
-  min-height: 240px;
-  background:
-    linear-gradient(145deg, rgba(0, 79, 159, 0.12), rgba(255, 255, 255, 0.9)),
-    linear-gradient(135deg, #dce9f7, #f6faff);
-}
-
-.modal-media img {
-  width: 100%;
-  height: 100%;
-  min-height: 240px;
-  object-fit: cover;
-  display: block;
-}
-
-.modal-body {
-  min-width: 0;
-  padding-right: 44px;
-}
-
-.modal-body h2 {
-  margin: 0 0 12px;
-  color: var(--strong);
-  font-size: 1.55rem;
-  line-height: 1.25;
-}
-
-.modal-body h3 {
-  margin: 18px 0 8px;
-  color: var(--strong);
-  font-size: 1.05rem;
-}
-
-.modal-body p,
-.modal-body li {
-  color: var(--muted);
-}
-
 @media (max-width: 760px) {
   .content-modal {
     padding: 14px;
@@ -2214,13 +1710,9 @@ body.modal-open {
     padding: 22px;
   }
 
-  .modal-layout {
-    grid-template-columns: 1fr;
-  }
+  
 
-  .modal-body {
-    padding-right: 0;
-  }
+  
 }
 
 .hero-process {
@@ -2333,10 +1825,10 @@ body.modal-open {
 .membrane-layer {
   position: absolute;
   left: 50%;
-  top: 20px;
+  top: 14px;
   z-index: 2;
   width: 22px;
-  height: 104px;
+  height: 92px;
   transform: translateX(-50%) rotate(4deg);
   border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 9px;
@@ -2356,11 +1848,16 @@ body.modal-open {
   box-shadow: inset 0 1px 2px rgba(0, 25, 48, 0.55);
 }
 
-.membrane-layer i:nth-child(1) { top: 9px; }
-.membrane-layer i:nth-child(2) { top: 29px; }
-.membrane-layer i:nth-child(3) { top: 49px; }
-.membrane-layer i:nth-child(4) { top: 69px; }
-.membrane-layer i:nth-child(5) { top: 89px; }
+/* Spaced to the 92px height above, 1px borders included: five 7px pores 17px
+   apart leave 8px clear at the top and 7px at the bottom. These positions are
+   absolute, so they do not follow if the membrane is resized - the last pore
+   spent a week hanging over the bottom edge after the height changed and these
+   did not. Re-space them here, in this rule, whenever that height moves. */
+.membrane-layer i:nth-child(1) { top: 8px; }
+.membrane-layer i:nth-child(2) { top: 25px; }
+.membrane-layer i:nth-child(3) { top: 42px; }
+.membrane-layer i:nth-child(4) { top: 59px; }
+.membrane-layer i:nth-child(5) { top: 76px; }
 
 .particle {
   position: absolute;
@@ -2463,7 +1960,6 @@ body.modal-open {
     transform: translateX(-50%) rotate(2deg) scaleY(1.03);
   }
 }
-
 
 /* Accessibility ------------------------------------------------------------ */
 
@@ -2854,4 +2350,237 @@ main:focus {
   .brand-affiliation { height: 21px; }
   .brand-mark-divider { height: 21px; }
   .brand-marks { gap: 10px; }
+}
+
+/* ============================================================
+   Proposed improvements (2026-09) — appended after base styles
+   ============================================================ */
+
+/* Home hero: single identity block replaces acronym stack + duplicate h1 */
+.hero-identity-v2 h1 {
+  margin: 0 0 4px;
+  font-size: clamp(2.4rem, 4.5vw, 3.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--strong);
+}
+.hero-identity-v2 h1 sup {
+  background: var(--ms3l-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.hero-fullname { margin: 0 0 14px; font-weight: 600; font-size: 1.04rem; color: var(--text); }
+.hero-fullname b { font-weight: 800; }
+.hero-fullname b:nth-of-type(1) { color: #0075c2; }
+.hero-fullname b:nth-of-type(2) { color: #0083bd; }
+.hero-fullname b:nth-of-type(3) { color: #0090b4; }
+.hero-fullname b:nth-of-type(4) { color: #0096a5; }
+.hero-fullname b:nth-of-type(5) { color: #009b96; }
+.hero-identity-v2 .hero-mission { margin: 0; font-size: 1.04rem; }
+.hero-main { gap: 18px; }
+.hero-process { min-height: 140px; padding: 18px 20px; }
+.separation-visual { height: 112px; }
+.flow-line-one { top: 40px; }
+.flow-line-two { top: 84px; }
+.side-news-item:first-of-type { border-top: 0; padding-top: 4px; }
+
+/* Home section rhythm: nav-duplicating grids become quiet tiles */
+.home-overview-grid .card,
+.impact-card { background: rgba(255, 255, 255, 0.6); box-shadow: none; }
+.home-overview-grid .card::before { width: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .home-overview-grid .card-link:hover,
+  .impact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(15, 43, 70, 0.1);
+    background: #ffffff;
+  }
+}
+
+/* Home closing contact banner on brand navy */
+.page-card.contact-banner {
+  color: #ffffff;
+  border: 0;
+  background:
+    radial-gradient(circle at 82% 16%, rgba(64, 219, 210, 0.2), transparent 30%),
+    linear-gradient(125deg, #062c54 0%, #075e88 56%, #008a91 100%);
+}
+.page-card.contact-banner::before { display: none; }
+.contact-banner-copy h2 { color: #ffffff; }
+.contact-banner-copy p { color: rgba(255, 255, 255, 0.82); }
+.contact-banner-meta strong { color: #ffffff; }
+.contact-banner .inline-link { color: #7ee5dd; }
+.contact-banner .btn-primary { background: #ffffff; color: var(--brand-ink); }
+.contact-banner .btn-primary:hover { opacity: 1; background: #e8f6f9; }
+
+@media (max-width: 720px) {
+  .hero-process { grid-template-columns: 1fr; min-height: 0; }
+  .separation-visual { display: none; }
+  .hero-identity-v2 h1 { font-size: 2.2rem; }
+}
+
+/* Publications: compact year-rail list replaces card feed */
+.pub-list {
+  margin-top: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius, 14px);
+  padding: 6px 26px;
+  box-shadow: var(--shadow-soft, 0 10px 24px rgba(15, 43, 70, 0.06));
+}
+.pub-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 22px; padding: 16px 0; border-top: 1px solid var(--line); }
+.pub-list .pub-row:first-child { border-top: 0; }
+.pub-row.pub-year-start:not(:first-child) { border-top: 1px solid rgba(0, 117, 194, 0.35); }
+.pub-year { font-weight: 800; font-size: 1.02rem; letter-spacing: -0.01em; color: #0075c2; line-height: 1.5; }
+.pub-title { margin: 0 0 4px; font-size: 1rem; line-height: 1.45; font-weight: 700; }
+.pub-meta { margin: 0 0 6px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em; color: var(--muted, #5b708a); }
+.pub-authors { margin: 0; font-size: 0.86rem; line-height: 1.55; color: var(--muted, #5b708a); }
+@media (max-width: 640px) {
+  .pub-row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .pub-row:not(.pub-year-start) .pub-year { display: none; }
+}
+
+/* Research: whole card opens the details modal */
+.research-card-clickable { cursor: pointer; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+/* Guarded like the other lift-and-shadow hovers: a tap applies :hover, and a
+   32px blurred shadow repainting as the dialog opens is work at the worst
+   moment. See docs/performance-notes.md. */
+@media (hover: hover) and (pointer: fine) {
+  .research-card-clickable:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(15, 43, 70, 0.14); }
+}
+.research-card-clickable:focus-visible { outline: 3px solid rgba(0, 117, 194, 0.45); outline-offset: 2px; }
+.research-card-clickable .research-card-figure { pointer-events: none; }
+.research-details-figure { margin: 14px 0 0; }
+.research-details-figure img { max-width: 100%; border-radius: 10px; }
+
+/* News: related-link chips */
+.news-link-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
+.news-links-label-chip { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted, #5b708a); }
+a.news-link-chip { display: inline-flex; align-items: center; padding: 4px 12px; border: 1px solid rgba(0, 117, 194, 0.35); border-radius: 999px; font-size: 0.82rem; font-weight: 600; color: #0075c2; text-decoration: none; background: rgba(0, 117, 194, 0.05); }
+a.news-link-chip:hover { background: rgba(0, 117, 194, 0.12); }
+
+/* Join Us: numbered checklist */
+/* .card p is margin: 0, which is right for the single paragraph most cards
+   carry and wrong the moment one carries three - they closed up against each
+   other on Join Us. Only pairs are touched, so every other card is unchanged. */
+.card p + p {
+  margin-top: 10px;
+}
+
+.card p + p.joinus-send {
+  margin-top: 18px;
+}
+
+.joinus-steps { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.joinus-steps li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 12px; align-items: start; }
+.joinus-step-num { width: 26px; height: 26px; border-radius: 50%; background: #0075c2; color: #fff; font-size: 0.82rem; font-weight: 700; display: grid; place-items: center; margin-top: 1px; }
+
+
+/* Process diagrams ---------------------------------------------------------
+   One drawing vocabulary shared by every schematic on Introduction, so five
+   pictures read as one language rather than five styles: a membrane is always a
+   gradient bar, a bipolar membrane the darker one, a compartment a soft panel
+   tinted by what it holds, a species a dot in its own colour.
+
+   Everything that moves moves by `transform`. The hero particles animate `left`
+   and invalidate layout document-wide for it - see docs/redesign-notes.md - and
+   five more of those on one page would be worse than the problem they solve. */
+
+.dgm-grid {
+  display: grid;
+  /* Two across, not three. At three the 360-wide viewBox scales to about 300
+     and the labels inside it go with it, down to the point of being unreadable.
+     min() so the track can still fall below 408 on a narrow phone - a bare
+     minmax(408px, 1fr) holds that width and overflows the screen. */
+  grid-template-columns: repeat(auto-fit, minmax(min(408px, 100%), 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.dgm-card {
+  padding: 18px 20px 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.dgm-card h3 {
+  margin: 0 0 6px;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif;
+  font-size: 1.05rem;
+  color: var(--strong);
+}
+
+.dgm-card > p {
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.dgm {
+  contain: layout paint;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dgm-stream { fill: var(--surface-soft); stroke: var(--line); stroke-width: 1; }
+.dgm-stream-acid { fill: #fdf3e7; stroke: #e2c199; }
+.dgm-stream-base { fill: #eaf5ef; stroke: #a2d2b8; }
+.dgm-stream-draw { fill: #e6f1fb; stroke: #a8c8e6; }
+.dgm-mem { fill: url(#dgm-mem-grad); }
+.dgm-mem-bp { fill: url(#dgm-bp-grad); }
+.dgm-mem-label { font-size: 8.5px; font-weight: 700; letter-spacing: 0.06em; fill: #ffffff; }
+.dgm-label { font-size: 12px; font-weight: 700; fill: var(--strong); }
+.dgm-sub { font-size: 10px; fill: var(--muted); }
+.dgm-flow { fill: none; stroke: var(--accent-strong); stroke-width: 1.6; marker-end: url(#dgm-arrow); }
+.dgm-flow-faint { stroke: #9ab6d2; stroke-dasharray: 3 3; }
+
+.dgm-ion-neg { fill: var(--brand-secondary); }
+.dgm-ion-pos { fill: var(--brand-accent); }
+.dgm-ion-h { fill: #dd9433; }
+.dgm-ion-oh { fill: #2f9663; }
+.dgm-ion-keep { fill: var(--brand-ink); }
+.dgm-ion-pass { fill: var(--brand-secondary); }
+.dgm-solvent { fill: #7fc4e8; }
+
+@keyframes dgm-up { 0% { transform: translateY(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateY(-46px); opacity: 0 } }
+@keyframes dgm-down { 0% { transform: translateY(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateY(46px); opacity: 0 } }
+@keyframes dgm-shed-up { 0% { transform: translateY(0); opacity: 0 } 18%, 82% { opacity: 0.95 } 100% { transform: translateY(-24px); opacity: 0 } }
+@keyframes dgm-shed-down { 0% { transform: translateY(0); opacity: 0 } 18%, 82% { opacity: 0.95 } 100% { transform: translateY(24px); opacity: 0 } }
+@keyframes dgm-cross { 0% { transform: translateX(0); opacity: 0 } 14%, 86% { opacity: 1 } 100% { transform: translateX(96px); opacity: 0 } }
+@keyframes dgm-bounce { 0%, 100% { transform: translateX(0); opacity: 0.9 } 45% { transform: translateX(26px) } 55% { transform: translateX(26px) } }
+@keyframes dgm-spin { to { transform: rotate(360deg) } }
+
+.dgm-a-up { animation: dgm-up 3.2s linear infinite; }
+.dgm-a-down { animation: dgm-down 3.2s linear infinite; }
+.dgm-a-shed-up { animation: dgm-shed-up 3.2s linear infinite; }
+.dgm-a-shed-down { animation: dgm-shed-down 3.2s linear infinite; }
+.dgm-a-cross { animation: dgm-cross 3.4s linear infinite; }
+.dgm-a-bounce { animation: dgm-bounce 2.6s ease-in-out infinite; }
+/* Nine seconds a turn. The first attempt ran at 2.4 and the rotor read as a
+   smear - fast enough that it was not recognisable as a turbine at all.
+
+   No transform-origin here: whatever spins has to name its own centre in
+   viewBox coordinates. `transform-box: fill-box` with `center` looks right and
+   is not - it spins about the middle of the bounding box, and a three-bladed
+   rotor reaches 22px up but only 11px down, so its box sits 4px above the hub
+   and the thing wobbles instead of turning. */
+.dgm-a-spin { animation: dgm-spin 9s linear infinite; }
+
+.dgm-d1 { animation-delay: 0s }
+.dgm-d2 { animation-delay: 0.7s }
+.dgm-d3 { animation-delay: 1.4s }
+.dgm-d4 { animation-delay: 2.1s }
+.dgm-d5 { animation-delay: 2.8s }
+
+@media (prefers-reduced-motion: reduce) {
+  .dgm-a-up, .dgm-a-down, .dgm-a-shed-up, .dgm-a-shed-down,
+  .dgm-a-cross, .dgm-a-bounce, .dgm-a-spin {
+    animation: none;
+    opacity: 0.9;
+  }
 }

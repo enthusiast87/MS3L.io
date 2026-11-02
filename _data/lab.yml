@@ -35,12 +35,76 @@ introduction:
     - Circular plastic and solvent systems
     - Resource recovery from complex liquid streams
     - Membrane-enabled energy and electrochemical separations
+  separations:
+    # Off the live site until the set is settled. Flip to true to publish; the
+    # section renders only when this is true, so nothing else has to move.
+    published: false
+    title: Six separations
+    lead: >-
+      Separation is not one operation, and the group does not work on one. Each of these runs on a
+      different driving force; the research themes are these put to a problem.
+    items:
+      - key: salt-split
+        title: A salt back into its acid and base
+        summary: >-
+          <strong>Electric field.</strong> One stream in, acid and base out separately, no reagent
+          spent and no waste salt left.
+        alt: >-
+          Bipolar membrane electrodialysis. A salt feed enters the middle compartment; anions cross
+          an anion-exchange membrane into the acid compartment above and cations cross a
+          cation-exchange membrane into the base compartment below, while bipolar membranes at
+          either end supply hydrogen and hydroxide ions.
+      - key: selective-recovery
+        title: One molecule out of a mixture
+        summary: >-
+          <strong>Concentration difference.</strong> The target crosses into an extractant that
+          never mixes with the feed, and nothing is boiled.
+        alt: >-
+          A dense membrane separates a feed from an extractant. The target molecule crosses the
+          membrane into the extractant and leaves as product; larger species are rejected and stay
+          in the feed, which leaves separately.
+      - key: retention
+        title: A cut sharpened, then a volume reduced
+        summary: >-
+          <strong>Pressure.</strong> Wash solvent into the first stage to sharpen the cut, none
+          into the second so the volume comes down.
+        alt: >-
+          Two membrane stages in series. The first is fed fresh wash solvent, which carries smaller
+          species through the membrane while the product is retained at constant volume. The second
+          has no wash, so solvent leaves and the retained product concentrates.
+      - key: diffusion-dialysis
+        title: One ion moved, the other left
+        summary: >-
+          <strong>Concentration gradient - no current, no pressure.</strong> Cations cross and the
+          acid anions stay, carbonating for CO<sub>2</sub> mineralisation.
+        alt: >-
+          Diffusion dialysis across a cation-exchange membrane. Cations from an acid salt stream
+          cross into a carbon dioxide stream, where they form a solid carbonate; the acid anions
+          are held back and the purified acid leaves on the feed side.
+      - key: md-crystallization
+        title: Concentrated past saturation, then crystallised
+        summary: >-
+          <strong>Temperature difference.</strong> Vapour crosses a hydrophobic membrane and the
+          salt cannot, until the stream saturates and the mineral comes out solid.
+        alt: >-
+          Membrane distillation with crystallisation. A warm feed runs along a hydrophobic
+          membrane; water vapour crosses to a cooler distillate channel while dissolved salt is
+          retained, and the feed concentrates past saturation so crystals form and are collected.
+      - key: osmotic-power
+        title: Work out of a salinity difference
+        summary: >-
+          <strong>Osmotic pressure.</strong> Water crosses to the brine on its own and arrives
+          pressurised; the pressure turns a turbine.
+        alt: >-
+          A membrane separates fresh water from a pressurised high-salinity draw solution. Water
+          crosses into the draw side, and the pressurised flow leaving it turns a turbine to
+          generate power.
   principal_investigator:
     name: Jihoon Kim
     current_period: March 2026 - present
-    current_appointments:
+    current_positions:
       - title: Principal Researcher
-        organization: Korea Research Institute of Chemical Technology (KRICT)
+        organization: Chemical Process Technology Division, Korea Research Institute of Chemical Technology (KRICT)
       - title: Associate Professor
         organization: Advanced Materials and Chemical Engineering, University of Science and Technology (UST)
     career:
@@ -56,10 +120,10 @@ introduction:
         affiliation: Hanyang University
         note: Prof. Young Moo Lee
       - title: BS in Chemical Engineering
-        period: 2006 - 2008, 2010 - 2012
+        period: 2006 - 2008<br>2010 - 2012
         affiliation: Hanyang University
     biography:
-      - Dr. Jihoon Kim received his BS in Chemical Engineering from Hanyang University in 2012 and became a regular member of the Young Engineers Honour Society (YEHS) of the National Academy of Engineering of Korea.
+      - Dr. Jihoon Kim received his BS in Chemical Engineering from Hanyang University in 2012. On completing his mandatory military service in 2010 he became a regular member of the Young Engineers Honour Society (YEHS) of the National Academy of Engineering of Korea.
       - He completed an integrated MS-PhD program in Energy Engineering at Hanyang University under Prof. Young Moo Lee. His graduate research covered lithium-ion battery separators, pressure-retarded osmosis, membrane distillation, and organic solvent nanofiltration, including collaborative research in Prof. Andrew G. Livingston's group at Imperial College London.
       - After earning his PhD in 2017, he joined Imperial College London as a Postdoctoral Research Associate in 2018. There, he expanded his research into membrane technologies for biofuel recovery, crude-oil fractionation, iterative synthesis, and precision separation.
       - He began his independent research career at KRICT in 2021. His work connects fundamental membrane science with practical, scalable separation technologies for carbon-neutral and resource-circulating chemical processes.
@@ -275,6 +339,32 @@ join_us:
   body: MS<sup>3</sup>L welcomes students and researchers who are interested in membrane science, sustainable separations, and process innovation for chemical, energy, and environmental systems.
   cta_label: Contact MS<sup>3</sup>L
   cta_url: /contact
+  work:
+    title: What you would take on
+    lead: >-
+      People who want to own a separation problem from the first idea to the unit that runs it.
+    items:
+      - title: Sustainable separation process design
+        summary: >-
+          Most of our work has no standard unit operation to start from. The open question is what
+          the separation train should be, not which membrane goes into someone else's.
+      - title: Scalable material development
+        summary: >-
+          Membranes made for the feed they will actually meet: selective between ions of the same
+          charge, stable in solvent and heat, and still good when made by the metre.
+      - title: Proof of concept and pilot demonstration
+        summary: >-
+          We run our own pilot. Work here has gone from a coupon to a continuous skid, and from a
+          skid to plant designs industry has bought.
+  positions:
+    title: Positions we host
+    items:
+      - title: Graduate students
+        summary: M.S. and Ph.D. study through the UST Advanced Materials and Chemical Engineering programme, based at KRICT in Daejeon.
+      - title: Postdoctoral researchers
+        summary: Fixed-term research posts at KRICT, normally attached to one of the group's funded projects.
+      - title: Internship researchers
+        summary: Internship master researcher posts for degree holders, and visiting students who want to try the work before committing to it.
 
 contact:
   title: Contact
