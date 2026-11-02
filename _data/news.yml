@@ -4,14 +4,18 @@
   note: Process simulation and life cycle assessment put greenhouse gas emissions about 60% below the edible-sugar route. The work was published in Chemical Engineering Journal.
   image: /assets/images/news/press-coverage-sawdust-fdca.jpg
   image_alt: The KRICT and POSTECH research team behind the sawdust-to-FDCA process.
-  url: https://biz.heraldcorp.com/article/10921575
+  url: https://www.dongascience.com/ko/news/80641
   links:
+    - label: Dong-A Science
+      url: https://www.dongascience.com/ko/news/80641
+    - label: Yonhap News
+      url: https://www.yna.co.kr/view/AKR20261030075700063
     - label: Herald Economy
       url: https://biz.heraldcorp.com/article/10921575
-    - label: Segye Ilbo
-      url: https://www.segye.com/newsView/20261101509246
-    - label: Kuki News
-      url: https://www.kukinews.com/article/view/kuk202610300137
+    - label: News1
+      url: https://www.news1.kr/local/daejeon-chungnam/6337868
+    - label: ZDNet Korea
+      url: https://zdnet.co.kr/view/?no=20261031140325
 
 - date: 2026-10-03
   title: STS forum Young Leaders Program in Kyoto.
