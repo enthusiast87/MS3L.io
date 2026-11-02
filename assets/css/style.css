@@ -2596,6 +2596,63 @@ main:focus {
   margin-top: 8px;
 }
 
+/* On /publications the Featured block is a <details> that starts closed, so the
+   chronological list is the first thing on screen. The summary row keeps the
+   section title and adds a pill that reads "Show" / "Hide". */
+.publication-featured-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px 18px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.publication-featured-summary::-webkit-details-marker {
+  display: none;
+}
+
+.publication-featured-summary .section-title {
+  margin-bottom: 0;
+}
+
+.publication-featured-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  margin-top: 4px;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--accent-strong);
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.publication-featured-toggle::after {
+  content: "Show";
+  padding-left: 8px;
+  border-left: 1px solid var(--line);
+}
+
+.publication-featured-section[open] .publication-featured-toggle::after {
+  content: "Hide";
+}
+
+.publication-featured-summary:hover .publication-featured-toggle,
+.publication-featured-summary:focus-visible .publication-featured-toggle {
+  border-color: var(--accent-strong);
+  background: rgba(0, 92, 165, 0.08);
+}
+
+.publication-featured-section[open] > .publication-featured-summary {
+  margin-bottom: 16px;
+}
+
 /* Impact cards ------------------------------------------------------------- */
 
 .impact-grid {

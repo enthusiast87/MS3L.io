@@ -131,6 +131,10 @@ home page fresh without creating an obligation to post.
 `/publications`. Six entries carry it today; it is a deliberate selection, not
 "most recent".
 
+On `/publications` the Featured block is a `<details>` that starts collapsed,
+so the chronological list is what a visitor sees first; the header row opens
+it. The home page still shows the featured cards open.
+
 ## Page lead lines (`_data/lab.yml`)
 
 Each page's `lead` is one line about the content itself — never about the state
