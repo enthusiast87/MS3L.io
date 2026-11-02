@@ -2044,6 +2044,55 @@ main:focus {
   gap: 14px;
 }
 
+/* On /publications the Featured cards sit in a <details>, collapsed by default,
+   so the full list is what the page opens on. The heading itself is the toggle. */
+.featured-toggle {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+}
+
+.featured-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.featured-toggle .section-title-sm {
+  display: block;
+}
+
+.featured-count {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 9px;
+  border-radius: 999px;
+  background: rgba(0, 92, 165, 0.1);
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.featured-chevron {
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  color: var(--accent-strong);
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+details[open] > .featured-toggle .featured-chevron {
+  transform: rotate(180deg);
+}
+
+.featured-toggle:hover .featured-chevron {
+  color: var(--brand-primary);
+}
+
+details.publication-featured-section:not([open]) {
+  margin-bottom: 14px;
+}
+
 .publication-featured {
   display: flex;
   flex-direction: column;

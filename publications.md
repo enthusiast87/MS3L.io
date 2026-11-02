@@ -13,8 +13,10 @@ title: Publications
 
     {% assign featured = site.data.publications | where: "featured", true %}
     {% if featured.size > 0 %}
-    <section class="publication-featured-section">
-      <h2 class="section-title section-title-sm">Featured</h2>
+    <details class="publication-featured-section">
+      <summary class="featured-toggle">
+        <h2 class="section-title section-title-sm">Featured <span class="featured-count">{{ featured.size }}</span><svg class="featured-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></h2>
+      </summary>
       <div class="card-grid three featured-grid">
         {% for item in featured %}
         <article class="card publication-featured">
@@ -29,7 +31,7 @@ title: Publications
         </article>
         {% endfor %}
       </div>
-    </section>
+    </details>
     {% endif %}
 
     <h2 class="section-title section-title-sm all-publications-title">All publications</h2>

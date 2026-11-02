@@ -1,3 +1,18 @@
+- date: 2026-11-01
+  title: Press coverage on sawdust-to-FDCA bioplastic monomer production.
+  summary: Korean media covered the joint KRICT - POSTECH process that turns waste wood sawdust into 2,5-furandicarboxylic acid (FDCA) at over 99% purity through bromomethylfurfural and acetoxymethylfurfural intermediates, without high-pressure equipment.
+  note: Process simulation and life cycle assessment put greenhouse gas emissions about 60% below the edible-sugar route. The work was published in Chemical Engineering Journal.
+  image: /assets/images/news/press-coverage-sawdust-fdca.jpg
+  image_alt: The KRICT and POSTECH research team behind the sawdust-to-FDCA process.
+  url: https://biz.heraldcorp.com/article/10921575
+  links:
+    - label: Herald Economy
+      url: https://biz.heraldcorp.com/article/10921575
+    - label: Segye Ilbo
+      url: https://www.segye.com/newsView/20261101509246
+    - label: Kuki News
+      url: https://www.kukinews.com/article/view/kuk202610300137
+
 - date: 2026-10-03
   title: STS forum Young Leaders Program in Kyoto.
   summary: Jihoon Kim took part in the Young Leaders Program of the Science and Technology in Society (STS) forum on the nomination of the National Research Council of Science & Technology (NST), including the Dialogue between Young Leaders and Nobel Laureates.
