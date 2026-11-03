@@ -14,19 +14,6 @@ title: Join Us
     </div>
 
     <section class="profile-section">
-      <h2 class="section-title section-title-sm">{{ join.work.title }}</h2>
-      <p class="section-lead">{{ join.work.lead }}</p>
-      <div class="card-grid three">
-        {% for item in join.work.items %}
-        <div class="card">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.summary }}</p>
-        </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="profile-section">
       <h2 class="section-title section-title-sm">{{ join.positions.title }}</h2>
       <div class="card-grid three">
         {% for item in join.positions.items %}
