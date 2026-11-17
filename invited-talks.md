@@ -20,7 +20,7 @@ title: Invited Talks
           <div class="talk-meta">
             <span class="list-meta">{{ item.date_label | default: item.date }}</span>
             {% if item.tag %}<span class="talk-tag">{{ item.tag }}</span>{% endif %}
-            {% if talk_ts > now_ts %}<span class="talk-upcoming">Upcoming</span>{% endif %}
+            {% if talk_ts > now_ts %}<span class="talk-upcoming" data-talk-date="{{ item.date }}">Upcoming</span>{% endif %}
           </div>
           <h2 class="news-card-title">{{ item.title }}</h2>
           <p class="talk-event">
@@ -34,3 +34,14 @@ title: Invited Talks
     </div>
   </div>
 </div>
+
+<script>
+  // The badge is decided at build time, and the site only rebuilds on a push,
+  // so a talk that has since happened would keep it. Re-check against today.
+  (function () {
+    var today = new Date().toISOString().slice(0, 10);
+    document.querySelectorAll('.talk-upcoming[data-talk-date]').forEach(function (el) {
+      if (el.getAttribute('data-talk-date') < today) el.remove();
+    });
+  })();
+</script>
